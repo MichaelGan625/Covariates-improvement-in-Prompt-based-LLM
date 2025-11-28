@@ -41,25 +41,27 @@ class SemanticCovariateSystem:
         # 更新历史记录
         self._update_history(instruction, performance, scores)
 
-        # 1. 性能相关维度 (3维)
+        # 1. 性能相关维度 (3维) - 这些方法原本就返回 tensor，保持不变
         covariates[0] = self._absolute_performance(performance)
         covariates[1] = self._relative_improvement(performance)
         covariates[2] = self._performance_consistency(scores)
 
-        # 2. 指令质量维度 (3维)
+        # 2. 指令质量维度 (3维) - 注意：task_alignment 返回的是 float/numpy，需要转换
         covariates[3] = self._instruction_clarity(instruction)
         covariates[4] = self._constraint_appropriateness(instruction)
-        covariates[5] = self._task_alignment(instruction, task_name)
+        # 修改点：强制转换为 float
+        covariates[5] = float(self._task_alignment(instruction, task_name))
 
-        # 3. 搜索状态维度 (3维)
-        covariates[6] = self._search_stage(step, total_steps)
-        covariates[7] = self._exploration_need(step, total_steps)
-        covariates[8] = self._region_coverage()
+        # 3. 搜索状态维度 (3维) - 修改点：全部强制转为 float
+        covariates[6] = float(self._search_stage(step, total_steps))
+        covariates[7] = float(self._exploration_need(step, total_steps))
+        covariates[8] = float(self._region_coverage())
 
-        # 4. 风险预警维度 (3维)
-        covariates[9] = self._convergence_risk()
-        covariates[10] = self._instruction_novelty(instruction)
-        covariates[11] = self._output_reliability(scores)
+        # 4. 风险预警维度 (3维) - 修改点：全部强制转为 float
+        covariates[9] = float(self._convergence_risk())
+        covariates[10] = float(self._instruction_novelty(instruction))
+        # 报错的行在这里，加上 float()
+        covariates[11] = float(self._output_reliability(scores))
 
         return covariates
 
