@@ -1,4 +1,4 @@
-import subprocess
+Timport subprocess
 import os
 import re
 import csv
@@ -102,3 +102,4 @@ for row in summary:
     print(f"{row['task']:30} {row['status']:10} {row['score']:8} {str(row['exit_code']):9} {row['log']}")
 
 print(f"\nSaved summary to {summary_path}")
+
