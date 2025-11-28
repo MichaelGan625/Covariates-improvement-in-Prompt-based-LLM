@@ -1,5 +1,5 @@
 import numpy as np
-
+import traceback
 from automatic_prompt_engineer import data, llm, evaluate
 from evaluation_instruction_induction import utility
 
@@ -126,6 +126,7 @@ def get_query(prompt, eval_template, input_, output_, demo_data, demos_template,
                                input=input_,
                                output='',
                                full_demo=demos)
+    return query
 
 def get_query_for_test(prompt, eval_template, input_, output_, task_name=None):
     query = eval_template.fill(prompt=prompt,
@@ -141,6 +142,9 @@ def get_query_for_test(prompt, eval_template, input_, output_, task_name=None):
 
 
 def exec_accuracy_evaluator(prompts, eval_template, eval_data, demos_template, few_shot_data, config):
+    if prompts is None:
+        print("[ERROR] exec_accuracy_evaluator received None prompts")
+        return 0.0, []
     queries = []
     answers = []
     inputs = []
@@ -157,6 +161,22 @@ def exec_accuracy_evaluator(prompts, eval_template, eval_data, demos_template, f
             queries.append(query)
             answers.append(output_)
             inputs.append(input_)
+    
+    try:
+        model = llm.model_from_config(config['model'])
+        model_outputs = model.generate_text(queries, 1)
+        
+    except Exception as e:
+        print(f"\n[CRITICAL ERROR] LLM Generation failed in exec_accuracy!")
+        print(f"Error type: {type(e).__name__}")
+        print(f"Error details: {e}")
+        traceback.print_exc() # 打印完整堆栈，这能告诉你到底是 Key 没拿到，还是参数不对
+        return 0.0, [] # 返回零分，保护主程序不崩
+
+    metric = utility.TASK_TO_METRIC.get(task, utility.default_metric)
+    print(f'Using metric "{metric}" for task "{task}"...') # 如果这行没打印，说明上面崩了
+
+    # ... 后面的代码保持不变 ...
 
     # Instantiate the LLM
     model = llm.model_from_config(config['model'])
