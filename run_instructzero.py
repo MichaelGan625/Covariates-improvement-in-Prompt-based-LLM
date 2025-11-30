@@ -433,16 +433,48 @@ class LMForwardAPI:
 
         # === 依据任务画像决定是否采样 ===
         _profile = TASK_PROFILES.get(self.task_name, DEFAULT_PROFILE)
-        gen_kwargs = dict(do_sample=False)
+        # === 1. 生成配置 (增加随机性，防止复读) ===
+        # 这里把 temperature 稍微调高一点点，让它敢于生成不同的句子
+        gen_kwargs = dict(do_sample=True, temperature=0.7, top_p=0.9)
 
         outputs = self.model.generate(inputs_embeds=input_embed, max_new_tokens=64, **gen_kwargs)
         instruction = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
-        # === 清洗：仅当 profile 允许时才做，避免把强规则指令洗没了 ===
+        # === 2. 强力清洗 ===
         raw = instruction[0] if isinstance(instruction, list) else str(instruction)
-        instr_clean = raw.strip()
+        # 很多时候模型会自己生成 "Instruction: " 前缀，必须去掉
+        instr_clean = raw.replace("Instruction:", "").strip()
 
-        # 仅保留极简兜底：真的为空时（极少见），给 antonyms 一个最小可用指令
+        # === 3. 强力过滤器 (Hard Filter) ===
+        # 目的：一旦发现指令长得像 "Input: ... Output: ..."，直接判死刑 (0分)
+        # 这样 GP 就会受到惩罚，从而被迫去探索其他区域
+        
+        is_lazy_pattern = False
+        lower_instr = instr_clean.lower()
+        
+        # 规则 A: 如果指令里同时出现了 input 和 output，极大概率是它在复读 Template
+        # (除非是 antonyms 这种极简任务，否则不允许)
+        if "input:" in lower_instr or "output:" in lower_instr:
+             if self.task_name != 'antonyms':
+                 is_lazy_pattern = True
+        
+        # 规则 B: 指令太短 (小于 5 个字符)
+        if len(instr_clean) < 5: 
+            is_lazy_pattern = True
+
+        # === 4. 判决 ===
+        if is_lazy_pattern:
+            print(f"[FILTER] 拦截到偷懒指令: '{instr_clean}' -> 强制判为 0.0 分")
+            # 记录一下，防止主循环报错找不到 last_instruction_text
+            self.last_instruction_text = instr_clean 
+            
+            # 【核心修改】直接返回 0 分！给 GP 一个巨大的负反馈
+            # 注意：这里的 [0.0] * len(...) 是为了构造一个全 0 的 scores 向量
+            dummy_scores = [0.0] * len(self.eval_data[0])
+            return 0.0, dummy_scores
+
+        # === 5. 通过检查，正常进入后续评估 ===
+        # 兜底：真的为空时（极少见），给 antonyms 一个最小可用指令
         if not instr_clean:
             if self.task_name == 'antonyms':
                 instr_clean = "Return the antonym of the input word."
@@ -571,11 +603,15 @@ def run(args):
     eval_template = "Instruction: [PROMPT]\n\nInput: [INPUT]\n\nOUTPUT: [OUTPUT]"
     init_prompt = ['\n']
     prompt_gen_template = (
+        "Here are some examples of a task:\n"
         "[full_DEMO]\n\n"
-        "Write ONE concise instruction that maps Input to Output above.\n"
-        "Use an imperative sentence. Output only the instruction."
+        "Write a clear, imperative instruction for this task.\n"
+        "The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n"
+        "Examples of good instructions:\n"
+        "- 'Sort the words alphabetically. Output only the space-separated list.'\n"
+        "- 'Find the synonym. Return just the word.'\n"
+        "Instruction:"
     )
-
     base_conf = '../configs/instruction_induction.yaml'
     conf = get_conf(task, eval_data)
 
@@ -735,7 +771,7 @@ def run(args):
           #      kern = gp_model.covar_module.base_kernel
            #     kern.alpha_cov = 0.0
             #except Exception:
-             #   pass
+            #pass
 
         gp_model.train()
         with torch.no_grad():
@@ -853,7 +889,7 @@ def run(args):
                     torch.full((dim,), 1.0, device=device, dtype=torch.float64)
                 ])
 
-                beta_value = 2.0 
+                beta = 2.0 * (0.9 ** i) 
                 UCB = UpperConfidenceBound(gp_model, beta=beta_value)
                 
                 # 初始化 acq_value 避免未定义
