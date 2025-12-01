@@ -47,7 +47,7 @@ tkwargs = {
     "dtype": torch.float64,  # 🟢 [修改] 强烈建议改为 float64，以获得更高的数值精度
 }
 
-N_INIT = 35
+N_INIT = 40
 N_ITERATIONS = 40 if not SMOKE_TEST else 1
 BATCH_SIZE = 10 if not SMOKE_TEST else 1
 
