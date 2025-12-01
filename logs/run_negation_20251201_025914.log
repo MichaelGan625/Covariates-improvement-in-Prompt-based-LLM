@@ -1,0 +1,344 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.60s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.85s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.41s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the answer without any explanation or conversational text.'"]
+[DEBUG] 开始评估，指令: 'Return the answer without any explanation or conversational text.'
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Hallgeir Langeland was not born in Strand.'] | pred='norway' | score=0.0000
+[PRED 1] gold=['ESPN and ABC did not sign an eight year deal with NASCAR in 2005.'] | pred='2005' | score=0.0000
+[PRED 2] gold=['Eugène Lanti was not born in Normandy.'] | pred='france' | score=0.0000
+[PRED 3] gold=['Eugene Odum does not work in the field of ecology.'] | pred='yes' | score=0.0000
+[PRED 4] gold=['Achievement does not require effort.'] | pred='true' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030001__em__Return_the_answer_without_any_explanatio__2034d3a2.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Certainly, here are some examples of a task:
+
+Input: Cany Ash and Robert Sakula are both Architects.
+Output: Cany Ash and Robert Sakula are both not Architects.
+Input: The arket price of skill is reflected by wages.
+Output:' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Cany Ash and Robert Sakula are both Architects.
+Output: Cany Ash and Robert Sakula are both not Architects.' -> 强制判为 0.0 分
+Instruction: ['Sort the examples alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the examples alphabetically. Output only the space-separated list.
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['The official language of Finland is not Finnish.'] | pred='finnish is the official language of finland' | score=0.0000
+[PRED 1] gold=['Thomas Davis did not break his arm during the NFC Championship Game.'] | pred='arm broke championship davis during game his nfc the thomas' | score=0.0000
+[PRED 2] gold=['Stiff Valentine was not founded in Vancouver, Canada.'] | pred='canada founded in stiff valentine vancouver was' | score=1.0000
+[PRED 3] gold=['Doves cannot fly.'] | pred='can doves fly' | score=0.0000
+[PRED 4] gold=['Disease cannot strike unexpectedly.'] | pred='can disease strike unexpectedly' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030036__em__Sort_the_examples_alphabetically._Output__1a2d5d47.tsv
+Dev loss: 0.2. Dev perf: 0.2. Best dev perf: 0.2
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Cany Ash and Robert Sakula are both Architects.
+Output: Cany Ash and Robert Sakula are both not Architects.' -> 强制判为 0.0 分
+Instruction: ['The']
+[DEBUG] 开始评估，指令: The
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Adeline Dutton Train Whitney did not die in Milton.'] | pred='1872' | score=0.0000
+[PRED 1] gold=['Humans are not eukaryotes.'] | pred='true' | score=0.0000
+[PRED 2] gold=['Some flowers are not perennial.'] | pred='some flowers are perennial.' | score=1.0000
+[PRED 3] gold=['Between 1979 and 1984, Catholic schools were not integrated into New Zealand public schools.'] | pred='between 1979 and 1984, catholic schools were integrated into new zealand state schools.' | score=1.0000
+[PRED 4] gold=['Princess Bee was not born in Italy.'] | pred='there is no princess bee. bees do not have princesses, and there is no historical or cultural figure by that name.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030105__em__The__a4704fd3.tsv
+Dev loss: 0.5. Dev perf: 0.5. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['The lotion is not sticky.'] | pred='is lotion sticky the' | score=0.0000
+[PRED 1] gold=['Herpa Wings was not founded in Germany.'] | pred='founded germany herpa in was wings' | score=0.0000
+[PRED 2] gold=['Tooth & Nail Records was not founded in California.'] | pred='a and california founded in nail records tooth was' | score=0.0000
+[PRED 3] gold=['The first major city in the stream of the Rhine is not Basel.'] | pred='basel city first in is major of rhine stream the' | score=0.0000
+[PRED 4] gold=['The un-elected subordinates of member state governments of the EU are not called Commissioners.'] | pred='are called commissioners eu governments member of state subordinates the un-elected' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030137__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.2. Dev perf: 0.2. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sort the words alphabetically. Output only the space-separated list.' -> 强制判为 0.0 分
+Instruction: ['clear and concise']
+[DEBUG] 开始评估，指令: clear and concise
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['A lion cannot roar.'] | pred='true' | score=0.0000
+[PRED 1] gold=['A diamond is not colorless.'] | pred="that's incorrect. diamonds come in a range of colors, including pink, yellow, blue, and green." | score=0.0000
+[PRED 2] gold=['After starting his company, Tesla first did not receive patents.'] | pred='tesla first received patents after starting his company.' | score=1.0000
+[PRED 3] gold=['Some houses are not empty.'] | pred='some houses are empty.' | score=1.0000
+[PRED 4] gold=['Huguenots and Walloons did not settle in Canterbury.'] | pred='16th century.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030208__em__clear_and_concise__f67a5935.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The input to the task is not provided. Output: The output to the task is not provided.' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.2. Dev perf: 0.2. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: '' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Cany Ash and Robert Sakula are both not Architects.
+Output: Cany Ash and Robert Sakula are both not Architects.' -> 强制判为 0.0 分
+Instruction: ['Please provide a clear and concise instruction for the task.']
+[DEBUG] 开始评估，指令: Please provide a clear and concise instruction for the task.
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Coca-Cola C2 was not created in Japan.'] | pred='true' | score=0.0000
+[PRED 1] gold=['Madonna is not a songwriter.'] | pred='true' | score=0.0000
+[PRED 2] gold=['Windows Millennium Edition is not developed by Microsoft.'] | pred='true' | score=0.0000
+[PRED 3] gold=['John Grice did not die in Melbourne.'] | pred='the result only output is: melbourne' | score=0.0000
+[PRED 4] gold=['The main religion in Kenya is not Christianity.'] | pred='what is the main religion in kenya? \nanswer: christianity' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030245__em__Please_provide_a_clear_and_concise_instr__942b464a.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+Instruction: ['"Process the data. Output only the numerical result."']
+[DEBUG] 开始评估，指令: "Process the data. Output only the numerical result."
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Nikola Tesla was not Serbian by ethnicity.'] | pred='none' | score=0.0000
+[PRED 1] gold=['Copper cannot be melted.'] | pred='there is no numerical result to output. the input sentence is a statement and does not contain any numerical data.' | score=0.0000
+[PRED 2] gold=['Wells Coates did not die in Vancouver.'] | pred='0' | score=0.0000
+[PRED 3] gold=['Bloodsports was not written in English.'] | pred='0' | score=0.0000
+[PRED 4] gold=['Arthur Kinnaird, 11th Lord Kinnaird was not born in Kensington.'] | pred='11' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030312__em__Process_the_data._Output_only_the_numeri__7d42e76e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: A
+Output: B
+
+ C
+Output: D
+
+ E
+Output: F
+
+ G
+Output: H
+
+ I
+Output: J
+
+ K
+Output: L
+
+ M' -> 强制判为 0.0 分
+Instruction: ['"Write a clear, imperative instruction for this task."']
+[DEBUG] 开始评估，指令: "Write a clear, imperative instruction for this task."
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['White does not consist of red.'] | pred="swap the words 'white' and 'red' in the sentence." | score=0.0000
+[PRED 1] gold=["Luther was not an adviser in other areas' churches."] | pred='rewrite the sentence to make it clear that luther was not only an adviser in his own church, but also in other churches by rephrasing it to "luther was an adviser not only in his own church, but also in other areas\' churches."' | score=0.0000
+[PRED 2] gold=['The long-term preservation of the V&A collections is not due to Conservation.'] | pred='ensure the long-term preservation of the v&a collections by implementing and maintaining rigorous conservation practices and standards.' | score=0.0000
+[PRED 3] gold=['Sometimes competing does not cause stress.'] | pred='identify a situation where competing causes you stress and write about how you can manage that stress.' | score=0.0000
+[PRED 4] gold=['Judy Dunaway was not born in Mississippi.'] | pred='write a short biography of judy dunaway.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030356__em__Write_a_clear__imperative_instruction_fo__ff71c33c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ["Write a clear, concise instruction for this task. The instruction MUST be specific and direct, without any unnecessary explanations or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the synonym"]
+[DEBUG] 开始评估，指令: Write a clear, concise instruction for this task. The instruction MUST be specific and direct, without any unnecessary explanations or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* 'Find the synonym
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Belisario was not created in Italy.'] | pred='find the country where belisario was created.' | score=0.0000
+[PRED 1] gold=['Denmark is not part of Scandinavia.'] | pred='identify the country mentioned in the sentence.' | score=0.0000
+[PRED 2] gold=['The French ancestry of some South Africans is identified by names.'] | pred="list all the words that start with the letter 'f'." | score=0.0000
+[PRED 3] gold=['Abbasid Caliphate is not located in Africa.'] | pred='identify the incorrect information in the given sentence and correct it. output the corrected sentence.' | score=0.0000
+[PRED 4] gold=['A dam is not made of concert.'] | pred='find the correct sentence by replacing the incorrect word. output the corrected sentence.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030435__em__Write_a_clear__concise_instruction_for_t__6f2cbba2.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['"Return the list of words with their respective outputs, without any explanation or numbering."']
+[DEBUG] 开始评估，指令: "Return the list of words with their respective outputs, without any explanation or numbering."
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Automatism is not a defence.'] | pred='automatism - a legal defence\nis - a linking verb\na - an indefinite article\ndefence - a legal term' | score=1.0000
+[PRED 1] gold=['The official language of Faido is not Italian.'] | pred='the, 1\nofficial, 1\nlanguage, 1\nof, 1\nfaido, 1\nis, 1\nitalian, 1' | score=1.0000
+[PRED 2] gold=['Judy Dunaway was not born in Mississippi.'] | pred='judy - 1\ndunaway - 1\nwas - 1\nborn - 1\nin - 1\nmississippi - 1' | score=1.0000
+[PRED 3] gold=['Moshe Beregovski did not die in Kiev.'] | pred='moshe - proper noun\nberegovski - proper noun\ndied - verb\nin - preposition\nkiev - proper noun' | score=1.0000
+[PRED 4] gold=['Antonio Caggiano does not have the position of archbishop.'] | pred='[antonio: per, caggiano: per, has: o, the: o, position: o, of: o, archbishop: o]' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030523__em__Return_the_list_of_words_with_their_resp__770dd5cf.tsv
+Dev loss: 1.0. Dev perf: 1.0. Best dev perf: 1.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The arket price of skill is not reflected by wages.
+Output: The arket price of skill is not reflected by wages.
+
+Input: Des Abbott was not born in Darwin.
+Output: Des Abbott was not born in Darwin.
+Input: Bill Stall' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Find the synonym. Output: Just the word.' -> 强制判为 0.0 分
+Instruction: ['clear, imperative']
+[DEBUG] 开始评估，指令: clear, imperative
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['John Mure did not die in Glasgow.'] | pred='john mure passed away in glasgow.' | score=1.0000
+[PRED 1] gold=['The original language of Les Nanas is not French.'] | pred='translate les nanas into english.' | score=0.0000
+[PRED 2] gold=['Cultural imperialism to sway local elites was not used by the Roman historic empire.'] | pred='use "cultural imperialism to sway local elites" as a tool to expand your empire, just like the roman empire did historically.' | score=0.0000
+[PRED 3] gold=['The most successful team sport in Kenya is not cricket.'] | pred='false' | score=0.0000
+[PRED 4] gold=['Disgust is not an emotion.'] | pred='true' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030600__em__clear__imperative__98303d0c.tsv
+Dev loss: 0.3. Dev perf: 0.3. Best dev perf: 1.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The instruction is clear and direct.
+Output: The instruction is clear and direct.' -> 强制判为 0.0 分
+Instruction: ['"Sort the examples alphabetically."']
+[DEBUG] 开始评估，指令: "Sort the examples alphabetically."
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Felines are not carnivores.'] | pred='carnivores are felines.' | score=0.0000
+[PRED 1] gold=['Wells Coates did not die in Vancouver.'] | pred='coates died in vancouver wells' | score=0.0000
+[PRED 2] gold=['John Seru was not born in Australia.'] | pred="there are no examples to sort, as the input is a single sentence. if you meant to provide a list of examples, please do so, and i'll be happy to help you sort them alphabetically." | score=0.0000
+[PRED 3] gold=['The Saint-Evroul monks were not known for the singing tradition.'] | pred='saint-evroul' | score=0.0000
+[PRED 4] gold=['Some things are not finite.'] | pred='here is the sorted list:\n\n* are\n* finite\n* some\n* things' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030638__em__Sort_the_examples_alphabetically.__2c79a83f.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 1.0
+********* Done *********
+Instruction: ['clear, concise, and specific']
+[DEBUG] 开始评估，指令: clear, concise, and specific
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['The official language of Lemi is not Finnish.'] | pred='finnish' | score=0.0000
+[PRED 1] gold=['William Hardy was not born in Jamaica.'] | pred='nationality: jamaican' | score=0.0000
+[PRED 2] gold=['Alexander Wilson was not born in Virginia.'] | pred='alexander wilson was not born in virginia.' | score=1.0000
+[PRED 3] gold=['Gravitational forces do not act between masses.'] | pred='always.' | score=0.0000
+[PRED 4] gold=['During the Eastern Bloc economy in Warsaw infrastructure did not suffer considerably.'] | pred="warsaw's infrastructure suffered considerably during the eastern bloc economy." | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030707__em__clear__concise__and_specific__4acadf41.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 1.0
+********* Done *********
+Best initial point: 1.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][03:07:07] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[03:07:10] INFO [PROFILE] GP fit: 2.632s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:07:10] INFO Iter 0 best_value=3.89237 gp_loss=-22911.35565
+[03:07:10] INFO [PROFILE] Acquisition: 0.591s
+[03:07:39] INFO [PROFILE] LLM eval candidate: 28.693s
+[03:07:39] INFO Best value so far: 1.00000
+Bayes iterations:  20%|██        | 1/5 [00:31<02:07, 31.95s/it][03:07:39] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[03:07:41] INFO [PROFILE] GP fit: 2.259s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:07:41] INFO Iter 1 best_value=3.97694 gp_loss=-12776.00606
+[03:07:42] INFO [PROFILE] Acquisition: 0.695s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[03:07:45] INFO [PROFILE] LLM eval candidate: 2.643s
+[03:07:45] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:37<00:49, 16.46s/it][03:07:45] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[03:07:46] INFO [PROFILE] GP fit: 1.766s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:07:46] INFO Iter 2 best_value=3.97694 gp_loss=-12776.00606
+[03:07:47] INFO [PROFILE] Acquisition: 0.549s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[03:07:48] INFO [PROFILE] LLM eval candidate: 1.301s
+[03:07:48] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [00:41<00:21, 10.60s/it][03:07:48] INFO [Iteration 3] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[03:07:50] INFO [PROFILE] GP fit: 1.776s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:07:50] INFO Iter 3 best_value=3.97694 gp_loss=-12776.00606
+[03:07:51] INFO [PROFILE] Acquisition: 0.743s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[03:08:15] INFO [PROFILE] LLM eval candidate: 24.036s
+[03:08:15] INFO Best value so far: 1.00000
+Bayes iterations:  80%|████████  | 4/5 [01:07<00:16, 16.91s/it][03:08:15] INFO [Iteration 4] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[03:08:17] INFO [PROFILE] GP fit: 2.310s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:08:17] INFO Iter 4 best_value=4.05301 gp_loss=320.98859
+[03:08:18] INFO [PROFILE] Acquisition: 0.921s
+[03:08:20] INFO [PROFILE] LLM eval candidate: 2.140s
+[03:08:20] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [01:13<00:00, 12.76s/it]Bayes iterations: 100%|██████████| 5/5 [01:13<00:00, 14.63s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['The long-term preservation of the V&A collections is not due to Conservation.'] | pred='conservation collections due is long-term of preservation the the to v&a' | score=0.0000
+[PRED 1] gold=['Brian Callison was not born in Manchester.'] | pred='born brian callison in manchester was' | score=0.0000
+[PRED 2] gold=['Bandai was not founded in Tokyo.'] | pred='bandai founded in tokyo was' | score=1.0000
+[PRED 3] gold=['Gösta Krantz did not die in Stockholm.'] | pred='died gösta in krantz stockholm' | score=0.0000
+[PRED 4] gold=['Gamaliel Bradford did not die in Cambridge.'] | pred='bradford cambridge died gamaliel in' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030739__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 1.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: Cany Ash and Robert Sakula are both Architects.
+Output: Cany Ash and Robert Sakula are not Architects.
+
+Input: The arket price of skill is reflected by wages.
+Output: The arket price of skill is not reflected by wages.' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: Sort the words alphabetically.
+Output: Sort the words alphabetically.
+
+Input: Find the synonym.
+Output: Find the synonym.' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Identify the profession. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Identify the profession. Output only the space-separated list."
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Jacobus Trigland did not die in Leiden.'] | pred='theologian' | score=0.0000
+[PRED 1] gold=['Germany does not maintain diplomatic relations with Benin.'] | pred='diplomat' | score=0.0000
+[PRED 2] gold=['Granite cannot be carved.'] | pred='sculptor' | score=0.0000
+[PRED 3] gold=['The 1947 film Wyoming Kid was not adapted for ABC into the television show  Cheyenne.'] | pred='actor' | score=0.0000
+[PRED 4] gold=['The organization that continued to be a major disruptive force in Palestine is not Hamas.'] | pred='none' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/negation_20251201_030815__em__Identify_the_profession._Output_only_the__174d2795.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 1.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: Cany Ash and Robert Sakula are both Architects.
+Output: Cany Ash and Robert Sakula are not Architects.
+
+Input: The arket price of skill is reflected by wages.
+Output: The arket price of skill is not reflected by wages.' -> 强制判为 0.0 分
+Evaluate on test data...
+Best instruction is:
+['"Return the list of words with their respective outputs, without any explanation or numbering."']
+The final instruction set is:
+{"'Return the answer without any explanation or conversational text.'": (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 1., 0.]])), 'Sort the examples alphabetically. Output only the space-separated list.': (0.2, array([[0., 0., 1., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 1., 0.,
+        0., 0., 1., 0.]])), 'The': (0.5, array([[0., 0., 1., 1., 0., 1., 0., 0., 1., 0., 1., 0., 0., 0., 1., 1.,
+        0., 1., 1., 1.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.2, array([[0., 0., 0., 0., 0., 1., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.,
+        0., 0., 0., 1.]])), 'clear and concise': (0.25, array([[0., 0., 1., 1., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 1., 0.,
+        0., 0., 0., 1.]])), 'Please provide a clear and concise instruction for the task.': (0.05, array([[0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Process the data. Output only the numerical result."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Write a clear, imperative instruction for this task."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Write a clear, concise instruction for this task. The instruction MUST be specific and direct, without any unnecessary explanations or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the synonym": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the list of words with their respective outputs, without any explanation or numbering."': (1.0, array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.]])), 'clear, imperative': (0.3, array([[1., 0., 0., 0., 0., 0., 1., 0., 0., 1., 0., 1., 1., 0., 0., 1.,
+        0., 0., 0., 0.]])), '"Sort the examples alphabetically."': (0.1, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        1., 1., 0., 0.]])), 'clear, concise, and specific': (0.25, array([[0., 0., 1., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 1., 1., 0.,
+        0., 1., 0., 0.]])), '"Sort the words alphabetically. Output only the space-separated list."': (0.05, array([[0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Identify the profession. Output only the space-separated list."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "negation"...
+Using metric "em" for task "negation"...
+[PRED 0] gold=['Scientists think all of the plagues did not originate from China.'] | pred='scientists - experts in science\nthink - have an opinion\nall - every\nof - belonging to\nthe - used to indicate a person or thing previously mentioned\nplagues - a widespread disease\noriginated - started\nfrom - indicating the starting point\nchina - a country in east asia' | score=1.0000
+[PRED 1] gold=['Some tea does not contain caffeine.'] | pred='some: determiner\ntea: noun\ncontains: verb\ncaffeine: noun' | score=1.0000
+[PRED 2] gold=['William %22Rip%22 Robertson did not die in Laos.'] | pred='william -> proper noun\nrip -> proper noun\nrobertson -> proper noun\ndied -> verb\nin -> preposition\nlaos -> proper noun' | score=1.0000
+[PRED 3] gold=['The LDS Church does not focuse on spiritual mentorship.'] | pred='the : article\nlds : acronym\nchurch : noun\nfocuses : verb\non : preposition\nspiritual : adjective\nmentorship : noun' | score=1.0000
+[PRED 4] gold=['Dennis Rowland does not play jazz music.'] | pred='dennis - name\nrowland - surname\nplays - action\njazz - genre\nmusic - art form' | score=1.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/negation_20251201_031229__em__Return_the_list_of_words_with_their_resp__770dd5cf.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.89

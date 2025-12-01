@@ -1,0 +1,406 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.43s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.26s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.88s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Retrieve the data.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the data.'
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The lawyer was recognized by the manager.'] | pred='the manager, the lawyer' | score=1.0000
+[PRED 1] gold=['The bankers were advised by the actor.'] | pred="the subject is 'the actor' and the object is 'the bankers'." | score=1.0000
+[PRED 2] gold=['The senators were advised by the doctors.'] | pred='the output is: the senators' | score=1.0000
+[PRED 3] gold=['The doctor was stopped by the students.'] | pred='the doctor was stopped by the students.' | score=1.0000
+[PRED 4] gold=['The manager was admired by the tourists.'] | pred='there is no data to retrieve. the input sentence is a simple statement and does not contain any data to be retrieved.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032132__em__Retrieve_the_data.__48ab0d5f.tsv
+Dev loss: 0.85. Dev perf: 0.85. Best dev perf: 0.85
+********* Done *********
+Instruction: ["The assistant must adhere to the clear and concise instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated"]
+[DEBUG] 开始评估，指令: The assistant must adhere to the clear and concise instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+- 'Sort the words alphabetically. Output only the space-separated
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The actor was encouraged by the president.'] | pred='actor encouraged president the the' | score=0.0000
+[PRED 1] gold=['The actors were thanked by the president.'] | pred='actors president thanked the the' | score=0.0000
+[PRED 2] gold=['The secretary was avoided by the actors.'] | pred='actors avoided secretary the' | score=0.0000
+[PRED 3] gold=['The athletes were encouraged by the actor.'] | pred='actor athletes encouraged the' | score=0.0000
+[PRED 4] gold=['The authors were encouraged by the secretaries.'] | pred='authors encouraged secretaries the' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032207__em__The_assistant_must_adhere_to_the_clear_a__5febe2bc.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.85
+********* Done *********
+Instruction: ["'Retrieve the answer.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the answer.'
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The secretary was recognized by the athlete.'] | pred='the subject of the sentence is "the athlete".' | score=1.0000
+[PRED 1] gold=['The athlete was thanked by the banker.'] | pred='who was thanked? the athlete.' | score=0.0000
+[PRED 2] gold=['The authors were encouraged by the secretary.'] | pred='to submit their manuscript.' | score=0.0000
+[PRED 3] gold=['The artists were mentioned by the doctors.'] | pred='none' | score=0.0000
+[PRED 4] gold=['The author was advised by the doctors.'] | pred='rest.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032239__em__Retrieve_the_answer.__ed592c99.tsv
+Dev loss: 0.6. Dev perf: 0.6. Best dev perf: 0.85
+********* Done *********
+Instruction: ['"Sort the sentences alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the sentences alphabetically. Output only the space-separated list."
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The bankers were stopped by the secretaries.'] | pred='the bankers secretaries stopped the' | score=1.0000
+[PRED 1] gold=['The scientist was stopped by the author.'] | pred='author scientist stopped the the' | score=0.0000
+[PRED 2] gold=['The athletes were thanked by the scientists.'] | pred='athletes the scientists thanked the' | score=0.0000
+[PRED 3] gold=['The actor was believed by the author.'] | pred='actor author believed the the' | score=0.0000
+[PRED 4] gold=['The tourists were thanked by the professor.'] | pred='professor thanked the the tourists' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032310__em__Sort_the_sentences_alphabetically._Outpu__23f7ff35.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.85
+********* Done *********
+Instruction: ['"Sort the examples alphabetically."']
+[DEBUG] 开始评估，指令: "Sort the examples alphabetically."
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The judge was recommended by the doctors.'] | pred='doctors, judge, recommended, the' | score=0.0000
+[PRED 1] gold=['The lawyer was thanked by the scientists.'] | pred='lawyer, scientists, the, thanked' | score=0.0000
+[PRED 2] gold=['The managers were helped by the professors.'] | pred="here are the examples in alphabetical order, but since there's only one sentence, i will break it down into individual words and sort them alphabetically:\n\nhelped, managers, professors, the" | score=0.0000
+[PRED 3] gold=['The scientists were contacted by the artists.'] | pred='artists contacted scientists the' | score=0.0000
+[PRED 4] gold=['The doctors were recognized by the manager.'] | pred='doctors, manager, recognized, the' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032343__em__Sort_the_examples_alphabetically.__2c79a83f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.85
+********* Done *********
+Instruction: ['The instruction must be given in a clear, imperative manner. The manager must be stopped in a conversational text. The instruction must be given in a clear, imperative manner. The manager must be stopped in a conversational text. The instruction must be given in a clear, imperative manner. The manager must']
+[DEBUG] 开始评估，指令: The instruction must be given in a clear, imperative manner. The manager must be stopped in a conversational text. The instruction must be given in a clear, imperative manner. The manager must be stopped in a conversational text. The instruction must be given in a clear, imperative manner. The manager must
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The actor was believed by the managers.'] | pred='stop right there, manager!' | score=0.0000
+[PRED 1] gold=['The judges were believed by the doctors.'] | pred='stop. do not proceed with the sentence. the instruction is to stop the manager in a conversational text, and the input provided is not a conversational text about a manager.' | score=0.0000
+[PRED 2] gold=['The president was believed by the secretary.'] | pred='stop the manager now.' | score=0.0000
+[PRED 3] gold=['The artists were supported by the senators.'] | pred='stop.' | score=0.0000
+[PRED 4] gold=['The scientist was recognized by the professor.'] | pred='stop the manager in the conversation.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032430__em__The_instruction_must_be_given_in_a_clear__309a855b.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.85
+********* Done *********
+Instruction: ['Return the answer.']
+[DEBUG] 开始评估，指令: Return the answer.
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The judge was mentioned by the scientist.'] | pred='the judge was mentioned by the scientist.' | score=1.0000
+[PRED 1] gold=['The tourist was avoided by the actor.'] | pred='the tourist avoided the actor.' | score=1.0000
+[PRED 2] gold=['The secretary was supported by the author.'] | pred='the sentence is in the active voice. the subject "author" performs the action "supported" on the object "secretary".' | score=1.0000
+[PRED 3] gold=['The professor was avoided by the lawyer.'] | pred='the subject is "the lawyer" and the object is "the professor".' | score=1.0000
+[PRED 4] gold=['The secretaries were supported by the athlete.'] | pred='the secretaries supported the athlete.' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032506__em__Return_the_answer.__e2e69756.tsv
+Dev loss: 0.95. Dev perf: 0.95. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The task is to sort the words alphabetically. Output: Sort the space-separated list.' -> 强制判为 0.0 分
+Instruction: ['clear and specific']
+[DEBUG] 开始评估，指令: clear and specific
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The doctor was stopped by the managers.'] | pred='the subject of the sentence is "the managers" and the object is "the doctor".' | score=1.0000
+[PRED 1] gold=['The lawyers were admired by the senator.'] | pred='the subject "the senator" performed the action "admired" on the object "the lawyers".' | score=1.0000
+[PRED 2] gold=['The secretary was believed by the author.'] | pred='the secretary was believed by the author.' | score=1.0000
+[PRED 3] gold=['The athlete was recommended by the judges.'] | pred='approved' | score=0.0000
+[PRED 4] gold=['The artists were recommended by the author.'] | pred='the artists were recommended by the author.' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032542__em__clear_and_specific__21d5884d.tsv
+Dev loss: 0.9. Dev perf: 0.9. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The assistant was instructed to return the answer without any explanation, numbering, or conversational text.
+Output: The answer was returned by the assistant.' -> 强制判为 0.0 分
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The professors were believed by the president.'] | pred='believed president professors the the' | score=0.0000
+[PRED 1] gold=['The president was helped by the tourist.'] | pred='helped president the the tourist' | score=0.0000
+[PRED 2] gold=['The professors were encouraged by the lawyers.'] | pred='encouraged lawyers professors the the' | score=0.0000
+[PRED 3] gold=['The athlete was believed by the bankers.'] | pred='athlete bankers believed the' | score=0.0000
+[PRED 4] gold=['The tourists were encouraged by the judge.'] | pred='encouraged judge the the tourists.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032614__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Clear, concise instructions for this task:
+
+1. "Sort the words alphabetically."
+2. "Find the synonym."
+
+Output:
+
+1. "Sort the words alphabetically."
+2. "Find the synonym."
+
+
+
+1. "Sort' -> 强制判为 0.0 分
+Instruction: ['The instruction is clear, concise, and directs the assistant to provide a specific, unambiguous answer without any additional context or explanation.']
+[DEBUG] 开始评估，指令: The instruction is clear, concise, and directs the assistant to provide a specific, unambiguous answer without any additional context or explanation.
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The secretary was believed by the author.'] | pred='the secretary was believed by the author.' | score=1.0000
+[PRED 1] gold=['The professors were recognized by the student.'] | pred='plural subject, plural verb' | score=0.0000
+[PRED 2] gold=['The doctors were avoided by the author.'] | pred='who?' | score=0.0000
+[PRED 3] gold=['The author was avoided by the professor.'] | pred='the subject is "the professor".' | score=1.0000
+[PRED 4] gold=['The student was recommended by the managers.'] | pred='the student was accepted.' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032647__em__The_instruction_is_clear__concise__and_d__7151e018.tsv
+Dev loss: 0.7. Dev perf: 0.7. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The author was advised by the banker. Output: The author was advised by the banker.' -> 强制判为 0.0 分
+Instruction: ["'Retrieve the information. Output only the requested data.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the information. Output only the requested data.'
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The students were avoided by the scientists.'] | pred='the' | score=1.0000
+[PRED 1] gold=['The professor was introduced by the judge.'] | pred='the subject: the judge, the professor' | score=1.0000
+[PRED 2] gold=['The doctor was thanked by the actors.'] | pred='the doctor' | score=1.0000
+[PRED 3] gold=['The secretary was recommended by the athlete.'] | pred='the athlete' | score=1.0000
+[PRED 4] gold=['The banker was encouraged by the athlete.'] | pred='the subject: the athlete' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032714__em__Retrieve_the_information._Output_only_th__508b3830.tsv
+Dev loss: 0.95. Dev perf: 0.95. Best dev perf: 0.95
+********* Done *********
+Instruction: ['"Sort the words alphabetically."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically."
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The scientist was introduced by the artist.'] | pred='artist, introduced, scientist, the' | score=0.0000
+[PRED 1] gold=['The doctors were advised by the judges.'] | pred='advised, doctors, judges, the' | score=0.0000
+[PRED 2] gold=['The professors were supported by the student.'] | pred='professors, student, supported, the' | score=0.0000
+[PRED 3] gold=['The tourist was contacted by the banker.'] | pred='banker contacted the tourist the' | score=0.0000
+[PRED 4] gold=['The actors were believed by the managers.'] | pred='actors believed managers the the' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032741__em__Sort_the_words_alphabetically.__22411b0d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+Instruction: ['Please provide the task for which you would like me to write a clear, imperative instruction.']
+[DEBUG] 开始评估，指令: Please provide the task for which you would like me to write a clear, imperative instruction.
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The tourists were encouraged by the judge.'] | pred='here is the task:\n\nwrite an instruction on how to politely decline an offer of free food or drinks from a judge or someone in a position of authority.' | score=0.0000
+[PRED 1] gold=['The managers were helped by the athletes.'] | pred='here is the task:\n\nwrite a clear, imperative instruction to swap the subject and object of a sentence.' | score=0.0000
+[PRED 2] gold=['The tourists were thanked by the professor.'] | pred='here is the task:\n\nwrite a clear, imperative instruction to transform the sentence "the professor thanked the tourists" into the passive voice.' | score=0.0000
+[PRED 3] gold=['The senators were thanked by the presidents.'] | pred='rewrite the sentence in the passive voice.' | score=0.0000
+[PRED 4] gold=['The president was recognized by the manager.'] | pred='write an imperative sentence instructing the manager to recognize the president.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032823__em__Please_provide_the_task_for_which_you_wo__0e19e22a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+Instruction: ["'Retrieve the information.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the information.'
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The doctors were recognized by the athletes.'] | pred='the doctors were recognized by the athletes.' | score=1.0000
+[PRED 1] gold=['The doctor was contacted by the athlete.'] | pred='the subject is "the athlete". the action is "contacted". the recipient is "the doctor".' | score=1.0000
+[PRED 2] gold=['The judges were avoided by the professor.'] | pred='the professor avoided the judges.' | score=1.0000
+[PRED 3] gold=['The doctor was stopped by the managers.'] | pred='the managers stopped the doctor.' | score=1.0000
+[PRED 4] gold=['The student was introduced by the judge.'] | pred='the subject is "the judge" and the verb is "introduced". the object is "the student".' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032900__em__Retrieve_the_information.__05f861d8.tsv
+Dev loss: 0.9. Dev perf: 0.9. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The banker advised the author. Output: The author was advised by the banker.' -> 强制判为 0.0 分
+Instruction: ['"Sort the words alphabetically."']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The words were sorted alphabetically.
+Output: The space-separated list.' -> 强制判为 0.0 分
+Instruction: ['clear, concise, specific, unambiguous, definite, explicit']
+[DEBUG] 开始评估，指令: clear, concise, specific, unambiguous, definite, explicit
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The author was believed by the scientist.'] | pred='the sentence is not clear because it lacks context. who is the author? what did the author say or do that the scientist believed?' | score=1.0000
+[PRED 1] gold=['The doctors were helped by the student.'] | pred='the doctors were helped by the student.' | score=1.0000
+[PRED 2] gold=['The doctors were encouraged by the athletes.'] | pred='the doctors were encouraged by the athletes.' | score=1.0000
+[PRED 3] gold=['The tourist was believed by the doctors.'] | pred='the subject of the sentence is "the doctors" and the verb is "believed". the object of the verb is "the tourist".' | score=1.0000
+[PRED 4] gold=['The actor was helped by the tourist.'] | pred='the actor was helped by the tourist.' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_032936__em__clear__concise__specific__unambiguous__d__36bd8884.tsv
+Dev loss: 1.0. Dev perf: 1.0. Best dev perf: 1.0
+********* Done *********
+Instruction: ["I understand the task you've described. To provide a clear, imperative instruction, the assistant must return ONLY the answer, without any explanation, numbering, or conversational text. Here are some examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated"]
+[DEBUG] 开始评估，指令: I understand the task you've described. To provide a clear, imperative instruction, the assistant must return ONLY the answer, without any explanation, numbering, or conversational text. Here are some examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The artist was thanked by the professor.'] | pred='artist professor thanked the' | score=0.0000
+[PRED 1] gold=['The athlete was supported by the tourist.'] | pred='athlete supported the tourist' | score=0.0000
+[PRED 2] gold=['The athletes were recommended by the tourists.'] | pred='athletes recommended the tourists' | score=0.0000
+[PRED 3] gold=['The lawyer was advised by the bankers.'] | pred='advised bankers lawyer the the' | score=0.0000
+[PRED 4] gold=['The banker was avoided by the actor.'] | pred='actor avoided banker the the' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_033006__em__I_understand_the_task_you_ve_described.___c97a88bb.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 1.0
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The athletes were avoided by the doctors.'] | pred='athletes avoided doctors the the' | score=0.0000
+[PRED 1] gold=['The bankers were believed by the judges.'] | pred='bankers believed judges the' | score=0.0000
+[PRED 2] gold=['The bankers were mentioned by the judges.'] | pred='bankers judges mentioned the the' | score=0.0000
+[PRED 3] gold=['The student was avoided by the professor.'] | pred='avoided professor student the the' | score=0.0000
+[PRED 4] gold=['The scientists were supported by the secretaries.'] | pred='secretaries scientists supported the the' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_033034__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 1.0
+********* Done *********
+Instruction: ["The instruction is not given.\n\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n- 'Find the synonym. Return just the word.'"]
+[DEBUG] 开始评估，指令: The instruction is not given.
+
+Examples of good instructions:
+- 'Sort the words alphabetically. Output only the space-separated list.'
+- 'Find the synonym. Return just the word.'
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The professors were recognized by the student.'] | pred="the sentence seems to be a grammatically correct sentence, and without specific instructions, it's difficult to provide a meaningful output. however, if i had to provide an output, i would suggest:\n\nthe professors were recognized by the student.\n\nthis output is a rearranged version of the original sentence, but it conveys the same meaning. if you could provide more context or specific instructions, i'd be happy to help further!" | score=1.0000
+[PRED 1] gold=['The lawyers were admired by the professor.'] | pred='it seems like there is no specific instruction provided. however, based on the input sentence "the professor admired the lawyers," i can try to provide a possible output.\n\nif the instruction was to identify the parts of speech, the output could be:\n\n"the: article, professor: noun, admired: verb, the: article, lawyers: noun"\n\nif the instruction was to identify the grammatical roles, the output could be:\n\n"the: subject, professor: subject, admired: verb, the: object' | score=0.0000
+[PRED 2] gold=['The actor was believed by the managers.'] | pred='i\'m happy to help! however, i need a clear instruction to provide a correct output. the input "the managers believed the actor" seems to be a sentence, but i\'m not sure what i\'m supposed to do with it. could you please provide a specific instruction, such as "find the subject of the sentence" or "identify the verb"?' | score=0.0000
+[PRED 3] gold=['The tourist was avoided by the actor.'] | pred="i'm ready to help, but i don't see any instruction. please provide the instruction, and i'll do my best to assist you." | score=0.0000
+[PRED 4] gold=['The scientists were believed by the doctor.'] | pred='i\'m happy to help! however, i need a clear instruction on what to do with the input. could you please provide an instruction, such as "find the part of speech for each word" or "identify the subject of the sentence"? that way, i can give you an accurate output.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_033127__em__The_instruction_is_not_given._Examples_o__992c12ad.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 1.0
+********* Done *********
+Best initial point: 1.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: -4.7684e-09
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][03:31:28] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[03:31:28] INFO [PROFILE] GP fit: 0.716s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:31:28] INFO Iter 0 best_value=1.75332 gp_loss=-15583.05321
+[03:31:29] INFO [PROFILE] Acquisition: 0.719s
+[03:32:00] INFO [PROFILE] LLM eval candidate: 30.812s
+[03:32:00] INFO Best value so far: 1.00000
+Bayes iterations:  20%|██        | 1/5 [00:32<02:09, 32.27s/it][03:32:00] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[03:32:01] INFO [PROFILE] GP fit: 1.034s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:32:01] INFO Iter 1 best_value=1.78310 gp_loss=-13844.68926
+[03:32:02] INFO [PROFILE] Acquisition: 0.677s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[03:32:39] INFO [PROFILE] LLM eval candidate: 37.186s
+[03:32:39] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [01:11<01:48, 36.18s/it][03:32:39] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[03:32:40] INFO [PROFILE] GP fit: 1.036s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:32:40] INFO Iter 2 best_value=1.78310 gp_loss=-13844.68926
+[03:32:41] INFO [PROFILE] Acquisition: 0.655s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[03:32:41] INFO [PROFILE] LLM eval candidate: 0.929s
+[03:32:41] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [01:13<00:41, 20.86s/it][03:32:41] INFO [Iteration 3] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[03:32:42] INFO [PROFILE] GP fit: 1.019s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:32:42] INFO Iter 3 best_value=1.78310 gp_loss=-13844.68926
+[03:32:43] INFO [PROFILE] Acquisition: 0.676s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[03:33:21] INFO [PROFILE] LLM eval candidate: 37.939s
+[03:33:21] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  80%|████████  | 4/5 [01:53<00:28, 28.28s/it][03:33:21] INFO [Iteration 4] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[03:33:22] INFO [PROFILE] GP fit: 1.115s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[03:33:22] INFO Iter 4 best_value=1.78310 gp_loss=-13844.68926
+[03:33:23] INFO [PROFILE] Acquisition: 0.681s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[03:33:58] INFO [PROFILE] LLM eval candidate: 35.093s
+[03:33:58] INFO Best value so far: 1.00000
+Bayes iterations: 100%|██████████| 5/5 [02:30<00:00, 31.39s/it]Bayes iterations: 100%|██████████| 5/5 [02:30<00:00, 30.08s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["'Retrieve the answer, without any additional information or context.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the answer, without any additional information or context.'
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The president was recommended by the athlete.'] | pred='arnold schwarzenegger' | score=0.0000
+[PRED 1] gold=['The athletes were advised by the doctor.'] | pred='to get plenty of rest' | score=0.0000
+[PRED 2] gold=['The secretaries were believed by the actor.'] | pred='tom hanks' | score=0.0000
+[PRED 3] gold=['The professor was stopped by the lawyers.'] | pred='the lawyers stopped the professor.' | score=1.0000
+[PRED 4] gold=['The actors were helped by the professor.'] | pred='supported' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_033200__em__Retrieve_the_answer__without_any_additio__9dfc8ed2.tsv
+Dev loss: 0.35. Dev perf: 0.35. Best dev perf: 1.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['The']
+[DEBUG] 开始评估，指令: The
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The student was mentioned by the actors.'] | pred='the students mentioned the actors.' | score=1.0000
+[PRED 1] gold=['The doctors were recognized by the student.'] | pred='the doctors were recognized by the student.' | score=1.0000
+[PRED 2] gold=['The lawyer was recognized by the manager.'] | pred='the lawyer was recognized by the manager.' | score=1.0000
+[PRED 3] gold=['The senators were thanked by the manager.'] | pred='the senators thanked the manager.' | score=1.0000
+[PRED 4] gold=['The presidents were believed by the senators.'] | pred='that the accusations were false.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_033239__em__The__a4704fd3.tsv
+Dev loss: 0.95. Dev perf: 0.95. Best dev perf: 1.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: The banker recommended the tourists.
+Output: The tourists were recommended by the banker.' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["The assistant MUST return ONLY the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n- 'Find the synonym. Return just the word.'"]
+[DEBUG] 开始评估，指令: The assistant MUST return ONLY the answer, without any explanation, numbering, or conversational text.
+Examples of good instructions:
+- 'Sort the words alphabetically. Output only the space-separated list.'
+- 'Find the synonym. Return just the word.'
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The actor was recognized by the doctor.'] | pred='recognized' | score=0.0000
+[PRED 1] gold=['The presidents were thanked by the lawyer.'] | pred='the lawyers thanked the president.' | score=1.0000
+[PRED 2] gold=['The actor was recognized by the senators.'] | pred='acknowledged' | score=0.0000
+[PRED 3] gold=['The lawyers were thanked by the judges.'] | pred='the lawyers thanked the judges.' | score=1.0000
+[PRED 4] gold=['The actors were stopped by the presidents.'] | pred='the actors stopped the presidents.' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_033321__em__The_assistant_MUST_return_ONLY_the_answe__11ebf74d.tsv
+Dev loss: 0.75. Dev perf: 0.75. Best dev perf: 1.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['I am ready for the next instruction.']
+[DEBUG] 开始评估，指令: I am ready for the next instruction.
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The presidents were encouraged by the professors.'] | pred='the professors encouraged the presidents.' | score=1.0000
+[PRED 1] gold=['The authors were believed by the lawyers.'] | pred='the authors believed the lawyers.' | score=1.0000
+[PRED 2] gold=['The lawyer was recommended by the tourists.'] | pred='the sentence is grammatically correct.' | score=1.0000
+[PRED 3] gold=['The judges were recommended by the student.'] | pred='the judges were recommended by the student.' | score=1.0000
+[PRED 4] gold=['The student was advised by the judge.'] | pred='the judge advised the student.' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/active_to_passive_20251201_033358__em__I_am_ready_for_the_next_instruction.__07976700.tsv
+Dev loss: 1.0. Dev perf: 1.0. Best dev perf: 1.0
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['I am ready for the next instruction.']
+The final instruction set is:
+{"'Retrieve the data.'": (0.85, array([[1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 0., 1., 0.]])), "The assistant must adhere to the clear and concise instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated": (0.1, array([[0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 0.,
+        0., 0., 0., 0.]])), "'Retrieve the answer.'": (0.6, array([[1., 0., 0., 0., 0., 1., 1., 1., 1., 1., 1., 1., 1., 0., 0., 0.,
+        1., 0., 1., 1.]])), '"Sort the sentences alphabetically. Output only the space-separated list."': (0.1, array([[1., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the examples alphabetically."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The instruction must be given in a clear, imperative manner. The manager must be stopped in a conversational text. The instruction must be given in a clear, imperative manner. The manager must be stopped in a conversational text. The instruction must be given in a clear, imperative manner. The manager must': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 1., 0.]])), 'Return the answer.': (0.95, array([[1., 1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.]])), 'clear and specific': (0.9, array([[1., 1., 1., 0., 1., 0., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.]])), '"Sort the words alphabetically. Output only the space-separated list."': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The instruction is clear, concise, and directs the assistant to provide a specific, unambiguous answer without any additional context or explanation.': (0.7, array([[1., 0., 0., 1., 1., 1., 1., 1., 0., 1., 1., 1., 1., 0., 1., 1.,
+        1., 0., 0., 1.]])), "'Retrieve the information. Output only the requested data.'": (0.95, array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 0., 1., 1., 1., 1.,
+        1., 1., 1., 1.]])), '"Sort the words alphabetically."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Please provide the task for which you would like me to write a clear, imperative instruction.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "'Retrieve the information.'": (0.9, array([[1., 1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1., 1., 0., 1.,
+        1., 1., 1., 1.]])), 'clear, concise, specific, unambiguous, definite, explicit': (1.0, array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.]])), "I understand the task you've described. To provide a clear, imperative instruction, the assistant must return ONLY the answer, without any explanation, numbering, or conversational text. Here are some examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "The instruction is not given.\n\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n- 'Find the synonym. Return just the word.'": (0.15, array([[1., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 1.,
+        0., 0., 0., 0.]])), "'Retrieve the answer, without any additional information or context.'": (0.35, array([[0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0., 1., 1.,
+        1., 1., 0., 0.]])), 'The': (0.95, array([[1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.]])), "The assistant MUST return ONLY the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n- 'Find the synonym. Return just the word.'": (0.75, array([[0., 1., 0., 1., 1., 1., 0., 1., 1., 1., 1., 0., 1., 1., 1., 1.,
+        0., 1., 1., 1.]])), 'I am ready for the next instruction.': (1.0, array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "active_to_passive"...
+Using metric "em" for task "active_to_passive"...
+[PRED 0] gold=['The authors were recommended by the student.'] | pred='the student recommended the authors.' | score=1.0000
+[PRED 1] gold=['The lawyer was avoided by the bankers.'] | pred='the output is: the lawyer was avoided by the bankers.' | score=1.0000
+[PRED 2] gold=['The authors were admired by the tourist.'] | pred='the sentence is in the passive voice. \n\ncorrected sentence in active voice: the authors were admired by the tourist.' | score=1.0000
+[PRED 3] gold=['The manager was supported by the judges.'] | pred='the manager was supported by the judges.' | score=1.0000
+[PRED 4] gold=['The authors were believed by the athletes.'] | pred='the authors believed the athletes.' | score=1.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/active_to_passive_20251201_033655__em__I_am_ready_for_the_next_instruction.__07976700.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.88

@@ -1,0 +1,376 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.18s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.79s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Retrieve the data. Output only the numerical value.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the data. Output only the numerical value.'
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['source'] | pred='there is no numerical value in the input "reference".' | score=0.0000
+[PRED 1] gold=['fall'] | pred='0' | score=0.0000
+[PRED 2] gold=['priority'] | pred='6' | score=0.0000
+[PRED 3] gold=['opposite'] | pred='1' | score=0.0000
+[PRED 4] gold=['see'] | pred='there is no numerical value associated with the input "watch", so the output is:\n\n none' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050324__exact_or_contains__Retrieve_the_data._Output_only_the_numer__a4594abf.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['I will not provide any further instructions or explanations. The task is now complete.']
+[DEBUG] 开始评估，指令: I will not provide any further instructions or explanations. The task is now complete.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['god'] | pred='god' | score=1.0000
+[PRED 1] gold=['irrigate'] | pred='water' | score=0.0000
+[PRED 2] gold=['low'] | pred='fixed' | score=0.0000
+[PRED 3] gold=['supposition'] | pred='there is no output.' | score=0.0000
+[PRED 4] gold=['secure'] | pred='socket' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050353__exact_or_contains__I_will_not_provide_any_further_instructi__9b5e3110.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: task' -> 强制判为 0.0 分
+Instruction: ['"Return the answer without any explanation, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Return the answer without any explanation, numbering, or conversational text."
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['assembly'] | pred='the act of making something up, especially to deceive people' | score=0.0000
+[PRED 1] gold=['little'] | pred='tampering' | score=0.0000
+[PRED 2] gold=['sail'] | pred='broom' | score=0.0000
+[PRED 3] gold=['secret'] | pred='nedih' | score=0.0000
+[PRED 4] gold=['swift'] | pred='navy' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050425__exact_or_contains__Return_the_answer_without_any_explanatio__4aafea6c.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['fault'] | pred='defect' | score=0.0000
+[PRED 1] gold=['regard'] | pred='gaze' | score=0.0000
+[PRED 2] gold=['life'] | pred='e i l i n e s s v' | score=0.0000
+[PRED 3] gold=['look'] | pred='expect' | score=0.0000
+[PRED 4] gold=['book'] | pred='script' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050459__exact_or_contains__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['What is the meaning of life']
+[DEBUG] 开始评估，指令: What is the meaning of life
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['instead'] | pred="a rather existential question, isn't it?" | score=0.0000
+[PRED 1] gold=['audience'] | pred='to find meaning in life through hearing, it may be about listening to and understanding others, being empathetic, and finding connection and community through shared experiences and conversations. it could also be about appreciating the beauty of sound and music, and finding joy and solace in the rhythms and harmonies that surround us.' | score=0.0000
+[PRED 2] gold=['range'] | pred='the meaning of life is a philosophical question concerning the significance of existence or consciousness.' | score=0.0000
+[PRED 3] gold=['ever'] | pred='to seek happiness and fulfillment' | score=0.0000
+[PRED 4] gold=['move'] | pred="the question of the meaning of life is one that has puzzled philosophers, theologians, scientists, and everyday people for centuries. it's a deeply subjective and existential inquiry that doesn't have a definitive answer, as it varies greatly from person to person based on beliefs, experiences, and cultural backgrounds. however, many people find the meaning of life in personal fulfillment, relationships, contributing to society, or pursuing happiness." | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050607__exact_or_contains__What_is_the_meaning_of_life__e750541f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: '' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: sort the words alphabetically. Output: only the space-separated list.' -> 强制判为 0.0 分
+Instruction: ['clear, direct, explicit, unambiguous, precise, specific, detailed, explicit, clear-cut, concise, well-defined, definite, exact, specific, detailed, explicit, clear-cut, concise, well-defined, definite, exact, specific, detailed, explicit, clear-cut,']
+[DEBUG] 开始评估，指令: clear, direct, explicit, unambiguous, precise, specific, detailed, explicit, clear-cut, concise, well-defined, definite, exact, specific, detailed, explicit, clear-cut, concise, well-defined, definite, exact, specific, detailed, explicit, clear-cut,
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['crossing'] | pred='american multinational automaker founded in 1903 by henry ford.' | score=0.0000
+[PRED 1] gold=['discharge'] | pred='empty' | score=0.0000
+[PRED 2] gold=['draw'] | pred='take back' | score=0.0000
+[PRED 3] gold=['discourse'] | pred='talk, speak, discuss, chat, confer, communicate, dialogue, interact, gossip, jabber, prattle, chatter, natter, yak, yack, blether' | score=0.0000
+[PRED 4] gold=['loose'] | pred='casual' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050655__exact_or_contains__clear__direct__explicit__unambiguous__pr__9d8261f4.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: task
+Output: answer' -> 强制判为 0.0 分
+Instruction: ['The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['0'] | pred='0' | score=0.0000
+[PRED 1] gold=['repetition'] | pred='repeat' | score=0.0000
+[PRED 2] gold=['temperament'] | pred="the act of disposing or the state of being disposed; a person's natural tendency or mood; the way in which something is placed or arranged." | score=0.0000
+[PRED 3] gold=['draw'] | pred='pull back or remove something' | score=0.0000
+[PRED 4] gold=['sound'] | pred='weighty' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050730__exact_or_contains__The_instruction_MUST_tell_the_assistant___dccfc262.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: provide
+Output: deliver
+
+Input: offer
+Output: present
+Input: give
+Output: receive
+Input: take
+Output: leave
+Input: fetch
+Output: obtain
+Input: bring
+Output: fetch' -> 强制判为 0.0 分
+Instruction: ['I understand that I must follow your instructions to the letter. I will provide clear, concise, and imperative guidance for each task.']
+[DEBUG] 开始评估，指令: I understand that I must follow your instructions to the letter. I will provide clear, concise, and imperative guidance for each task.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['enjoy'] | pred='love' | score=0.0000
+[PRED 1] gold=['organic'] | pred='a person who is a voter or supporter of a particular politician or political party.' | score=0.0000
+[PRED 2] gold=['game'] | pred='create a storyline with a beginning, middle, and end, including characters, settings, and conflicts.' | score=0.0000
+[PRED 3] gold=['deal'] | pred='deal with' | score=1.0000
+[PRED 4] gold=['bottom'] | pred='a piece of furniture for sleeping or resting' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050807__exact_or_contains__I_understand_that_I_must_follow_your_ins__e317d19f.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: task
+Output: answer' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: command' -> 强制判为 0.0 分
+Instruction: ['As an AI language model, I am programmed to follow ethical and moral guidelines. I am not capable of providing instructions that may encourage unethical behavior or violate any policies. It is important to follow legal and moral guidelines while providing assistance.']
+[DEBUG] 开始评估，指令: As an AI language model, I am programmed to follow ethical and moral guidelines. I am not capable of providing instructions that may encourage unethical behavior or violate any policies. It is important to follow legal and moral guidelines while providing assistance.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['have'] | pred='i cannot provide information or guidance on harmful or illegal activities, including inducing harm to oneself or others. can i help you with something else?' | score=0.0000
+[PRED 1] gold=['neural'] | pred="it's normal to feel nervous in certain situations. would you like some suggestions on how to manage your nerves and feel more calm and confident?" | score=0.0000
+[PRED 2] gold=['machine'] | pred='a vehicle powered by an internal combustion engine or electric motor, used for transportation.' | score=0.0000
+[PRED 3] gold=['force'] | pred='i\'m happy to help!\n\nthe word "pull" can have different meanings depending on the context. here are a few possible interpretations:\n\n* to pull something means to apply force to move it towards oneself.\n* to pull a muscle means to strain or injure it.\n* to pull someone\'s leg means to tease or joke with them.\n\ncould you please provide more context or clarify what you mean by "pull"? i\'ll do my best to assist you within ethical and moral guidelines.' | score=0.0000
+[PRED 4] gold=['joint'] | pred='a type of cooking method where food is cooked in the oven until crispy and golden brown, bringing out its natural flavors. would you like some roast recipe suggestions or cooking tips?' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050858__exact_or_contains__As_an_AI_language_model__I_am_programmed__8e0177c5.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['The instruction is to return only the answer, without any explanation, numbering, or conversational text. The assistant must follow only the answer, without any explanation, numbering, or conversational text. The instruction is to return only the answer, without any explanation, numbering, or conversational text. The instruction']
+[DEBUG] 开始评估，指令: The instruction is to return only the answer, without any explanation, numbering, or conversational text. The assistant must follow only the answer, without any explanation, numbering, or conversational text. The instruction is to return only the answer, without any explanation, numbering, or conversational text. The instruction
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['side'] | pred='m = (y2 - y1) / (x2 - x1)' | score=0.0000
+[PRED 1] gold=['drink'] | pred='wallow' | score=0.0000
+[PRED 2] gold=['growth'] | pred='appearance' | score=0.0000
+[PRED 3] gold=['discharge'] | pred='none' | score=0.0000
+[PRED 4] gold=['independent'] | pred='self-governing' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050924__exact_or_contains__The_instruction_is_to_return_only_the_an__fb837c03.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.1
+********* Done *********
+Instruction: ["'Return the answer, without any explanation, numbering, or conversational text.'"]
+[DEBUG] 开始评估，指令: 'Return the answer, without any explanation, numbering, or conversational text.'
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['capable'] | pred='able' | score=0.0000
+[PRED 1] gold=['develop'] | pred='railway locomotive' | score=0.0000
+[PRED 2] gold=['frankly'] | pred='adverb' | score=0.0000
+[PRED 3] gold=['glimpse'] | pred='a quick look' | score=0.0000
+[PRED 4] gold=['grey'] | pred='grey' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_050950__exact_or_contains__Return_the_answer__without_any_explanati__4fe65da9.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.15
+********* Done *********
+Instruction: ['I am ready for the task. Please provide the input and I will generate the output accordingly.']
+[DEBUG] 开始评估，指令: I am ready for the task. Please provide the input and I will generate the output accordingly.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['press'] | pred='a campaign undertaken in a militant or enthusiastic manner to achieve a particular objective or to support a cause.' | score=0.0000
+[PRED 1] gold=['ab'] | pred='abdominal refers to the part of the body that contains the digestive organs, including the stomach, small intestine, liver, and pancreas.' | score=0.0000
+[PRED 2] gold=['scheme'] | pred='please provide the details for the outline. what topic or subject would you like the outline to be about?' | score=0.0000
+[PRED 3] gold=['9'] | pred='9' | score=0.0000
+[PRED 4] gold=['western'] | pred='coming from the west' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051020__exact_or_contains__I_am_ready_for_the_task._Please_provide___7f0a11b7.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Please provide a clear, imperative instruction for this task.']
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['saving'] | pred='convert the given word "preservation" into its plural form.' | score=0.0000
+[PRED 1] gold=['manly'] | pred='provide the masculine form of a noun or a pronoun that corresponds to the input "male".' | score=0.0000
+[PRED 2] gold=['charge'] | pred='separate the input into individual letters and arrange them in alphabetical order.\n\noutput: a-e-r-t' | score=0.0000
+[PRED 3] gold=['stomach'] | pred='define the word "abdomen".' | score=0.0000
+[PRED 4] gold=['round'] | pred='write the opposite of the input word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051056__exact_or_contains__Please_provide_a_clear__imperative_instr__5d3dcca5.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['clear, concise, specific, detailed, explicit, unambiguous, precise, direct, explicit.']
+[DEBUG] 开始评估，指令: clear, concise, specific, detailed, explicit, unambiguous, precise, direct, explicit.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['good'] | pred='having or showing a natural ability or skill; proficient.' | score=0.0000
+[PRED 1] gold=['false'] | pred='implied' | score=0.0000
+[PRED 2] gold=['plane'] | pred='a fixed-wing aircraft powered by jet engines or propellers, used for transporting people, cargo, or both.' | score=0.0000
+[PRED 3] gold=['favor'] | pred='a special right or advantage granted to an individual or group, often due to their status, position, or circumstances, that is not available to everyone.' | score=0.0000
+[PRED 4] gold=['provincial'] | pred='a member of the class of people who work on the land, typically as small farmers or laborers, often in a subservient social position.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051133__exact_or_contains__clear__concise__specific__detailed__expl__013b2c0a.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ["I understand the task you've described. Please provide me with a clear, concise instruction for this task, and I will return only the answer, without any explanation or conversational text."]
+[DEBUG] 开始评估，指令: I understand the task you've described. Please provide me with a clear, concise instruction for this task, and I will return only the answer, without any explanation or conversational text.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['western'] | pred='provide the opposite direction of the given word.' | score=0.0000
+[PRED 1] gold=['dear'] | pred='the opposite of "costly" is "affordable".' | score=0.0000
+[PRED 2] gold=['older'] | pred='what is the opposite of "old"?' | score=0.0000
+[PRED 3] gold=['factor'] | pred='provide a 5-letter word that is synonymous with "agent".' | score=0.0000
+[PRED 4] gold=['complete'] | pred='what is the opposite of the word "accomplished"?' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051205__exact_or_contains__I_understand_the_task_you_ve_described.___169ed90e.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: request
+Output: response' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Here are some examples of a task:
+Input: propose
+Output: offer
+Input: probe
+Output: investigation
+Input: healthy
+Output: sound
+Input: spy
+Output: sight
+Input: radius
+Output: r
+Input: sin
+Output: hell
+Input: regulation' -> 强制判为 0.0 分
+Best initial point: 0.150
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][05:12:08] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[05:12:09] INFO [PROFILE] GP fit: 1.341s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:12:09] INFO Iter 0 best_value=2.80503 gp_loss=819.59697
+[05:12:10] INFO [PROFILE] Acquisition: 0.642s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:12:40] INFO [PROFILE] LLM eval candidate: 30.435s
+[05:12:40] INFO Best value so far: 0.30000
+Bayes iterations:  20%|██        | 1/5 [00:32<02:09, 32.45s/it][05:12:40] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:12:44] INFO [PROFILE] GP fit: 3.423s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:12:44] INFO Iter 1 best_value=3.83064 gp_loss=-51309.47819
+[05:12:44] INFO [PROFILE] Acquisition: 0.610s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:12:45] INFO [PROFILE] LLM eval candidate: 0.356s
+[05:12:45] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:36<00:47, 15.95s/it][05:12:45] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:12:48] INFO [PROFILE] GP fit: 3.187s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:12:48] INFO Iter 2 best_value=3.83064 gp_loss=-51309.47819
+[05:12:48] INFO [PROFILE] Acquisition: 0.581s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:13:21] INFO [PROFILE] LLM eval candidate: 32.214s
+[05:13:21] INFO Best value so far: 0.30000
+Bayes iterations:  60%|██████    | 3/5 [01:12<00:50, 25.11s/it][05:13:21] INFO [Iteration 3] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[05:13:24] INFO [PROFILE] GP fit: 3.468s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:13:24] INFO Iter 3 best_value=3.90399 gp_loss=827.55137
+[05:13:25] INFO [PROFILE] Acquisition: 0.615s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:14:36] INFO [PROFILE] LLM eval candidate: 71.100s
+[05:14:36] INFO Best value so far: 0.30000
+Bayes iterations:  80%|████████  | 4/5 [02:28<00:44, 44.89s/it][05:14:36] INFO [Iteration 4] X_train torch.Size([28, 30]), y_train torch.Size([28, 1])
+[05:14:40] INFO [PROFILE] GP fit: 3.710s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:14:40] INFO Iter 4 best_value=3.97614 gp_loss=-21215.34763
+[05:14:40] INFO [PROFILE] Acquisition: 0.649s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:15:13] INFO [PROFILE] LLM eval candidate: 32.524s
+[05:15:13] INFO Best value so far: 0.30000
+Bayes iterations: 100%|██████████| 5/5 [03:04<00:00, 42.01s/it]Bayes iterations: 100%|██████████| 5/5 [03:04<00:00, 37.00s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Provide the answer, without any additional information or context."']
+[DEBUG] 开始评估，指令: "Provide the answer, without any additional information or context."
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['standard'] | pred='standard' | score=1.0000
+[PRED 1] gold=['understand'] | pred='understand and share the feelings of another' | score=1.0000
+[PRED 2] gold=['whip'] | pred='baddest' | score=0.0000
+[PRED 3] gold=['sum'] | pred='provide a brief statement of the main points.' | score=0.0000
+[PRED 4] gold=['getting'] | pred='getting' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051240__exact_or_contains__Provide_the_answer__without_any_addition__567d4f6c.tsv
+Dev loss: 0.3. Dev perf: 0.3. Best dev perf: 0.3
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: query
+Output: response' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['clear and concise']
+[DEBUG] 开始评估，指令: clear and concise
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['forward'] | pred='moving forward' | score=0.0000
+[PRED 1] gold=['pitch'] | pred='a mechanical device that transmits rotational motion from one shaft to another, often with a change in torque or speed.' | score=0.0000
+[PRED 2] gold=['operation'] | pred='outcome' | score=0.0000
+[PRED 3] gold=['manly'] | pred='he' | score=0.0000
+[PRED 4] gold=['petition'] | pred='a humble and sincere request to a higher power for guidance, wisdom, and strength.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051321__exact_or_contains__clear_and_concise__f67a5935.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.3
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["'Retrieve the information from the database. Output only the relevant data.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the information from the database. Output only the relevant data.'
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['rational'] | pred='related to: \n- intellectual property \n- intellectual disability' | score=0.0000
+[PRED 1] gold=['wickedness'] | pred='maleficent' | score=0.0000
+[PRED 2] gold=['rank'] | pred='a term used to describe a value or quantity that is not relative to any other value or quantity. in other words, an absolute value is one that is true or valid without reference to anything else.' | score=0.0000
+[PRED 3] gold=['bend'] | pred='here is the relevant data:\n\n**bending**\n\n* definition: the act of changing the direction or shape of something, such as a pipe or a piece of metal, by folding or curving it.\n* types: \n\t+ compression bending: bending by compressing the material.\n\t+ tension bending: bending by stretching the material.\n\t+ draw bending: bending by pulling the material through a die.\n* applications: \n\t+ pipe fitting\n\t+ sheet metal work\n\t+' | score=0.0000
+[PRED 4] gold=['rough'] | pred='since i\'m a large language model, i don\'t have direct access to a specific database. however, i can assume that the input "harsh" is a query to retrieve information about a person named harsh.\n\nhere\'s the output:\n\n**name:** harsh\n**age:** 25\n**occupation:** software engineer\n**location:** new york, usa' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051436__exact_or_contains__Retrieve_the_information_from_the_databa__9088d5d0.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.3
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['This is a task.']
+[DEBUG] 开始评估，指令: This is a task.
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['comparatively'] | pred='comparatively' | score=1.0000
+[PRED 1] gold=['tendency'] | pred='leaning' | score=0.0000
+[PRED 2] gold=['strain'] | pred='music' | score=0.0000
+[PRED 3] gold=['drink'] | pred='a bird' | score=0.0000
+[PRED 4] gold=['false'] | pred='assumed' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/synonyms_20251201_051513__exact_or_contains__This_is_a_task.__ee205bda.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.3
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['"Provide the answer, without any additional information or context."']
+The final instruction set is:
+{"'Retrieve the data. Output only the numerical value.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I will not provide any further instructions or explanations. The task is now complete.': (0.05, array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the answer without any explanation, numbering, or conversational text."': (0.1, array([[0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'What is the meaning of life': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'clear, direct, explicit, unambiguous, precise, specific, detailed, explicit, clear-cut, concise, well-defined, definite, exact, specific, detailed, explicit, clear-cut, concise, well-defined, definite, exact, specific, detailed, explicit, clear-cut,': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I understand that I must follow your instructions to the letter. I will provide clear, concise, and imperative guidance for each task.': (0.1, array([[0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'As an AI language model, I am programmed to follow ethical and moral guidelines. I am not capable of providing instructions that may encourage unethical behavior or violate any policies. It is important to follow legal and moral guidelines while providing assistance.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The instruction is to return only the answer, without any explanation, numbering, or conversational text. The assistant must follow only the answer, without any explanation, numbering, or conversational text. The instruction is to return only the answer, without any explanation, numbering, or conversational text. The instruction': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "'Return the answer, without any explanation, numbering, or conversational text.'": (0.15, array([[0., 0., 0., 0., 1., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I am ready for the task. Please provide the input and I will generate the output accordingly.': (0.1, array([[0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 1., 0.]])), 'Please provide a clear, imperative instruction for this task.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'clear, concise, specific, detailed, explicit, unambiguous, precise, direct, explicit.': (0.05, array([[0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I understand the task you've described. Please provide me with a clear, concise instruction for this task, and I will return only the answer, without any explanation or conversational text.": (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0.,
+        0., 0., 0., 0.]])), '"Provide the answer, without any additional information or context."': (0.3, array([[1., 1., 0., 0., 1., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 0.,
+        0., 1., 0., 0.]])), 'clear and concise': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "'Retrieve the information from the database. Output only the relevant data.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'This is a task.': (0.1, array([[1., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "exact_or_contains" for task "synonyms"...
+Using metric "exact_or_contains" for task "synonyms"...
+[PRED 0] gold=['foot'] | pred='foot soldiers' | score=1.0000
+[PRED 1] gold=['agricultural'] | pred='relating to land or farming.' | score=0.0000
+[PRED 2] gold=['unknown'] | pred='weird' | score=0.0000
+[PRED 3] gold=['pound'] | pred='tool' | score=0.0000
+[PRED 4] gold=['engine'] | pred='train' | score=0.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/synonyms_20251201_051755__exact_or_contains__Provide_the_answer__without_any_addition__567d4f6c.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.14

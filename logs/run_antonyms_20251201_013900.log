@@ -1,0 +1,505 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.28s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.20s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the answer without any explanation or conversational text.'"]
+[DEBUG] 开始评估，指令: 'Return the answer without any explanation or conversational text.'
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['taxable'] | pred='nontaxable' | score=0.0000
+[PRED 1] gold=['resolute'] | pred='indecisive' | score=0.0000
+[PRED 2] gold=['negative'] | pred='yes' | score=0.0000
+[PRED 3] gold=['boycott'] | pred='treat condescendingly' | score=0.0000
+[PRED 4] gold=['unravel'] | pred='ravel' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_013951__em__Return_the_answer_without_any_explanatio__2034d3a2.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+Instruction: ['I am ready for the task.']
+[DEBUG] 开始评估，指令: I am ready for the task.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['conciliatory'] | pred='adversarial' | score=0.0000
+[PRED 1] gold=['clement'] | pred='stormy' | score=0.0000
+[PRED 2] gold=['dryness'] | pred='moisture' | score=0.0000
+[PRED 3] gold=['unreliability'] | pred='the state of being reliable, trustworthy or performing consistently well.' | score=0.0000
+[PRED 4] gold=['courage'] | pred='lack of bravery or courage.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014015__em__I_am_ready_for_the_task.__1cb38f8c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExample of a good instruction:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Example of a good instruction:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['foreign'] | pred='output only: domestic' | score=0.0000
+[PRED 1] gold=['exogenous'] | pred='output: endogenous' | score=0.0000
+[PRED 2] gold=['cardinal'] | pred='ordinal' | score=0.0000
+[PRED 3] gold=['compatibility'] | pred='return the number of letters in the input word.' | score=0.0000
+[PRED 4] gold=['tasteless'] | pred='output only: aeflsttu' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014041__em__Please_provide_a_clear__imperative_instr__9174c32d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ['I understand the task. Please provide a clear, imperative instruction for this task.']
+[DEBUG] 开始评估，指令: I understand the task. Please provide a clear, imperative instruction for this task.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['unkindness'] | pred='define the word "kindness" and explain its significance in human relationships.' | score=0.0000
+[PRED 1] gold=['inferiority'] | pred='write a 100-word essay that argues for or against the concept of superiority.' | score=0.0000
+[PRED 2] gold=['lie'] | pred='output the verb in the past tense.' | score=0.0000
+[PRED 3] gold=['abolish'] | pred='create a verb in the past tense by adding -ed to the end of the given verb "establish".' | score=0.0000
+[PRED 4] gold=['mortality'] | pred='define the word "immortality".' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014110__em__I_understand_the_task._Please_provide_a___dc2f3068.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['debilitating'] | pred='a g g i i n i o r t v' | score=0.0000
+[PRED 1] gold=['prudence'] | pred='d e i m n p r s u' | score=0.0000
+[PRED 2] gold=['endogenous'] | pred='e e g n o s u x' | score=0.0000
+[PRED 3] gold=['unvoiced'] | pred='voiced' | score=0.0000
+[PRED 4] gold=['raw'] | pred='cooked' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014142__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ['clear, concise, and specific.']
+[DEBUG] 开始评估，指令: clear, concise, and specific.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['unstuck'] | pred='unstuck' | score=1.0000
+[PRED 1] gold=['ready'] | pred='unprepared' | score=0.0000
+[PRED 2] gold=['refined'] | pred='refined' | score=1.0000
+[PRED 3] gold=['anticholinergic'] | pred='relating to or denoting nerve fibers that release the neurotransmitter acetylcholine.' | score=0.0000
+[PRED 4] gold=['discontinue'] | pred='please go ahead.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014210__em__clear__concise__and_specific.__ee4f1e24.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.15
+********* Done *********
+Instruction: ['I understand the task. Please provide a clear, imperative instruction for this task.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['coordinating'] | pred='subordinating' | score=0.0000
+[PRED 1] gold=['conform'] | pred='a, d, d, e, i, t, v' | score=0.0000
+[PRED 2] gold=['artificially'] | pred='a, a, i, l, l, n, r, t, u, y' | score=0.0000
+[PRED 3] gold=['nonexistent'] | pred='existent' | score=0.0000
+[PRED 4] gold=['fairness'] | pred='aefinnrssu' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014236__em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ["I understand the task you've given me. Please provide a clear, imperative instruction for this task, and I'll return only the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the"]
+[DEBUG] 开始评估，指令: I understand the task you've given me. Please provide a clear, imperative instruction for this task, and I'll return only the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['abundant'] | pred='scarce' | score=0.0000
+[PRED 1] gold=['offence'] | pred='output only the word in lowercase.' | score=0.0000
+[PRED 2] gold=['general'] | pred='output: local' | score=0.0000
+[PRED 3] gold=['defense'] | pred='provide the result of sorting the letters of the word "prosecution" alphabetically.' | score=0.0000
+[PRED 4] gold=['intolerant'] | pred='provide the result of sorting the word "tolerant" alphabetically' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014302__em__I_understand_the_task_you_ve_given_me._P__c213f9b8.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Input: task-specific\nOutput: task-related']
+[DEBUG] 开始评估，指令: Input: task-specific
+Output: task-related
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['infinitely'] | pred='finite' | score=0.0000
+[PRED 1] gold=['quietly'] | pred='noisy' | score=0.0000
+[PRED 2] gold=['extensive'] | pred='intense' | score=0.0000
+[PRED 3] gold=['asymmetrical'] | pred='symmetry-related' | score=0.0000
+[PRED 4] gold=['reversal'] | pred='affirmation-related' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014326__em__Input_task-specific_Output_task-related__1b59cc36.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Return only the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Return only the answer, without any explanation, numbering, or conversational text.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['backed'] | pred='strapless' | score=0.0000
+[PRED 1] gold=['immortality'] | pred='rate of death' | score=0.0000
+[PRED 2] gold=['decent'] | pred='obscene, lewd, improper, immodest, indecorous' | score=0.0000
+[PRED 3] gold=['surface'] | pred='abovehead' | score=0.0000
+[PRED 4] gold=['inconclusive'] | pred='decisive' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014350__em__Return_only_the_answer__without_any_expl__4ae8be85.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Sort the words alphabetically."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically."
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['attention'] | pred='a, attention, in, inattention, n' | score=0.0000
+[PRED 1] gold=['brave'] | pred='cowardly' | score=0.0000
+[PRED 2] gold=['ahistorical'] | pred='here is the sorted output:\n\na\nc\nh\ni\nl\no\nr\ns\nt\ny' | score=0.0000
+[PRED 3] gold=['permanence'] | pred='c-e-e-i-m-n-p-r' | score=0.0000
+[PRED 4] gold=['deaf'] | pred='aehginr' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014417__em__Sort_the_words_alphabetically.__22411b0d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ["I understand the task you've given me. I'm ready to assist you. Please provide the desired input, and I'll generate the appropriate output based on the instructions given."]
+[DEBUG] 开始评估，指令: I understand the task you've given me. I'm ready to assist you. Please provide the desired input, and I'll generate the appropriate output based on the instructions given.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['attractive'] | pred='unappealing, ugly, uninviting, unpleasant, unsightly' | score=0.0000
+[PRED 1] gold=['friendly'] | pred='aggressive' | score=0.0000
+[PRED 2] gold=['insolubility'] | pred='the ability of a substance to dissolve in a solvent, usually measured by the maximum amount of solute that can dissolve in a given amount of solvent at a specific temperature and pressure.' | score=0.0000
+[PRED 3] gold=['unlimited'] | pred='restricted, confined, small in scope or extent.' | score=0.0000
+[PRED 4] gold=['yang'] | pred='yang' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014441__em__I_understand_the_task_you_ve_given_me._I__e6c25dc8.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Input: clear\nOutput: concise']
+[DEBUG] 开始评估，指令: Input: clear
+Output: concise
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['employee'] | pred='boss' | score=0.0000
+[PRED 1] gold=['beseeching'] | pred='direct' | score=0.0000
+[PRED 2] gold=['certain'] | pred='vague' | score=0.0000
+[PRED 3] gold=['homosexual'] | pred='ambisexual' | score=0.0000
+[PRED 4] gold=['supervised'] | pred='self-taught' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014504__em__Input_clear_Output_concise__8d057414.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Input: clear\nOutput: concise']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ["The instruction for this task is to provide a clear and imperative set of instructions that tell the assistant to return only the answer without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically.'\n* 'Find the synonym.'"]
+[DEBUG] 开始评估，指令: The instruction for this task is to provide a clear and imperative set of instructions that tell the assistant to return only the answer without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically.'
+* 'Find the synonym.'
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['informality'] | pred='ceremoniousness' | score=0.0000
+[PRED 1] gold=['current'] | pred='obsolete' | score=0.0000
+[PRED 2] gold=['unfold'] | pred='crease' | score=0.0000
+[PRED 3] gold=['head'] | pred='back' | score=0.0000
+[PRED 4] gold=['afloat'] | pred='stranded' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014527__em__The_instruction_for_this_task_is_to_prov__e369cc1a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for the given task. The instruction should tell me to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for the given task. The instruction should tell me to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['equitable'] | pred='return the number of vowels in the input word.' | score=0.0000
+[PRED 1] gold=['qualified'] | pred='return only the word that is a synonym for "unqualified".' | score=0.0000
+[PRED 2] gold=['uncollected'] | pred='return the number of letters in the word.' | score=0.0000
+[PRED 3] gold=['unestablished'] | pred='return the number of letters in the given word.' | score=0.0000
+[PRED 4] gold=['medical'] | pred='provide the plural form of the word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014555__em__Please_provide_a_clear__imperative_instr__f4ca16c5.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['clear, concise, specific, detailed, explicit, direct, plain-spoken, unambiguous, straightforward, easy to understand.']
+[DEBUG] 开始评估，指令: clear, concise, specific, detailed, explicit, direct, plain-spoken, unambiguous, straightforward, easy to understand.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['wireless'] | pred='connected to a power source by a cable' | score=0.0000
+[PRED 1] gold=['imprudent'] | pred='showing caution and good judgment in practical matters, especially by avoiding risk.' | score=0.0000
+[PRED 2] gold=['failure'] | pred='achieving a desired goal or outcome through effort, skill, and perseverance, resulting in a sense of accomplishment and satisfaction.' | score=0.0000
+[PRED 3] gold=['quickly'] | pred='take your time and move at a leisurely pace, without rushing or hurrying.' | score=0.0000
+[PRED 4] gold=['unpretentious'] | pred='arrogant and overly concerned with appearing sophisticated or intelligent.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014626__em__clear__concise__specific__detailed__expl__76c94f67.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Input: "Sort the words alphabetically. Output only the space-separated list."\n\n\nPlease provide the input text you\'d like me to process.']
+[DEBUG] 开始评估，指令: Input: "Sort the words alphabetically. Output only the space-separated list."
+
+
+Please provide the input text you'd like me to process.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['organize'] | pred="please provide the input text you'd like me to process.\n\ninput: disorganize organize mess chaos" | score=0.0000
+[PRED 1] gold=['ample'] | pred='aegemr' | score=0.0000
+[PRED 2] gold=['productive'] | pred="please provide the input text you'd like me to process.\n\ninput: unproductive umbrella unaware unusable unafraid" | score=0.0000
+[PRED 3] gold=['unwanted'] | pred="it seems like you didn't provide the input text. please provide the list of words you'd like me to sort alphabetically." | score=0.0000
+[PRED 4] gold=['harden'] | pred="please go ahead and provide the input text. i'm ready to sort the words alphabetically.\n\nwaiting for input..." | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014702__em__Input_Sort_the_words_alphabetically._Out__d3a6586b.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['I am ready for the task. Please provide the instruction, and I will follow it to create the output.']
+[DEBUG] 开始评估，指令: I am ready for the task. Please provide the instruction, and I will follow it to create the output.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['logically'] | pred='i\'ll provide the instruction. however, i don\'t see any instruction provided. please provide the instruction, and i\'ll follow it to create the output.\n\nif you meant to provide a word and ask me to do something with it, please let me know what you\'d like me to do with the word "illogically".' | score=0.0000
+[PRED 1] gold=['religious'] | pred='please provide a plural form of the input word "secular".' | score=0.0000
+[PRED 2] gold=['possibly'] | pred='your task is to reverse the input word.\n\noutput: ylssibomi' | score=0.0000
+[PRED 3] gold=['dominant'] | pred='ss' | score=0.0000
+[PRED 4] gold=['asexual'] | pred='i\'m happy to provide the instruction.\n\nplease create a list of 5 synonyms for the given input word "sexual".\n\nwaiting for your output...' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014742__em__I_am_ready_for_the_task._Please_provide___d7c46778.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Return only the appropriate response, without any additional text or explanation. Only the necessary information should be provided to complete the task."']
+[DEBUG] 开始评估，指令: "Return only the appropriate response, without any additional text or explanation. Only the necessary information should be provided to complete the task."
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['unsuitably'] | pred='adverb' | score=0.0000
+[PRED 1] gold=['critical'] | pred='critical' | score=1.0000
+[PRED 2] gold=['color'] | pred='discolour' | score=0.0000
+[PRED 3] gold=['discourtesy'] | pred='politeness' | score=0.0000
+[PRED 4] gold=['literate'] | pred='unable to read or write' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014805__em__Return_only_the_appropriate_response__wi__47d3384e.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Here are some examples of a task:\nInput: humorless\nOutput: humorous\nInput: depressing\nOutput: cheerful\nInput: unwrap\nOutput: wrap\nInput: consumptive\nOutput: generative\nInput: uncoil\nOutput: coil\nInput: corrected']
+[DEBUG] 开始评估，指令: Here are some examples of a task:
+Input: humorless
+Output: humorous
+Input: depressing
+Output: cheerful
+Input: unwrap
+Output: wrap
+Input: consumptive
+Output: generative
+Input: uncoil
+Output: coil
+Input: corrected
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['unproved'] | pred='disproved' | score=0.0000
+[PRED 1] gold=['internationalism'] | pred='internationalism' | score=1.0000
+[PRED 2] gold=['sensible'] | pred='sensible' | score=1.0000
+[PRED 3] gold=['discomfort'] | pred='discomfort' | score=1.0000
+[PRED 4] gold=['download'] | pred='download' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014831__em__Here_are_some_examples_of_a_task_Input_h__cc50aa62.tsv
+Dev loss: 0.8. Dev perf: 0.8. Best dev perf: 0.8
+********* Done *********
+Instruction: ['clear, direct, explicit, explicit']
+[DEBUG] 开始评估，指令: clear, direct, explicit, explicit
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['specialize'] | pred='to spread investments or activities across a wide range of assets, industries, or markets in order to reduce risk and increase potential returns' | score=0.0000
+[PRED 1] gold=['discomposed'] | pred='made up of several parts, formed by combining different things' | score=0.0000
+[PRED 2] gold=['offence'] | pred='defense' | score=0.0000
+[PRED 3] gold=['explicit'] | pred='explicit' | score=1.0000
+[PRED 4] gold=['unhelpful'] | pred='clear, direct, explicit' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014856__em__clear__direct__explicit__explicit__7cbaf647.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.8
+********* Done *********
+Instruction: ['What is the task?']
+[DEBUG] 开始评估，指令: What is the task?
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['enjoy'] | pred='endure' | score=0.0000
+[PRED 1] gold=['imperceptible'] | pred='adjective' | score=0.0000
+[PRED 2] gold=['unoccupied'] | pred='taken' | score=0.0000
+[PRED 3] gold=['claim'] | pred='to give up or surrender, often used in games or competitions.' | score=0.0000
+[PRED 4] gold=['written'] | pred='audio' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014924__em__What_is_the_task__bdd54419.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.8
+********* Done *********
+Instruction: ["I'm sorry, I didn't understand your request. Could you please rephrase your question in English?"]
+[DEBUG] 开始评估，指令: I'm sorry, I didn't understand your request. Could you please rephrase your question in English?
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['import'] | pred='please rephrase your request in english' | score=0.0000
+[PRED 1] gold=['active'] | pred='could you please rephrase your question in english?' | score=0.0000
+[PRED 2] gold=['accessible'] | pred='unavailable' | score=0.0000
+[PRED 3] gold=['unsuitably'] | pred='suitable' | score=0.0000
+[PRED 4] gold=['intemperate'] | pred='moderate' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_014959__em__I_m_sorry__I_didn_t_understand_your_requ__6db2be51.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.8
+********* Done *********
+Best initial point: 0.800
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: -9.5367e-09
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][01:49:59] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[01:50:06] INFO [PROFILE] GP fit: 6.180s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:50:06] INFO Iter 0 best_value=4.68521 gp_loss=-3331.00003
+[01:50:06] INFO [PROFILE] Acquisition: 0.542s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[01:50:37] INFO [PROFILE] LLM eval candidate: 30.721s
+[01:50:37] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  20%|██        | 1/5 [00:37<02:29, 37.46s/it][01:50:37] INFO [Iteration 1] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[01:50:44] INFO [PROFILE] GP fit: 6.806s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:50:44] INFO Iter 1 best_value=4.68521 gp_loss=-3331.00003
+[01:50:44] INFO [PROFILE] Acquisition: 0.546s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[01:51:09] INFO [PROFILE] LLM eval candidate: 24.412s
+[01:51:09] INFO Best value so far: 0.80000
+Bayes iterations:  40%|████      | 2/5 [01:09<01:42, 34.12s/it][01:51:09] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[01:51:11] INFO [PROFILE] GP fit: 2.724s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:51:11] INFO Iter 2 best_value=4.78183 gp_loss=-3508.47077
+[01:51:12] INFO [PROFILE] Acquisition: 0.591s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[01:51:39] INFO [PROFILE] LLM eval candidate: 27.015s
+[01:51:39] INFO Best value so far: 0.80000
+Bayes iterations:  60%|██████    | 3/5 [01:39<01:04, 32.40s/it][01:51:39] INFO [Iteration 3] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[01:51:41] INFO [PROFILE] GP fit: 2.072s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:51:41] INFO Iter 3 best_value=4.59665 gp_loss=-3671.41326
+[01:51:42] INFO [PROFILE] Acquisition: 0.625s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[01:52:07] INFO [PROFILE] LLM eval candidate: 24.764s
+[01:52:07] INFO Best value so far: 0.80000
+Bayes iterations:  80%|████████  | 4/5 [02:07<00:30, 30.46s/it][01:52:07] INFO [Iteration 4] X_train torch.Size([28, 30]), y_train torch.Size([28, 1])
+[01:52:13] INFO [PROFILE] GP fit: 6.336s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:52:13] INFO Iter 4 best_value=4.16432 gp_loss=-3694.18835
+[01:52:14] INFO [PROFILE] Acquisition: 0.762s
+[01:52:38] INFO [PROFILE] LLM eval candidate: 23.838s
+[01:52:38] INFO Best value so far: 0.80000
+Bayes iterations: 100%|██████████| 5/5 [02:38<00:00, 30.64s/it]Bayes iterations: 100%|██████████| 5/5 [02:38<00:00, 31.61s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['theoretically'] | pred='output only the word.' | score=0.0000
+[PRED 1] gold=['mobility'] | pred='return the number of letters in the input word.' | score=0.0000
+[PRED 2] gold=['strengthen'] | pred='return the antonym of the input word.' | score=0.0000
+[PRED 3] gold=['invalidate'] | pred='return the result of checking if the input string "validate" is a palindrome or not.' | score=0.0000
+[PRED 4] gold=['unresponsive'] | pred='responsive' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_015037__em__Please_provide_a_clear__imperative_instr__df998172.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.8
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['What is the word.']
+[DEBUG] 开始评估，指令: What is the word.
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['animate'] | pred='object' | score=0.0000
+[PRED 1] gold=['narrow'] | pred='broaden' | score=0.0000
+[PRED 2] gold=['generality'] | pred='noun' | score=0.0000
+[PRED 3] gold=['palatable'] | pred='distasteful' | score=0.0000
+[PRED 4] gold=['exact'] | pred='adjective' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_015109__em__What_is_the_word.__6689ac93.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.8
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["'Unwrap the gift. Output only the unwrapped present.'"]
+[DEBUG] 开始评估，指令: 'Unwrap the gift. Output only the unwrapped present.'
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['variable'] | pred='variable' | score=1.0000
+[PRED 1] gold=['ambitious'] | pred='ambitious' | score=1.0000
+[PRED 2] gold=['qualified'] | pred='qualified' | score=1.0000
+[PRED 3] gold=['prolix'] | pred='cise' | score=0.0000
+[PRED 4] gold=['deflation'] | pred='flation' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_015139__em__Unwrap_the_gift._Output_only_the_unwrapp__93eb17e4.tsv
+Dev loss: 0.3. Dev perf: 0.3. Best dev perf: 0.8
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['input: depressed\nOutput: cheerful\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative']
+[DEBUG] 开始评估，指令: input: depressed
+Output: cheerful
+
+Output: generative
+
+Output: generative
+
+Output: generative
+
+Output: generative
+
+Output: generative
+
+Output: generative
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['probability'] | pred='probability' | score=1.0000
+[PRED 1] gold=['extinguish'] | pred='extinguish' | score=1.0000
+[PRED 2] gold=['insufficiently'] | pred='excessively' | score=0.0000
+[PRED 3] gold=['alcoholic'] | pred='alcoholic' | score=1.0000
+[PRED 4] gold=['unintended'] | pred='unintended' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_015207__em__input_depressed_Output_cheerful_Output_g__8bc98dcc.tsv
+Dev loss: 0.45. Dev perf: 0.45. Best dev perf: 0.8
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['unsorted']
+[DEBUG] 开始评估，指令: unsorted
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['varied'] | pred='unvaried' | score=0.0000
+[PRED 1] gold=['solubility'] | pred='bilnosuilis' | score=0.0000
+[PRED 2] gold=['weak'] | pred='gnorts' | score=0.0000
+[PRED 3] gold=['mini'] | pred='i, a, m, x' | score=0.0000
+[PRED 4] gold=['asexual'] | pred='luxuries' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/antonyms_20251201_015238__em__unsorted__f7c21b1d.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.8
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['Here are some examples of a task:\nInput: humorless\nOutput: humorous\nInput: depressing\nOutput: cheerful\nInput: unwrap\nOutput: wrap\nInput: consumptive\nOutput: generative\nInput: uncoil\nOutput: coil\nInput: corrected']
+The final instruction set is:
+{"'Return the answer without any explanation or conversational text.'": (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 1., 0.]])), 'I am ready for the task.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExample of a good instruction:\n\n* 'Sort the words alphabetically. Output only the space-separated list": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I understand the task. Please provide a clear, imperative instruction for this task.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically. Output only the space-separated list."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'clear, concise, and specific.': (0.15, array([[1., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I understand the task you've given me. Please provide a clear, imperative instruction for this task, and I'll return only the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the": (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Input: task-specific\nOutput: task-related': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Return only the answer, without any explanation, numbering, or conversational text.': (0.05, array([[0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I understand the task you've given me. I'm ready to assist you. Please provide the desired input, and I'll generate the appropriate output based on the instructions given.": (0.05, array([[0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Input: clear\nOutput: concise': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "The instruction for this task is to provide a clear and imperative set of instructions that tell the assistant to return only the answer without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically.'\n* 'Find the synonym.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Please provide a clear, imperative instruction for the given task. The instruction should tell me to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'clear, concise, specific, detailed, explicit, direct, plain-spoken, unambiguous, straightforward, easy to understand.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Input: "Sort the words alphabetically. Output only the space-separated list."\n\n\nPlease provide the input text you\'d like me to process.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I am ready for the task. Please provide the instruction, and I will follow it to create the output.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return only the appropriate response, without any additional text or explanation. Only the necessary information should be provided to complete the task."': (0.05, array([[0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Here are some examples of a task:\nInput: humorless\nOutput: humorous\nInput: depressing\nOutput: cheerful\nInput: unwrap\nOutput: wrap\nInput: consumptive\nOutput: generative\nInput: uncoil\nOutput: coil\nInput: corrected': (0.8, array([[0., 1., 1., 1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 0., 1., 1.,
+        1., 0., 1., 1.]])), 'clear, direct, explicit, explicit': (0.05, array([[0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'What is the task?': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I'm sorry, I didn't understand your request. Could you please rephrase your question in English?": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list": (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.,
+        0., 0., 0., 0.]])), 'What is the word.': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 1., 0., 0.]])), "'Unwrap the gift. Output only the unwrapped present.'": (0.3, array([[1., 1., 1., 0., 0., 0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0.,
+        0., 0., 1., 0.]])), 'input: depressed\nOutput: cheerful\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative\n\nOutput: generative': (0.45, array([[1., 1., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 1., 1., 1., 0.,
+        0., 0., 0., 0.]])), 'unsorted': (0.1, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 1.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "antonyms"...
+Using metric "em" for task "antonyms"...
+[PRED 0] gold=['compromising'] | pred='compromising' | score=1.0000
+[PRED 1] gold=['noble'] | pred='noble' | score=1.0000
+[PRED 2] gold=['incredulous'] | pred='skeptical' | score=0.0000
+[PRED 3] gold=['disapprove'] | pred='disapprove' | score=1.0000
+[PRED 4] gold=['flat'] | pred='i think i can help with that!\n\nbased on the patterns i see in the examples, i\'m going to take a guess that the output for the input "natural" would be "artificial". am i correct?' | score=0.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/antonyms_20251201_015452__em__Here_are_some_examples_of_a_task_Input_h__cc50aa62.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.75

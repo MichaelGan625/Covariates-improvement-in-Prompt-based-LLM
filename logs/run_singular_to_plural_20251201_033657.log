@@ -1,0 +1,304 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.40s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.52s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.10s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the phrase.'"]
+[DEBUG] 开始评估，指令: 'Return the phrase.'
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['surgeries'] | pred='a medical procedure involving an operation' | score=0.0000
+[PRED 1] gold=['courtyards'] | pred='the word is "courtyard".' | score=0.0000
+[PRED 2] gold=['components'] | pred='the component' | score=0.0000
+[PRED 3] gold=['ratios'] | pred='the golden' | score=0.0000
+[PRED 4] gold=['reels'] | pred='return the phrase.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_033746__em__Return_the_phrase.__a429df87.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['I am ready to assist with any questions or tasks you may have.']
+[DEBUG] 开始评估，指令: I am ready to assist with any questions or tasks you may have.
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['reels'] | pred='a reel is a circular spool wound with a length of film, tape, or other material. it can also refer to a social media post on instagram that is a short video clip up to 60 seconds long.' | score=0.0000
+[PRED 1] gold=['switches'] | pred='a device for making and breaking the connection in an electric circuit.' | score=0.0000
+[PRED 2] gold=['sections'] | pred='a section' | score=0.0000
+[PRED 3] gold=['intakes'] | pred='admission or reception of something, such as patients, students, or data, into a system or organization.' | score=0.0000
+[PRED 4] gold=['bubbles'] | pred='a bubble!' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_033826__em__I_am_ready_to_assist_with_any_questions___3fdd2e02.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExample of a good instruction:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Example of a good instruction:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['platforms'] | pred='output only the result:' | score=0.0000
+[PRED 1] gold=['discs'] | pred='disc' | score=0.0000
+[PRED 2] gold=['holes'] | pred='output only: hole' | score=0.0000
+[PRED 3] gold=['bedrooms'] | pred='output only: bedroom' | score=0.0000
+[PRED 4] gold=['restaurants'] | pred='return the number of vowels in the word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_033858__em__Please_provide_a_clear__imperative_instr__5e68a5e2.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: instruction
+Output: instruction' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['ensembles'] | pred='ensemble' | score=0.0000
+[PRED 1] gold=['arrests'] | pred='arrest' | score=0.0000
+[PRED 2] gold=['rosters'] | pred='erostor' | score=0.0000
+[PRED 3] gold=['troops'] | pred='troop' | score=0.0000
+[PRED 4] gold=['cows'] | pred='cow' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_033926__em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["I'm sorry, I'm not sure what you're trying to say. Can you please provide more context or clarify your question?"]
+[DEBUG] 开始评估，指令: I'm sorry, I'm not sure what you're trying to say. Can you please provide more context or clarify your question?
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['exits'] | pred="i'm sorry, i'm not sure what you're trying to say. can you please provide more context or clarify your question?" | score=0.0000
+[PRED 1] gold=['subplots'] | pred='a subplot is a secondary plot or storyline in a narrative that runs parallel to the main plot. it can be used to add depth, complexity, and interest to a story, and to provide additional character development, themes, or conflicts. subplots can be resolved before the main plot is resolved, or they can be left unresolved, leaving room for a sequel or further exploration.' | score=0.0000
+[PRED 2] gold=['mocks'] | pred='it seems like you just typed "mock" without providing any context or question. could you please provide more information about what you mean by "mock"? are you referring to a mock object in programming, a mockingbird, or something else entirely? i\'d be happy to help if you could clarify your question or provide more context.' | score=0.0000
+[PRED 3] gold=['synths'] | pred='it seems like you just typed "synth" without any context or question. could you please provide more information about what you mean by "synth"? are you referring to synthesizers, synth music, or something else entirely? i\'d happpy to help if you clarify your question!' | score=0.0000
+[PRED 4] gold=['explorations'] | pred='it seems like you just typed "exploration" without asking a question or providing context. could you please provide more information about what you\'re looking for or what you\'d like to know about exploration? are you referring to space exploration, scientific exploration, or something else?' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034029__em__I_m_sorry__I_m_not_sure_what_you_re_tryi__7f9c7175.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['As an AI language model, I am capable of understanding and executing a wide range of tasks, from simple ones like sorting words alphabetically or finding synonyms, to more complex ones like returning the answer without any explanation, numbering, or conversational text. Please provide a clear, imperative instruction for the']
+[DEBUG] 开始评估，指令: As an AI language model, I am capable of understanding and executing a wide range of tasks, from simple ones like sorting words alphabetically or finding synonyms, to more complex ones like returning the answer without any explanation, numbering, or conversational text. Please provide a clear, imperative instruction for the
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['spells'] | pred='s-p-e-l-l' | score=0.0000
+[PRED 1] gold=['centimeters'] | pred='convert to inches:' | score=0.0000
+[PRED 2] gold=['organises'] | pred='organise -> organise, organizes, organizing, organized' | score=0.0000
+[PRED 3] gold=['ghosts'] | pred='return the definition of the word.' | score=0.0000
+[PRED 4] gold=['metaphors'] | pred='analogy' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034059__em__As_an_AI_language_model__I_am_capable_of__d820c226.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: clear
+Output: clear' -> 强制判为 0.0 分
+Instruction: ['clear, direct, explicit, unambiguous, unqualified, unambiguous, explicit, direct, unqualified, clear, direct, unambiguous, explicit, direct, unqualified, clear, direct, unambiguous, explicit, direct, unqualified, clear, direct, unambigu']
+[DEBUG] 开始评估，指令: clear, direct, explicit, unambiguous, unqualified, unambiguous, explicit, direct, unqualified, clear, direct, unambiguous, explicit, direct, unqualified, clear, direct, unambiguous, explicit, direct, unqualified, clear, direct, unambigu
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['documentaries'] | pred='a film or television program that provides factual information about a subject' | score=0.0000
+[PRED 1] gold=['cultures'] | pred='the collective beliefs, values, and practices shared by a group of people' | score=0.0000
+[PRED 2] gold=['researchers'] | pred='a person who conducts research, especially in a university, laboratory, or other scientific or academic setting.' | score=0.0000
+[PRED 3] gold=['lures'] | pred='attract' | score=0.0000
+[PRED 4] gold=['telegrams'] | pred='send' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034134__em__clear__direct__explicit__unambiguous__un__5ff1819e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Find the antonym. Output only the word."']
+[DEBUG] 开始评估，指令: "Find the antonym. Output only the word."
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['museums'] | pred='ruin' | score=0.0000
+[PRED 1] gold=['tickets'] | pred='refund' | score=0.0000
+[PRED 2] gold=['remixes'] | pred='original' | score=0.0000
+[PRED 3] gold=['requirements'] | pred='option' | score=0.0000
+[PRED 4] gold=['funerals'] | pred='wedding' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034201__em__Find_the_antonym._Output_only_the_word.__f9c821b9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['finalists'] | pred='a f i l n s t' | score=0.0000
+[PRED 1] gold=['kids'] | pred='kid' | score=0.0000
+[PRED 2] gold=['companions'] | pred='a c c m n o p i o n' | score=0.0000
+[PRED 3] gold=['interactions'] | pred='aaceilnort' | score=0.0000
+[PRED 4] gold=['assaults'] | pred='aaultss' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034233__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Find the word that fits in the space provided."']
+[DEBUG] 开始评估，指令: "Find the word that fits in the space provided."
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['withdrawals'] | pred='bank' | score=0.0000
+[PRED 1] gold=['districts'] | pred='school' | score=0.0000
+[PRED 2] gold=['myths'] | pred='legend' | score=0.0000
+[PRED 3] gold=['semifinals'] | pred='round' | score=0.0000
+[PRED 4] gold=['festivals'] | pred='celebration' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034307__em__Find_the_word_that_fits_in_the_space_pro__88639ba2.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['I understand the task you have given me. Please provide a clear, imperative instruction for this task, and I will make sure to follow it without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: I understand the task you have given me. Please provide a clear, imperative instruction for this task, and I will make sure to follow it without any explanation, numbering, or conversational text.
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['songwriters'] | pred='write a short poem or song lyrics about a songwriter.' | score=0.0000
+[PRED 1] gold=['studios'] | pred='capitalize the first letter of the input word.' | score=0.0000
+[PRED 2] gold=['receptions'] | pred='define the word "reception".' | score=0.0000
+[PRED 3] gold=['tragedies'] | pred='write a one-sentence definition of the word "tragedy".' | score=0.0000
+[PRED 4] gold=['teams'] | pred='capitalize the first letter of the input word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034344__em__I_understand_the_task_you_have_given_me.__27e4a06b.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: instruction
+Output: instruction' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: instruction
+Output: instruction' -> 强制判为 0.0 分
+Instruction: ['"Write the answer in full, clear sentences."']
+[DEBUG] 开始评估，指令: "Write the answer in full, clear sentences."
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['affiliates'] | pred='an affiliate is a person or entity that promotes a product or service of another company and earns a commission on sales or referrals generated through their unique affiliate link.' | score=0.0000
+[PRED 1] gold=['suites'] | pred='a suite is a set of rooms in a hotel or other building that are connected and designed to be used together, often featuring a living area, bedroom, and bathroom.' | score=0.0000
+[PRED 2] gold=['possesses'] | pred='the verb "possess" means to have, own, or control something, often in a physical or emotional sense.' | score=0.0000
+[PRED 3] gold=['sopranos'] | pred='a soprano is a type of classical singing voice that is typically the highest vocal range, often used to describe a female singer who sings in this range, but can also refer to a male singer who sings in the soprano range, known as a countertenor or male soprano.' | score=0.0000
+[PRED 4] gold=['mechanisms'] | pred='a mechanism is a system of parts that work together to perform a particular function or achieve a specific goal.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034437__em__Write_the_answer_in_full__clear_sentence__e5beec5a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for the given task. The instruction should tell me to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for the given task. The instruction should tell me to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['considerations'] | pred="return the number of letters in the word 'consideration'." | score=0.0000
+[PRED 1] gold=['lovers'] | pred='return the plural form of the input noun.' | score=0.0000
+[PRED 2] gold=['executives'] | pred='return the number of letters in the input word.' | score=0.0000
+[PRED 3] gold=['artists'] | pred='return the plural form of the given word.' | score=0.0000
+[PRED 4] gold=['officers'] | pred='return the rank of the given military title.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034519__em__Please_provide_a_clear__imperative_instr__f4ca16c5.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Output: ASS' -> 强制判为 0.0 分
+Instruction: ['Sort the phrases alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the phrases alphabetically. Output only the space-separated list.
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['homages'] | pred='homage' | score=0.0000
+[PRED 1] gold=['ambushes'] | pred='ambush' | score=0.0000
+[PRED 2] gold=['surveys'] | pred='survey' | score=0.0000
+[PRED 3] gold=['passages'] | pred='passage' | score=0.0000
+[PRED 4] gold=['symphonies'] | pred='symphony' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034550__em__Sort_the_phrases_alphabetically._Output___0626f0a8.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['I understand your request. Please provide the task you want me to perform, and I will ensure the output is clear and concise.']
+[DEBUG] 开始评估，指令: I understand your request. Please provide the task you want me to perform, and I will ensure the output is clear and concise.
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['streaks'] | pred='define the word "streak" and provide its synonyms.' | score=0.0000
+[PRED 1] gold=['catalogs'] | pred="it seems you're ready to assist me!\n\nhere's the task:\n\nprovide a brief definition of a catalog.\n\n(waiting for your response...)" | score=0.0000
+[PRED 2] gold=['messages'] | pred='it seems like there is no task provided. please provide the task you want me to perform, and i will ensure the output is clear and concise.' | score=0.0000
+[PRED 3] gold=['sorties'] | pred='i\'d like you to define the word "sortie".' | score=0.0000
+[PRED 4] gold=['wickets'] | pred='a structure, typically consisting of two pairs of parallel vertical poles (called stumps) connected by two horizontal edges (called bails), used to determine whether a batsman is out or not in the game of cricket.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034634__em__I_understand_your_request._Please_provid__8afd1de4.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Sort the phrases by their length. Output only the categorized list."']
+[DEBUG] 开始评估，指令: "Sort the phrases by their length. Output only the categorized list."
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['taxes'] | pred='short phrases:\n- tax' | score=0.0000
+[PRED 1] gold=['parts'] | pred='part' | score=0.0000
+[PRED 2] gold=['rappers'] | pred='since there is only one phrase "rapper", it has a length of 6 characters. here is the categorized list:\n\n**6 characters**\n1. rapper' | score=0.0000
+[PRED 3] gold=['hospitals'] | pred='single word: hospital' | score=0.0000
+[PRED 4] gold=['clients'] | pred='single word: client' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034713__em__Sort_the_phrases_by_their_length._Output__5e189ff8.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['What is the task?']
+[DEBUG] 开始评估，指令: What is the task?
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['pigs'] | pred='big' | score=0.0000
+[PRED 1] gold=['borders'] | pred='define the word "border".' | score=0.0000
+[PRED 2] gold=['holidays'] | pred='a time of rest, recreation, or celebration.' | score=0.0000
+[PRED 3] gold=['basins'] | pred='wash' | score=0.0000
+[PRED 4] gold=['massacres'] | pred='bloodbath' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034744__em__What_is_the_task__bdd54419.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['I understand that the task is to return ONLY the answer, without any explanation, numbering, or conversational text.\n\n\n\n* Sort the words alphabetically. Output only the space-separated list.\n* Find the synonym. Return just the word.\n\nInstruction']
+[DEBUG] 开始评估，指令: I understand that the task is to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+
+
+* Sort the words alphabetically. Output only the space-separated list.
+* Find the synonym. Return just the word.
+
+Instruction
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['storylines'] | pred='plot' | score=0.0000
+[PRED 1] gold=['writers'] | pred='author' | score=0.0000
+[PRED 2] gold=['backdrops'] | pred='background' | score=0.0000
+[PRED 3] gold=['shrines'] | pred='sanctuary' | score=0.0000
+[PRED 4] gold=['councils'] | pred='assembly' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034811__em__I_understand_that_the_task_is_to_return___50470376.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['I am ready to receive the instruction for the task. Please provide the clear, imperative instruction without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: I am ready to receive the instruction for the task. Please provide the clear, imperative instruction without any explanation, numbering, or conversational text.
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['cameras'] | pred='take a photo' | score=0.0000
+[PRED 1] gold=['temperatures'] | pred='°c or °f' | score=0.0000
+[PRED 2] gold=['wheels'] | pred='circular object with spokes' | score=0.0000
+[PRED 3] gold=['sizes'] | pred='medium' | score=0.0000
+[PRED 4] gold=['clocks'] | pred='timepiece' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034839__em__I_am_ready_to_receive_the_instruction_fo__181116b9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['clear, concise, and to the point.']
+[DEBUG] 开始评估，指令: clear, concise, and to the point.
+Using metric "em" for task "singular_to_plural"...
+Using metric "em" for task "singular_to_plural"...
+[PRED 0] gold=['pounders'] | pred='a person who pounds or strikes something, especially a blacksmith.' | score=0.0000
+[PRED 1] gold=['cricketers'] | pred='a sportsman who plays cricket.' | score=0.0000
+[PRED 2] gold=['gales'] | pred='a strong wind' | score=0.0000
+[PRED 3] gold=['excavations'] | pred='the process of digging or uncovering something, typically soil, rock, or other materials, often for construction, mining, or archaeological purposes.' | score=0.0000
+[PRED 4] gold=['concessions'] | pred='a compromise or surrender, especially in a dispute or negotiation.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/singular_to_plural_20251201_034910__em__clear__concise__and_to_the_point.__62949369.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Best initial point: 0.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 0.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][03:49:11] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+[03:49:11] INFO [PROFILE] GP fit: 0.681s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[WARNING][Iteration 0] custom kernel GP fit failed, falling back to baseline. Error: All attempts to fit the model have failed.
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 0.0000e+00, mean: 0.0000e+00
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 879, in run
+    output = gp_model(X_train)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py", line 345, in __call__
+    ) = self.prediction_strategy.exact_prediction(full_mean, full_covar)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 324, in exact_prediction
+    self.exact_predictive_mean(test_mean, test_train_covar),
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 349, in exact_predictive_mean
+    res = (test_train_covar @ mean_cache.unsqueeze(-1)).squeeze(-1)
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: double != float

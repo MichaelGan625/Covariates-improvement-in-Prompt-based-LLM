@@ -1,0 +1,333 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.87s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.60s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.24s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the output only.'"]
+[DEBUG] 开始评估，指令: 'Return the output only.'
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='2' | score=0.0000
+[PRED 1] gold=['not the same'] | pred='they got an early start.' | score=0.0000
+[PRED 2] gold=['same'] | pred='sentence 1: we will *** a medal in your honour. sentence 2: *** a medal.' | score=0.0000
+[PRED 3] gold=['same'] | pred='war on terror; war on christmas' | score=0.0000
+[PRED 4] gold=['same'] | pred='the word "view" is a verb in sentence 1 and a verb in sentence 2.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_060816__em__Return_the_output_only.__cb86dee8.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['The task is to provide a clear and concise instruction for the user.']
+[DEBUG] 开始评估，指令: The task is to provide a clear and concise instruction for the user.
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='to use the word "follow" correctly:\n\n1. use "follow" to mean "to understand or comprehend" when referring to an idea, argument, or instruction (e.g., "can you follow her argument?").\n2. use "follow" to mean "to go or come after someone" when referring to physical movement or tracking (e.g., "she followed the men with the binoculars.").' | score=0.0000
+[PRED 1] gold=['same'] | pred='to use the word "send" correctly, follow these steps:\n\n1. identify the context: determine whether you want to "send" a message, letter, or an object.\n2. use the correct sentence structure: for sending a message or letter, use the phrase "to send a [message/letter]". for sending an object, use the phrase "[name] sent [object] to [recipient]".\n\nexample sentences:\n- to send a message, you need to type it in the' | score=0.0000
+[PRED 2] gold=['not the same'] | pred='the instruction is:\n\nto use the word "side" correctly, consider its context. in sentence 1, "side" refers to a physical surface or part of an object (the tray). in sentence 2, "side" means a particular aspect or division of a larger whole (the purchasing aspect of the business).' | score=0.0000
+[PRED 3] gold=['same'] | pred='the word "canvas" is used figuratively in both sentences to refer to a broad or expansive scope or background, rather than a literal canvas for painting.' | score=0.0000
+[PRED 4] gold=['not the same'] | pred='to use the word "approach" correctly:\n\n* use "approach" as a verb to start doing something or to deal with a task or problem (e.g., "approach a task").\n* use "approach" as a verb to move near to a place or to get close to something (e.g., "to approach the city").' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_060942__em__The_task_is_to_provide_a_clear_and_conci__d6752a25.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: synonym' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: sort' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='a, always, bastard, call, called, could, friend, he, me, on, we' | score=0.0000
+[PRED 1] gold=['same'] | pred='downtown, emphasis, have, office, shift, the, these, to' | score=0.0000
+[PRED 2] gold=['not the same'] | pred='beat, fare, his, shoe, subway, table, the' | score=0.0000
+[PRED 3] gold=['same'] | pred="authority, foremost, on, orangutans, tennessee, the, valley, world's" | score=0.0000
+[PRED 4] gold=['not the same'] | pred='a, brick, cylinder, into, negotiations, of, perforated, ran, the, wall, walls, were' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061034__em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Sentence 1:
+
+* Input: Sentence 1:
+
+* Input: Sentence 1:
+
+* Input: Sentence 1:
+
+* Input: Sentence 1:
+
+* Input: Sentence 1:
+
+* Input: Sentence 1' -> 强制判为 0.0 分
+Instruction: ['"Return the list of words in alphabetical order."']
+[DEBUG] 开始评估，指令: "Return the list of words in alphabetical order."
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['same'] | pred='[is, lady, luck, say, they, to]' | score=0.0000
+[PRED 1] gold=['same'] | pred="['a', 'cheese', 'loaf', 'meat', 'of']" | score=0.0000
+[PRED 2] gold=['not the same'] | pred="dress, the, victim's, windows, wounds" | score=0.0000
+[PRED 3] gold=['same'] | pred='here is the list of words in alphabetical order:\n\n1. better\n2. is\n3. it\n4. no\n5. now\n6. right\n7. than\n8. there\n9. time\n10. to\n11. up\n12. worked' | score=0.0000
+[PRED 4] gold=['not the same'] | pred='here is the list of words in alphabetical order:\n\nago, appear, appeared, court, had, he, homo, in, last, millions, month, of, sapiens, to, years' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061139__em__Return_the_list_of_words_in_alphabetical__4e78717d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['same'] | pred='amazed apparition at h natives of prescott spaniards stranger sudden the this were white william' | score=0.0000
+[PRED 1] gold=['same'] | pred='a centimetre change is length of per the unit volume' | score=0.0000
+[PRED 2] gold=['not the same'] | pred='always before cloth exercising i my muscles of out piece stretch stretch that' | score=0.0000
+[PRED 3] gold=['not the same'] | pred='a and case case consists door lessons of studies teaching the theory' | score=0.0000
+[PRED 4] gold=['same'] | pred='a all enough for guests not of saddle seat seats the there were' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061218__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: return
+Output: same
+
+Input: Sentence 1: Retrieve the data from the system. Sentence 2: Recover the lost files. Word: retrieve
+Output' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Move the box. Sentence 2: Come on, let's move it. Word: move
+Output: same' -> 强制判为 0.0 分
+Instruction: ['Only the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Only the answer, without any explanation, numbering, or conversational text.
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['same'] | pred='synonym' | score=0.0000
+[PRED 1] gold=['not the same'] | pred='give' | score=0.0000
+[PRED 2] gold=['same'] | pred='a threat, the dirty dishes from the table' | score=0.0000
+[PRED 3] gold=['same'] | pred='tow is flax with short staple. staple fibers vary widely in length.' | score=0.0000
+[PRED 4] gold=['same'] | pred='up' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061254__em__Only_the_answer__without_any_explanation__8ac79e18.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Here are some examples of good instructions:
+
+* 'Sort the words alphabetically.' Output: sorted
+* 'Find the synonym. Return: synonym'
+
+
+* 'Sort the words alphabetically.' Output: sorted
+* 'Find the synonym. Return: synonym'' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: sort
+Output: same
+Input: Sentence 1: Count the heads. Sentence 2: Tally the score. Word: count
+Output: same
+Input: Sentence' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: synonym
+Output: same' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: A river runs through it. Sentence 2: The river flows through it. Word: river
+Output: same' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='return the part of speech of the word "devotion" in each sentence.' | score=0.0000
+[PRED 1] gold=['not the same'] | pred='return the number of sentences that contain the word "way".' | score=0.0000
+[PRED 2] gold=['same'] | pred='return the sentence number that contains the word "cold" used as a noun.' | score=0.0000
+[PRED 3] gold=['not the same'] | pred='identify the sentences where the word "keep" is used and return them.' | score=0.0000
+[PRED 4] gold=['same'] | pred='return the number of sentences in which the word "convert" is used in the active voice.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061337__em__Write_a_clear__imperative_instruction_fo__894c13a1.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: synonym
+Output: same
+
+Input: Sentence 1: Place the words in a dictionary. Sentence 2: Look up the definitions. Word: definitions
+Output: same' -> 强制判为 0.0 分
+Instruction: ['"Return the list of words with \'move\' as the first word and \'draw\' as the second word, separated by a space."']
+[DEBUG] 开始评估，指令: "Return the list of words with 'move' as the first word and 'draw' as the second word, separated by a space."
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='[]' | score=0.0000
+[PRED 1] gold=['not the same'] | pred='[] (empty list, since no sentences match the specified pattern)' | score=0.0000
+[PRED 2] gold=['same'] | pred='move collector draw' | score=0.0000
+[PRED 3] gold=['not the same'] | pred='move draw' | score=0.0000
+[PRED 4] gold=['same'] | pred='[]' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061417__em__Return_the_list_of_words_with__move__as___f1ad7319.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: sort
+Output: same
+Input: Sentence 1: Find the antonym. Sentence 2: Find the opposite. Word: find
+Output: same' -> 强制判为 0.0 分
+Instruction: ["'Move the words to the right column. Output only the column-separated list.'"]
+[DEBUG] 开始评估，指令: 'Move the words to the right column. Output only the column-separated list.'
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='sentence 1: the soup, sentence 2: emotions' | score=0.0000
+[PRED 1] gold=['same'] | pred='please  | develop\nthis  | \nroll  | \nof  | \nfilm  | \nfor  | \nme  |' | score=0.0000
+[PRED 2] gold=['not the same'] | pred='sentence 1: what do we  here? | sentence 2: a lover.' | score=0.0000
+[PRED 3] gold=['same'] | pred='uncork | the french wine, a bottle of wine.' | score=0.0000
+[PRED 4] gold=['same'] | pred="the book had an important  | on my thinking.\nhis friend's opinion had an  | on his decision." | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061459__em__Move_the_words_to_the_right_column._Outp__97b610d7.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["Clearly, I need to provide a specific instruction for the task at hand. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space"]
+[DEBUG] 开始评估，指令: Clearly, I need to provide a specific instruction for the task at hand. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='keep' | score=0.0000
+[PRED 1] gold=['same'] | pred='make' | score=0.0000
+[PRED 2] gold=['not the same'] | pred='play' | score=0.0000
+[PRED 3] gold=['same'] | pred='spring' | score=0.0000
+[PRED 4] gold=['not the same'] | pred='run' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061524__em__Clearly__I_need_to_provide_a_specific_in__d7a50ee4.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: sort
+Output: same' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: space-separated list, synonym. Output: same, same
+Input: Sentence 1: Return just the word. Sentence 2: Find the definition. Word: definition' -> 强制判为 0.0 分
+Instruction: ["The assistant requires a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: The assistant requires a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='2' | score=0.0000
+[PRED 1] gold=['not the same'] | pred='true true' | score=0.0000
+[PRED 2] gold=['same'] | pred='true true' | score=0.0000
+[PRED 3] gold=['same'] | pred='sentence 1: 1. i 2. went 3. to 4. a 5. lot 6. of 7. trouble. sentence 2: 1. he 2. won 3. without 4. any 5. trouble.' | score=0.0000
+[PRED 4] gold=['same'] | pred='a corn field a field' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061603__em__The_assistant_requires_a_clear__imperati__3f396f13.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Best initial point: 0.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 0.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][06:16:04] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[06:16:05] INFO [PROFILE] GP fit: 0.819s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:16:05] INFO Iter 0 best_value=0.00000 gp_loss=2033.14752
+[06:16:06] INFO [PROFILE] Acquisition: 0.752s
+[06:16:42] INFO [PROFILE] LLM eval candidate: 35.960s
+[06:16:42] INFO Best value so far: 0.00000
+Bayes iterations:  20%|██        | 1/5 [00:37<02:30, 37.57s/it][06:16:42] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[06:16:42] INFO [PROFILE] GP fit: 0.592s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:16:42] INFO Iter 1 best_value=0.00000 gp_loss=2036.97487
+[06:16:43] INFO [PROFILE] Acquisition: 0.594s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:16:45] INFO [PROFILE] LLM eval candidate: 2.396s
+[06:16:45] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:41<00:52, 17.58s/it][06:16:45] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[06:16:46] INFO [PROFILE] GP fit: 1.070s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:16:46] INFO Iter 2 best_value=0.00000 gp_loss=2036.97487
+[06:16:47] INFO [PROFILE] Acquisition: 0.576s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:16:49] INFO [PROFILE] LLM eval candidate: 2.249s
+[06:16:49] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [00:45<00:22, 11.35s/it][06:16:49] INFO [Iteration 3] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[06:16:50] INFO [PROFILE] GP fit: 0.736s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:16:50] INFO Iter 3 best_value=0.00000 gp_loss=2036.97487
+[06:16:51] INFO [PROFILE] Acquisition: 0.591s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:17:38] INFO [PROFILE] LLM eval candidate: 47.340s
+[06:17:38] INFO Best value so far: 0.00000
+Bayes iterations:  80%|████████  | 4/5 [01:33<00:26, 26.09s/it][06:17:38] INFO [Iteration 4] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[06:17:38] INFO [PROFILE] GP fit: 0.285s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:17:38] INFO Iter 4 best_value=0.00000 gp_loss=2040.66112
+[06:17:39] INFO [PROFILE] Acquisition: 0.596s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:17:41] INFO [PROFILE] LLM eval candidate: 2.356s
+[06:17:41] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [01:37<00:00, 17.85s/it]Bayes iterations: 100%|██████████| 5/5 [01:37<00:00, 19.40s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Find the antonym. Return just the word."']
+[DEBUG] 开始评估，指令: "Find the antonym. Return just the word."
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['not the same'] | pred='death' | score=0.0000
+[PRED 1] gold=['same'] | pred='slice' | score=0.0000
+[PRED 2] gold=['same'] | pred='leave' | score=0.0000
+[PRED 3] gold=['same'] | pred='blindness' | score=0.0000
+[PRED 4] gold=['same'] | pred='dull' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061642__em__Find_the_antonym._Return_just_the_word.__07d4668f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Here are some examples of a task:
+
+Input: Sentence 1: To move in a matter. Sentence 2: Come on guys, let's move: there's work to do! Word: move
+Output: same
+
+Input: Sentence 1: Draw on a cig' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Draw on a cigarette. Sentence 2: Draw wire. Word: draw
+Output: not the same
+
+Input: Sentence 1: His instructions deliberately gave them the wrong set. Sentence 2: A set of tools. Word: set' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Sort the words alphabetically. Output only the space-separated list. Find the synonym. Return just the word.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list. Find the synonym. Return just the word.
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['same'] | pred='a arms port rifle' | score=0.0000
+[PRED 1] gold=['same'] | pred='best costume for he prize the to we wore won \n\ndisguise' | score=0.0000
+[PRED 2] gold=['not the same'] | pred='here is the output:\n\nfade shrink tendency\npropensity' | score=0.0000
+[PRED 3] gold=['not the same'] | pred="air by fresh go if i need some spare the time to you've" | score=0.0000
+[PRED 4] gold=['same'] | pred='atomic charm endearing his is most of particles physical properties study the' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_in_context_20251201_061738__em__Sort_the_words_alphabetically._Output_on__690e1afa.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym. Word: sort
+Output: return only the space-separated list
+
+
+ A
+
+
+Input: Sentence 1: Return the package. Sentence 2: Mail' -> 强制判为 0.0 分
+Evaluate on test data...
+Best instruction is:
+['Sort the words alphabetically. Output only the space-separated list. Find the synonym. Return just the word.']
+The final instruction set is:
+{"'Return the output only.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The task is to provide a clear and concise instruction for the user.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the list of words in alphabetical order."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Only the answer, without any explanation, numbering, or conversational text.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the list of words with \'move\' as the first word and \'draw\' as the second word, separated by a space."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "'Move the words to the right column. Output only the column-separated list.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Clearly, I need to provide a specific instruction for the task at hand. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "The assistant requires a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Find the antonym. Return just the word."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list. Find the synonym. Return just the word.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "word_in_context"...
+Using metric "em" for task "word_in_context"...
+[PRED 0] gold=['same'] | pred='here is the output:\n\naptness example follow iron men of of rust the to' | score=0.0000
+[PRED 1] gold=['same'] | pred='down gauntlet the threw took up \n\nchallenge' | score=0.0000
+[PRED 2] gold=['same'] | pred='food french i love \naffection' | score=0.0000
+[PRED 3] gold=['same'] | pred='fold flaps folded newspaper open the tony up' | score=0.0000
+[PRED 4] gold=['same'] | pred='am after australia children contact contacted emigrated he his i my never sister to trying' | score=0.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/word_in_context_20251201_062106__em__Sort_the_words_alphabetically._Output_on__690e1afa.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.0

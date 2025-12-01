@@ -1,0 +1,236 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.05s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.64s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+[FILTER] 拦截到偷懒指令: 'Input: Sort the words alphabetically. Output only the space-separated list.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'A' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: john' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['said'] | pred='big, elephants, from, gave, has, he, man, ny, often, peanuts, said, that, the, to' | score=0.0000
+[PRED 1] gold=['became blond'] | pred='a, became, blond, daniel' | score=0.0000
+[PRED 2] gold=['he'] | pred='always, deep, eats, fried, he, muffins' | score=0.0000
+[PRED 3] gold=['them the'] | pred='duty, made, meetings, miss, never, the, them, weekly' | score=0.0000
+[PRED 4] gold=['one'] | pred='force, i, marry, no, one, to, will, you' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_044721__es__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['to the'] | pred='expect i results see soon the to' | score=0.0000
+[PRED 1] gold=['with'] | pred='hair i long of physics saw student the with' | score=0.0000
+[PRED 2] gold=['black'] | pred='always black clad in she was' | score=0.0000
+[PRED 3] gold=['any'] | pred='a any doctor tell that the will you' | score=0.0000
+[PRED 4] gold=['her'] | pred='cried dry eyes her philippa' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_044757__es__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Romeo sent letters to Juliet. [s]
+Output: sent
+
+Input: John made Kim a great doll. [g]
+Output: great
+
+Input: These are the things for which to be thankful. [a]
+Output: are
+
+Input: We persuaded' -> 强制判为 0.0 分
+Instruction: ['The instruction is to return the answer without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: The instruction is to return the answer without any explanation, numbering, or conversational text.
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['a amounts'] | pred='five thousand dollars' | score=0.0000
+[PRED 1] gold=['free'] | pred='aphrodite may quickly free the animals.' | score=0.0000
+[PRED 2] gold=['heather'] | pred='heather' | score=1.0000
+[PRED 3] gold=['worried when'] | pred='whom' | score=0.0000
+[PRED 4] gold=['resources'] | pred='true' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_044829__es__The_instruction_is_to_return_the_answer___d43ab0d1.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sort the words alphabetically. Output only the space-separated list.
+Input: Find the synonym. Return just the word.' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically.\n\n\nFind the synonym.\n\n\nReturn just the word.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+
+
+Find the synonym.
+
+
+Return just the word.
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['vampires vegetarian'] | pred='the word "v" stands for "vegetarian". here are the alphabetical sort and the synonym:\n\nalphabetical sort: become, have, many, vampires, vegetarian\n\nsynonym for "vegetarian": vegan' | score=0.0000
+[PRED 1] gold=['the'] | pred='enthusiasm' | score=0.0000
+[PRED 2] gold=['they talked the'] | pred='the' | score=0.0000
+[PRED 3] gold=['is'] | pred='here are the words in alphabetical order:\n\n\n* dana\n* either\n* going\n* is\n* lead\n* lee\n* or\n* parade\n* the\n* to' | score=0.0000
+[PRED 4] gold=['careful'] | pred='cautious' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_044910__es__Sort_the_words_alphabetically._Find_the___6b239760.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Mary appreciates only John and herself. [j]
+Output: john' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Clear and concise instructions for this task:\n\n1. Sort the input alphabetically.\n2. Find the synonym.\n3. Return the word.']
+[DEBUG] 开始评估，指令: Clear and concise instructions for this task:
+
+1. Sort the input alphabetically.
+2. Find the synonym.
+3. Return the word.
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['his'] | pred='here is the output:\n\nhue' | score=0.0000
+[PRED 1] gold=['where'] | pred="here's the output:\n\nwhen" | score=0.0000
+[PRED 2] gold=['that'] | pred='here is the output:\n\nbehaved' | score=0.0000
+[PRED 3] gold=['party'] | pred='here are the instructions followed:\n\n1. sort the input alphabetically: \nabout, and, brenda, haggled, molly, party, the\n\n2. find the synonym for the word in brackets, which is "[p]" for "party". \na synonym for "party" is "gathering".\n\n3. return the word: \ngathering' | score=0.0000
+[PRED 4] gold=['edmund'] | pred='here are the instructions followed:\n\n1. sort the input alphabetically: \n   but, crawford, edmund, fanny, fanny, henry, loved, loved, loved\n\n2. find the synonym of "loved" starting with "e": \n   endear\n\n3. return the word: \n   endear' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045021__es__Clear_and_concise_instructions_for_this___791b06a6.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Clear, concise, and specific instructions for the assistant to follow:\n\n1. "Sort the words alphabetically and return only the answer, without any explanation, numbering, or conversational text."\n2. "Find the synonym and return just the word."']
+[DEBUG] 开始评估，指令: Clear, concise, and specific instructions for the assistant to follow:
+
+1. "Sort the words alphabetically and return only the answer, without any explanation, numbering, or conversational text."
+2. "Find the synonym and return just the word."
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['put'] | pred='loot' | score=0.0000
+[PRED 1] gold=['the'] | pred='hints' | score=0.0000
+[PRED 2] gold=['who what whom'] | pred='donation' | score=0.0000
+[PRED 3] gold=['never'] | pred='trust' | score=0.0000
+[PRED 4] gold=['are'] | pred='contact' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045051__es__Clear__concise__and_specific_instruction__328d5f6f.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sort the words alphabetically. Output only the space-separated list.' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ["'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['people'] | pred='each five in people room sleep we' | score=0.0000
+[PRED 1] gold=['to'] | pred='a considered is mary never question to whether win' | score=0.0000
+[PRED 2] gold=['student'] | pred='big hair in library long of physics student the with' | score=0.0000
+[PRED 3] gold=['were'] | pred='abolished all election in of rights special the voting were' | score=0.0000
+[PRED 4] gold=['brother'] | pred='brother lives my near strasbourg' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045125__es__Sort_the_words_alphabetically._Output_on__3a2979d5.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Please sort the words alphabetically and return only the space-separated list.']
+[DEBUG] 开始评估，指令: Please sort the words alphabetically and return only the space-separated list.
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['this'] | pred='here is the sorted list of words:\n\nin john lives seoul smith this' | score=0.0000
+[PRED 1] gold=['choir church'] | pred='a choir church in sang the' | score=0.0000
+[PRED 2] gold=['philippa'] | pred='cried dry her eyes philippa' | score=0.0000
+[PRED 3] gold=['poison'] | pred='did drink poison the you' | score=0.0000
+[PRED 4] gold=['with'] | pred='decorated jeweller name ring the the with' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045206__es__Please_sort_the_words_alphabetically_and__9f16545e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['cause called'] | pred='all and anxiety are called cause dreams experts great nightmares stress that' | score=0.0000
+[PRED 1] gold=['the'] | pred='bathtub bill broke into pieces the' | score=0.0000
+[PRED 2] gold=['been'] | pred='been cuneiform gilgamesh has not reading tablets the' | score=0.0000
+[PRED 3] gold=['cave'] | pred='an ancient cave found in is there this treasure trove was' | score=0.0000
+[PRED 4] gold=['books'] | pred='a books long read take three time to two very' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045241__es__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: '"Input: John and Mary are two people. Output: john."' -> 强制判为 0.0 分
+Instruction: ['"Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['would'] | pred='return "true"' | score=0.0000
+[PRED 1] gold=['know'] | pred='return the letter that is enclosed in the square brackets.' | score=0.0000
+[PRED 2] gold=['sells'] | pred='return the names of the people mentioned in the sentence.' | score=0.0000
+[PRED 3] gold=['with'] | pred='return the part of speech of the word in brackets.' | score=0.0000
+[PRED 4] gold=['the taken'] | pred='return the verb tense of the given sentence.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045315__es__Write_a_clear__imperative_instruction_fo__894c13a1.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['clear, specific']
+[DEBUG] 开始评估，指令: clear, specific
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['to the'] | pred='john convinced bill to cook the rice in the kitchen.' | score=0.0000
+[PRED 1] gold=['is'] | pred='it is likely that patrick left.' | score=0.0000
+[PRED 2] gold=['waved'] | pred='the flag waved.' | score=0.0000
+[PRED 3] gold=['light'] | pred='he turned off the ligth.' | score=0.0000
+[PRED 4] gold=['money'] | pred='a million' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045348__es__clear__specific__b260bccf.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: These are the things for which to be thankful. [a]
+Output: are
+
+Input: We persuaded the dentist to examine us. [w]
+Output: we
+Input: Each student speaks two languages. [t]
+Output: two
+Input: Being honest is' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['clear, direct, explicit, unambiguous, unmistakable, unquestionability, undeniability, incontrovertible, unquestionability, unquestionability, incontrovertible.']
+[DEBUG] 开始评估，指令: clear, direct, explicit, unambiguous, unmistakable, unquestionability, undeniability, incontrovertible, unquestionability, unquestionability, incontrovertible.
+Using metric "es" for task "orthography_starts_with"...
+Using metric "es" for task "orthography_starts_with"...
+[PRED 0] gold=['down'] | pred='the instruction to provide a clear, direct, explicit, unambiguous, unmistakable, unquestionable, undeniable, incontrovertible, and unquestionable statement is not applicable to the given input.' | score=0.0000
+[PRED 1] gold=['likely'] | pred='it is certain.' | score=0.0000
+[PRED 2] gold=['from found'] | pred='the sentence is false.' | score=0.0000
+[PRED 3] gold=['him'] | pred='the only ones he had shown him.' | score=0.0000
+[PRED 4] gold=['the'] | pred='half of the year is not dark and wintry.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/orthography_starts_with_20251201_045437__es__clear__direct__explicit__unambiguous__un__36b89f1d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Best initial point: 0.150
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][04:54:38] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+[04:54:38] INFO [PROFILE] GP fit: 0.706s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[WARNING][Iteration 0] custom kernel GP fit failed, falling back to baseline. Error: All attempts to fit the model have failed.
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 879, in run
+    output = gp_model(X_train)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py", line 345, in __call__
+    ) = self.prediction_strategy.exact_prediction(full_mean, full_covar)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 324, in exact_prediction
+    self.exact_predictive_mean(test_mean, test_train_covar),
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 349, in exact_predictive_mean
+    res = (test_train_covar @ mean_cache.unsqueeze(-1)).squeeze(-1)
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: double != float

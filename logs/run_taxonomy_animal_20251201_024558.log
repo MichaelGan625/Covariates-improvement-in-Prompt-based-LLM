@@ -1,0 +1,350 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.28s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.18s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Output only the final word in the sequence.'"]
+[DEBUG] 开始评估，指令: 'Output only the final word in the sequence.'
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['duck, hippo, elephant, penguin'] | pred='pea' | score=0.0000
+[PRED 1] gold=['zebra, mouse, penguin'] | pred='truck' | score=0.0000
+[PRED 2] gold=['bee, butterfly, fly'] | pred='bee' | score=0.0000
+[PRED 3] gold=['tortoise, snail, bee'] | pred='teacher' | score=0.0000
+[PRED 4] gold=['panda, sheep, donkey, bat'] | pred='panda' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_024642__es__Output_only_the_final_word_in_the_sequen__989bc85e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Return the answer without any explanation."']
+[DEBUG] 开始评估，指令: "Return the answer without any explanation."
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['lizard, horse, monkey, octopus'] | pred='lizard' | score=0.0000
+[PRED 1] gold=['panda, camel, sheep, dolphin'] | pred='panda, sheep, camel' | score=0.0000
+[PRED 2] gold=['sheep, whale, panda, spider'] | pred='nurse, mechanic' | score=0.0000
+[PRED 3] gold=['tortoise, goat, camel, swan'] | pred='none are mammals except camel, goat' | score=0.0000
+[PRED 4] gold=['penguin, butterfly, fly'] | pred='penguin' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_024707__es__Return_the_answer_without_any_explanatio__779a61c5.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: elephant, jacket, designer, jellyfish, gray, bee
+Output: bee, jellyfish, elephant' -> 强制判为 0.0 分
+Instruction: ['Output only the sorted list of animal names.']
+[DEBUG] 开始评估，指令: Output only the sorted list of animal names.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['panda, donkey, fly'] | pred='donkey, fly, panda' | score=1.0000
+[PRED 1] gold=['camel, elephant, snail'] | pred='camel, elephant, snail' | score=1.0000
+[PRED 2] gold=['parrot, elephant, hippo'] | pred='elephant, hippo, parrot' | score=1.0000
+[PRED 3] gold=['bat, butterfly, mouse'] | pred='bat, butterfly, mouse' | score=1.0000
+[PRED 4] gold=['elephant, donkey, penguin, snake'] | pred='donkey, elephant, penguin, snake' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_024736__es__Output_only_the_sorted_list_of_animal_na__4d247aab.tsv
+Dev loss: 0.9. Dev perf: 0.9. Best dev perf: 0.9
+********* Done *********
+Instruction: ['Please provide the input and output pairs for the task, and I will return the requested output without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Please provide the input and output pairs for the task, and I will return the requested output without any explanation, numbering, or conversational text.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['snake, hippo, zebra, shark'] | pred='swimsuit, shark' | score=0.0000
+[PRED 1] gold=['frog, spider, zebra, butterfly'] | pred='animal, clothing, animal, profession, animal, animal, profession' | score=0.0000
+[PRED 2] gold=['monkey, bee, snail'] | pred='bee' | score=0.0000
+[PRED 3] gold=['duck, mouse, panda'] | pred='panda, mouse, duck' | score=1.0000
+[PRED 4] gold=['giraffe, cat, butterfly, goat'] | pred='butterfly, cat, goat, giraffe' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_024806__es__Please_provide_the_input_and_output_pair__7b60b48f.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.9
+********* Done *********
+Instruction: ['The instruction must be clear and imperative. The assistant must return only the answer, without any explanation, numbering, or conversational text. The instruction must tell the assistant to return only the answer, without any explanation, numbering, or conversational text. The instruction must be clear and imperative. The assistant']
+[DEBUG] 开始评估，指令: The instruction must be clear and imperative. The assistant must return only the answer, without any explanation, numbering, or conversational text. The instruction must tell the assistant to return only the answer, without any explanation, numbering, or conversational text. The instruction must be clear and imperative. The assistant
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['jellyfish, penguin, monkey'] | pred='jellyfish' | score=0.0000
+[PRED 1] gold=['dolphin, spider, bee'] | pred='gray' | score=0.0000
+[PRED 2] gold=['giraffe, dolphin, shark, tortoise'] | pred='dolphin, tortoise, giraffe, shark' | score=1.0000
+[PRED 3] gold=['hippo, jellyfish, panda, zebra'] | pred='panda' | score=0.0000
+[PRED 4] gold=['duck, spider, tiger'] | pred='spider, jacket, tiger, duck, tractor, artist' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_024832__es__The_instruction_must_be_clear_and_impera__351806af.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.9
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: horse, camel, snail, frog, chicken
+Output: chicken, camel, horse, frog, snail' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: pink, shark, giraffe, truck, duck, monkey
+Output: giraffe, monkey, shark, duck, truck
+
+Input: mango, camel, chicken, sock, frog, donkey
+Output: donkey' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: camel, horse, snail, chicken, duck, monkey
+Output: donkey, chicken, camel, frog, monkey
+Input: mango, shark, duck, monkey, truck
+Output: giraffe, monkey, shark' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: giraffe, shark, duck, monkey, pink, truck
+Output: giraffe, monkey, shark, duck, pink, truck' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['goat, giraffe, cat'] | pred='cat cook goat giraffe milk' | score=0.0000
+[PRED 1] gold=['snail, octopus, mouse'] | pred='car mouse octopus rice snail teacher' | score=0.0000
+[PRED 2] gold=['bat, hippo, mouse, horse'] | pred='bat bus hippo horse mouse orange pear' | score=0.0000
+[PRED 3] gold=['whale, butterfly, octopus'] | pred='butterfly businessman octopus pink whale white' | score=0.0000
+[PRED 4] gold=['spider, parrot, bat'] | pred='bat bus orange parrot spider' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_024904__es__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: pink, shark, giraffe, duck, monkey
+Output: giraffe, monkey, shark, duck' -> 强制判为 0.0 分
+Instruction: ['"Return the word \'giraffe\'."']
+[DEBUG] 开始评估，指令: "Return the word 'giraffe'."
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['chicken, monkey, hippo, bat'] | pred='giraffe' | score=0.0000
+[PRED 1] gold=['frog, bat, donkey'] | pred='giraffe' | score=0.0000
+[PRED 2] gold=['butterfly, snake, rabbit, mouse'] | pred='giraffe' | score=0.0000
+[PRED 3] gold=['camel, chicken, horse, duck'] | pred='giraffe' | score=0.0000
+[PRED 4] gold=['cat, spider, bat'] | pred='giraffe' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_024931__es__Return_the_word__giraffe_.__1903e662.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: duck, pig, horse, cow, sheep, chicken
+Output: chicken, sheep, cow, horse, duck' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: pink, shark, giraffe, truck, duck, monkey
+Output: giraffe, monkey, shark, duck, truck
+
+Input: mango, camel, chicken, sock, frog, donkey
+Output: donkey' -> 强制判为 0.0 分
+Instruction: ['Please provide a clear and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Please provide a clear and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['tortoise, jellyfish, horse'] | pred='tortoise' | score=0.0000
+[PRED 1] gold=['shark, whale, penguin'] | pred='helicopter' | score=0.0000
+[PRED 2] gold=['cat, chicken, penguin'] | pred='return the nouns that are not animals.' | score=0.0000
+[PRED 3] gold=['spider, panda, chicken'] | pred='return the longest word from the given list.' | score=0.0000
+[PRED 4] gold=['butterfly, cat, zebra, parrot'] | pred='return the items that are not animals.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025003__es__Please_provide_a_clear_and_imperative_in__b10bbb24.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.9
+********* Done *********
+Instruction: ['Output the modified word list.']
+[DEBUG] 开始评估，指令: Output the modified word list.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['camel, rabbit, lion'] | pred='here is the modified word list with each word capitalized:\n\ngray, rabbit, green, camel, train, lion' | score=0.0000
+[PRED 1] gold=['octopus, panda, duck, parrot'] | pred='truckie, duckie, artista, octopie, parrotie, pandaie' | score=0.0000
+[PRED 2] gold=['bee, rabbit, lizard, frog'] | pred="here is the modified word list with each word's first letter capitalized:\n\nlizard, bee, scarf, frog, orange, rabbit" | score=0.0000
+[PRED 3] gold=['fly, octopus, rabbit, spider'] | pred='fly, octopuses, mechanics, spiders, swimsuits, skirts, rabbits' | score=0.0000
+[PRED 4] gold=['tortoise, hippo, monkey, fly'] | pred='here is the modified word list:\n\ncook -> cooker\nfly -> flyer\nmonkey -> monkeys\nhippo -> hippos\nshoe -> shoes\ntortoise -> tortoises\ndoctor -> doctors' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025047__es__Output_the_modified_word_list.__1c569634.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['giraffe, goat, penguin, swan'] | pred='sort the words alphabetically. output only the space-separated list.' | score=0.0000
+[PRED 1] gold=['panda, spider, chicken, shark'] | pred='list the words in alphabetical order, separated by commas.' | score=0.0000
+[PRED 2] gold=['horse, penguin, dolphin, hippo'] | pred='sort the words alphabetically. output only the space-separated list.' | score=0.0000
+[PRED 3] gold=['goat, frog, donkey'] | pred='donkey frog goat shirt yellow' | score=0.0000
+[PRED 4] gold=['tiger, zebra, spider'] | pred='sort the words alphabetically. output only the comma-separated list.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025125__es__Please_provide_a_clear__imperative_instr__1db032cd.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+Instruction: ['Output only the alphabetized list of words.']
+[DEBUG] 开始评估，指令: Output only the alphabetized list of words.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['donkey, rabbit, panda'] | pred='chocolate, donkey, panda, pajamas, rabbit' | score=0.0000
+[PRED 1] gold=['bee, hippo, tortoise, frog'] | pred='bee, frog, green, hippo, orange, tortoise' | score=0.0000
+[PRED 2] gold=['hippo, snail, bee, cat'] | pred='bee, burger, cat, green, hippo, snail, waiter' | score=0.0000
+[PRED 3] gold=['duck, jellyfish, donkey, spider'] | pred='car, donkey, duck, gold, jellyfish, spider' | score=0.0000
+[PRED 4] gold=['penguin, whale, duck, cat'] | pred='cat, dress, duck, penguin, scarf, whale' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025201__es__Output_only_the_alphabetized_list_of_wor__d456e2f2.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['zebra, monkey, cat'] | pred='bread, businesswoman, cat, monkey, white, zebra' | score=0.0000
+[PRED 1] gold=['octopus, dolphin, swan, lizard'] | pred='carrot, dolphin, honey, lizard, octopus, swan' | score=0.0000
+[PRED 2] gold=['butterfly, tiger, rabbit, elephant'] | pred='belt, butterfly, elephant, photographer, rabbit, teacher, tiger' | score=0.0000
+[PRED 3] gold=['panda, snake, giraffe'] | pred='giraffe, hat, panda, snake, spaceship, train' | score=0.0000
+[PRED 4] gold=['rabbit, spider, whale, parrot'] | pred='motorway, parrot, rabbit, sock, spider, whale' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025234__es__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['rabbit, chicken, zebra'] | pred='actor chicken kiwi rabbit truck zebra' | score=0.0000
+[PRED 1] gold=['butterfly, bee, frog, bat'] | pred='bat bee belt butterfly frog helicopter' | score=0.0000
+[PRED 2] gold=['dolphin, bat, sheep'] | pred='bat dolphin green sheep taxi' | score=0.0000
+[PRED 3] gold=['bat, monkey, hippo, goat'] | pred='artist bat goat hippo lemon monkey' | score=0.0000
+[PRED 4] gold=['elephant, horse, monkey'] | pred='candy elephant helicopter horse monkey' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025305__es__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: "Return the answer."
+Output: "give the result."
+
+
+* "Provide the solution."
+* "Offer the answer."
+* "Supply the information."
+* "Furnish the data."
+
+* "Present' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: giraffe, monkey, shark, duck, camel
+Output: giraffe, monkey, shark, duck, camel' -> 强制判为 0.0 分
+Instruction: ["I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?"]
+[DEBUG] 开始评估，指令: I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['swan, penguin, tiger, horse'] | pred="it seems like you've provided a list of words, but i'm not sure what you'd like me to do with them. are you looking for categorization, a story, or something else? could you please provide more context or clarify your question?" | score=0.0000
+[PRED 1] gold=['lion, whale, mouse, jellyfish'] | pred="it seems like you've provided a list of words, but i'm not sure what you're asking me to do with them. are you looking for a connection between these words, or perhaps wanting me to categorize them in some way? could you please provide more context or clarify your question?" | score=0.0000
+[PRED 2] gold=['dolphin, bat, sheep'] | pred="it seems like you've provided a list of words, but i'm not sure what you're asking me to do with them. could you please provide more context or clarify your question?" | score=0.0000
+[PRED 3] gold=['swan, duck, lizard'] | pred="it seems like you've provided a list of words, but i'm not sure what you'd like me to do with them. could you please provide more context or clarify what you're asking for? are you looking for a story, a categorization, or something else?" | score=0.0000
+[PRED 4] gold=['mouse, giraffe, frog'] | pred="it seems like you've listed five words, but i'm not sure what you'd like me to do with them. are you looking for a connection between these words, or perhaps a story that uses all of them? could you please provide more context or clarify what you're trying to achieve?" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025420__es__I_m_sorry__I_m_not_sure_what_you_re_aski__a68b33ff.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+Best initial point: 0.900
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][02:54:21] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[02:54:24] INFO [PROFILE] GP fit: 2.725s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[02:54:24] INFO Iter 0 best_value=4.54582 gp_loss=-9658.88206
+[02:54:24] INFO [PROFILE] Acquisition: 0.637s
+[02:55:11] INFO [PROFILE] LLM eval candidate: 46.771s
+[02:55:11] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  20%|██        | 1/5 [00:50<03:20, 50.16s/it][02:55:11] INFO [Iteration 1] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[02:55:14] INFO [PROFILE] GP fit: 3.484s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[02:55:14] INFO Iter 1 best_value=4.54582 gp_loss=-9658.88206
+[02:55:15] INFO [PROFILE] Acquisition: 0.625s
+[02:55:17] INFO [PROFILE] LLM eval candidate: 2.242s
+[02:55:17] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:56<01:13, 24.40s/it][02:55:17] INFO [Iteration 2] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[02:55:20] INFO [PROFILE] GP fit: 2.896s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[02:55:20] INFO Iter 2 best_value=4.54582 gp_loss=-9658.88206
+[02:55:21] INFO [PROFILE] Acquisition: 0.807s
+[02:56:02] INFO [PROFILE] LLM eval candidate: 41.333s
+[02:56:02] INFO Best value so far: 0.90000
+Bayes iterations:  60%|██████    | 3/5 [01:41<01:07, 33.84s/it][02:56:02] INFO [Iteration 3] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[02:56:05] INFO [PROFILE] GP fit: 2.941s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[02:56:05] INFO Iter 3 best_value=4.64274 gp_loss=-6683.95105
+[02:56:06] INFO [PROFILE] Acquisition: 0.669s
+[02:56:08] INFO [PROFILE] LLM eval candidate: 1.637s
+[02:56:08] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  80%|████████  | 4/5 [01:46<00:22, 22.56s/it][02:56:08] INFO [Iteration 4] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[02:56:11] INFO [PROFILE] GP fit: 3.004s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[02:56:11] INFO Iter 4 best_value=4.64274 gp_loss=-6683.95105
+[02:56:11] INFO [PROFILE] Acquisition: 0.730s
+[02:56:46] INFO [PROFILE] LLM eval candidate: 34.370s
+[02:56:46] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [02:25<00:00, 28.18s/it]Bayes iterations: 100%|██████████| 5/5 [02:25<00:00, 29.00s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['As an AI language model, I do not have personal preferences or opinions. However, I can provide you with some general guidelines for writing clear and effective instructions.\n\nTo write a clear, imperative instruction, consider the following guidelines:\n\n1. Use simple and concise language']
+[DEBUG] 开始评估，指令: As an AI language model, I do not have personal preferences or opinions. However, I can provide you with some general guidelines for writing clear and effective instructions.
+
+To write a clear, imperative instruction, consider the following guidelines:
+
+1. Use simple and concise language
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['snail, octopus, mouse'] | pred='use imperative verbs and focus on one action per instruction. \n\nhere are the imperative instructions for the given inputs:\n\n1. cook the rice.\n2. drive the car.\n3. eat the octopus.\n4. ask the teacher.\n5. feed the snail.\n6. catch the mouse.' | score=0.0000
+[PRED 1] gold=['frog, lion, tortoise, horse'] | pred='arrange the words in alphabetical order: cook, frog, green, horse, lion, taxi, tortoise' | score=0.0000
+[PRED 2] gold=['penguin, swan, horse'] | pred='list the nouns in alphabetical order: actor, brown, horse, orange, penguin, swan' | score=0.0000
+[PRED 3] gold=['butterfly, parrot, monkey'] | pred='here is a clear and concise instruction:\n\n"list the given words that are living things."' | score=0.0000
+[PRED 4] gold=['jellyfish, dolphin, penguin, hippo'] | pred='write the instruction using the word "brown". \n\nfor example: "use a brown pen to fill out the form."' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025511__es__As_an_AI_language_model__I_do_not_have_p__4118b559.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: pink, shark, giraffe, truck, duck, monkey
+Output: giraffe, monkey, shark, duck
+
+Input: mango, camel, chicken, sock, frog, donkey
+Output: donkey, chicken' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Output only the list of synonyms.']
+[DEBUG] 开始评估，指令: Output only the list of synonyms.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['parrot, camel, rabbit'] | pred='executive, bunny, pants, dromedary, instructor, bird' | score=0.0000
+[PRED 1] gold=['fly, whale, dolphin, goat'] | pred='soar, yellow, sheep, flapjack, porpoise, orca' | score=0.0000
+[PRED 2] gold=['snake, cat, octopus, zebra'] | pred='biscuit, vessel, feline, serpent, fruit, mollusk, equine' | score=0.0000
+[PRED 3] gold=['dolphin, chicken, horse, elephant'] | pred='steed, mount, equine, nag, coach, vehicle' | score=0.0000
+[PRED 4] gold=['butterfly, mouse, tortoise, duck'] | pred='here is the list of synonyms:\n\n* doctor: physician\n* butterfly: moth\n* carrot: parsnip\n* mouse: rodent\n* plane: aircraft\n* tortoise: turtle\n* duck: drake' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025602__es__Output_only_the_list_of_synonyms.__973b2610.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: '"Input: horse, snail, camel, penguin, chicken"
+Output: "chicken, penguin, snail, camel, horse"' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Too many requests in 1 hour. Try again later.']
+[DEBUG] 开始评估，指令: Too many requests in 1 hour. Try again later.
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['bat, lizard, dolphin'] | pred='no output, as the instruction is to try again later due to too many requests in 1 hour.' | score=0.0000
+[PRED 1] gold=['jellyfish, snake, lion, goat'] | pred='no result, as the instruction is to try again later due to too many requests in 1 hour.' | score=0.0000
+[PRED 2] gold=['cat, swan, mouse, giraffe'] | pred='cat' | score=0.0000
+[PRED 3] gold=['snail, snake, parrot'] | pred='animal, vehicle' | score=0.0000
+[PRED 4] gold=['panda, butterfly, cat, bat'] | pred='bat' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/taxonomy_animal_20251201_025646__es__Too_many_requests_in_1_hour._Try_again_l__381f5253.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.9
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['Output only the sorted list of animal names.']
+The final instruction set is:
+{"'Output only the final word in the sequence.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the answer without any explanation."': (0.1, array([[0., 0., 0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Output only the sorted list of animal names.': (0.9, array([[1., 1., 1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.]])), 'Please provide the input and output pairs for the task, and I will return the requested output without any explanation, numbering, or conversational text.': (0.15, array([[0., 0., 0., 1., 1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The instruction must be clear and imperative. The assistant must return only the answer, without any explanation, numbering, or conversational text. The instruction must tell the assistant to return only the answer, without any explanation, numbering, or conversational text. The instruction must be clear and imperative. The assistant': (0.25, array([[0., 0., 1., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0., 0., 0.,
+        1., 0., 1., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the word \'giraffe\'."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Please provide a clear and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Output the modified word list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Output only the alphabetized list of words.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically. Output only the space-separated list."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'As an AI language model, I do not have personal preferences or opinions. However, I can provide you with some general guidelines for writing clear and effective instructions.\n\nTo write a clear, imperative instruction, consider the following guidelines:\n\n1. Use simple and concise language': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Output only the list of synonyms.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Too many requests in 1 hour. Try again later.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "es" for task "taxonomy_animal"...
+Using metric "es" for task "taxonomy_animal"...
+[PRED 0] gold=['eagle, dog, crocodile, kangaroo'] | pred='crocodile, dog, eagle, kangaroo' | score=1.0000
+[PRED 1] gold=['dog, cow, bird'] | pred='bird, cow, dog' | score=1.0000
+[PRED 2] gold=['bear, bird, crocodile, kangaroo'] | pred='bear, bird, crocodile, kangaroo' | score=1.0000
+[PRED 3] gold=['dog, beetle, bear'] | pred='bear, beetle, dog' | score=1.0000
+[PRED 4] gold=['eagle, beetle, cow, dog'] | pred='beetle, cow, dog, eagle' | score=1.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/taxonomy_animal_20251201_025913__es__Output_only_the_sorted_list_of_animal_na__4d247aab.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.74

@@ -1,0 +1,379 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.32s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.95s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Translate the sentence. Return the translation.'"]
+[DEBUG] 开始评估，指令: 'Translate the sentence. Return the translation.'
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['cariño', 'archivo adjunto', 'ejecución', 'apego', 'afición'] | pred='anexo' | score=0.0000
+[PRED 1] gold=['baño', 'cuarto de baño', 'bañera', 'bañar'] | pred='bain' | score=0.0000
+[PRED 2] gold=['celebración'] | pred='fête' | score=0.0000
+[PRED 3] gold=['empleado', 'empleada'] | pred='empleado' | score=1.0000
+[PRED 4] gold=['anticuerpo'] | pred='anticorps' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_053750__em__Translate_the_sentence._Return_the_trans__c01e3f54.tsv
+Dev loss: 0.5. Dev perf: 0.5. Best dev perf: 0.5
+********* Done *********
+Instruction: ['"Return only the answer, without any explanation, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Return only the answer, without any explanation, numbering, or conversational text."
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['canal'] | pred='channel, waterway' | score=0.0000
+[PRED 1] gold=['rueda', 'volante', 'pez gordo', 'rodar', 'volar en círculos', 'llanta', 'circunvolar'] | pred='tire' | score=0.0000
+[PRED 2] gold=['vacación', 'vacaciones', 'día feriado', 'fiesta', 'festividad'] | pred='vacation' | score=0.0000
+[PRED 3] gold=['reserva', 'existencias', 'acción', 'ganado', 'caldo', 'disponible', 'en almacén', 'surtido'] | pred='store, inventory, goods' | score=0.0000
+[PRED 4] gold=['hospital'] | pred='healthcare facility' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_053818__em__Return_only_the_answer__without_any_expl__9cff6480.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['"Return the input word for each output."']
+[DEBUG] 开始评估，指令: "Return the input word for each output."
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['dirección'] | pred='direction' | score=0.0000
+[PRED 1] gold=['sugestión', 'propuesta'] | pred='suggestion' | score=0.0000
+[PRED 2] gold=['cronometraje'] | pred='timing' | score=0.0000
+[PRED 3] gold=['diosa'] | pred='goddess' | score=0.0000
+[PRED 4] gold=['chorro', 'a propulsión', 'azabache', 'a reacción', 'a chorro'] | pred='jet' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_053843__em__Return_the_input_word_for_each_output.__c6de20fd.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['suicida', 'suicidio'] | pred='acdeiisu' | score=0.0000
+[PRED 1] gold=['antología'] | pred='anthology' | score=0.0000
+[PRED 2] gold=['adopción'] | pred='adoption' | score=0.0000
+[PRED 3] gold=['médico'] | pred='physician' | score=0.0000
+[PRED 4] gold=['bovino', 'vaca', 'intimidar', 'bruja'] | pred='cow' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_053911__em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: instruction
+Output: instrucción' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input:
+Output:
+
+Input:
+Output:' -> 强制判为 0.0 分
+Instruction: ['The instruction is clear and imperative. It tells the assistant to return only the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: The instruction is clear and imperative. It tells the assistant to return only the answer, without any explanation, numbering, or conversational text.
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['overtime', 'a destajo', 'pago overtime', 'tiempo de más'] | pred='work exceeding regular working hours' | score=0.0000
+[PRED 1] gold=['objeción', 'protesta'] | pred='a disagreement or complaint' | score=0.0000
+[PRED 2] gold=['vocabulario', 'léxico'] | pred='the study of words and their meanings' | score=0.0000
+[PRED 3] gold=['metro', 'contador', 'medidor'] | pred='100 centimeters' | score=0.0000
+[PRED 4] gold=['nivel', 'niveles', 'nivelado', 'llano'] | pred='a position in a hierarchy' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_053943__em__The_instruction_is_clear_and_imperative.__c3faa4cf.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.\nFind the synonym. Return just the word.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Find the synonym. Return just the word.
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['humanidad'] | pred='mankind' | score=0.0000
+[PRED 1] gold=['existencia'] | pred='being' | score=0.0000
+[PRED 2] gold=['capa', 'enlace'] | pred='level' | score=0.0000
+[PRED 3] gold=['especulación'] | pred='guess' | score=0.0000
+[PRED 4] gold=['tecnología'] | pred='science' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054007__em__Sort_the_words_alphabetically._Output_on__690e1afa.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: task
+Output: respuesta' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['impuesto', 'tasa'] | pred='tax' | score=0.0000
+[PRED 1] gold=['banda', 'pasmo', 'cinta', 'grupo', 'franja'] | pred='band' | score=0.0000
+[PRED 2] gold=['catedral'] | pred='a c a d e h l r t' | score=0.0000
+[PRED 3] gold=['especialista'] | pred='a c i l p s s t' | score=0.0000
+[PRED 4] gold=['estación'] | pred='a i n o s t' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054037__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+Instruction: ['"Retrieve the list of words. Output only the list of words."']
+[DEBUG] 开始评估，指令: "Retrieve the list of words. Output only the list of words."
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['capricho', 'extravagancia', 'lujo'] | pred='[luxury]' | score=0.0000
+[PRED 1] gold=['porcentaje'] | pred='percentage' | score=0.0000
+[PRED 2] gold=['instrucción'] | pred='retrieve", "the", "list", "of", "words", "output", "only", "the", "list", "of", "words' | score=0.0000
+[PRED 3] gold=['catedral'] | pred='[cathedral]' | score=0.0000
+[PRED 4] gold=['modificación'] | pred='modification' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054113__em__Retrieve_the_list_of_words._Output_only___0b77f107.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Clear and concise instructions are essential for ensuring the AI assistant provides the correct answer without any additional explanations or conversations. Here are some examples of good instructions:
+
+Input: sort
+Output: ordenar
+Input: find
+Output: encontrar
+Input: return
+Output: retornar' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: instruction
+Output: instrucción
+Input: clear
+Output: clara
+Input: concise
+Output: concisa
+Input: direct
+Output: directa
+Input: explicit
+Output: explícito
+Input: definite
+Output: definida
+Input: specific
+Output: especí' -> 强制判为 0.0 分
+Instruction: ["'Organize the ideas. Output just the ordered list.'\n'Sort the concepts. Return just the categorized list.'\n'Arrange the steps. Output only the sequential list.'\n'Order the phases. Return just the serial list.'\n'Classify the tasks. Output only the categorized list"]
+[DEBUG] 开始评估，指令: 'Organize the ideas. Output just the ordered list.'
+'Sort the concepts. Return just the categorized list.'
+'Arrange the steps. Output only the sequential list.'
+'Order the phases. Return just the serial list.'
+'Classify the tasks. Output only the categorized list
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['protagonista'] | pred="1. definition: the main character in a story, play, or novel.\n2. characteristics: brave, determined, and often flawed.\n3. role: drives the plot forward, faces challenges, and undergoes significant change.\n4. examples: luke skywalker in star wars, frodo baggins in the lord of the rings, harry potter in j.k. rowling's series." | score=0.0000
+[PRED 1] gold=['negligencia', 'descuidar', 'perecear'] | pred='1. identify causes of neglect\n2. assess consequences of neglect\n3. develop strategies to address neglect\n4. implement plans to prevent neglect\n5. monitor and evaluate progress' | score=0.0000
+[PRED 2] gold=['imagen'] | pred='1. acquisition\n2. processing\n3. analysis\n4. manipulation\n5. storage' | score=0.0000
+[PRED 3] gold=['venidero', 'porvenir', 'futuro'] | pred='1. short-term goals\n2. mid-term objectives\n3. long-term vision' | score=0.0000
+[PRED 4] gold=['presencia'] | pred='1. being present\n2. attendance\n3. existence\n4. visibility' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054218__em__Organize_the_ideas._Output_just_the_orde__0701bb57.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Return the word.']
+[DEBUG] 开始评估，指令: Return the word.
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['cargo', 'atacar', 'cargar', 'figura'] | pred='charge' | score=0.0000
+[PRED 1] gold=['calefacción', 'calentamiento'] | pred='heating' | score=0.0000
+[PRED 2] gold=['gobierno'] | pred='government' | score=0.0000
+[PRED 3] gold=['tarea'] | pred='assignment' | score=0.0000
+[PRED 4] gold=['comunidad'] | pred='community' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054243__em__Return_the_word.__42ad7221.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ["The instruction is a clear, imperative order given to the assistant to return only the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the syn"]
+[DEBUG] 开始评估，指令: The instruction is a clear, imperative order given to the assistant to return only the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* 'Find the syn
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['renovación'] | pred='novation rereno renova renovation' | score=0.0000
+[PRED 1] gold=['fatiga'] | pred='tiredness, exhaustion, lethargy, weariness' | score=0.0000
+[PRED 2] gold=['elefante'] | pred='tusks mammal large animal' | score=0.0000
+[PRED 3] gold=['ion', 'ión'] | pred='action' | score=0.0000
+[PRED 4] gold=['sendero', 'rastro', 'arrastrar', 'pista', 'seguir'] | pred='pathway' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054326__em__The_instruction_is_a_clear__imperative_o__23d5b8a2.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['tapador', 'custodiar', 'guardar', 'guarda', 'bloque', 'vigilar', 'vanguardia', 'protector', 'guardia'] | pred='guard' | score=0.0000
+[PRED 1] gold=['ballet', 'baile'] | pred='a b e l l t' | score=0.0000
+[PRED 2] gold=['transición'] | pred='transition' | score=0.0000
+[PRED 3] gold=['movilidad'] | pred='b i l i m o y' | score=0.0000
+[PRED 4] gold=['techno'] | pred='echnot' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054359__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+Instruction: ['clear, concise, specific, detailed, explicit, step-by-step, comprehensive, precise, well-defined, unambiguous.']
+[DEBUG] 开始评估，指令: clear, concise, specific, detailed, explicit, step-by-step, comprehensive, precise, well-defined, unambiguous.
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['herramienta', 'utensilio'] | pred='here is a comprehensive and detailed guide on how to choose the right tool for a task:\n\n**step 1: define the task**\n identify the specific task or problem you need to solve.\n\n**step 2: determine the requirements**\n list the necessary features, functions, and specifications required to complete the task.\n\n**step 3: research options**\n investigate different tools that can fulfill the requirements, including manual and power tools, software, and online platforms.\n\n**step 4: evaluate tools**' | score=0.0000
+[PRED 1] gold=['pornografía'] | pred='i cannot provide explicit content. is there anything else i can help you with?' | score=0.0000
+[PRED 2] gold=['buque de guerra'] | pred='a large, heavily armed and armored naval vessel, designed for combat operations, typically with a crew of several hundred sailors and officers, equipped with various types of guns, missiles, torpedoes, and electronic warfare systems, and often serving as a flagship or command center for a fleet or task force.' | score=0.0000
+[PRED 3] gold=['uniforme'] | pred='consistent in quality, texture, or appearance; identical or unvarying in shape, size, or pattern; worn by members of an organization or group to identify themselves.' | score=0.0000
+[PRED 4] gold=['edad adulta', 'adultez'] | pred='a series of developmental stages marked by significant physical, emotional, and psychological changes, typically occurring between the ages of 18 and 30, characterized by:\n\n1. **physical development**: completion of physical growth, development of motor skills, and peak physical strength and health.\n2. **emotional development**: formation of emotional regulation, self-awareness, and independence from family and caregivers.\n3. **cognitive development**: development of critical thinking, problem-solving, and decision-making skills, as well as' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054516__em__clear__concise__specific__detailed__expl__950e2b85.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['I understand that you want a clear and imperative instruction for the task. I will provide a concise and direct answer, without any explanation or conversational text.\n\nPlease provide a clear and detailed instruction for the task you want me to accomplish. I will follow your instructions to the letter and ensure a successful outcome']
+[DEBUG] 开始评估，指令: I understand that you want a clear and imperative instruction for the task. I will provide a concise and direct answer, without any explanation or conversational text.
+
+Please provide a clear and detailed instruction for the task you want me to accomplish. I will follow your instructions to the letter and ensure a successful outcome
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['engranaje', 'velocidad', 'marcha', 'cambio', 'engranar', 'equipo'] | pred='define the word "gear" in 50 words or less, using a dictionary definition format.' | score=0.0000
+[PRED 1] gold=['capricho', 'extravagancia', 'lujo'] | pred='define the concept of luxury and provide 5 characteristics that distinguish luxury products or services from non-luxury ones.' | score=0.0000
+[PRED 2] gold=['retorno', 'rédito', 'recaudación'] | pred='define revenue as the total income earned by a business or organization from its normal business activities, such as sales of goods or services, during a specific period of time, typically a month, quarter, or year, and calculate it by multiplying the number of units sold by the average price per unit.' | score=0.0000
+[PRED 3] gold=['hueco', 'hoyo'] | pred='define the word "hole" and provide its part of speech.' | score=0.0000
+[PRED 4] gold=['delegación'] | pred='identify a task that can be delegated, determine the strengths and weaknesses of team members, assign the task to the most suitable team member, provide clear instructions and necessary resources, establish deadlines and check-in points, and monitor progress.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054616__em__I_understand_that_you_want_a_clear_and_i__e09b3012.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.5
+********* Done *********
+Instruction: ['"Sort the list alphabetically. Output only the space-separated list."\n"Find the synonym. Return just the word."']
+[DEBUG] 开始评估，指令: "Sort the list alphabetically. Output only the space-separated list."
+"Find the synonym. Return just the word."
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['pega', 'empleo', 'curro', 'trabajo', 'chamba', 'laburo', 'talacha', 'tarea', 'camello', 'trabajar'] | pred='position' | score=0.0000
+[PRED 1] gold=['prosa'] | pred='verse' | score=0.0000
+[PRED 2] gold=['modelaje'] | pred='posing' | score=0.0000
+[PRED 3] gold=['repartir', 'escisión', 'espagat', 'partir', 'escindir', 'fisura', 'separar', 'dividir'] | pred='divide' | score=0.0000
+[PRED 4] gold=['disparate', 'sin sentido', 'estupidez', 'tonterías', 'tontería', 'parida'] | pred='balderdash' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054647__em__Sort_the_list_alphabetically._Output_onl__59f48db8.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+Best initial point: 0.500
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][05:46:48] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[05:46:51] INFO [PROFILE] GP fit: 2.950s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:46:51] INFO Iter 0 best_value=4.60658 gp_loss=1210.77301
+[05:46:52] INFO [PROFILE] Acquisition: 0.721s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:47:23] INFO [PROFILE] LLM eval candidate: 31.116s
+[05:47:23] INFO Best value so far: 0.50000
+Bayes iterations:  20%|██        | 1/5 [00:34<02:19, 34.82s/it][05:47:23] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:47:26] INFO [PROFILE] GP fit: 2.901s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:47:26] INFO Iter 1 best_value=4.70294 gp_loss=-5794.42204
+[05:47:26] INFO [PROFILE] Acquisition: 0.641s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:47:28] INFO [PROFILE] LLM eval candidate: 1.286s
+[05:47:28] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:39<00:51, 17.19s/it][05:47:28] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:47:30] INFO [PROFILE] GP fit: 2.233s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:47:30] INFO Iter 2 best_value=4.70294 gp_loss=-5794.42204
+[05:47:31] INFO [PROFILE] Acquisition: 0.732s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:47:31] INFO [PROFILE] LLM eval candidate: 0.118s
+[05:47:31] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [00:42<00:21, 10.76s/it][05:47:31] INFO [Iteration 3] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:47:34] INFO [PROFILE] GP fit: 2.869s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:47:34] INFO Iter 3 best_value=4.70294 gp_loss=-5794.42204
+[05:47:34] INFO [PROFILE] Acquisition: 0.597s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:47:35] INFO [PROFILE] LLM eval candidate: 0.394s
+[05:47:35] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  80%|████████  | 4/5 [00:46<00:08,  8.04s/it][05:47:35] INFO [Iteration 4] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:47:38] INFO [PROFILE] GP fit: 3.132s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:47:38] INFO Iter 4 best_value=4.70294 gp_loss=-5794.42204
+[05:47:38] INFO [PROFILE] Acquisition: 0.621s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:47:41] INFO [PROFILE] LLM eval candidate: 2.358s
+[05:47:41] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [00:52<00:00,  7.35s/it]Bayes iterations: 100%|██████████| 5/5 [00:52<00:00, 10.56s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['The instruction is "find the synonym."']
+[DEBUG] 开始评估，指令: The instruction is "find the synonym."
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['enrollar', 'carrete'] | pred='spool' | score=0.0000
+[PRED 1] gold=['trasero', 'cierva'] | pred='rear' | score=0.0000
+[PRED 2] gold=['placer'] | pred='delight' | score=0.0000
+[PRED 3] gold=['rayo'] | pred='said' | score=0.0000
+[PRED 4] gold=['atmósfera', 'clima', 'aire', 'ambiente'] | pred='ambiance' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-es_20251201_054723__em__The_instruction_is_find_the_synonym.__946cbe89.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.5
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: palabra
+Output: palabra
+
+Input: sinónimo
+Output: sinónimo
+
+Input: concepto
+Output: concepto' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: '''' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: sort
+Output: ordenado' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Here are some examples of a task:
+
+Input: press
+Output: prensa
+
+Input: participante
+Output: participante
+Input: compañía
+Output: compañía
+Input: label
+Output: etiquetar
+Input: contorno
+Output: contorno
+Input: triangle' -> 强制判为 0.0 分
+Evaluate on test data...
+Best instruction is:
+["'Translate the sentence. Return the translation.'"]
+The final instruction set is:
+{"'Translate the sentence. Return the translation.'": (0.5, array([[0., 0., 0., 1., 0., 1., 1., 0., 1., 1., 1., 0., 0., 1., 1., 0.,
+        1., 0., 0., 1.]])), '"Return only the answer, without any explanation, numbering, or conversational text."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the input word for each output."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically.': (0.05, array([[0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The instruction is clear and imperative. It tells the assistant to return only the answer, without any explanation, numbering, or conversational text.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.\nFind the synonym. Return just the word.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Retrieve the list of words. Output only the list of words."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "'Organize the ideas. Output just the ordered list.'\n'Sort the concepts. Return just the categorized list.'\n'Arrange the steps. Output only the sequential list.'\n'Order the phases. Return just the serial list.'\n'Classify the tasks. Output only the categorized list": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Return the word.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "The instruction is a clear, imperative order given to the assistant to return only the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the syn": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically. Output only the space-separated list."': (0.1, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'clear, concise, specific, detailed, explicit, step-by-step, comprehensive, precise, well-defined, unambiguous.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I understand that you want a clear and imperative instruction for the task. I will provide a concise and direct answer, without any explanation or conversational text.\n\nPlease provide a clear and detailed instruction for the task you want me to accomplish. I will follow your instructions to the letter and ensure a successful outcome': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the list alphabetically. Output only the space-separated list."\n"Find the synonym. Return just the word."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The instruction is "find the synonym."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "translation_en-es"...
+Using metric "em" for task "translation_en-es"...
+[PRED 0] gold=['madrugada', 'mañana', 'AM'] | pred='i\'m happy to help!\n\nthe translation of "morning" is:\n\n* spanish: mañana\n* french: matin\n* german: morgen\n* italian: mattina\n* portuguese: manhã\n* chinese: (zhāoshang)\n* japanese: (asa)\n* korean: (achim)\n\nplease let me know which language you would like the translation for!' | score=0.0000
+[PRED 1] gold=['mudanza', 'traslado'] | pred='relocation -> réinstallation (french)' | score=0.0000
+[PRED 2] gold=['subproceso', 'argumento', 'hilo', 'pasar', 'filete', 'tema', 'enhebrar', 'rosca', 'proceso ligero', 'tópico'] | pred='fil' | score=0.0000
+[PRED 3] gold=['autonomía'] | pred='the translation of "autonomy" is:\n\nautonomía (spanish)\nautonomie (french)\nautonomia (italian)\nautonomie (german)\nαὐτονομία (greek)\n\nplease let me know which language you would like the translation for.' | score=0.0000
+[PRED 4] gold=['cena'] | pred='dîner' | score=0.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/translation_en-es_20251201_055136__em__Translate_the_sentence._Return_the_trans__c01e3f54.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.24

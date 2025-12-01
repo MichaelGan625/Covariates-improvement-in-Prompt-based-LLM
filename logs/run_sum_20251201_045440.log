@@ -1,0 +1,249 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.32s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.94s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the output as a space-separated list.'"]
+[DEBUG] 开始评估，指令: 'Return the output as a space-separated list.'
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['73'] | pred='29 43' | score=0.0000
+[PRED 1] gold=['115'] | pred='43 72' | score=1.0000
+[PRED 2] gold=['160'] | pred='80' | score=0.0000
+[PRED 3] gold=['138'] | pred='45 93' | score=1.0000
+[PRED 4] gold=['16'] | pred='1 2 3 4' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045532__sum_numeric_em__Return_the_output_as_a_space-separated_l__60422212.tsv
+Dev loss: 0.5. Dev perf: 0.5. Best dev perf: 0.5
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['70'] | pred='there are no words to sort.' | score=0.0000
+[PRED 1] gold=['141'] | pred='there are no words to sort alphabetically. the input appears to be numbers.' | score=0.0000
+[PRED 2] gold=['135'] | pred='there are no words in the input to sort. the input appears to be numbers.' | score=0.0000
+[PRED 3] gold=['128'] | pred='48 80' | score=1.0000
+[PRED 4] gold=['94'] | pred="there are no words to sort alphabetically in the input. the input consists of numbers only. if you meant to provide words, please enter them, and i'll be happy to help!" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045621__sum_numeric_em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.45. Dev perf: 0.45. Best dev perf: 0.5
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 13 28
+Output: 41' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 16 83
+Output: 99' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 13 28
+Output: 41' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'This is a list of instructions:
+
+Input: 17 59
+Output: 125
+
+Input: 16 83
+Output: 99
+
+Input: 31 72
+Output: 103
+
+Input: 17' -> 强制判为 0.0 分
+Instruction: ['Output only the answer.']
+[DEBUG] 开始评估，指令: Output only the answer.
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['99'] | pred='99' | score=1.0000
+[PRED 1] gold=['171'] | pred='171' | score=1.0000
+[PRED 2] gold=['133'] | pred='cd' | score=0.0000
+[PRED 3] gold=['109'] | pred='3' | score=0.0000
+[PRED 4] gold=['143'] | pred='143' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045654__sum_numeric_em__Output_only_the_answer.__7402a904.tsv
+Dev loss: 0.75. Dev perf: 0.75. Best dev perf: 0.75
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 35 90
+Output: 125' -> 强制判为 0.0 分
+Instruction: ['Example HTML PageCiao']
+[DEBUG] 开始评估，指令: Example HTML PageCiao
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['147'] | pred='147' | score=1.0000
+[PRED 1] gold=['88'] | pred='1' | score=0.0000
+[PRED 2] gold=['61'] | pred='<html>\n  <head>\n    <title>result</title>\n  </head>\n  <body>\n    <h1>61</h1>\n  </body>\n</html>' | score=0.0000
+[PRED 3] gold=['147'] | pred="i apologize, but there is no clear instruction or problem to solve based on the provided input. if you could provide more context or clarify the task, i'd be happy to help." | score=0.0000
+[PRED 4] gold=['47'] | pred='<html>\n  <head>\n    <title>example html page</title>\n  </head>\n  <body>\n    <h1>ciao</h1>\n    <p>3 44</p>\n  </body>\n</html>' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045737__sum_numeric_em__Example_HTML_PageCiao__d03e52e9.tsv
+Dev loss: 0.45. Dev perf: 0.45. Best dev perf: 0.75
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 13 28
+Output: 41' -> 强制判为 0.0 分
+Instruction: ['Please provide a clear, imperative instruction for this task.']
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task.
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['9'] | pred='calculate the greatest common divisor (gcd) of the two input numbers.' | score=0.0000
+[PRED 1] gold=['109'] | pred='add the two numbers together.' | score=0.0000
+[PRED 2] gold=['96'] | pred='add the two numbers together.\n\noutput: 96' | score=0.0000
+[PRED 3] gold=['137'] | pred='add the two numbers together.\n\noutput (result only): 137' | score=0.0000
+[PRED 4] gold=['18'] | pred='multiply the two numbers together.\n\noutput: 56' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045812__sum_numeric_em__Please_provide_a_clear__imperative_instr__5d3dcca5.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.75
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['113'] | pred='forty-five sixty-eight' | score=1.0000
+[PRED 1] gold=['59'] | pred='45 14' | score=1.0000
+[PRED 2] gold=['66'] | pred='2 64' | score=1.0000
+[PRED 3] gold=['126'] | pred="there are no words to sort. the input consists of numbers. if the input were words, i'd be happy to help:\n\nplease provide the words you'd like to sort." | score=0.0000
+[PRED 4] gold=['142'] | pred='forty-seven ninety-five' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045851__sum_numeric_em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.7. Dev perf: 0.7. Best dev perf: 0.75
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 13 28
+Output: 41
+
+Input: 31 41
+Output: 72
+Input: 35 90
+Output: 125
+Input: 16 83
+Output: 99
+Input:' -> 强制判为 0.0 分
+Instruction: ['"Calculate the sum. Output only the number."']
+[DEBUG] 开始评估，指令: "Calculate the sum. Output only the number."
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['11'] | pred='11' | score=1.0000
+[PRED 1] gold=['24'] | pred='24' | score=1.0000
+[PRED 2] gold=['78'] | pred='78' | score=1.0000
+[PRED 3] gold=['99'] | pred='99' | score=1.0000
+[PRED 4] gold=['95'] | pred='95' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045922__sum_numeric_em__Calculate_the_sum._Output_only_the_numbe__dc08d971.tsv
+Dev loss: 1.0. Dev perf: 1.0. Best dev perf: 1.0
+********* Done *********
+Instruction: ['Return only the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Return only the answer, without any explanation, numbering, or conversational text.
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['136'] | pred='1360' | score=0.0000
+[PRED 1] gold=['111'] | pred='111' | score=1.0000
+[PRED 2] gold=['42'] | pred='272' | score=0.0000
+[PRED 3] gold=['130'] | pred='130' | score=1.0000
+[PRED 4] gold=['58'] | pred='58' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_045949__sum_numeric_em__Return_only_the_answer__without_any_expl__4ae8be85.tsv
+Dev loss: 0.7. Dev perf: 0.7. Best dev perf: 1.0
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+Dev loss: 0.7. Dev perf: 0.7. Best dev perf: 1.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 28 12
+Output: 12
+
+Input: 11 43
+Output: 11
+
+Input: 25 78
+Output: 17
+
+Input: 14 67
+Output: 14' -> 强制判为 0.0 分
+Instruction: ['Example:\n"Find the synonym. Return just the word."']
+[DEBUG] 开始评估，指令: Example:
+"Find the synonym. Return just the word."
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['112'] | pred='forty-five sixty-seven' | score=1.0000
+[PRED 1] gold=['93'] | pred="i'm happy to help! however, i don't see a word to find a synonym for in your input. could you please provide a word or phrase, and i'll do my best to find a suitable synonym?" | score=0.0000
+[PRED 2] gold=['112'] | pred='identical' | score=0.0000
+[PRED 3] gold=['135'] | pred='none' | score=0.0000
+[PRED 4] gold=['126'] | pred='what are the words associated with the numbers 61 and 65 in the ascii table?\n\n61 = a\n65 = a\n\nso, the output is: same' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_050021__sum_numeric_em__Example_Find_the_synonym._Return_just_th__6dd9ef4d.tsv
+Dev loss: 0.3. Dev perf: 0.3. Best dev perf: 1.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 41 13
+Output: 72' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 13 41
+Output: 41' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 13 28
+Output: 41' -> 强制判为 0.0 分
+Instruction: ['clear conversation context']
+[DEBUG] 开始评估，指令: clear conversation context
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['88'] | pred='188' | score=0.0000
+[PRED 1] gold=['72'] | pred='32' | score=0.0000
+[PRED 2] gold=['61'] | pred='$7^2 + 5^2 + 4^2 = 49 + 25 + 16 = 90$' | score=0.0000
+[PRED 3] gold=['69'] | pred='69' | score=1.0000
+[PRED 4] gold=['80'] | pred='80' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_050050__sum_numeric_em__clear_conversation_context__99dad21e.tsv
+Dev loss: 0.8. Dev perf: 0.8. Best dev perf: 1.0
+********* Done *********
+Instruction: ["I'm sorry, I'm not sure what you're asking for. Can you please provide more context or clarify your question?"]
+[DEBUG] 开始评估，指令: I'm sorry, I'm not sure what you're asking for. Can you please provide more context or clarify your question?
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['102'] | pred="it seems like you provided two numbers, 35 and 67, but didn't specify what operation you want to perform on them. do you want to add, subtract, multiply, or divide them? please let me know, and i'll be happy to help!" | score=1.0000
+[PRED 1] gold=['49'] | pred='49' | score=1.0000
+[PRED 2] gold=['92'] | pred="it seems like you provided two numbers, 3 and 89, but didn't specify what operation to perform on them. could you please clarify whether you want to:\n\n* add them together (3 + 89)\n* multiply them (3 × 89)\n* perform some other operation?\n\nlet me know, and i'll be happy to help!" | score=1.0000
+[PRED 3] gold=['106'] | pred='106' | score=1.0000
+[PRED 4] gold=['156'] | pred="it seems like you're providing two numbers, 74 and 82, but it's not clear what operation you want to perform on them. are you looking to add, subtract, multiply, or divide them? please let me know, and i'll be happy to help!" | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_050133__sum_numeric_em__I_m_sorry__I_m_not_sure_what_you_re_aski__8857223d.tsv
+Dev loss: 0.75. Dev perf: 0.75. Best dev perf: 1.0
+********* Done *********
+Instruction: ['The instruction is to return the output without any additional text, numbering, or conversational context.']
+[DEBUG] 开始评估，指令: The instruction is to return the output without any additional text, numbering, or conversational context.
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['104'] | pred='104' | score=1.0000
+[PRED 1] gold=['82'] | pred='182' | score=0.0000
+[PRED 2] gold=['176'] | pred='176' | score=1.0000
+[PRED 3] gold=['102'] | pred='102' | score=1.0000
+[PRED 4] gold=['111'] | pred='111' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_050159__sum_numeric_em__The_instruction_is_to_return_the_output___6ea3393c.tsv
+Dev loss: 0.8. Dev perf: 0.8. Best dev perf: 1.0
+********* Done *********
+Instruction: ['clear, concise, and specific']
+[DEBUG] 开始评估，指令: clear, concise, and specific
+Using metric "sum_numeric_em" for task "sum"...
+Using metric "sum_numeric_em" for task "sum"...
+[PRED 0] gold=['111'] | pred='43 + 68 = 111' | score=1.0000
+[PRED 1] gold=['106'] | pred='106' | score=1.0000
+[PRED 2] gold=['128'] | pred='128' | score=1.0000
+[PRED 3] gold=['125'] | pred='125' | score=1.0000
+[PRED 4] gold=['133'] | pred='1333' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sum_20251201_050226__sum_numeric_em__clear__concise__and_specific__4acadf41.tsv
+Dev loss: 0.65. Dev perf: 0.65. Best dev perf: 1.0
+********* Done *********
+Best initial point: 1.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: -9.5367e-09
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][05:02:26] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+[05:02:27] INFO [PROFILE] GP fit: 0.803s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[WARNING][Iteration 0] custom kernel GP fit failed, falling back to baseline. Error: All attempts to fit the model have failed.
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: -9.5367e-09
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 879, in run
+    output = gp_model(X_train)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py", line 345, in __call__
+    ) = self.prediction_strategy.exact_prediction(full_mean, full_covar)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 324, in exact_prediction
+    self.exact_predictive_mean(test_mean, test_train_covar),
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 349, in exact_predictive_mean
+    res = (test_train_covar @ mean_cache.unsqueeze(-1)).squeeze(-1)
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: double != float

@@ -1,0 +1,338 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.63s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  5.98s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.52s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Translate the sentence into French. Return only the translated text.'"]
+[DEBUG] 开始评估，指令: 'Translate the sentence into French. Return only the translated text.'
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['2 - possibly'] | pred='un homme coupe des tomates. une femme coupe du brocoli.' | score=0.0000
+[PRED 1] gold=['2 - possibly'] | pred='devises et or 25 août 2012 devises et or 19 juillet 2012' | score=0.0000
+[PRED 2] gold=['4 - almost perfectly'] | pred="les actions asiatiques rebondissent après une série de données optimistes. les marchés asiatiques sont à la hausse grâce aux chiffres solides de l'emploi aux états-unis." | score=0.0000
+[PRED 3] gold=['5 - perfectly'] | pred='un chien lèche un bébé. un chien lèche un bébé.' | score=0.0000
+[PRED 4] gold=['4 - almost perfectly'] | pred="abbas doit diriger le gouvernement d'unité palestinien\nabbas proposé comme pdg dans le gouvernement d'unité intérimaire" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_041946__em__Translate_the_sentence_into_French._Retu__a361f7ab.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["The task is to write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n\n* 'Sort the words alphabetically.' Output only the space-separ"]
+[DEBUG] 开始评估，指令: The task is to write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+
+
+* 'Sort the words alphabetically.' Output only the space-separ
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['2 - possibly'] | pred='determine if sentence 1 and sentence 2 are opposite in meaning.' | score=0.0000
+[PRED 1] gold=['5 - perfectly'] | pred='identify the sentence with the most words.' | score=0.0000
+[PRED 2] gold=['0 - definitely not'] | pred='identify the words common to both sentences.' | score=0.0000
+[PRED 3] gold=['1 - probably not'] | pred='identify the words that are common to both sentences.' | score=0.0000
+[PRED 4] gold=['4 - almost perfectly'] | pred='identify the common words between the two sentences.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042018__em__The_task_is_to_write_a_clear__imperative__584d459e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Output only the space-separated list."
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['2 - possibly'] | pred='quotes from leaders family at mandela memorial world unites for mandela memorial' | score=0.0000
+[PRED 1] gold=['4 - almost perfectly'] | pred='ha ha ha ha ha' | score=0.0000
+[PRED 2] gold=['2 - possibly'] | pred='pakistan fighter jets bomb taliban hideouts pakistan wants arms supply to syrian sides stopped' | score=0.0000
+[PRED 3] gold=['1 - probably not'] | pred='man man man man' | score=0.0000
+[PRED 4] gold=['5 - perfectly'] | pred='black and white dog runs through the grass' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042049__em__Output_only_the_space-separated_list.__1897c3eb.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Thousands of Britons claim dole in Germany Sentence 2: Thousands of white-clad Amsterdammers march for MH17
+Output: 1 - probably not
+
+Input: Sentence 1: the drug is also known as' -> 强制判为 0.0 分
+Instruction: ['"Sort the sentences by topic. Output only the relevant ones."']
+[DEBUG] 开始评估，指令: "Sort the sentences by topic. Output only the relevant ones."
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['1 - probably not'] | pred='**topic: playing musical instruments**\n\n sentence 1: a girl is playing a guitar.\n sentence 2: a boy is playing a key-board between the people.' | score=0.0000
+[PRED 1] gold=['1 - probably not'] | pred="since the topic is not explicitly stated, i'll assume it's about the location or setting. here are the sorted sentences:\n\n**indoor:**\n sentence 1: two women sitting on brown couch.\n\n**outdoor:**\n sentence 2: two women standing outside of a bus." | score=0.0000
+[PRED 2] gold=['5 - perfectly'] | pred='here are the sorted sentences by topic:\n\n**topic: israel-syria conflict**\n\n1. israel planes strike inside syria\n2. israel launches airstrike into syria' | score=0.0000
+[PRED 3] gold=['3 - probably'] | pred='sentence 1: car bomb kills 37 in northwest pakistan\n sentence 2: bomb kills three in northwest pakistan' | score=0.0000
+[PRED 4] gold=['0 - definitely not'] | pred='**music**\n sentence 2: a woman is playing flute.\n\n**animals**\n sentence 1: a cat is playing.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042138__em__Sort_the_sentences_by_topic._Output_only__0433f1e3.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["I'm sorry, I'm not sure what you're asking for. Can you please provide more context or clarify your question?"]
+[DEBUG] 开始评估，指令: I'm sorry, I'm not sure what you're asking for. Can you please provide more context or clarify your question?
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['4 - almost perfectly'] | pred='the sentences are similar but not identical.' | score=0.0000
+[PRED 1] gold=['0 - definitely not'] | pred='both sentences have the same subject "a man" but are describing different actions.' | score=0.0000
+[PRED 2] gold=['1 - probably not'] | pred='what do these two sentences have in common?' | score=0.0000
+[PRED 3] gold=['5 - perfectly'] | pred='these two sentences have the same meaning.' | score=0.0000
+[PRED 4] gold=['5 - perfectly'] | pred='what is the difference between the two sentences?' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042221__em__I_m_sorry__I_m_not_sure_what_you_re_aski__8857223d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The cat is on the mat. Sentence 2: A cat is on a mat.
+Output: 2 - possibly' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Thousands of Britons claim dole in Germany. Sentence 2: Thousands of white-clad Amsterdammers march for MH17. Output: 1 - probably not.
+
+Input: Sentence 1: The drug is also' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The dog is eating the bone. Sentence 2: A dog gnaws a bone.
+Output: 2 - probably' -> 强制判为 0.0 分
+Instruction: ["'Translate the text to French. Output only the translated text.'"]
+[DEBUG] 开始评估，指令: 'Translate the text to French. Output only the translated text.'
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['0 - definitely not'] | pred="le plus grand bâtiment du monde ouvert dans l'ouest de la chine\nle centre-gauche de l'italie se désintègre lors du scrutin présidentiel" | score=0.0000
+[PRED 1] gold=['1 - probably not'] | pred='phrase 1 : un chien est dans une voiture. phrase 2 : un chien mord une serpillière.' | score=0.0000
+[PRED 2] gold=['2 - possibly'] | pred="la grande chose à propos de vivre ici, c'est qu'il y a de l'espace. la mauvaise chose, c'est qu'il y a de l'espace." | score=0.0000
+[PRED 3] gold=['5 - perfectly'] | pred='un homme joue de la flûte. un homme joue de la flûte.' | score=0.0000
+[PRED 4] gold=['4 - almost perfectly'] | pred="l'immeuble de philadelphie s'effondre, 8-10 personnes peuvent être piégées.\nl'immeuble de philadelphie s'effondre ; des rapports de personnes piégées." | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042316__em__Translate_the_text_to_French._Output_onl__8b189513.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n- 'Find the synonym. Return just the word.'"]
+[DEBUG] 开始评估，指令: The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+Examples of good instructions:
+- 'Sort the words alphabetically. Output only the space-separated list.'
+- 'Find the synonym. Return just the word.'
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['4 - almost perfectly'] | pred='the sentences are similar but not identical' | score=0.0000
+[PRED 1] gold=['2 - possibly'] | pred='through the' | score=0.0000
+[PRED 2] gold=['3 - probably'] | pred='a woman is riding a' | score=0.0000
+[PRED 3] gold=['4 - almost perfectly'] | pred='they are paraphrases.' | score=0.0000
+[PRED 4] gold=['0 - definitely not'] | pred='sentence 1: ignoring has the effect of normalizing. sentence 2: taking advantage has the effect of reinforcing.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042352__em__The_instruction_MUST_tell_the_assistant___e6b9fb98.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Thousands of words. Sentence 2: Thousands of syllables.
+Output: 1 - probably not
+
+Input: Sentence 1: A man is speaking in tongues. Sentence 2: A man speaks in tongues.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym.
+Output: 1 - probably
+Input: Sentence 1: Count the number of occurrences of each word. Sentence 2: Identify the most common word.
+Output:' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Thousands of Britons claim dole in Germany Sentence 2: Thousands of white-clad Amsterdammers march for MH17
+Output: 1 - probably not
+
+Input: Sentence 1: the drug is also known as' -> 强制判为 0.0 分
+Instruction: ['Return the list of words with a space between each word.']
+[DEBUG] 开始评估，指令: Return the list of words with a space between each word.
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['2 - possibly'] | pred='world stocks fall before greek debt deal deadline asia stocks fall ahead of greek debt deal deadline' | score=0.0000
+[PRED 1] gold=['0 - definitely not'] | pred='here is the output:\n\nunrest in tense nigeria leaves at least 95 dead\nsouthwest china quakes kill at least 50' | score=0.0000
+[PRED 2] gold=['5 - perfectly'] | pred='two dogs play in the grass \ntwo dogs are playing in the grass' | score=0.0000
+[PRED 3] gold=['4 - almost perfectly'] | pred='a person is walking down a stone path. a man is walking down a sidewalk.\n\n becomes:\n\na person is walking down a stone path. \na man is walking down a sidewalk.' | score=0.0000
+[PRED 4] gold=['3 - probably'] | pred="religious fiction isn't that redundant and repetetive" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042441__em__Return_the_list_of_words_with_a_space_be__258e2a21.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['3 - probably'] | pred='a a and black black brown dog dog grass in is running running the' | score=0.0000
+[PRED 1] gold=['1 - probably not'] | pred="another another have have i'll i'll preakness retired sentence stud to wins" | score=0.0000
+[PRED 2] gold=['4 - almost perfectly'] | pred='at beckham david end football from of retire retires season sentence to' | score=0.0000
+[PRED 3] gold=['1 - probably not'] | pred='china crash eight helicopter link no over police say seek sentence suspects terrorism to uk' | score=0.0000
+[PRED 4] gold=['5 - perfectly'] | pred='a are group of people sing singing some' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042537__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The cat is on the mat. Sentence 2: A cat is on the mat.
+Output: 1 - probably not' -> 强制判为 0.0 分
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['5 - perfectly'] | pred='afghan afghan authorities bagram bagram control hands over prison prison to transfers u.s. us' | score=0.0000
+[PRED 1] gold=['4 - almost perfectly'] | pred='controversial delay it korea launch looks may n n. rocket says set to' | score=0.0000
+[PRED 2] gold=['4 - almost perfectly'] | pred='a down driving highway his is man motorcycle motorcycle on person road rode the' | score=0.0000
+[PRED 3] gold=['1 - probably not'] | pred='a at attack attacks blast drone iraq kill least of six spate suicide yemen' | score=0.0000
+[PRED 4] gold=['0 - definitely not'] | pred='a a cat down drinking going hill is some truck water' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042620__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Find the correct output for each input sentence."']
+[DEBUG] 开始评估，指令: "Find the correct output for each input sentence."
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['0 - definitely not'] | pred='sentence 1: the woman is wet.\n sentence 2: the car is moving.' | score=0.0000
+[PRED 1] gold=['0 - definitely not'] | pred='sentence 1: the subject is a cat and the verb is is drinking.\nsentence 2: the subject is a truck and the verb is is going.' | score=0.0000
+[PRED 2] gold=['5 - perfectly'] | pred='sentence 1: true. sentence 2: false' | score=0.0000
+[PRED 3] gold=['1 - probably not'] | pred='no' | score=0.0000
+[PRED 4] gold=['2 - possibly'] | pred="sentence 1: chinese icebreaker changes course towards suspicious objects -> chinese icebreaker changes course towards suspicious objects in search for mh370. \n sentence 2: chinese search plane finds 'suspicious objects' -> chinese search plane finds 'suspicious objects' in search for mh370" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042709__em__Find_the_correct_output_for_each_input_s__ad63a71f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The cat is meowing. Sentence 2: A cat is meowing.
+Output: 0 - definitely not
+Input: Sentence 1: The dog is barking. Sentence 2: A dog is barking.
+Output:' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Thousands of Britons claim dole in Germany Sentence 2: Thousands of white-clad Amsterdammers march for MH17
+Output: 1 - probably not
+
+Input: Sentence 1: the drug is also known as' -> 强制判为 0.0 分
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['1 - probably not'] | pred='identify the common words between the two sentences. output only the space-separated list.' | score=0.0000
+[PRED 1] gold=['1 - probably not'] | pred='identify the common noun in both sentences. output only the noun.' | score=0.0000
+[PRED 2] gold=['0 - definitely not'] | pred='return only the common words between the two sentences, separated by commas.' | score=0.0000
+[PRED 3] gold=['2 - possibly'] | pred='find the common words between the two sentences. output only the space-separated list.' | score=0.0000
+[PRED 4] gold=['4 - almost perfectly'] | pred='compare the two sentences and output only the sentence that is grammatically correct.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042757__em__Please_provide_a_clear__imperative_instr__1db032cd.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man is standing on a street corner. Sentence 2: A man stands on a street corner.
+Output: 0 - definitely not
+Input: Sentence 1: The dog is chasing its tail. Sentence 2: A dog chases its tail' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man is doing push-ups. Sentence 2: A man is doing chin-ups.
+Output: 4 - almost perfectly
+
+Input: Sentence 1: The cat is playing with the mouse. Sentence 2: A cat is playing with' -> 强制判为 0.0 分
+Instruction: ["The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n- 'Find the synonym. Return just the word.'"]
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Best initial point: 0.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 0.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][04:28:05] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[04:28:05] INFO [PROFILE] GP fit: 0.539s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[04:28:05] INFO Iter 0 best_value=0.00000 gp_loss=1854.84297
+[04:28:06] INFO [PROFILE] Acquisition: 0.565s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[04:28:37] INFO [PROFILE] LLM eval candidate: 31.313s
+[04:28:37] INFO Best value so far: 0.00000
+Bayes iterations:  20%|██        | 1/5 [00:32<02:09, 32.44s/it][04:28:37] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[04:28:37] INFO [PROFILE] GP fit: 0.279s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[04:28:37] INFO Iter 1 best_value=0.00000 gp_loss=1858.52925
+[04:28:38] INFO [PROFILE] Acquisition: 0.558s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[04:28:39] INFO [PROFILE] LLM eval candidate: 1.226s
+[04:28:39] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:34<00:43, 14.58s/it][04:28:39] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[04:28:40] INFO [PROFILE] GP fit: 0.390s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[04:28:40] INFO Iter 2 best_value=0.00000 gp_loss=1858.52925
+[04:28:40] INFO [PROFILE] Acquisition: 0.567s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[04:29:16] INFO [PROFILE] LLM eval candidate: 35.865s
+[04:29:16] INFO Best value so far: 0.00000
+Bayes iterations:  60%|██████    | 3/5 [01:11<00:49, 24.75s/it][04:29:16] INFO [Iteration 3] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[04:29:16] INFO [PROFILE] GP fit: 0.291s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[04:29:16] INFO Iter 3 best_value=0.00000 gp_loss=1862.21548
+[04:29:17] INFO [PROFILE] Acquisition: 0.570s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[04:30:03] INFO [PROFILE] LLM eval candidate: 46.242s
+[04:30:03] INFO Best value so far: 0.00000
+Bayes iterations:  80%|████████  | 4/5 [01:58<00:33, 33.59s/it][04:30:03] INFO [Iteration 4] X_train torch.Size([28, 30]), y_train torch.Size([28, 1])
+[04:30:04] INFO [PROFILE] GP fit: 0.570s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[04:30:04] INFO Iter 4 best_value=0.00000 gp_loss=1865.89990
+[04:30:04] INFO [PROFILE] Acquisition: 0.569s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[04:30:06] INFO [PROFILE] LLM eval candidate: 1.236s
+[04:30:06] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [02:00<00:00, 22.34s/it]Bayes iterations: 100%|██████████| 5/5 [02:00<00:00, 24.18s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["'Sort the sentences by type of output. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: 'Sort the sentences by type of output. Output only the space-separated list.'
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['2 - possibly'] | pred='negative positive' | score=0.0000
+[PRED 1] gold=['1 - probably not'] | pred='news news' | score=0.0000
+[PRED 2] gold=['1 - probably not'] | pred='news news' | score=0.0000
+[PRED 3] gold=['3 - probably'] | pred='news updates' | score=0.0000
+[PRED 4] gold=['2 - possibly'] | pred='statement question' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042837__em__Sort_the_sentences_by_type_of_output._Ou__ba1515c7.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The dog barks. Sentence 2: The dog barks.
+Output: 3 - almost perfectly' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['I understand the task. Please provide the input sentence for this task.']
+[DEBUG] 开始评估，指令: I understand the task. Please provide the input sentence for this task.
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['0 - definitely not'] | pred='two un envoys are in turkey for talks on syria and nz is to increase exports to china' | score=0.0000
+[PRED 1] gold=['3 - probably'] | pred='similar' | score=0.0000
+[PRED 2] gold=['4 - almost perfectly'] | pred='duplicate' | score=0.0000
+[PRED 3] gold=['1 - probably not'] | pred='the sentences are not identical.' | score=0.0000
+[PRED 4] gold=['3 - probably'] | pred="please go ahead and provide the task you'd like to perform on the given sentences." | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_042916__em__I_understand_the_task._Please_provide_th__803f3233.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['4 - almost perfectly'] | pred='here are the words in alphabetical order:\n\na, a, and, and, black, black, cow, cow, field, field, grassy, in, in, standing, standing, the, white, white' | score=0.0000
+[PRED 1] gold=['5 - perfectly'] | pred='a, cardboard, homeless, holding, men, outside, sign, stand, two, with, young' | score=0.0000
+[PRED 2] gold=['5 - perfectly'] | pred='here is the sorted list of words:\n\n* is\n* jihadi\n* john\n* john?\n* was\n* who' | score=0.0000
+[PRED 3] gold=['4 - almost perfectly'] | pred='a, global, international, is, it, major, presents, security, serious, threat, to' | score=0.0000
+[PRED 4] gold=['3 - probably'] | pred='here is the sorted list of words in alphabetical order:\n\n1. action\n2. against\n3. case\n4. for\n5. makes\n6. possible\n7. readies\n8. solo\n9. syria\n10. us' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/sentence_similarity_20251201_043003__em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: Sort the words alphabetically. Sentence 2: Find the synonym.
+Output: 3 - probably not' -> 强制判为 0.0 分
+Evaluate on test data...
+Best instruction is:
+['Sort the words alphabetically.']
+The final instruction set is:
+{"'Translate the sentence into French. Return only the translated text.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "The task is to write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n\n* 'Sort the words alphabetically.' Output only the space-separ": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Output only the space-separated list."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the sentences by topic. Output only the relevant ones."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I'm sorry, I'm not sure what you're asking for. Can you please provide more context or clarify your question?": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "'Translate the text to French. Output only the translated text.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n- 'Find the synonym. Return just the word.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Return the list of words with a space between each word.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically. Output only the space-separated list."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Find the correct output for each input sentence."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "'Sort the sentences by type of output. Output only the space-separated list.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I understand the task. Please provide the input sentence for this task.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "sentence_similarity"...
+Using metric "em" for task "sentence_similarity"...
+[PRED 0] gold=['2 - possibly'] | pred='here is the sorted list of words in alphabetical order:\n\n* a\n* an\n* cuts\n* is\n* lemon\n* off\n* orange\n* peeling\n* piece\n* rind\n* small\n* woman' | score=0.0000
+[PRED 1] gold=['2 - possibly'] | pred='here are the words in alphabetical order:\n\n1. act\n2. asks\n3. calls\n4. council\n5. for\n6. help\n7. kerry\n8. libya\n9. on\n10. on\n11. security\n12. syria\n13. to\n14. un \n\nnote: since "on" and "on" are the same word with different capitalization, they can be considered as the same word. if you want to remove duplicates, the' | score=0.0000
+[PRED 2] gold=['2 - possibly'] | pred='here are the words sorted alphabetically:\n\n* a\n* baby\n* boy\n* carrying\n* her\n* is\n* woman' | score=0.0000
+[PRED 3] gold=['3 - probably'] | pred='here are the words in alphabetical order:\n\n* a\n* come\n* from\n* get\n* is\n* of\n* out\n* puppy\n* sink\n* the\n* to\n* tried\n* trying\n* tub' | score=0.0000
+[PRED 4] gold=['0 - definitely not'] | pred="here are the words from the two sentences in alphabetical order:\n\n1. best's\n2. brings\n3. cheer\n4. day\n5. gaza\n6. great\n7. in\n8. instructed\n9. near\n10. residents\n11. shelter\n12. stay\n13. to\n14. west" | score=0.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/sentence_similarity_20251201_043459__em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.0

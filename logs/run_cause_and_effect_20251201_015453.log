@@ -1,0 +1,246 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.96s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.54s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.20s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the output sentence for each input.'"]
+[DEBUG] 开始评估，指令: 'Return the output sentence for each input.'
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015515__f1__Return_the_output_sentence_for_each_inpu__f84c11d3.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['clear, imperative.']
+[DEBUG] 开始评估，指令: clear, imperative.
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015515__f1__clear__imperative.__f20d669c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man climbed in through the window. Sentence 2: The woman who was walking on the street opened her umbrella.
+Output: The man climbed in through the window.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man climbed in through the window. Sentence 2: The man climbed out the window. Output: The man climbed in and out through the window.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The car was driven. Sentence 2: The driver stopped at the store.
+Output: The driver stopped at the store.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man was a success. Sentence 2: The woman was a success.
+Output: The man was a success.
+
+Input: Sentence 1: The dog was a success. Sentence 2: The cat was a success.
+Output: The dog' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: '"Return the following sentence for each input: Sentence 1: The door was locked. Sentence 2: The man climbed in through the window. Output: The door was locked. Sentence 1: The meat spoiled. Sentence 2: The power was out for days. Output:' -> 强制判为 0.0 分
+Instruction: ['"Return the following sentences, without any explanation or conversational text:\n\n1. The door was locked.\n2. The man climbed in through the window.\n3. The power was out for days.\n4. The air conditioner broke.\n5. George plugged the laptop charger']
+[DEBUG] 开始评估，指令: "Return the following sentences, without any explanation or conversational text:
+
+1. The door was locked.
+2. The man climbed in through the window.
+3. The power was out for days.
+4. The air conditioner broke.
+5. George plugged the laptop charger
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015526__f1__Return_the_following_sentences__without___d0afb63b.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Sort the words alphabetically."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically."
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015526__f1__Sort_the_words_alphabetically.__22411b0d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The cat slept on the mat. Sentence 2: The pillow was soft.
+Output: The cat slept on the mat.' -> 强制判为 0.0 分
+Instruction: ['Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Output only the space-separated list.
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015528__f1__Output_only_the_space-separated_list.__b38dc6fc.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: The word. Output: The word.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man climbed in through the window. Sentence 2: The power was out for days. Output: The power was out for days.
+Input: Sentence 1: The family went to the beach. Sentence 2: The air conditioner broke. Output' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man walked on the street. Sentence 2: The woman opened her umbrella.
+Output: The man walked on the street.' -> 强制判为 0.0 分
+Instruction: ["'Find the antonym. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: 'Find the antonym. Output only the space-separated list.'
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015533__f1__Find_the_antonym._Output_only_the_space-__b857ce6b.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015534__f1__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015536__f1__Write_a_clear__imperative_instruction_fo__894c13a1.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man climbed in through the window. Sentence 2: The man climbed in through the window.
+Output: The man climbed in through the window.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The cat chased the mouse. Sentence 2: The dog barked at the cat.
+Output: The cat chased the mouse.
+
+Input: Sentence 1: The baby cried for the bath. Sentence 2: The mother washed the' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The door was locked. Sentence 2: The man climbed in through the window.
+Output: The door was locked.
+
+Input: Sentence 1: The meat spoiled. Sentence 2: The power was out for days.
+Output: The' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man who stood at the gate. Sentence 2: The dog sat by the tree.
+Output: The man who stood at the gate.
+
+Input: Sentence 1: The mouse that roared. Sentence 2: The lion lay down.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The man walked on the street. Sentence 2: The umbrella was opened.
+Output: The umbrella was opened.
+
+Input: Sentence 1: The woman walked on the street. Sentence 2: The raindrop was collected.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Sentence 1: The cat chased the mouse. Sentence 2: The mouse ran up the tree.
+Output: The cat chased the mouse.
+
+Input: Sentence 1: The fire was in the fireplace. Sentence 2: The hearth was warm.' -> 强制判为 0.0 分
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."\n\n\n"Find the synonym. Return just the word."\n\n\nExamples of good instructions:\n\n- \'Sort the words alphabetically. Output only the space-separated list.\'\n- \'']
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:746: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+
+
+"Find the synonym. Return just the word."
+
+
+Examples of good instructions:
+
+- 'Sort the words alphabetically. Output only the space-separated list.'
+- '
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015554__f1__Sort_the_words_alphabetically._Output_on__6206d619.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Best initial point: 0.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 0.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][01:55:54] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[01:55:55] INFO [PROFILE] GP fit: 0.838s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:55:55] INFO Iter 0 best_value=0.00000 gp_loss=101.42057
+[01:55:56] INFO [PROFILE] Acquisition: 0.532s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[01:55:57] INFO [PROFILE] LLM eval candidate: 0.737s
+[01:55:57] INFO Best value so far: 0.00000
+Bayes iterations:  20%|██        | 1/5 [00:02<00:08,  2.13s/it][01:55:57] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[01:55:57] INFO [PROFILE] GP fit: 0.176s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:55:57] INFO Iter 1 best_value=0.00000 gp_loss=98.69454
+[01:56:01] INFO [PROFILE] Acquisition: 3.805s
+[01:56:01] INFO [PROFILE] LLM eval candidate: 0.541s
+[01:56:01] INFO Best value so far: 0.00000
+Bayes iterations:  40%|████      | 2/5 [00:06<00:10,  3.55s/it][01:56:01] INFO [Iteration 2] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[01:56:01] INFO [PROFILE] GP fit: 0.169s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:56:01] INFO Iter 2 best_value=0.00000 gp_loss=103.09200
+[01:56:02] INFO [PROFILE] Acquisition: 0.637s
+[01:56:03] INFO [PROFILE] LLM eval candidate: 0.774s
+[01:56:03] INFO Best value so far: 0.00000
+Bayes iterations:  60%|██████    | 3/5 [00:08<00:05,  2.66s/it][01:56:03] INFO [Iteration 3] X_train torch.Size([28, 30]), y_train torch.Size([28, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[01:56:04] INFO [PROFILE] GP fit: 1.507s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:56:04] INFO Iter 3 best_value=0.00000 gp_loss=112.47926
+[01:56:05] INFO [PROFILE] Acquisition: 0.748s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[01:56:05] INFO [PROFILE] LLM eval candidate: 0.318s
+[01:56:05] INFO Best value so far: 0.00000
+Bayes iterations:  80%|████████  | 4/5 [00:10<00:02,  2.64s/it][01:56:05] INFO [Iteration 4] X_train torch.Size([29, 30]), y_train torch.Size([29, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[01:56:06] INFO [PROFILE] GP fit: 0.337s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[01:56:06] INFO Iter 4 best_value=0.00000 gp_loss=111.68039
+[01:56:06] INFO [PROFILE] Acquisition: 0.563s
+[01:56:07] INFO [PROFILE] LLM eval candidate: 0.625s
+[01:56:07] INFO Duplicate instruction detected; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [00:12<00:00,  2.24s/it]Bayes iterations: 100%|██████████| 5/5 [00:12<00:00,  2.48s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Complete the sentences with the appropriate response. Output only the final sentence."']
+[DEBUG] 开始评估，指令: "Complete the sentences with the appropriate response. Output only the final sentence."
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015557__f1__Complete_the_sentences_with_the_appropri__e2a8a38a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Process the sentences and output the final result."']
+[DEBUG] 开始评估，指令: "Process the sentences and output the final result."
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015601__f1__Process_the_sentences_and_output_the_fin__6f06c257.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Sort the sentences alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the sentences alphabetically. Output only the space-separated list.
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015603__f1__Sort_the_sentences_alphabetically._Outpu__34aa9d13.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED-DUMP] wrote 0 rows to logs/preds/cause_and_effect_20251201_015605__f1__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['"Sort the words alphabetically. Output only the space-separated list."']
+The final instruction set is:
+{"'Return the output sentence for each input.'": (0.0, array([], shape=(1, 0), dtype=float64)), 'clear, imperative.': (0.0, array([], shape=(1, 0), dtype=float64)), '"Return the following sentences, without any explanation or conversational text:\n\n1. The door was locked.\n2. The man climbed in through the window.\n3. The power was out for days.\n4. The air conditioner broke.\n5. George plugged the laptop charger': (0.0, array([], shape=(1, 0), dtype=float64)), '"Sort the words alphabetically."': (0.0, array([], shape=(1, 0), dtype=float64)), 'Output only the space-separated list.': (0.0, array([], shape=(1, 0), dtype=float64)), "'Find the antonym. Output only the space-separated list.'": (0.0, array([], shape=(1, 0), dtype=float64)), '"Sort the words alphabetically. Output only the space-separated list."': (0.0, array([], shape=(1, 0), dtype=float64)), '"Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text."': (0.0, array([], shape=(1, 0), dtype=float64)), '"Sort the words alphabetically. Output only the space-separated list."\n\n\n"Find the synonym. Return just the word."\n\n\nExamples of good instructions:\n\n- \'Sort the words alphabetically. Output only the space-separated list.\'\n- \'': (0.0, array([], shape=(1, 0), dtype=float64)), '"Complete the sentences with the appropriate response. Output only the final sentence."': (0.0, array([], shape=(1, 0), dtype=float64)), '"Process the sentences and output the final result."': (0.0, array([], shape=(1, 0), dtype=float64)), 'Sort the sentences alphabetically. Output only the space-separated list.': (0.0, array([], shape=(1, 0), dtype=float64)), 'Sort the words alphabetically.': (0.0, array([], shape=(1, 0), dtype=float64))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "f1" for task "cause_and_effect"...
+Using metric "f1" for task "cause_and_effect"...
+[PRED 0] gold=['The bread was dry.'] | pred='bread dry french made the toast was we' | score=0.6667
+[PRED 1] gold=['It started raining.'] | pred='driver it on raining started the turned wipers' | score=0.5455
+[PRED 2] gold=['The basketball player was shoved.'] | pred='a basketball free player shoved take the throw was' | score=0.7143
+[PRED 3] gold=['Alice ate the last cookie.'] | pred='alice and ate bob cookie frustrated jar last opened the was' | score=0.6250
+[PRED 4] gold=['My clothes got dirty.'] | pred='clothes dirty got i in machine my put the washing' | score=0.5714
+[PRED-DUMP] wrote 25 rows to logs/preds/cause_and_effect_20251201_015646__f1__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.6103989996931173

@@ -1,0 +1,317 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.04s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.07s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+[FILTER] 拦截到偷懒指令: 'Input: clear, imperative instruction
+Output: clear, imperative instruction' -> 强制判为 0.0 分
+Instruction: ['The instruction is to provide the assistant with a clear and concise response, without any unnecessary details, numbers, or conversations.']
+[DEBUG] 开始评估，指令: The instruction is to provide the assistant with a clear and concise response, without any unnecessary details, numbers, or conversations.
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['p'] | pred='support or backing, especially by a person of high rank or influence.' | score=0.0000
+[PRED 1] gold=['a'] | pred="a written account of a person's life written by that person themselves." | score=1.0000
+[PRED 2] gold=['s'] | pred='trigonometric function' | score=0.0000
+[PRED 3] gold=['r'] | pred='symbol, image, or figure that stands for something else.' | score=0.0000
+[PRED 4] gold=['s'] | pred='synthesizer' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_020927__em__The_instruction_is_to_provide_the_assist__01eae6b4.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: "Sort the words alphabetically. Output only the space-separated list."
+
+Output: "Sort the words alphabetically. Output only the space-separated list."' -> 强制判为 0.0 分
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['m'] | pred='return the anagrams of the input word in alphabetical order, separated by commas.' | score=0.0000
+[PRED 1] gold=['a'] | pred='return the synonyms of the given word, separated by commas.' | score=0.0000
+[PRED 2] gold=['l'] | pred='return the plural form of the input word.' | score=0.0000
+[PRED 3] gold=['p'] | pred='return the plural form of the input word.' | score=0.0000
+[PRED 4] gold=['i'] | pred='return the number of vowels in the given word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021013__em__Please_provide_a_clear__imperative_instr__1db032cd.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['s'] | pred='sign' | score=0.0000
+[PRED 1] gold=['l'] | pred='liquid' | score=0.0000
+[PRED 2] gold=['c'] | pred='critic' | score=0.0000
+[PRED 3] gold=['d'] | pred='diesel' | score=0.0000
+[PRED 4] gold=['e'] | pred='e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021041__em__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: year
+Output: y
+Input: trust
+Output: t
+Input: qualification
+Output: q
+Input: defendant
+Output: d
+Input: client
+Output: c
+Input: fishing
+Output: f
+Input: railway
+Output: r
+Input: request
+Output' -> 强制判为 0.0 分
+Instruction: ['The instruction is clear and imperative. It is a straightforward task that requires no explanation, numbering, or conversational text. The assistant must return only the answer without any additional text.']
+[DEBUG] 开始评估，指令: The instruction is clear and imperative. It is a straightforward task that requires no explanation, numbering, or conversational text. The assistant must return only the answer without any additional text.
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['h'] | pred='protagonist' | score=0.0000
+[PRED 1] gold=['p'] | pred='earth' | score=0.0000
+[PRED 2] gold=['p'] | pred='a sticky film of bacteria that forms on teeth' | score=0.0000
+[PRED 3] gold=['p'] | pred='pu' | score=0.0000
+[PRED 4] gold=['c'] | pred='sect' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021111__em__The_instruction_is_clear_and_imperative.__902c6c4c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: year
+Output: y
+Input: trust
+Output: t
+Input: qualification
+Output: q
+Input: defendant
+Output: d
+Input: client
+Output: c
+Input: fishing
+Output: f
+Input: railway
+Output: r
+Input: request
+Output' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: y
+Output: t
+Input: trust
+Output: c
+Input: def
+Output: d
+Input: client
+Output: f
+Input: source
+Output: s
+Input: curtain
+Output: r
+Input: request
+Output: r
+Input: fishing
+Output:' -> 强制判为 0.0 分
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['p'] | pred='c d e e n t' | score=0.0000
+[PRED 1] gold=['g'] | pred='growth' | score=0.0000
+[PRED 2] gold=['c'] | pred='contempt' | score=0.0000
+[PRED 3] gold=['m'] | pred='a i l m o o r t y' | score=0.0000
+[PRED 4] gold=['m'] | pred='militant' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021148__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+Instruction: ["The instruction is to provide a clear and imperative response to the user's question, without any explanation, numbering, or conversational text. The response MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. The response should be sorted alphabetically and"]
+[DEBUG] 开始评估，指令: The instruction is to provide a clear and imperative response to the user's question, without any explanation, numbering, or conversational text. The response MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. The response should be sorted alphabetically and
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['c'] | pred='a pledge or undertaking to do something' | score=0.0000
+[PRED 1] gold=['c'] | pred='axiom, book, clause, division, episode, head, heading, installment, part, passage, section, segment, subheading, title, verse' | score=0.0000
+[PRED 2] gold=['c'] | pred='a hollow place in the ground, especially one that is a large opening in the side of a mountain or cliff.' | score=0.0000
+[PRED 3] gold=['n'] | pred='afghan, albanian, algerian, american, andorran, angolan, antiguan, argentinian, armenian, australian, austrian, azerbaijani, bahamian, bahraini, bangladeshi, barbadian, belarusian, belgian, belizean, beninese, bhutanese, bolivian, bosnian, botswana, brazilian, bruneian, bulgarian, burkinabe, burmese, burundian, cambodian,' | score=0.0000
+[PRED 4] gold=['r'] | pred='artists: beastie boys, cardi b, drake, eminem, ice cube, jay-z, kanye west, lil wayne, nas, nicki minaj, snoop dogg, the notorious b.i.g., tupac shakur' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021229__em__The_instruction_is_to_provide_a_clear_an__4ac52080.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ['"Sort the words alphabetically."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically."
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['m'] | pred='d e g i l m m n o' | score=0.0000
+[PRED 1] gold=['a'] | pred='a c c e h i r t' | score=1.0000
+[PRED 2] gold=['s'] | pred='a i n o s t t u' | score=0.0000
+[PRED 3] gold=['v'] | pred='aeginoitnv' | score=0.0000
+[PRED 4] gold=['m'] | pred='mass' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021257__em__Sort_the_words_alphabetically.__22411b0d.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+Instruction: ["I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?"]
+[DEBUG] 开始评估，指令: I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['p'] | pred='the state of being present or in attendance.' | score=0.0000
+[PRED 1] gold=['h'] | pred='could you please provide more context or clarify what you mean by "height"? are you referring to the height of a person, a building, or something else?' | score=0.0000
+[PRED 2] gold=['v'] | pred='could you please provide more context or clarify what you mean by "volunteer"? are you looking to volunteer for a specific cause, organization, or event? or are you asking about the benefits of volunteering or how to get involved in volunteer work?' | score=0.0000
+[PRED 3] gold=['d'] | pred='it seems like you\'ve provided a single word, "descent". could you please provide more context or clarify what you\'d like to know or discuss about "descent"? are you looking for its definition, its usage in a sentence, or something!' | score=0.0000
+[PRED 4] gold=['s'] | pred='can you please provide more context or clarify what you mean by "sympathy"? are you looking for its definition, an example of how to show sympathy, or something else?' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021349__em__I_m_sorry__I_m_not_sure_what_you_re_aski__a68b33ff.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: task
+Output: t' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: A' -> 强制判为 0.0 分
+Instruction: ['I understand that the task is to sort the words alphabetically and output only the space-separated list. I will provide a clear, imperative instruction for this task, and the instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: I understand that the task is to sort the words alphabetically and output only the space-separated list. I will provide a clear, imperative instruction for this task, and the instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['f'] | pred='feedback' | score=0.0000
+[PRED 1] gold=['c'] | pred='couple' | score=0.0000
+[PRED 2] gold=['p'] | pred='aeeelpnst' | score=0.0000
+[PRED 3] gold=['c'] | pred='consultant' | score=0.0000
+[PRED 4] gold=['c'] | pred='casualty' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021416__em__I_understand_that_the_task_is_to_sort_th__d72eadc7.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['As an AI language model, I am not capable of providing instructions or performing tasks on my own. However, I can provide examples of instructions based on the given examples you provided:\n\nExamples of clear, imperative instructions:\n\n* "Sort the words alphabetically. Output only the space-separ']
+[DEBUG] 开始评估，指令: As an AI language model, I am not capable of providing instructions or performing tasks on my own. However, I can provide examples of instructions based on the given examples you provided:
+
+Examples of clear, imperative instructions:
+
+* "Sort the words alphabetically. Output only the space-separ
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['t'] | pred='away' | score=0.0000
+[PRED 1] gold=['w'] | pred='worker' | score=0.0000
+[PRED 2] gold=['s'] | pred='subway' | score=0.0000
+[PRED 3] gold=['c'] | pred='cooking' | score=0.0000
+[PRED 4] gold=['b'] | pred='bikini' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021442__em__As_an_AI_language_model__I_am_not_capabl__acdb6ec1.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ["Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n*"]
+[DEBUG] 开始评估，指令: Write a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+*
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['o'] | pred="output only the correct spelling of the word 'overseeing'." | score=0.0000
+[PRED 1] gold=['o'] | pred='return the plural form of the input word.' | score=0.0000
+[PRED 2] gold=['d'] | pred='return the plural form of the input word. output only the result.' | score=0.0000
+[PRED 3] gold=['p'] | pred='return the synonyms of the given word, separated by commas.' | score=0.0000
+[PRED 4] gold=['t'] | pred='output only the synonyms for the word, separated by commas.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021517__em__Write_a_clear__imperative_instruction_fo__62100d2d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ["Please provide a clear and imperative instruction for this task. The instruction should be written in a way that only the answer is returned, without any explanation, numbering, or conversational text.\n\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separ"]
+[DEBUG] 开始评估，指令: Please provide a clear and imperative instruction for this task. The instruction should be written in a way that only the answer is returned, without any explanation, numbering, or conversational text.
+
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separ
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['v'] | pred='output the number of vowels in the input word.' | score=0.0000
+[PRED 1] gold=['g'] | pred='gravitational' | score=0.0000
+[PRED 2] gold=['b'] | pred='return the plural form of the input word.' | score=0.0000
+[PRED 3] gold=['g'] | pred='decode the word using the caesar cipher with a shift of 3. output only the decoded word.' | score=0.0000
+[PRED 4] gold=['d'] | pred='output the word in uppercase.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021547__em__Please_provide_a_clear_and_imperative_in__895cc415.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ["I'm sorry, but I'm not sure what you're asking for. Could you please provide more context or clarify your question?"]
+[DEBUG] 开始评估，指令: I'm sorry, but I'm not sure what you're asking for. Could you please provide more context or clarify your question?
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['w'] | pred='could you please provide more context or clarify what you mean by "walk"? are you asking about the act of walking, a walking route, a specific type of walk, or something else?' | score=0.0000
+[PRED 1] gold=['t'] | pred='it seems like you just typed the word "track". could you please provide more context or clarify what you mean by "track"? are you referring to a music track, a track in sports, a tracking system, or something else?' | score=0.0000
+[PRED 2] gold=['c'] | pred='could you please provide more context or clarify what you mean by "criticism"? are you looking for the definition, types of criticism, how to give or receive criticism, or something else?' | score=0.0000
+[PRED 3] gold=['f'] | pred='fundraising is the process of gathering voluntary contributions of money or other resources, by requesting donations from individuals, businesses, charitable foundations, or governmental agencies.' | score=0.0000
+[PRED 4] gold=['r'] | pred='a meeting or gathering, especially a secret one' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021635__em__I_m_sorry__but_I_m_not_sure_what_you_re___55e72088.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['"Retrieve the definition."']
+[DEBUG] 开始评估，指令: "Retrieve the definition."
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['m'] | pred='a legendary creature or being of great size, strength, or ferocity, often depicted as frightening or grotesque.' | score=0.0000
+[PRED 1] gold=['l'] | pred='official permission or authority to do something.' | score=0.0000
+[PRED 2] gold=['c'] | pred='the act or process of giving a particular color or hue to something; the state of being colored.' | score=0.0000
+[PRED 3] gold=['f'] | pred='a right or license granted by a company to an individual or group to market its products or services in a specific territory.' | score=0.0000
+[PRED 4] gold=['s'] | pred='a phrase or sentence used to express the aims or ideals of an organization or product.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021718__em__Retrieve_the_definition.__e4136c81.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.1
+********* Done *********
+Instruction: ['The instruction MUST be clear and concise, without any unnecessary details or fluff. The answer MUST be straightforward and direct, without any confusion or ambiguity. The space-separated list MUST be organized and logical, without any chaos or disorder. The synonym MUST be relevant and accurate']
+[DEBUG] 开始评估，指令: The instruction MUST be clear and concise, without any unnecessary details or fluff. The answer MUST be straightforward and direct, without any confusion or ambiguity. The space-separated list MUST be organized and logical, without any chaos or disorder. The synonym MUST be relevant and accurate
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['m'] | pred='instant, flash, second, juncture, occasion, instance' | score=0.0000
+[PRED 1] gold=['b'] | pred='equilibrium harmony stability steadiness poise' | score=0.0000
+[PRED 2] gold=['d'] | pred='wharf pier harbor berth jetty moor quay slip synonym: pier' | score=0.0000
+[PRED 3] gold=['b'] | pred='entrepreneur executive' | score=0.0000
+[PRED 4] gold=['e'] | pred='admission access entry inlet gateway portal door opening' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021748__em__The_instruction_MUST_be_clear_and_concis__69176c17.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['clear, direct, explicit, unambiguous']
+[DEBUG] 开始评估，指令: clear, direct, explicit, unambiguous
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['a'] | pred='success or accomplishment of something' | score=0.0000
+[PRED 1] gold=['a'] | pred='help' | score=0.0000
+[PRED 2] gold=['t'] | pred='a platform or a flat area outside a building.' | score=0.0000
+[PRED 3] gold=['g'] | pred='intestine' | score=0.0000
+[PRED 4] gold=['s'] | pred='discard, waste' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021827__em__clear__direct__explicit__unambiguous__cdd57c21.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.1
+********* Done *********
+Instruction: ['I am ready to assist with any questions or concerns you may have. Please let me know if you need further guidance or additional information. I am here to help with any problems or issues you may encounter. Please let me know if you need further support or additional information. I am here to help with any challenges or']
+[DEBUG] 开始评估，指令: I am ready to assist with any questions or concerns you may have. Please let me know if you need further guidance or additional information. I am here to help with any problems or issues you may encounter. Please let me know if you need further support or additional information. I am here to help with any challenges or
+Using metric "em" for task "first_word_letter"...
+Using metric "em" for task "first_word_letter"...
+[PRED 0] gold=['v'] | pred="i'd be happy to help with any vehicle-related questions or concerns you may have. do you need information on a specific type of vehicle, maintenance, or perhaps troubleshooting an issue?" | score=0.0000
+[PRED 1] gold=['s'] | pred='concerns you may have.' | score=0.0000
+[PRED 2] gold=['c'] | pred='difficulties you may face.' | score=0.0000
+[PRED 3] gold=['d'] | pred='how can i assist you with a dish? do you have a recipe question, need cooking instructions, or perhaps want to know more about a specific type of dish?' | score=0.0000
+[PRED 4] gold=['b'] | pred="i'm happy to help you with any questions or concerns you may have about bridges. please let me know what you need help with or what information you're looking for, and i'll do my best to assist you." | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/first_word_letter_20251201_021918__em__I_am_ready_to_assist_with_any_questions___a8ff4209.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Best initial point: 0.100
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: -4.7684e-09
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][02:19:19] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+[02:19:19] INFO [PROFILE] GP fit: 0.679s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[WARNING][Iteration 0] custom kernel GP fit failed, falling back to baseline. Error: All attempts to fit the model have failed.
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: -4.7684e-09
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 879, in run
+    output = gp_model(X_train)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py", line 345, in __call__
+    ) = self.prediction_strategy.exact_prediction(full_mean, full_covar)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 324, in exact_prediction
+    self.exact_predictive_mean(test_mean, test_train_covar),
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 349, in exact_predictive_mean
+    res = (test_train_covar @ mean_cache.unsqueeze(-1)).squeeze(-1)
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: double != float

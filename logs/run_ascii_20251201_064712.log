@@ -1,0 +1,10 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 589, in run
+    induce_data, test_data = load_data('induce', task), load_data('eval', task)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/data_instruction_induction/load_data.py", line 15, in load_data
+    with open(path, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home2/langj/Covariates-improvement-in-Prompt-based-LLM/data_instruction_induction/raw/induce/ascii.json'

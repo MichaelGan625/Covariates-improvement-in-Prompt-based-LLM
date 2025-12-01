@@ -1,0 +1,456 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.61s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.80s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.38s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Output only the list of tasks.'"]
+[DEBUG] 开始评估，指令: 'Output only the list of tasks.'
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['Computer Science books'] | pred='no tasks.' | score=0.0000
+[PRED 1] gold=['tech companies'] | pred='1. automate workflows in smartsheet\n2. create email marketing campaigns in madwire\n3. manage job postings and applicants in icims' | score=0.0000
+[PRED 2] gold=['Apparel'] | pred='1. trousers\n2. innerwear vests\n3. rain jacket' | score=0.0000
+[PRED 3] gold=['extinct languages'] | pred='there is no task list in the input. the input appears to be a list of language names. if you meant to ask for the list of language names, here is the output:\n\n1. chimila\n2. mehri\n3. southeastern tarahumara' | score=0.0000
+[PRED 4] gold=['African countries'] | pred='no tasks to display.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062224__f1__Output_only_the_list_of_tasks.__f345702c.tsv
+Dev loss: 0.0156. Dev perf: 0.0156. Best dev perf: 0.0156
+********* Done *********
+Instruction: ['Example HTML PageCiao']
+[DEBUG] 开始评估，指令: Example HTML PageCiao
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['presidents of the U.S'] | pred='<html>\n  <head>\n    <title>presidents</title>\n  </head>\n  <body>\n    <h1>presidents</h1>\n    <ul>\n      <li>rutherford b. hayes</li>\n      <li>william henry harrison</li>\n      <li>james a. garfield</li>\n    </ul>\n  </body>\n</html>' | score=0.0000
+[PRED 1] gold=['tech companies'] | pred='<!doctype html>\n<html>\n<head>\n\t<title>companies</title>\n</head>\n<body>\n\t<h1>companies</h1>\n\t<ul>\n\t\t<li>malwarebytes</li>\n\t\t<li>brandwatch</li>\n\t\t<li>qualtrics</li>\n\t</ul>\n</body>\n</html>' | score=0.0000
+[PRED 2] gold=['artists'] | pred='<html>\n<head>\n<title>famous artists</title>\n</head>\n<body>\n<h1>famous artists</h1>\n<ul>\n<li>giotto di bondone</li>\n<li>caravaggio</li>\n<li>peter paul rubens</li>\n</ul>\n</body>\n</html>' | score=0.0000
+[PRED 3] gold=['the media'] | pred='<a href="http://6abc.com" target="_blank">6abc.com</a>, <a href="http://supermarketnews.com" target="_blank">supermarket news</a>, and <a href="http://www.khaama.com" target="_blank">khaama press (press release) (blog)</a>' | score=0.0000
+[PRED 4] gold=['extinct languages'] | pred='<html>\n  <head>\n    <title>example html page</title>\n  </head>\n  <body>\n    <h1>ciao</h1>\n    <p>culina, wotapuri-katarqalai, and bashkardi</p>\n  </body>\n</html>' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062349__f1__Example_HTML_PageCiao__d03e52e9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0156
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Liouville's theorem, Pu's inequality, and Picard–Lindelöf theorem
+Output: math theorems' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Liouville's theorem, Pu's inequality, and Picard–Lindelöf theorem  
+Output: math theorems' -> 强制判为 0.0 分
+Instruction: ['"Find the corresponding output for each input."']
+[DEBUG] 开始评估，指令: "Find the corresponding output for each input."
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['Computer Science books'] | pred='non-fiction books' | score=0.3333
+[PRED 1] gold=['countries with large population'] | pred='most populous countries in asia and africa' | score=0.1818
+[PRED 2] gold=['chemical elements with high density'] | pred='metals' | score=0.0000
+[PRED 3] gold=['chemical elements with high density'] | pred='miny' | score=0.0000
+[PRED 4] gold=['animals'] | pred='sciurus spadiceus, sigmodon hispidus, and semnopithecus priam' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062430__f1__Find_the_corresponding_output_for_each_i__675535af.tsv
+Dev loss: 0.11. Dev perf: 0.11. Best dev perf: 0.11
+********* Done *********
+Instruction: ['It seems like you are trying to find a pattern or structure in the input/output pairs you provided. If you can give me a clear and concise example or pattern, I would be happy to help you.']
+[DEBUG] 开始评估，指令: It seems like you are trying to find a pattern or structure in the input/output pairs you provided. If you can give me a clear and concise example or pattern, I would be happy to help you.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['people shot by police'] | pred='i think i can provide a clear pattern.\n\nthe input appears to be a list of names, and the output is the same list of names, but with the first and last names switched.\n\nso, the output would be:\n\nmiller louis c., shorter ronnie lee, pickard brent' | score=0.0000
+[PRED 1] gold=['people shot by police'] | pred='smith, charles m.; higgins, kevin; simmons, brandon' | score=0.0000
+[PRED 2] gold=['extinct languages'] | pred="i think i have found a pattern!\n\nit appears that the input consists of three language names, and the output is the next language in a specific alphabetical order. here's the pattern:\n\n1. lenca\n2. tetserret\n3. afitti\n4. **akkala** (next in alphabetical order)\n\nso, the output would be: akkala" | score=0.0000
+[PRED 3] gold=['animals'] | pred="i'm happy to provide a clear and concise example.\n\nhere's the pattern i'm looking for:\n\nthe output is a list of animal names that are one word shorter than the input names.\n\nso, the output would be: glider, sheep, dog" | score=0.0000
+[PRED 4] gold=['math theorems'] | pred="here's a pattern i noticed:\n\nall three inputs are named after a person (wald, fermat, clausius) and are theorems in mathematics or physics.\n\nso, the output could be:\n\neuler's identity" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062547__f1__It_seems_like_you_are_trying_to_find_a_p__d4e7126f.tsv
+Dev loss: 0.1384. Dev perf: 0.1384. Best dev perf: 0.1384
+********* Done *********
+Instruction: ["Return the following words:\n\n* Liouville\n* Pu's inequality\n* Picard–Lindelöf theorem\n* math theorems\n* Turtwig\n* Seel\n* Drifloon\n* math theorems\n* pokeman\n* Stirling"]
+[DEBUG] 开始评估，指令: Return the following words:
+
+* Liouville
+* Pu's inequality
+* Picard–Lindelöf theorem
+* math theorems
+* Turtwig
+* Seel
+* Drifloon
+* math theorems
+* pokeman
+* Stirling
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['Computer Science books'] | pred="liouville, pu's inequality, picard–lindelöf theorem, math theorems, stirling" | score=0.0000
+[PRED 1] gold=['Apparel'] | pred='liouville' | score=0.0000
+[PRED 2] gold=['large islands'] | pred="liouville\npu's inequality\npicard–lindelöf theorem\nmath theorems\nturtwig\nseel\ndrifloon\nmath theorems\npokeman\nstirling" | score=0.0000
+[PRED 3] gold=['pokeman'] | pred='turtwig, seel, drifloon' | score=0.0000
+[PRED 4] gold=['chemical elements with high density'] | pred="liouville\npu's inequality\npicard–lindelöf theorem\nmath theorems\nturtwig\nseel\ndrifloon\nmath theorems\npokeman\nstirling" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062646__f1__Return_the_following_words_Liouville_Pu___36c3c918.tsv
+Dev loss: 0.0118. Dev perf: 0.0118. Best dev perf: 0.1384
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['historical wars'] | pred="monmouth's rebellion thirty year's war zulu war" | score=0.0000
+[PRED 1] gold=['computer file format extensions'] | pred='hcxs pdq vpm' | score=0.0000
+[PRED 2] gold=['top journals'] | pred='output only the comma-separated list of journal names in alphabetical order.' | score=0.0000
+[PRED 3] gold=['African countries'] | pred='output only the comma-separated list of countries in alphabetical order.' | score=0.1538
+[PRED 4] gold=['African countries'] | pred='malawi rwanda tanzania' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062731__f1__Please_provide_a_clear__imperative_instr__df998172.tsv
+Dev loss: 0.0549. Dev perf: 0.0549. Best dev perf: 0.1384
+********* Done *********
+Instruction: ["I understand the task you're asking me to do. Please provide a clear and concise instruction for me to follow."]
+[DEBUG] 开始评估，指令: I understand the task you're asking me to do. Please provide a clear and concise instruction for me to follow.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['chemical elements with high density'] | pred='list the three elements in order from lowest to highest atomic number.' | score=0.1176
+[PRED 1] gold=['Apparel'] | pred='here is the instruction:\n\nlist the given items of clothing in alphabetical order, separated by commas.' | score=0.0000
+[PRED 2] gold=['tech companies'] | pred='here is the instruction:\n\nplease list three alternative software options for each of the given software products (malwarebytes, brandwatch, and qualtrics), resulting in a total of 9 alternative software options.' | score=0.0000
+[PRED 3] gold=['historical wars'] | pred='please list the start and end years for each of the given wars.' | score=0.1429
+[PRED 4] gold=['top journals'] | pred='please list the three publications in alphabetical order, separated by commas.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062830__f1__I_understand_the_task_you_re_asking_me_t__0a74adb0.tsv
+Dev loss: 0.0553. Dev perf: 0.0553. Best dev perf: 0.1384
+********* Done *********
+Instruction: ['Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['extinct languages'] | pred='return the iso 639-3 language codes for the given languages.' | score=0.2000
+[PRED 1] gold=['extinct languages'] | pred='culina, wotapuri-katarqalai, and bashkardi are iranian languages' | score=0.2000
+[PRED 2] gold=['Big Tech'] | pred='these are the big five tech companies.' | score=0.4444
+[PRED 3] gold=['tech companies'] | pred='list the companies that are not publicly traded.' | score=0.2000
+[PRED 4] gold=['African countries'] | pred='return the three countries that were founded by the american colonization society.' | score=0.1538
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062910__f1__Please_provide_a_clear__imperative_instr__63c1b8ea.tsv
+Dev loss: 0.1524. Dev perf: 0.1524. Best dev perf: 0.1524
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['extinct languages'] | pred='and chimila mehri southeastern tarahumara' | score=0.0000
+[PRED 1] gold=['popular songs'] | pred='and bad china guy london the' | score=0.0000
+[PRED 2] gold=['presidents of the U.S'] | pred='abraham lincoln franklin pierce william mckinley' | score=0.0000
+[PRED 3] gold=['popular songs'] | pred="beautiful people (feat. khalid) if i can't have you soltera - remix" | score=0.0000
+[PRED 4] gold=['games on Steam'] | pred='and fantasy final heavensward hildegards of secret strife the xiv' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_062946__f1__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1524
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Liouville's theorem, Pu's inequality, and Picard–Lindelöf theorem  
+Output: math theorems
+
+Input: Turtwig, Seel, and Drifloon  
+Output: pokeman
+
+Input: Stirling's approximation' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Liouville's theorem, Pu's inequality, and Picard–Lindelöf theorem  
+Output: math theorems
+Input: Turtwig, Seel, and Drifloon  
+Output: pokeman
+Input: Stirling's approximation, Sh' -> 强制判为 0.0 分
+Instruction: ['Sort the examples alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the examples alphabetically. Output only the space-separated list.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['computer file format extensions'] | pred='and drw farconfig vdproj' | score=0.0000
+[PRED 1] gold=['extinct languages'] | pred='kabard-cherkes kwadi osage' | score=0.0000
+[PRED 2] gold=['extinct languages'] | pred='afitti lenca tetserret' | score=0.0000
+[PRED 3] gold=['artists'] | pred='caravaggio giotto di bondone peter paul rubens' | score=0.0000
+[PRED 4] gold=['presidents of the U.S'] | pred='dwight d. eisenhower richard nixon ronald reagan' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063031__f1__Sort_the_examples_alphabetically._Output__1a2d5d47.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1524
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Liouville's theorem, Pu's inequality, and Picard–Lindelöf theorem  
+Output: math theorems' -> 强制判为 0.0 分
+Instruction: ['The task is to sort the words alphabetically and return just the space-separated list.']
+[DEBUG] 开始评估，指令: The task is to sort the words alphabetically and return just the space-separated list.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['extinct languages'] | pred='and chimila mehri southeastern tarahumara' | score=0.0000
+[PRED 1] gold=['Big Tech'] | pred='amazon apple facebook google microsoft' | score=0.0000
+[PRED 2] gold=['pokeman'] | pred='and moltres salamence zapdos' | score=0.0000
+[PRED 3] gold=['people shot by police'] | pred='akinyia malik jerome gray joshua m. gomoll michael perez' | score=0.0000
+[PRED 4] gold=['historical wars'] | pred='english civil war polish-turkish war war of the austrian succession' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063109__f1__The_task_is_to_sort_the_words_alphabetic__bc59823c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1524
+********* Done *********
+Instruction: ['Please provide the task or question you would like me to complete.']
+[DEBUG] 开始评估，指令: Please provide the task or question you would like me to complete.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['computer file format extensions'] | pred='please decode the given abbreviations:\n\npdq, vpm, and hcxs' | score=0.0000
+[PRED 1] gold=['historical wars'] | pred='these events all occurred in 1887' | score=0.0000
+[PRED 2] gold=['prime numbers'] | pred="i'd like you to calculate the sum of the given input numbers.\n\n2 + 3 + 5 + 7 = 17" | score=0.1429
+[PRED 3] gold=['science fiction books'] | pred='what is the common thread among these three book titles?\n\noutput: they are all winners of the hugo award for best novel or best novella' | score=0.0000
+[PRED 4] gold=['animals'] | pred='these three animals are examples of species that have been observed exhibiting a unique behavior known as "allogrooming".' | score=0.1053
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063151__f1__Please_provide_the_task_or_question_you___4cb3ac93.tsv
+Dev loss: 0.0901. Dev perf: 0.0901. Best dev perf: 0.1524
+********* Done *********
+Instruction: ['Sort the words alphabetically.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['tourist_attractions'] | pred='here is the sorted output:\n\nhouse, museum, muni, old, sarepta, signalno, sisters, unmarried, village, watchtower' | score=0.0000
+[PRED 1] gold=['African countries'] | pred='malawi, rwanda, tanzania' | score=0.0000
+[PRED 2] gold=['games on Steam'] | pred='and, fantasy, final, heavensward, hildegards, of, secret, strife, the, xiv' | score=0.0000
+[PRED 3] gold=['prime numbers'] | pred='there are no words to sort alphabetically. the input appears to be a list of numbers. if you meant to provide a list of words, please provide the correct input.' | score=0.0870
+[PRED 4] gold=['science fiction books'] | pred='and leviathan wakes, the amber spyglass, the caves of steel' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063247__f1__Sort_the_words_alphabetically.__2ca0ba1d.tsv
+Dev loss: 0.0043. Dev perf: 0.0043. Best dev perf: 0.1524
+********* Done *********
+Instruction: ["'Sort the input and output words alphabetically.'"]
+[DEBUG] 开始评估，指令: 'Sort the input and output words alphabetically.'
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['people shot by police'] | pred='brandon simmons, charles m. smith, kevin higgins' | score=0.0000
+[PRED 1] gold=['extinct languages'] | pred='bashkardi, culina, wotapuri-katarqalai' | score=0.0000
+[PRED 2] gold=['extinct languages'] | pred='afitti, lenca, tetserret' | score=0.0000
+[PRED 3] gold=['the media'] | pred='capa - centre for aviation, fairfield daily republic, technewsworld' | score=0.0000
+[PRED 4] gold=['science fiction books'] | pred='all systems red, ancillary justice, obsidian' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063333__f1__Sort_the_input_and_output_words_alphabet__44931806.tsv
+Dev loss: 0.0215. Dev perf: 0.0215. Best dev perf: 0.1524
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+
+
+Output:' -> 强制判为 0.0 分
+Instruction: ['Sort the input and output text alphabetically.']
+[DEBUG] 开始评估，指令: Sort the input and output text alphabetically.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['historical wars'] | pred='egypt and the sudan, italo-ethiopian war, war of the spanish succession' | score=0.0000
+[PRED 1] gold=['tourist_attractions'] | pred='here are the sorted texts alphabetically:\n\ninput: arbor and freedom house in on square the tikhvin usanina volga\n\noutput: (no output text provided, so nothing to sort)' | score=0.0000
+[PRED 2] gold=['prime numbers'] | pred='here are the input and output text sorted alphabetically:\n\ninput: 2, 3, 5, 7 \noutput (result only): 2, 3, 5, 7' | score=0.0000
+[PRED 3] gold=['African countries'] | pred='here is the output in alphabetical order:\n\nand, ethiopia, mauritania, nigeria' | score=0.0000
+[PRED 4] gold=['the media'] | pred='here is the sorted output:\n\nindie wire, international business times uk, techcrunch' | score=0.2857
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063418__f1__Sort_the_input_and_output_text_alphabeti__ce4a504c.tsv
+Dev loss: 0.0286. Dev perf: 0.0286. Best dev perf: 0.1524
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+
+
+Output:' -> 强制判为 0.0 分
+Instruction: ['I am ready for the task. Please provide the clear, imperative instruction for me to follow.']
+[DEBUG] 开始评估，指令: I am ready for the task. Please provide the clear, imperative instruction for me to follow.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['infectious diseases'] | pred='here is the instruction:\n\n**classify the given diseases into their respective categories (viral, bacterial, or other)**\n\nplease provide the output for the given diseases:\n\n1. domoic acid poisoning\n2. spotted fever rickettsiosis\n3. brucellosis' | score=0.0000
+[PRED 1] gold=['science fiction books'] | pred='list the authors of the three given book titles in the order they appear:\n\n1. ancillary justice - ann leckie\n2. obsidian - nalini singh\n3. all systems red - martha wells' | score=0.0000
+[PRED 2] gold=['presidents of the U.S'] | pred='here is your instruction:\n\nlist the number of years each of these u.s. presidents served in office.' | score=0.0000
+[PRED 3] gold=['animals'] | pred='here is the instruction:\n\nidentify the common characteristic among the given species and provide the answer.\n\ngo ahead!' | score=0.0000
+[PRED 4] gold=['African countries'] | pred='are they landlocked countries in africa?' | score=0.2500
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063516__f1__I_am_ready_for_the_task._Please_provide___2fde2512.tsv
+Dev loss: 0.0558. Dev perf: 0.0558. Best dev perf: 0.1524
+********* Done *********
+Instruction: ['The instruction is to return a list of examples of a task and their corresponding outputs, without any explanation or conversational text.']
+[DEBUG] 开始评估，指令: The instruction is to return a list of examples of a task and their corresponding outputs, without any explanation or conversational text.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['the media'] | pred='[\n["6abc.com", "news website"],\n["supermarket news", "industry publication"],\n["khaama press (press release) (blog)", "news blog"]\n]' | score=0.0000
+[PRED 1] gold=['historical wars'] | pred='[\n["italo-ethiopian war", "1895-1896"],\n["egypt and the sudan", "1882-1898"],\n["war of the spanish succession", "1701-1714"]\n]' | score=0.0000
+[PRED 2] gold=['Computer Science books'] | pred='[\n["read \'adventures in minecraft\' to understand the game\'s mechanics", "understanding of minecraft\'s mechanics"],\n["read \'the innovators: how a group of hackers, geniuses and geeks created the digital revolution\' to learn about the history of computer science", "knowledge of the history of computer science"],\n["read \'the quark and the jaguar: adventures in the simple and the complex\' to understand complexity in science", "understanding of complexity in science"]\n]' | score=0.0000
+[PRED 3] gold=['tourist_attractions'] | pred='1. post office - a place where mail and packages are sent and received\n   output: list of postal services and hours of operation\n\n2. mansion tradesman pf blinov - a historic mansion built for a wealthy merchant\n   output: architectural style and historical significance\n\n3. the building of the russian-chinese bank - a historic bank building\n   output: current use and notable architectural features' | score=0.0000
+[PRED 4] gold=['science fiction books'] | pred='• the caves of steel: isaac asimov\n• the amber spyglass: philip pullman\n• leviathan wakes: james s. a. corey' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063630__f1__The_instruction_is_to_return_a_list_of_e__840a8b9f.tsv
+Dev loss: 0.0071. Dev perf: 0.0071. Best dev perf: 0.1524
+********* Done *********
+Instruction: ['clear and concise.']
+[DEBUG] 开始评估，指令: clear and concise.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['prime numbers'] | pred='17' | score=0.0000
+[PRED 1] gold=['tech companies'] | pred='software applications' | score=0.0000
+[PRED 2] gold=['math theorems'] | pred="wald's equation: e[y] = e[x]e[g(x)]\nfermat's little theorem: a^(p-1) ≡ 1 (mod p)\nclausius theorem: δs = ∫(dq/t)" | score=0.0000
+[PRED 3] gold=['animals'] | pred="these animals are found in the following continents:\n\n* barbary sheep: africa/asia\n* yellow-crested cockatoo: asia\n* leadbeater's possum: australia" | score=0.2222
+[PRED 4] gold=['top journals'] | pred='peer-reviewed sources of epidemiological and scientific data and research.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063714__f1__clear_and_concise.__6c3a7425.tsv
+Dev loss: 0.1684. Dev perf: 0.1684. Best dev perf: 0.1684
+********* Done *********
+Best initial point: 0.168
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 9.5367e-09
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][06:37:14] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[06:37:17] INFO [PROFILE] GP fit: 2.876s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:37:17] INFO Iter 0 best_value=2.46872 gp_loss=-5014.44292
+[06:37:18] INFO [PROFILE] Acquisition: 0.719s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:37:56] INFO [PROFILE] LLM eval candidate: 38.128s
+[06:37:56] INFO Best value so far: 0.16839
+Bayes iterations:  20%|██        | 1/5 [00:41<02:47, 41.75s/it][06:37:56] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[06:37:58] INFO [PROFILE] GP fit: 2.072s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:37:58] INFO Iter 1 best_value=2.52594 gp_loss=-5299.85043
+[06:37:59] INFO [PROFILE] Acquisition: 0.601s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:38:38] INFO [PROFILE] LLM eval candidate: 38.946s
+[06:38:38] INFO Best value so far: 0.27877
+Bayes iterations:  40%|████      | 2/5 [01:23<02:05, 41.69s/it][06:38:38] INFO [Iteration 2] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[06:38:41] INFO [PROFILE] GP fit: 3.407s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:38:41] INFO Iter 2 best_value=3.36225 gp_loss=-305.06364
+[06:38:42] INFO [PROFILE] Acquisition: 0.617s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:38:44] INFO [PROFILE] LLM eval candidate: 2.302s
+[06:38:44] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [01:29<00:51, 25.55s/it][06:38:44] INFO [Iteration 3] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[06:38:47] INFO [PROFILE] GP fit: 2.977s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:38:47] INFO Iter 3 best_value=3.36225 gp_loss=-305.06364
+[06:38:48] INFO [PROFILE] Acquisition: 0.677s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:39:20] INFO [PROFILE] LLM eval candidate: 32.047s
+[06:39:20] INFO Best value so far: 0.27877
+Bayes iterations:  80%|████████  | 4/5 [02:05<00:29, 29.57s/it][06:39:20] INFO [Iteration 4] X_train torch.Size([28, 30]), y_train torch.Size([28, 1])
+[06:39:21] INFO [PROFILE] GP fit: 1.747s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:39:21] INFO Iter 4 best_value=3.21576 gp_loss=-299.36413
+[06:39:22] INFO [PROFILE] Acquisition: 0.614s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:39:54] INFO [PROFILE] LLM eval candidate: 31.692s
+[06:39:54] INFO Best value so far: 0.34822
+Bayes iterations: 100%|██████████| 5/5 [02:39<00:00, 31.19s/it]Bayes iterations: 100%|██████████| 5/5 [02:39<00:00, 31.91s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["Sort the words alphabetically. Output only the space-separated list.'\nFind the synonym. Return just the word.'"]
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.'
+Find the synonym. Return just the word.'
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['extinct languages'] | pred='here is the sorted list:\n\nkabard-cherkes kwadi osage' | score=0.0000
+[PRED 1] gold=['animals'] | pred='ground squirrel hispid cotton rat spotted tufted gray langur' | score=0.0000
+[PRED 2] gold=['chemical elements with high density'] | pred='and iron nickel tungsten' | score=0.0000
+[PRED 3] gold=['large islands'] | pred='baffin island and ellesmere island madagascar' | score=0.0000
+[PRED 4] gold=['popular songs'] | pred='and bad china guy london the' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063756__f1__Sort_the_words_alphabetically._Output_on__9e909160.tsv
+Dev loss: 0.0071. Dev perf: 0.0071. Best dev perf: 0.1684
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Clear conversation context']
+[DEBUG] 开始评估，指令: Clear conversation context
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['tourist_attractions'] | pred='landmarks in moscow.' | score=0.0000
+[PRED 1] gold=['artists'] | pred='they are all famous painters.' | score=0.0000
+[PRED 2] gold=['countries in United Nations'] | pred='these are the 4 largest economies in the world.' | score=0.1818
+[PRED 3] gold=['Computer Science books'] | pred='three book titles.' | score=0.0000
+[PRED 4] gold=['sports'] | pred='olympic sports.' | score=0.6667
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063838__f1__Clear_conversation_context__917407b1.tsv
+Dev loss: 0.2788. Dev perf: 0.2788. Best dev perf: 0.2788
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Examples of a task:
+Input: Liouville's theorem, Pu's inequality, and Picard–Lindelöf theorem
+Output: math theorems
+Input: Turtwig, Seel, and Drifloon
+Output: pokeman
+Input: Stirling' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['What is the answer?']
+[DEBUG] 开始评估，指令: What is the answer?
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['computer file format extensions'] | pred='services, department of public relations, and sessions' | score=0.0000
+[PRED 1] gold=['artists'] | pred='famous painters' | score=0.0000
+[PRED 2] gold=['animals'] | pred='endangered species' | score=0.0000
+[PRED 3] gold=['infectious diseases'] | pred='zoonoses' | score=0.0000
+[PRED 4] gold=['extinct languages'] | pred='languages' | score=0.6667
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063920__f1__What_is_the_answer__376902a1.tsv
+Dev loss: 0.1569. Dev perf: 0.1569. Best dev perf: 0.2788
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Okay.']
+[DEBUG] 开始评估，指令: Okay.
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['animals'] | pred='squirrel glider: australia and new guinea\nbighorn sheep: north america\nbush dog: central and south america' | score=0.0000
+[PRED 1] gold=['popular songs'] | pred='skyfall' | score=0.0000
+[PRED 2] gold=['top journals'] | pred='scientific journals.' | score=0.5000
+[PRED 3] gold=['tech companies'] | pred='cybersecurity, social media monitoring, and survey research' | score=0.0000
+[PRED 4] gold=['extinct languages'] | pred='languages' | score=0.6667
+[PRED-DUMP] wrote 20 rows to logs/preds/auto_categorization_20251201_063954__f1__Okay.__2342c971.tsv
+Dev loss: 0.3482. Dev perf: 0.3482. Best dev perf: 0.3482
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['Okay.']
+The final instruction set is:
+{"'Output only the list of tasks.'": (0.015625, array([[0.    , 0.    , 0.    , 0.    , 0.    , 0.25  , 0.    , 0.    ,
+        0.    , 0.    , 0.    , 0.    , 0.    , 0.    , 0.0625, 0.    ,
+        0.    , 0.    , 0.    , 0.    ]])), 'Example HTML PageCiao': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Find the corresponding output for each input."': (0.11004329004329003, array([[0.33333333, 0.18181818, 0.        , 0.        , 0.        ,
+        0.28571429, 0.        , 0.        , 0.        , 0.        ,
+        0.4       , 0.5       , 0.5       , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ]])), 'It seems like you are trying to find a pattern or structure in the input/output pairs you provided. If you can give me a clear and concise example or pattern, I would be happy to help you.': (0.13836996336996338, array([[0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.33333333, 0.        , 0.        , 0.28571429,
+        0.07142857, 0.        , 1.        , 0.        , 0.07692308,
+        0.        , 0.        , 1.        , 0.        , 0.        ]])), "Return the following words:\n\n* Liouville\n* Pu's inequality\n* Picard–Lindelöf theorem\n* math theorems\n* Turtwig\n* Seel\n* Drifloon\n* math theorems\n* pokeman\n* Stirling": (0.011764705882352941, array([[0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.23529412, 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ]])), "Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list": (0.0548521331609567, array([[0.        , 0.        , 0.        , 0.15384615, 0.        ,
+        0.        , 0.15384615, 0.14285714, 0.        , 0.11764706,
+        0.        , 0.15384615, 0.        , 0.        , 0.375     ,
+        0.        , 0.        , 0.        , 0.        , 0.        ]])), "I understand the task you're asking me to do. Please provide a clear and concise instruction for me to follow.": (0.055338214267747175, array([[0.11764706, 0.        , 0.        , 0.14285714, 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.10526316, 0.22222222, 0.08695652,
+        0.        , 0.25      , 0.18181818, 0.        , 0.        ]])), 'Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.': (0.1523736802413273, array([[0.2       , 0.2       , 0.44444444, 0.2       , 0.15384615,
+        0.2       , 0.        , 0.22222222, 0.53333333, 0.23529412,
+        0.        , 0.        , 0.16666667, 0.16666667, 0.125     ,
+        0.2       , 0.        , 0.        , 0.        , 0.        ]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the examples alphabetically. Output only the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'The task is to sort the words alphabetically and return just the space-separated list.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Please provide the task or question you would like me to complete.': (0.09009832272990168, array([[0.        , 0.        , 0.14285714, 0.        , 0.10526316,
+        0.4       , 0.        , 0.15384615, 0.        , 0.        ,
+        0.33333333, 0.        , 0.        , 0.13333333, 0.        ,
+        0.        , 0.        , 0.2       , 0.        , 0.33333333]])), 'Sort the words alphabetically.': (0.004347826086956521, array([[0.        , 0.        , 0.        , 0.08695652, 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ]])), "'Sort the input and output words alphabetically.'": (0.021496924128503077, array([[0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.18181818, 0.10526316, 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.14285714]])), 'Sort the input and output text alphabetically.': (0.028571428571428574, array([[0.        , 0.        , 0.        , 0.        , 0.28571429,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.28571429, 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ]])), 'I am ready for the task. Please provide the clear, imperative instruction for me to follow.': (0.0558066933066933, array([[0.        , 0.        , 0.        , 0.        , 0.25      ,
+        0.18181818, 0.        , 0.15384615, 0.        , 0.        ,
+        0.        , 0.        , 0.15384615, 0.        , 0.        ,
+        0.09090909, 0.        , 0.28571429, 0.        , 0.        ]])), 'The instruction is to return a list of examples of a task and their corresponding outputs, without any explanation or conversational text.': (0.007142857142857143, array([[0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.14285714, 0.        , 0.        ]])), 'clear and concise.': (0.16839285714285715, array([[0.        , 0.        , 0.        , 0.22222222, 0.        ,
+        0.        , 0.        , 0.5       , 0.11111111, 0.33333333,
+        0.        , 0.14285714, 0.        , 0.66666667, 0.26666667,
+        0.125     , 0.        , 0.        , 0.        , 1.        ]])), "Sort the words alphabetically. Output only the space-separated list.'\nFind the synonym. Return just the word.'": (0.0071428571428571435, array([[0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.14285714, 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.        , 0.        , 0.        , 0.        , 0.        ]])), 'Clear conversation context': (0.2787734487734488, array([[0.        , 0.        , 0.18181818, 0.        , 0.66666667,
+        0.8       , 0.25      , 0.        , 0.8       , 0.33333333,
+        0.57142857, 0.25      , 0.        , 0.25      , 0.22222222,
+        0.25      , 0.66666667, 0.        , 0.33333333, 0.        ]])), 'What is the answer?': (0.15694444444444444, array([[0.        , 0.        , 0.        , 0.        , 0.66666667,
+        0.        , 0.        , 0.        , 0.        , 0.        ,
+        0.5       , 0.22222222, 1.        , 0.        , 0.25      ,
+        0.        , 0.        , 0.        , 0.33333333, 0.16666667]])), 'Okay.': (0.34821733821733825, array([[0.        , 0.        , 0.5       , 0.        , 0.66666667,
+        0.66666667, 0.4       , 0.5       , 0.46153846, 0.66666667,
+        0.46153846, 0.        , 0.22222222, 0.66666667, 0.28571429,
+        0.        , 0.        , 0.        , 0.8       , 0.66666667]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "f1" for task "auto_categorization"...
+Using metric "f1" for task "auto_categorization"...
+[PRED 0] gold=['sports'] | pred='olympic sports' | score=0.6667
+[PRED 1] gold=['crops'] | pred="it seems like you're listing different types of plant-based foods or products. if that's correct, here's a possible completion:\n\noutput: these are all important components of a healthy diet and sustainable agriculture.\n\nor, if you'd like me to categorize them:\n\noutput: vegetables (broccoli, carrots, etc.), grains (maize), and plant-based materials (fibers from cotton, hemp, etc.)." | score=0.0000
+[PRED 2] gold=['programming languages'] | pred='programming languages' | score=1.0000
+[PRED 3] gold=['indian foods'] | pred="it seems like you've listed some popular indian sweets and snacks!\n\n* ledikeni is a traditional bengali sweet dish made with deep-fried dough balls soaked in syrup.\n* chikki is a popular indian snack made from nuts, seeds, and dried fruits held together by a sweet syrup.\n* poha is a popular indian breakfast or snack dish made from flattened rice flakes.\n\nare you looking for a specific recipe or information about these dishes?" | score=0.1429
+[PRED 4] gold=['animals'] | pred='here is the output:\n\nthese three animals are from different parts of the world:\n\n* the african spurred tortoise is found in the savannas and grasslands of sub-saharan africa.\n* the humboldt penguin is found along the coasts of peru and chile in south america.\n* the cheetah is found in the grasslands and savannas of africa and a small portion of iran in the middle east.' | score=0.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/auto_categorization_20251201_064552__f1__Okay.__2342c971.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.2332987193539623

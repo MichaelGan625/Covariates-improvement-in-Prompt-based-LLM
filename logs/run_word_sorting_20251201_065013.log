@@ -1,0 +1,376 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.99s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.08s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Translate the phrase into French. Output only the translated text.'"]
+[DEBUG] 开始评估，指令: 'Translate the phrase into French. Output only the translated text.'
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['adjudge alpert barycentric bathe bequeath biopsy carousel conakry cowherd dc indispose intuit mu nocturnal phosphor pop shoehorn shortstop tarpon wit'] | pred='liste : léguer mon esprit intuitif juger indisposer barycentrique déchausser arrêt-court biopsie alpert phosphore tarpon berger conakry se baigner pop dc carrousel nocturne' | score=0.0000
+[PRED 1] gold=['jonas seclusion spirit yogi zagreb'] | pred='liste : esprit jonas séclusion yogi zagreb' | score=0.0000
+[PRED 2] gold=['puree trigram'] | pred='liste : purée trigramme' | score=0.0000
+[PRED 3] gold=['bater costello dumpy goldsmith introduce logician shirtmake'] | pred='liste : bâter costello orfèvre introduire logicien chemisier débile' | score=0.0000
+[PRED 4] gold=['abort leathery sobriquet suave'] | pred='liste : avorter suave surnom cuirassé' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065131__em__Translate_the_phrase_into_French._Output__e2223683.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['clear and concise']
+[DEBUG] 开始评估，指令: clear and concise
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['announce carp clayton co earthy hello inmate nimbus parentage phonetic sharon skinny sudan watson'] | pred='here is the list in alphabetical order:\n\n1. announce\n2. carp\n3. clayton\n4. co\n5. earthy\n6. hello\n7. inmate\n8. nimbus\n9. parentage\n10. phonetic\n11. sharon\n12. skinny\n13. sudan\n14. watson' | score=0.0000
+[PRED 1] gold=["artistry can't cascade condiment consignee gentlemen glance golf markov mimosa nine projectile shanghai swingable tale wildflower"] | pred='here is the list in alphabetical order:\n\n1. artistry\n2. cascade\n3. condiment\n4. consignee\n5. gentlemen\n6. glance\n7. golf\n8. markov\n9. mimosa\n10. nine\n11. projectile\n12. shanghai\n13. swingable\n14. tale\n15. wildflower' | score=0.0000
+[PRED 2] gold=['assure bully butterball bye contend cornet deaf dinosaur frontage gunky indeterminable lustrous ostentatious paradigmatic rhyme sanderson sashimi smokestack taint'] | pred='here is the list of words in alphabetical order:\n\n1. assure\n2. bully\n3. butterball\n4. bye\n5. contend\n6. cornet\n7. deaf\n8. dinosaur\n9. frontage\n10. gunky\n11. indeterminable\n12. lustrous\n13. ostentatious\n14. paradigmatic\n15. rhyme\n16. sanderson\n17. sashimi\n18. smokestack\n19.' | score=0.0000
+[PRED 3] gold=['acropolis asteroid bighorn britannica custodial groton indigent militia springtime sweepstake'] | pred='here is the list of words in alphabetical order:\n\nacropolis asteroid bighorn britannica custodial groton indigent militia springtime sweepstake' | score=0.0000
+[PRED 4] gold=['bifurcate meningitis tirana zap'] | pred='here is the alphabetized list:\n\nbifurcate, meningitis, tirana, zap' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065251__em__clear_and_concise__f67a5935.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: List: lorinda waterline dickey bizet captious hydrogenate successive' -> 强制判为 0.0 分
+Instruction: ['Alterate aseptic cayenne chandigarh debauch declassify dingy equanimity excursion foamflower groupoid inclement kruger lawful october only scorch.']
+[DEBUG] 开始评估，指令: Alterate aseptic cayenne chandigarh debauch declassify dingy equanimity excursion foamflower groupoid inclement kruger lawful october only scorch.
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['diana pacific programming scale wherever wordy'] | pred='here is the output:\n\nalternate: wherever\naseptic: programming\ncayenne: diana\nchandigarh: wordy\ndebauch: scale\ndeclassify: pacific' | score=0.0000
+[PRED 1] gold=['abalone bumpkin cannabis entranceway implantation knudson naples'] | pred='abalone alterate aseptic bumpkin cannabis debauch declassify dingy entranceway equanimity excursion foamflower groupoid implantation inclement knudson kruger lawful naples october only scorch' | score=1.0000
+[PRED 2] gold=['murray sweatband'] | pred='sweatband murray lawful' | score=0.0000
+[PRED 3] gold=['buxton callus cameron contribute extensible marque methanol olympic precise procrustean seepage shelf sideboard tty typescript unitary verify'] | pred='here is the altered list:\n\n1. aseptic -> sideboard\n2. cayenne -> procrustean\n3. chandigarh -> seepage\n4. debauch -> buxton\n5. declassify -> olympic\n6. dingy -> tty\n7. equanimity -> typescript\n8. excursion -> marque\n9. foamflower -> callus\n10. groupoid -> unitary\n11. inclement -> cam' | score=0.0000
+[PRED 4] gold=['captious elton ineligible iodinate olympic sherman'] | pred='here is the altered list:\n\nalterate elton aseptic olympic iodinate cayenne captious chandigarh ineligible sherman debauch' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065411__em__Alterate_aseptic_cayenne_chandigarh_deba__cb02fcfa.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Return the altered list of words from the input list."']
+[DEBUG] 开始评估，指令: "Return the altered list of words from the input list."
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['bluegrass brunette corvus cress durkee frank girlish hawley hispanic hydroelectric individuate liqueur octavia quicksand retentive screen sparky squabble tinsel treachery'] | pred='here is the altered list of words with all vowels removed:\n\n1. ndvdt\n2. brntt\n3. sprky\n4. rntv\n5. ctv\n6. crvs\n7. drky\n8. hspnc\n9. trchry\n10. scrn\n11. qcksd\n12. hwl\n13. blgss\n14. crss\n15. hdyelctr\n16. tns' | score=0.0000
+[PRED 1] gold=['berlioz caught chap constructor diathesis du grep liqueur lubricant salmonella sketch staff sunday tankard wheresoever xi'] | pred="here is the output:\n\n[ \n  'salmonella', \n  'tankard', \n  'xi', \n  'lubricant', \n  'constructor', \n  'liqueur', \n  'chap', \n  'diathesis', \n  'sunday', \n  'grep', \n  'caught', \n  'wheresoever', \n  'staff', \n  'du', \n  'sketch', \n  'berlioz" | score=0.0000
+[PRED 2] gold=['bucolic oblong whoosh'] | pred='oblong, bucolic, whoosh' | score=0.0000
+[PRED 3] gold=['crossbar exudate headline mcgrath meant obscene picnic pogrom rag vast zeta'] | pred='[picnic, exudate, headline, mcgrath, pogrom, obscene, zeta, crossbar, meant, rag, vast]' | score=0.0000
+[PRED 4] gold=['abutting francoise geminid insult meadow'] | pred="here is the output:\n\n['geminid', 'meadow', 'francoise', 'insult', 'abutting']" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065515__em__Return_the_altered_list_of_words_from_th__c87a871f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Sort the list of words alphabetically. Output only the space-separated list."\n\n\n\nList:\n\n* \'Sort the words alphabetically. Output only the space-separated list.\'\n* \'Find the synonym. Return just the word.\'']
+[DEBUG] 开始评估，指令: "Sort the list of words alphabetically. Output only the space-separated list."
+
+
+
+List:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* 'Find the synonym. Return just the word.'
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['darkle erudite hookup instant lip moldboard olsen pea quadrant yonkers'] | pred='darkle erudite hookup instant lip moldboard olsen pea quadrant yonkers' | score=1.0000
+[PRED 1] gold=['betelgeuse blue caudal char cyanide dew epoch grossman inexplainable lyre meaty snazzy stain tao trail trailside wash'] | pred='betelgeuse blue caudal char cyanide dew epoch grossman inexplainable lyre meaty snazzy stain tao trail trailside wash' | score=1.0000
+[PRED 2] gold=['elephantine eminent held interest reject rudder scarify woodyard'] | pred='elephantine eminent held interest reject rudder scarify woodyard' | score=1.0000
+[PRED 3] gold=["addict appliance cancer cardiology degrease dimorphism forfend informant inveigle mallory merrimack nichrome rhesus rickets slivery sora worth you're"] | pred="appliance addict cancer cardiology degrease dimorphism forfend informant inveigle mallory merrimack nichrome rhesus rickets slivery sora worth you're" | score=0.0000
+[PRED 4] gold=['chairperson chen cyclic distinguish kay luger manipulate martin odometer prosopopoeia siege stoat toby xerxes'] | pred='chairperson chen cyclic distinguish kay luger manipulate martin odometer prosopopoeia siege stoat toby xerxes' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065558__em__Sort_the_list_of_words_alphabetically._O__a08538bc.tsv
+Dev loss: 0.9. Dev perf: 0.9. Best dev perf: 0.9
+********* Done *********
+Instruction: ['"Return the output as a list, without any explanations, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Return the output as a list, without any explanations, numbering, or conversational text."
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['clamp deface'] | pred="['deface', 'clamp']" | score=0.0000
+[PRED 1] gold=['apotheosis boardinghouse coalesce dawn deject endgame ethereal eucalyptus glamour goldstine hover irradiate kick loire memoir pork proofread speedwell strict'] | pred="['apotheosis', 'boardinghouse', 'eucalyptus', 'endgame', 'ethereal', 'glamour', 'goldstine', 'hover', 'irradiate', 'kick', 'loire', 'memoir', 'pork', 'proofread', 'speedwell', 'strict']" | score=1.0000
+[PRED 2] gold=['cryptanalyst cycle demagogue extradite genie implement slovenia'] | pred='[cryptanalyst, genie, implement, cycle, extradite, slovenia, demagogue]' | score=1.0000
+[PRED 3] gold=['acclimate birdbath curriculum felon fire folic fran lesson nilpotent pea phantom'] | pred="['acclimate', 'birdbath', 'curriculum', 'felon', 'fire', 'folic', 'fran', 'lesson', 'nilpotent', 'pea', 'phantom']" | score=1.0000
+[PRED 4] gold=['beast counterproductive crescent eminent eugene gaff gullet haystack mayhem railbird talkative'] | pred="['beast', 'crescent', 'counterproductive', 'eugene', 'eminent', 'gaff', 'gullet', 'haystack', 'mayhem', 'railbird', 'talkative']" | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065656__em__Return_the_output_as_a_list__without_any__081f2d58.tsv
+Dev loss: 0.55. Dev perf: 0.55. Best dev perf: 0.9
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['blaine bucolic cosy fruehauf gerundive gnaw perfectible respirator rift sole spasm yucca'] | pred='blaine bucolic cosy fruehauf gerundive gnaw perfectible respirator rift sole spasm yucca' | score=1.0000
+[PRED 1] gold=['accipiter alb brainwash buttock dolomite embodiment geodetic tarzan tortoiseshell whomsoever wilma'] | pred='accipiter alb brainwash buttock dolomite embodiment geodetic tarzan tortoiseshell whomsoever wilma' | score=1.0000
+[PRED 2] gold=['artemis astronomy click crafty curricular dada malocclusion memoir mummify nimbus ohmmeter torn'] | pred='artemis astronomy click crafty curricular dada malocclusion memoir mummify nimbus ohmmeter torn' | score=1.0000
+[PRED 3] gold=['angora centrist constitution discuss emphases epitome equity expressway extradition katharine messy profusion vine'] | pred='angora centrist constitution discuss emphases epitome equity extradition expressway katharine messy profusion vine' | score=1.0000
+[PRED 4] gold=['appropriable casserole cauliflower compositor desire envious imbrium lousewort mealy olin organic ornithology philology reverie simply single soy tempest writeup'] | pred='appropriable cauliflower compositor desire envious imbrium lousewort mealy olin organic ornithology philology reverie simply single soy tempest writeup' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065738__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.95. Dev perf: 0.95. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+List:
+Output:' -> 强制判为 0.0 分
+Instruction: ['"Translate the text into French. Output only the translated text."']
+[DEBUG] 开始评估，指令: "Translate the text into French. Output only the translated text."
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['puree trigram'] | pred='liste : purée trigramme' | score=0.0000
+[PRED 1] gold=['anarchic bstj elution exhumation furl geld gradual j liniment locomote midshipman pantheist profess riddance rowley saline'] | pred='liste : aspirant rowley salin furl geld locomote exhumation anarchique bstj graduel élimination j liniment panthéiste élution profess' | score=0.0000
+[PRED 2] gold=['ail circumspect coxcomb deputation dogfish impeach invest snapdragon stickleback'] | pred='liste : épinoche délégation coquette pavot ail requin prudent mettre en accusation investir' | score=0.0000
+[PRED 3] gold=['appraisal beachhead befoul bridgehead caiman cryptanalyst imprecise marzipan mousy muse rhapsodic richard rood scatterbrain stun truss victory wolfe'] | pred="liste : pâte d'amande souris caïman victoire scatterbrain évaluation rood tête de pont imprécis plage tête de pont souiller ferme wolfe richard cryptanalyste stupéfier rhapsodique muse" | score=0.0000
+[PRED 4] gold=['acrobatic alcohol alleyway blocky congressional fireboat husband petition pith roadster scythia skullduggery sleazy tabernacle'] | pred='liste : tabernacle louche feu de bateau acrobatique alcool congrès époux bloc routier scythe scélératesse allée way pith pétition' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065828__em__Translate_the_text_into_French._Output_o__fb87716a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.95. Dev perf: 0.95. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+List:
+* chocolate
+* cookie
+* dough
+Output:
+* chocolate chip
+* cookie dough
+* batter
+
+
+Return only the antonym of the input word.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 
+List: 
+Output:' -> 强制判为 0.0 分
+Instruction: ["Please provide a clear and imperative instruction for the task you'd like me to perform. The instruction should be concise and specific, without any explanations, numberings, or conversational text."]
+[DEBUG] 开始评估，指令: Please provide a clear and imperative instruction for the task you'd like me to perform. The instruction should be concise and specific, without any explanations, numberings, or conversational text.
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['alan allan auspices bomb castanet certainty crupper derek ingrained montana planet ruminate saturnine secondhand shipman sorption spur telepathy this trio'] | pred='arrange the given list of words in alphabetical order.' | score=0.0000
+[PRED 1] gold=['kansas persona pithy potatoes practice prolific quadric thompson'] | pred='alphabetize the given list of words.' | score=0.0000
+[PRED 2] gold=["euphoric jurisprudent lao o'dell pareto reclamation stowage systemic"] | pred='sort the given list of words in alphabetical order and provide the sorted list.' | score=0.0000
+[PRED 3] gold=['annapolis bainite civet increment knapsack nnw tuberculosis wheelchair'] | pred='sort the list in alphabetical order.' | score=0.0000
+[PRED 4] gold=['bituminous derate digress each magnesium megalomaniac repartee segment teeth typewritten'] | pred='alphabetize the given list of words.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065905__em__Please_provide_a_clear_and_imperative_in__5a57b6cd.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+List:
+
+* aeolian
+* anthropophagus
+* antipathic
+* aseptic
+* berniece
+* bizet
+* cacuminal
+* captious
+* chandigarh
+* codicil
+*' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input:
+List: 
+
+Output: 
+
+
+
+1. Sort the words alphabetically.
+2. Find the synonym.
+3. Return just the word.' -> 强制判为 0.0 分
+Instruction: ['Please provide the answer without any explanations, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Please provide the answer without any explanations, numbering, or conversational text.
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['alabaster burette distributor downwind megavolt secondhand smote where'] | pred='alabaster distributor burette megavolt secondhand smote' | score=1.0000
+[PRED 1] gold=['abutting francoise geminid insult meadow'] | pred='geminid, meadow, francoise, insult, abutting' | score=0.0000
+[PRED 2] gold=['angles banish common crept cumbersome entry hilt ostracism phenyl squid william zygote'] | pred='angles, banish, common, crept, cumbersome, entry, hilt, ostracism, phenyl, squid, william, zygote' | score=1.0000
+[PRED 3] gold=['marrietta presentation sneeze'] | pred='sneeze' | score=0.0000
+[PRED 4] gold=['flunky gummy mindful moral nnw select tiffany'] | pred='mindful moral' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_065956__em__Please_provide_the_answer_without_any_ex__b63b12ae.tsv
+Dev loss: 0.35. Dev perf: 0.35. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 
+List: 
+Output: 
+
+Input: 
+List: 
+Output: 
+
+Input: 
+List: 
+Output: 
+
+Input: 
+List: 
+Output: 
+
+Input: 
+List: 
+Output:' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input:
+List: words
+Output: space-separated list' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.95. Dev perf: 0.95. Best dev perf: 0.95
+********* Done *********
+Instruction: ["'Process the input and output lists, replacing each word with its equivalent word in the other list. Output only the processed lists.'"]
+[DEBUG] 开始评估，指令: 'Process the input and output lists, replacing each word with its equivalent word in the other list. Output only the processed lists.'
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['aliquot collins confine deputy erie flippant frighten khaki lawgiver metronome molybdate principia rockabye snowflake spiegel utilitarian'] | pred="here are the processed lists:\n\nnote: i'll assume the input list is to be replaced with words from a general knowledge list. since there's no specific list provided, i'll use my knowledge database to replace each word.\n\nhere are the replaced words:\n\n1. frighten -> intimidate\n2. metronome -> chronometer\n3. rockabye -> lullaby\n4. molybdate -> tungstate\n5. snowflake -> icecrystal\n6. deputy ->" | score=0.0000
+[PRED 1] gold=['cetus conciliate enumerable hole inconsiderate litigant lymphocyte mummy nairobi narcotic olav perceptual perchlorate pillar pit'] | pred='narcotic cetus conciliate enumerable inconsiderate lymphocyte mummy nairobi olav percipience pit pillar pit' | score=0.0000
+[PRED 2] gold=['azure callisto isocline knossos marlborough newbold pinwheel precocity threshold tractor transverse'] | pred='isocline perpendicular precocity tractor pinwheel newbold knossos marlborough threshold blue callisto' | score=0.0000
+[PRED 3] gold=['aphelion appanage audio axiomatic baffle circadian contrariety duplicity gregory jugoslavia rampage verbena'] | pred='here are the processed lists:\n\n**input list with words replaced from output list:**\nsincerity simplicity sound chaos alexander contradiction obvious perihelion yugoslavia puzzle estate daily\n\n**output list with words replaced from input list:**\nverbena duplicity audio rampage gregory contrariety axiomatic aphelion jugoslavia baffle appanage circadian' | score=0.0000
+[PRED 4] gold=['allegheny ana anorthite ashore builtin canopy dew inhibitor krause retrograde sal sexton stratton wail'] | pred="i'm happy to help! however, i notice that there's some information missing. you've provided an input list, but you haven't provided the other list that the words should be replaced with.\n\ncould you please provide the other list, so i can help you process the input and output lists correctly?" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_070119__em__Process_the_input_and_output_lists__repl__b3f35da9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+Instruction: ['"Return the list of words in alphabetical order."']
+[DEBUG] 开始评估，指令: "Return the list of words in alphabetical order."
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['concordant mincemeat now'] | pred='concordant mincemeat now' | score=1.0000
+[PRED 1] gold=['garcia george piotr predacious riffle zither'] | pred='garcia george piotr predacious riffle zither' | score=1.0000
+[PRED 2] gold=['agee amanita anvil bogota citywide colt concurred crescendo magnum minnie mullion participant runneth somewhere stone teethe temptress this vainglorious'] | pred='amanita, anvil, bogota, citywide, colt, concurred, crescendo, magnum, minnie, mullion, participant, runneth, somewhere, stone, temptress, teethe, this, vainglorious' | score=0.0000
+[PRED 3] gold=['bimolecular camino catch flesh horse lionel putrefy puzzle rene seam skip turnabout whimsy'] | pred='bimolecular, camino, catch, flesh, horse, lionel, puzzle, putrefy, rene, seam, skip, turnabout, whimsy' | score=1.0000
+[PRED 4] gold=['altitude ammo chewy culpable demoniac dignitary eighteenth flux halve harp holloway julep kindred log nostalgia theatric tungstate vulcan'] | pred='altitude ammo chewy culpable demoniac dignitary eighteenth flux halve harp holloway julep kindred log nostalgia theatric tungstate vulcan' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_070218__em__Return_the_list_of_words_in_alphabetical__4e78717d.tsv
+Dev loss: 0.85. Dev perf: 0.85. Best dev perf: 0.95
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 
+List: 
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* 'Find the synonym. Return just the word.'' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input:
+List: unquestionability incontrovertibility indubitability undoubtability unquestionability indisputability unquestionability undoubtedness
+Output: indubitability undoubtability incontrovertibility unquestionability indisputability unquestionability undou' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Clear, imperative instruction for this task.
+
+
+Output:' -> 强制判为 0.0 分
+Best initial point: 0.950
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 2.8610e-08
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][07:02:23] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[07:02:26] INFO [PROFILE] GP fit: 2.224s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:02:26] INFO Iter 0 best_value=1.92056 gp_loss=-13530.97569
+[07:02:26] INFO [PROFILE] Acquisition: 0.599s
+[07:03:15] INFO [PROFILE] LLM eval candidate: 48.995s
+[07:03:15] INFO Best value so far: 0.95000
+Bayes iterations:  20%|██        | 1/5 [00:51<03:27, 51.85s/it][07:03:15] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[07:03:18] INFO [PROFILE] GP fit: 2.398s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:03:18] INFO Iter 1 best_value=1.95751 gp_loss=544.05433
+[07:03:18] INFO [PROFILE] Acquisition: 0.572s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:03:19] INFO [PROFILE] LLM eval candidate: 1.156s
+[07:03:19] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:55<01:11, 23.78s/it][07:03:19] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[07:03:21] INFO [PROFILE] GP fit: 1.748s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:03:21] INFO Iter 2 best_value=1.95751 gp_loss=544.05433
+[07:03:22] INFO [PROFILE] Acquisition: 0.595s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:03:24] INFO [PROFILE] LLM eval candidate: 1.893s
+[07:03:24] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [01:00<00:29, 14.86s/it][07:03:24] INFO [Iteration 3] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[07:03:25] INFO [PROFILE] GP fit: 1.864s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:03:25] INFO Iter 3 best_value=1.95751 gp_loss=544.05433
+[07:03:26] INFO [PROFILE] Acquisition: 0.611s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:04:23] INFO [PROFILE] LLM eval candidate: 57.027s
+[07:04:23] INFO Best value so far: 0.95000
+Bayes iterations:  80%|████████  | 4/5 [01:59<00:32, 32.49s/it][07:04:23] INFO [Iteration 4] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[07:04:25] INFO [PROFILE] GP fit: 2.391s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:04:25] INFO Iter 4 best_value=2.00496 gp_loss=531.61524
+[07:04:26] INFO [PROFILE] Acquisition: 0.590s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:05:22] INFO [PROFILE] LLM eval candidate: 55.478s
+[07:05:22] INFO Best value so far: 0.95000
+Bayes iterations: 100%|██████████| 5/5 [02:58<00:00, 41.86s/it]Bayes iterations: 100%|██████████| 5/5 [02:58<00:00, 35.65s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Alterate the list. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Alterate the list. Output only the space-separated list."
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['chloroplast implement love mycology sanctify screw stannic'] | pred='sanctify chloroplast stannic screw mycology implement love' | score=0.0000
+[PRED 1] gold=['calorimeter crewcut genii knightsbridge mauritius morrow prussic puck steeplebush theodosian'] | pred='puck prussic mauritius steeplebush theodosian calorimeter genii morrow crewcut knightsbridge' | score=0.0000
+[PRED 2] gold=['aura butane gulp librate queue snagging spoken sup teal teenage they trillion'] | pred='gulp aura they trillion teal snagging' | score=0.0000
+[PRED 3] gold=['astute fed inch informal monsieur pigroot solicit testament'] | pred='pigroot testament informal solicit monsieur astute fed inch' | score=0.0000
+[PRED 4] gold=['applejack contemporaneous irresponsible mercer phantasm prokaryote'] | pred='prokaryote phantasm applejack mercer contemporaneous irresponsible' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_070315__em__Alterate_the_list._Output_only_the_space__82e1dac0.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.95
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: 
+List: [Insert list of words here]
+Output: [Insert list of words with spaces between them here]' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Here are some examples of a task:
+Input: 
+List: foamflower lawful cayenne chandigarh only excursion declassify equanimity aseptic incursion.' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['clear, imperative']
+[DEBUG] 开始评估，指令: clear, imperative
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['adverbial catawba chintz debate disgustful dressmake glaciate groundskeep maya muffle pantheist peoria stodgy tingle troff woodside'] | pred='alphabetize the list of words:\n\nadverbial, catawba, chintz, debate, disgustful, dressmake, glaciate, groundskeep, maya, muffle, pantheist, peoria, stodgy, tingle, troff, woodside' | score=0.0000
+[PRED 1] gold=['cellar kiwanis orwell polish'] | pred='alphabetize the list.' | score=0.0000
+[PRED 2] gold=['greasy lapidary mark'] | pred='sort the list in alphabetical order: greasy lapidary mark' | score=0.0000
+[PRED 3] gold=['abbe adposition arragon cast danbury emplace falsetto gavin income inhibit onerous palazzi tabletop'] | pred='alphabetize the list:\n\n1. abbe\n2. adposition\n3. arragon\n4. cast\n5. danbury\n6. emplace\n7. falsetto\n8. gavin\n9. income\n10. inhibit\n11. onerous\n12. palazzi\n13. tabletop' | score=0.0000
+[PRED 4] gold=['alleyway proud swung'] | pred='alphabetize the list:\n\nalleyway, proud, swung' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_070423__em__clear__imperative__98303d0c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Find the synonym. Return just the word."']
+[DEBUG] 开始评估，指令: "Find the synonym. Return just the word."
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['andrew anne baltimorean benedict brighton churchyard cottonseed drizzly dunkirk excruciate gantlet influence mourn pete picayune rawhide tenebrous vary'] | pred="here are the synonyms:\n\n1. list - catalog\n2. vary - differ\n3. cottonseed - none (it's a noun)\n4. rawhide - leather\n5. anne - none (it's a proper noun)\n6. drizzly - rainy\n7. picayune - petty\n8. mourn - grieve\n9. gantlet - gauntlet\n10. dunkirk - none (it's a proper noun)\n11. tene" | score=0.0000
+[PRED 1] gold=['accelerometer amperage blackfeet brad circumspect effluvia emissary european feisty hard involution isolate jet poem solvent sorenson thebes vengeful'] | pred='here are the synonyms:\n\n1. accelerometer - sensor\n2. circumspect - cautious\n3. effluvia - waste\n4. thebes - city\n5. jet - plane\n6. amperage - current\n7. solvent - liquid\n8. blackfeet - tribe\n9. vengeful - angry\n10. european - foreign\n11. involution - spiral\n12. feisty - fierce\n13. brad - nail\n14. poem' | score=0.0000
+[PRED 2] gold=['centrex eocene grateful guideline holdup junior protactinium racial romania'] | pred="here are the synonyms:\n\n* centrex: switchboard\n* grateful: thankful\n* romania: (no synonym, it's a proper noun)\n* junior: younger\n* protactinium: (no synonym, it's a chemical element)\n* eocene: (no synonym, it's a geological epoch)\n* holdup: delay\n* racial: ethnic\n* guideline: directive" | score=0.0000
+[PRED 3] gold=['ablution arkansan dakota epigenetic gunpowder infectious kitakyushu lair layette littleton london rasmussen salamander saleslady sumeria'] | pred='here are the synonyms:\n\n* ablution: bath\n* littleton: none\n* infectious: contagious\n* gunpowder: explosive\n* epigenetic: genetic\n* arkansan: none\n* layette: none\n* dakota: none\n* lair: den\n* kitakyushu: none\n* sumeria: none\n* rasmussen: none\n* salamander: newt\n* saleslady: saleswoman\n* london:' | score=0.0000
+[PRED 4] gold=['canteen loaf thunder'] | pred='bread' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/word_sorting_20251201_070522__em__Find_the_synonym._Return_just_the_word.__52fd59e8.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.95
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['Sort the words alphabetically. Output only the space-separated list.']
+The final instruction set is:
+{"'Translate the phrase into French. Output only the translated text.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'clear and concise': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Alterate aseptic cayenne chandigarh debauch declassify dingy equanimity excursion foamflower groupoid inclement kruger lawful october only scorch.': (0.15, array([[0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0.,
+        0., 0., 0., 0.]])), '"Return the altered list of words from the input list."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the list of words alphabetically. Output only the space-separated list."\n\n\n\nList:\n\n* \'Sort the words alphabetically. Output only the space-separated list.\'\n* \'Find the synonym. Return just the word.\'': (0.9, array([[1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1., 1., 1., 0., 1., 1.,
+        1., 1., 1., 1.]])), '"Return the output as a list, without any explanations, numbering, or conversational text."': (0.55, array([[0., 1., 1., 1., 1., 0., 1., 1., 0., 1., 1., 1., 1., 1., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.95, array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+        0., 1., 1., 1.]])), '"Translate the text into French. Output only the translated text."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Please provide a clear and imperative instruction for the task you'd like me to perform. The instruction should be concise and specific, without any explanations, numberings, or conversational text.": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Please provide the answer without any explanations, numbering, or conversational text.': (0.35, array([[1., 0., 1., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0.,
+        1., 0., 1., 0.]])), "'Process the input and output lists, replacing each word with its equivalent word in the other list. Output only the processed lists.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the list of words in alphabetical order."': (0.85, array([[1., 1., 0., 1., 1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1.,
+        1., 1., 0., 1.]])), '"Alterate the list. Output only the space-separated list."': (0.25, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 1., 0., 1.,
+        0., 1., 1., 0.]])), 'clear, imperative': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Find the synonym. Return just the word."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "word_sorting"...
+Using metric "em" for task "word_sorting"...
+[PRED 0] gold=['afro amateur briggs davenport golf hippopotamus libretto mallow notch offsaddle piloerection platelet scorpion stevedore wastrel'] | pred='afro amateur briggs davenport golf hippopotamus libretto mallow notch offsaddle piloerection platelet scorpion stevedore wastrel' | score=1.0000
+[PRED 1] gold=['boycott champaign'] | pred='boycott champaign' | score=1.0000
+[PRED 2] gold=['crude cunard danubian inscribe peculate perceptive posterior tragedian upraise'] | pred='crude cunard danubian inscribe peculate perceptive posterior tragedian upraise' | score=1.0000
+[PRED 3] gold=['chapel claustrophobia dubious entire eskimo except gaslight hampshire ladybug lubricity teletypesetting trickster'] | pred='chapel claustrophobia dubious entire eskimo except gaslight hampshire ladybug lubricity teletypesetting trickster' | score=1.0000
+[PRED 4] gold=['bestow bondsmen customhouse diet dominic excretion list roadside silicosis snatch straight tulsa upkeep'] | pred='bestow bondsmen customhouse diet dominic excretion list roadside silicosis snatch straight tulsa upkeep' | score=1.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/word_sorting_20251201_070912__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.97

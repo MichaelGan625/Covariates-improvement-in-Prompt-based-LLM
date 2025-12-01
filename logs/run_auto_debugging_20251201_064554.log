@@ -1,0 +1,321 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.60s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.99s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the output of the expression.'"]
+[DEBUG] 开始评估，指令: 'Return the output of the expression.'
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064615__em__Return_the_output_of_the_expression.__bd846e4f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Example HTML PageCiao']
+[DEBUG] 开始评估，指令: Example HTML PageCiao
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064615__em__Example_HTML_PageCiao__d03e52e9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["'Return the value of x in the expression x + 1.'"]
+[DEBUG] 开始评估，指令: 'Return the value of x in the expression x + 1.'
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064616__em__Return_the_value_of_x_in_the_expression___9fa25176.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Return the value of x."']
+[DEBUG] 开始评估，指令: "Return the value of x."
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064616__em__Return_the_value_of_x.__649f84b8.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+```
+def test(x):
+	for i in range(2, x**(0.5)):
+		if x % int(i) == 0:
+			return False
+	return True
+```
+Output: True
+```' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: '```
+def return(x):
+	for i in range(2, x**(0.5)):
+		if x % int(i) == 0:
+			return False
+	return True
+```
+Output: True
+
+Write a clear, imperative instruction for this' -> 强制判为 0.0 分
+Instruction: ['Return the list of words sorted alphabetically.']
+[DEBUG] 开始评估，指令: Return the list of words sorted alphabetically.
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064621__em__Return_the_list_of_words_sorted_alphabet__616498f5.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Please provide a clear, imperative instruction for the task.']
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for the task.
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064621__em__Please_provide_a_clear__imperative_instr__79ad4a7f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["'Retrieve the data.'"]
+[DEBUG] 开始评估，指令: 'Retrieve the data.'
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064621__em__Retrieve_the_data.__48ab0d5f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+```python
+def test(x):
+    for i in range(2, x**(0.5)):
+        if x % int(i) == 0:
+            return False
+    return True
+```
+Output: True' -> 强制判为 0.0 分
+Instruction: ["'Return just the answer, without any explanation, numbering, or conversational text.'"]
+[DEBUG] 开始评估，指令: 'Return just the answer, without any explanation, numbering, or conversational text.'
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064624__em__Return_just_the_answer__without_any_expl__8f28551b.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: '' -> 强制判为 0.0 分
+Instruction: ['"Return the value without any explanation or conversational text."']
+[DEBUG] 开始评估，指令: "Return the value without any explanation or conversational text."
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064625__em__Return_the_value_without_any_explanation__816ac8ac.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Please provide a valid Python code snippet or a clear imperative instruction for the task you want me to perform.']
+[DEBUG] 开始评估，指令: Please provide a valid Python code snippet or a clear imperative instruction for the task you want me to perform.
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064626__em__Please_provide_a_valid_Python_code_snipp__717f2e9b.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Return the list of numbers in the given format."']
+[DEBUG] 开始评估，指令: "Return the list of numbers in the given format."
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064626__em__Return_the_list_of_numbers_in_the_given___9991edc9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["'Return the list of words, sorted alphabetically.'"]
+[DEBUG] 开始评估，指令: 'Return the list of words, sorted alphabetically.'
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064626__em__Return_the_list_of_words__sorted_alphabe__e77081da.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: '''' -> 强制判为 0.0 分
+Instruction: ["'Return the list of integers, excluding the explanations and additional text.'"]
+[DEBUG] 开始评估，指令: 'Return the list of integers, excluding the explanations and additional text.'
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064627__em__Return_the_list_of_integers__excluding_t__78f3a184.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Please return only the output of the following code:
+```python
+def test(x):
+	for i in range(2, x**(0.5)):
+		if x % int(i) == 0:
+			return False
+	return True
+```
+Output:' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: ```
+def test(x):
+	for i in range(2, x**(0.5)):
+		if x % int(i) == 0:
+			return False
+	return True
+```
+Output: True
+```
+
+
+```' -> 强制判为 0.0 分
+Instruction: ['Please provide a clear, imperative instruction for the task.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064633__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Please sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Please sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064633__em__Please_sort_the_words_alphabetically._Ou__f65749a2.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:746: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+```
+def test(x):
+	for i in range(2, x**(0.5)):
+		if x % int(i) == 0:
+			return False
+	return True
+```
+Output: True' -> 强制判为 0.0 分
+Instruction: ['Clear and imperative.']
+[DEBUG] 开始评估，指令: Clear and imperative.
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064635__em__Clear_and_imperative.__b04021e3.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Best initial point: 0.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 0.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][06:46:36] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[06:46:37] INFO [PROFILE] GP fit: 1.259s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:46:37] INFO Iter 0 best_value=0.00000 gp_loss=101.42057
+[06:46:38] INFO [PROFILE] Acquisition: 0.659s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:46:40] INFO [PROFILE] LLM eval candidate: 2.096s
+[06:46:40] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  20%|██        | 1/5 [00:04<00:16,  4.03s/it][06:46:40] INFO [Iteration 1] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[06:46:41] INFO [PROFILE] GP fit: 0.788s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:46:41] INFO Iter 1 best_value=0.00000 gp_loss=101.42057
+[06:46:41] INFO [PROFILE] Acquisition: 0.546s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:46:43] INFO [PROFILE] LLM eval candidate: 2.180s
+[06:46:43] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [00:07<00:11,  3.74s/it][06:46:43] INFO [Iteration 2] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[06:46:44] INFO [PROFILE] GP fit: 0.715s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:46:44] INFO Iter 2 best_value=0.00000 gp_loss=101.42057
+[06:46:45] INFO [PROFILE] Acquisition: 0.527s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:46:47] INFO [PROFILE] LLM eval candidate: 2.234s
+[06:46:47] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [00:11<00:07,  3.63s/it][06:46:47] INFO [Iteration 3] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[06:46:48] INFO [PROFILE] GP fit: 0.946s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:46:48] INFO Iter 3 best_value=0.00000 gp_loss=101.42057
+[06:46:48] INFO [PROFILE] Acquisition: 0.674s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:46:51] INFO [PROFILE] LLM eval candidate: 2.229s
+[06:46:51] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  80%|████████  | 4/5 [00:14<00:03,  3.72s/it][06:46:51] INFO [Iteration 4] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[06:46:52] INFO [PROFILE] GP fit: 0.876s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[06:46:52] INFO Iter 4 best_value=0.00000 gp_loss=101.42057
+[06:46:52] INFO [PROFILE] Acquisition: 0.593s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[06:46:54] INFO [PROFILE] LLM eval candidate: 2.107s
+[06:46:54] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [00:18<00:00,  3.68s/it]Bayes iterations: 100%|██████████| 5/5 [00:18<00:00,  3.71s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: '```
+y = list(map(int, ['1', 'hello', '2']))
+```
+Output: ValueError: invalid literal for int() with base 10: 'hello'
+
+Input:
+```
+class MyClass():
+	def __init__(self):
+		print(' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: ```
+str(r"Sort the words alphabetically. Output only the space-separated list.")
+
+Output: True
+```
+
+
+Input: ```
+str(r"Find the synonym. Return just the word.")
+
+Output: True
+```
+Instruction' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Here is an example of a clear, imperative instruction for a task:
+Input: ```
+y = list(map(int, ['1', '2']), ['3', '4'])
+```
+Output: A list of integers that includes 1, 2, and 3, but not' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED-DUMP] wrote 0 rows to logs/preds/auto_debugging_20251201_064651__em__Please_provide_a_clear__imperative_instr__df998172.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: ```
+d = {1: 'hello', 2: 'bye', 3: 'good morning'}
+str_ = ''
+for i in range(len(d)):
+	if i % 2 == 1:
+		str_ += d[i]
+```' -> 强制判为 0.0 分
+Evaluate on test data...
+Best instruction is:
+["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+The final instruction set is:
+{"'Return the output of the expression.'": (0.0, array([], shape=(1, 0), dtype=float64)), 'Example HTML PageCiao': (0.0, array([], shape=(1, 0), dtype=float64)), "'Return the value of x in the expression x + 1.'": (0.0, array([], shape=(1, 0), dtype=float64)), '"Return the value of x."': (0.0, array([], shape=(1, 0), dtype=float64)), 'Return the list of words sorted alphabetically.': (0.0, array([], shape=(1, 0), dtype=float64)), 'Please provide a clear, imperative instruction for the task.': (0.0, array([], shape=(1, 0), dtype=float64)), "'Retrieve the data.'": (0.0, array([], shape=(1, 0), dtype=float64)), "'Return just the answer, without any explanation, numbering, or conversational text.'": (0.0, array([], shape=(1, 0), dtype=float64)), '"Return the value without any explanation or conversational text."': (0.0, array([], shape=(1, 0), dtype=float64)), 'Please provide a valid Python code snippet or a clear imperative instruction for the task you want me to perform.': (0.0, array([], shape=(1, 0), dtype=float64)), '"Return the list of numbers in the given format."': (0.0, array([], shape=(1, 0), dtype=float64)), "'Return the list of words, sorted alphabetically.'": (0.0, array([], shape=(1, 0), dtype=float64)), "'Return the list of integers, excluding the explanations and additional text.'": (0.0, array([], shape=(1, 0), dtype=float64)), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([], shape=(1, 0), dtype=float64)), 'Please sort the words alphabetically. Output only the space-separated list.': (0.0, array([], shape=(1, 0), dtype=float64)), 'Clear and imperative.': (0.0, array([], shape=(1, 0), dtype=float64)), "Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list": (0.0, array([], shape=(1, 0), dtype=float64))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "auto_debugging"...
+Using metric "em" for task "auto_debugging"...
+[PRED 0] gold=['3'] | pred='3' | score=0.0000
+[PRED 1] gold=['5'] | pred='return only the output' | score=0.0000
+[PRED 2] gold=["NameError: name 'x' is not defined"] | pred='provide the corrected indentation for the given python code. output only the corrected code.\n\n```\nif x < 5:\n    pass\n```' | score=0.0000
+[PRED 3] gold=['12'] | pred='return the output of the code, without any additional text.' | score=0.0000
+[PRED 4] gold=['IndexError: list index out of range'] | pred='indexerror: list index out of range' | score=1.0000
+[PRED-DUMP] wrote 8 rows to logs/preds/auto_debugging_20251201_064710__em__Please_provide_a_clear__imperative_instr__df998172.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.125

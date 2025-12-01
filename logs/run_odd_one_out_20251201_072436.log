@@ -1,0 +1,278 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.21s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.62s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.16s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Output only the answer, without any explanation or conversational text.'"]
+[DEBUG] 开始评估，指令: 'Output only the answer, without any explanation or conversational text.'
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072456__em__Output_only_the_answer__without_any_expl__19b27b88.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['clear and concise']
+[DEBUG] 开始评估，指令: clear and concise
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072456__em__clear_and_concise__f67a5935.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Dublin, France, Tokyo, Athens, Paris, San Francisco  
+Output: France' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: Dublin, France, Tokyo, Athens, Paris, San Francisco  
+Output: France
+
+Input: Monday, spring, summer, fall  
+Output: Monday
+
+Input: mes, Iowa, Des Moines, Story County, machine learning  
+Output: machine learning
+
+Input: bread' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072459__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Write a clear, concise, and understandable instructions for this task. The instructions MUST be given in a logical, orderly, and well-organized manner. The output MUST be written in a clear, concise, and understandable manner. The instructions MUST be given in a logical,']
+[DEBUG] 开始评估，指令: "Write a clear, concise, and understandable instructions for this task. The instructions MUST be given in a logical, orderly, and well-organized manner. The output MUST be written in a clear, concise, and understandable manner. The instructions MUST be given in a logical,
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072501__em__Write_a_clear__concise__and_understandab__e0096c71.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Dublin, France, Tokyo, Athens, Paris, San Francisco  
+Output: France
+
+Input: Monday, spring, summer, winter, fall  
+Output: Monday
+Input: mes, Iowa, Des Moines, Story County, machine learning  
+Output: machine learning
+Input: bread' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['clear, concise, direct, explicit']
+[DEBUG] 开始评估，指令: clear, concise, direct, explicit
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072504__em__clear__concise__direct__explicit__b5371b0f.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["'Output only the input, without any explanation or conversational text.'"]
+[DEBUG] 开始评估，指令: 'Output only the input, without any explanation or conversational text.'
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072504__em__Output_only_the_input__without_any_expla__bc240d96.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Please provide a list of words with no explanations or numberings."']
+[DEBUG] 开始评估，指令: "Please provide a list of words with no explanations or numberings."
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072505__em__Please_provide_a_list_of_words_with_no_e__1d5159ae.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072506__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+Output:' -> 强制判为 0.0 分
+Instruction: ['Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Output only the space-separated list.
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072506__em__Output_only_the_space-separated_list.__b38dc6fc.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Return the list of locations without any additional text or explanation."']
+[DEBUG] 开始评估，指令: "Return the list of locations without any additional text or explanation."
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072507__em__Return_the_list_of_locations_without_any__858781c7.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Dublin, France, Tokyo, Athens, Paris, San Francisco  
+Output: Paris
+
+Input: Monday, spring, summer, winter, fall  
+Output: Monday
+
+Input: mes, Iowa, Des Moines, Story County, machine learning  
+Output: machine learning
+
+Input' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Dublin, France, Tokyo, Athens, Paris, San Francisco  
+Output: France' -> 强制判为 0.0 分
+Instruction: ['The instruction is clear and concise.']
+[DEBUG] 开始评估，指令: The instruction is clear and concise.
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072511__em__The_instruction_is_clear_and_concise.__4e259b7a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Output: France' -> 强制判为 0.0 分
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072514__em__Please_provide_a_clear__imperative_instr__65c20ee5.tsv
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:746: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: Dublin, France, Tokyo, Athens, Paris, San Francisco  
+Output: France
+
+Input: Monday, spring, summer, winter, fall  
+Output: Monday
+
+Input: mes, Iowa, Des Moines, Story County, machine learning  
+Output' -> 强制判为 0.0 分
+Instruction: ['clear, direct, explicit, unambiguous']
+[DEBUG] 开始评估，指令: clear, direct, explicit, unambiguous
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072516__em__clear__direct__explicit__unambiguous__cdd57c21.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Best initial point: 0.000
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 0.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][07:25:17] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[07:25:17] INFO [PROFILE] GP fit: 0.742s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:25:17] INFO Iter 0 best_value=0.00000 gp_loss=101.42057
+[07:25:18] INFO [PROFILE] Acquisition: 0.549s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:25:18] INFO [PROFILE] LLM eval candidate: 0.531s
+[07:25:18] INFO Best value so far: 0.00000
+Bayes iterations:  20%|██        | 1/5 [00:01<00:07,  1.84s/it][07:25:18] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[07:25:19] INFO [PROFILE] GP fit: 0.219s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:25:19] INFO Iter 1 best_value=0.00000 gp_loss=100.55947
+[07:25:19] INFO [PROFILE] Acquisition: 0.620s
+[07:25:20] INFO [PROFILE] LLM eval candidate: 0.296s
+[07:25:20] INFO Best value so far: 0.00000
+Bayes iterations:  40%|████      | 2/5 [00:02<00:04,  1.44s/it][07:25:20] INFO [Iteration 2] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[07:25:21] INFO [PROFILE] GP fit: 1.286s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:25:21] INFO Iter 2 best_value=0.00000 gp_loss=108.79303
+[07:25:21] INFO [PROFILE] Acquisition: 0.542s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:25:22] INFO [PROFILE] LLM eval candidate: 0.986s
+[07:25:22] INFO Best value so far: 0.00000
+Bayes iterations:  60%|██████    | 3/5 [00:05<00:04,  2.08s/it][07:25:22] INFO [Iteration 3] X_train torch.Size([28, 30]), y_train torch.Size([28, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[07:25:23] INFO [PROFILE] GP fit: 0.758s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:25:23] INFO Iter 3 best_value=0.00000 gp_loss=112.47925
+[07:25:24] INFO [PROFILE] Acquisition: 0.655s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:25:24] INFO [PROFILE] LLM eval candidate: 0.500s
+[07:25:24] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  80%|████████  | 4/5 [00:07<00:02,  2.02s/it][07:25:24] INFO [Iteration 4] X_train torch.Size([28, 30]), y_train torch.Size([28, 1])
+/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py:821: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  col_std = S.std(dim=0, keepdim=True).clamp_min(1e-3)
+[07:25:25] INFO [PROFILE] GP fit: 0.988s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[07:25:25] INFO Iter 4 best_value=0.00000 gp_loss=112.47925
+[07:25:26] INFO [PROFILE] Acquisition: 0.580s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[07:25:26] INFO [PROFILE] LLM eval candidate: 0.571s
+[07:25:26] INFO Duplicate instruction detected; skip appending to training set.
+Bayes iterations: 100%|██████████| 5/5 [00:09<00:00,  2.07s/it]Bayes iterations: 100%|██████████| 5/5 [00:09<00:00,  1.98s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['"Find the matching word. Return only the space-separated list."']
+[DEBUG] 开始评估，指令: "Find the matching word. Return only the space-separated list."
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072518__em__Find_the_matching_word._Return_only_the___5bd1b88e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['What is the definition.']
+[DEBUG] 开始评估，指令: What is the definition.
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072520__em__What_is_the_definition.__06ba88f1.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Sure, I can provide you with some examples of good instructions for the task. Please let me know if you need any further assistance.']
+[DEBUG] 开始评估，指令: Sure, I can provide you with some examples of good instructions for the task. Please let me know if you need any further assistance.
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072522__em__Sure__I_can_provide_you_with_some_exampl__15620d4a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Too many requests in 1 hour. Try again later.']
+[DEBUG] 开始评估，指令: Too many requests in 1 hour. Try again later.
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED-DUMP] wrote 0 rows to logs/preds/odd_one_out_20251201_072524__em__Too_many_requests_in_1_hour._Try_again_l__381f5253.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['Sort the words alphabetically. Output only the space-separated list.']
+The final instruction set is:
+{"'Output only the answer, without any explanation or conversational text.'": (0.0, array([], shape=(1, 0), dtype=float64)), 'clear and concise': (0.0, array([], shape=(1, 0), dtype=float64)), 'Sort the words alphabetically. Output only the space-separated list.': (0.0, array([], shape=(1, 0), dtype=float64)), '"Write a clear, concise, and understandable instructions for this task. The instructions MUST be given in a logical, orderly, and well-organized manner. The output MUST be written in a clear, concise, and understandable manner. The instructions MUST be given in a logical,': (0.0, array([], shape=(1, 0), dtype=float64)), 'clear, concise, direct, explicit': (0.0, array([], shape=(1, 0), dtype=float64)), "'Output only the input, without any explanation or conversational text.'": (0.0, array([], shape=(1, 0), dtype=float64)), '"Please provide a list of words with no explanations or numberings."': (0.0, array([], shape=(1, 0), dtype=float64)), '"Sort the words alphabetically. Output only the space-separated list."': (0.0, array([], shape=(1, 0), dtype=float64)), 'Output only the space-separated list.': (0.0, array([], shape=(1, 0), dtype=float64)), '"Return the list of locations without any additional text or explanation."': (0.0, array([], shape=(1, 0), dtype=float64)), 'The instruction is clear and concise.': (0.0, array([], shape=(1, 0), dtype=float64)), "Please provide a clear, imperative instruction for the task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list": (0.0, array([], shape=(1, 0), dtype=float64)), 'clear, direct, explicit, unambiguous': (0.0, array([], shape=(1, 0), dtype=float64)), '"Find the matching word. Return only the space-separated list."': (0.0, array([], shape=(1, 0), dtype=float64)), 'What is the definition.': (0.0, array([], shape=(1, 0), dtype=float64)), 'Sure, I can provide you with some examples of good instructions for the task. Please let me know if you need any further assistance.': (0.0, array([], shape=(1, 0), dtype=float64)), 'Too many requests in 1 hour. Try again later.': (0.0, array([], shape=(1, 0), dtype=float64))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "odd_one_out"...
+Using metric "em" for task "odd_one_out"...
+[PRED 0] gold=['eraser'] | pred='aser beautiful exciting fat slow ugly' | score=0.0000
+[PRED 1] gold=['pencil'] | pred='clap jump pencil read run' | score=0.0000
+[PRED 2] gold=['mouse'] | pred='ant beetle dragonfly ladybug mouse' | score=0.0000
+[PRED 3] gold=['June'] | pred='four june seventy thousand twelve' | score=0.0000
+[PRED 4] gold=['bath'] | pred='bath cottage hut skyscraper' | score=1.0000
+[PRED-DUMP] wrote 50 rows to logs/preds/odd_one_out_20251201_072646__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.2

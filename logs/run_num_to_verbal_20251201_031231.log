@@ -1,0 +1,250 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.34s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.98s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Process the numbers. Output only the sorted list.'"]
+[DEBUG] 开始评估，指令: 'Process the numbers. Output only the sorted list.'
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['five hundred and twenty-six'] | pred='[2, 5, 6]' | score=0.0000
+[PRED 1] gold=['six thousand, seven hundred and nineteen'] | pred='[1, 6, 7, 9]' | score=0.0000
+[PRED 2] gold=['nine thousand, four hundred and eighty-five'] | pred='[4, 5, 8, 9]' | score=0.0000
+[PRED 3] gold=['six thousand, nine hundred and eighty-four'] | pred='[4, 6, 8, 9]' | score=0.0000
+[PRED 4] gold=['seven hundred and eighty-five'] | pred='7, 5, 8' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031335__em__Process_the_numbers._Output_only_the_sor__3c09e056.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ["This is an example of a task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* '"]
+[DEBUG] 开始评估，指令: This is an example of a task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* '
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['seven hundred and five'] | pred='seven hundred five' | score=1.0000
+[PRED 1] gold=['eight thousand, two hundred and sixty-three'] | pred='eight thousand two hundred sixty-three' | score=1.0000
+[PRED 2] gold=['seven thousand, six hundred and fifty-nine'] | pred='1357' | score=0.0000
+[PRED 3] gold=['seven thousand, two hundred and seventy-one'] | pred='seven thousand two hundred seventy-one' | score=1.0000
+[PRED 4] gold=['six thousand, two hundred and twenty-five'] | pred='6,2,2,5' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031407__em__This_is_an_example_of_a_task._The_instru__4f664b65.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.25
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 241
+Output: two hundred and forty-one' -> 强制判为 0.0 分
+Instruction: ['"Sort the numbers sequentially. Output only the list of integers."']
+[DEBUG] 开始评估，指令: "Sort the numbers sequentially. Output only the list of integers."
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['one hundred and thirty-one'] | pred='[1, 1, 3]' | score=0.0000
+[PRED 1] gold=['one thousand, six hundred and forty-nine'] | pred='1, 4, 6, 9' | score=0.0000
+[PRED 2] gold=['six thousand, five hundred and seventy-nine'] | pred='5 6 7 9' | score=0.0000
+[PRED 3] gold=['nine thousand, three hundred and four'] | pred='3049' | score=0.0000
+[PRED 4] gold=['eight thousand, six hundred and seventy-three'] | pred='[3, 6, 7, 8]' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031439__em__Sort_the_numbers_sequentially._Output_on__08def5d2.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.25
+********* Done *********
+Instruction: ['Please provide the input and output examples in the specified format.']
+[DEBUG] 开始评估，指令: Please provide the input and output examples in the specified format.
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['four thousand, nine hundred and twenty-four'] | pred='output: four thousand nine hundred twenty-four' | score=1.0000
+[PRED 1] gold=['seven thousand, eight hundred and fifty-seven'] | pred='since the instruction is to provide the output result only, i will assume that the task is to reverse the input number.\n\ninput: 7857\noutput: 7587' | score=0.0000
+[PRED 2] gold=['one thousand, one hundred and eleven'] | pred='output: 4' | score=0.0000
+[PRED 3] gold=['one thousand, four hundred and nineteen'] | pred='output: 1' | score=0.0000
+[PRED 4] gold=['eight thousand, six hundred and thirty-one'] | pred='input: 8631\noutput: eight thousand six hundred thirty-one' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031517__em__Please_provide_the_input_and_output_exam__4cef5370.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.25
+********* Done *********
+Instruction: ['clear, concise, and specific.']
+[DEBUG] 开始评估，指令: clear, concise, and specific.
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['five thousand, nine hundred'] | pred='please provide the specific instruction that i should perform on the input 5900.' | score=0.0000
+[PRED 1] gold=['six thousand, eight hundred and sixty-seven'] | pred='the reverse of 6867 is 7686.' | score=0.0000
+[PRED 2] gold=['five hundred and eighty-eight'] | pred='prime factors: 2, 2, 3, 7, 7' | score=0.0000
+[PRED 3] gold=['seven thousand, seven hundred and eighty-seven'] | pred='the reverse of 7787 is 7877.' | score=0.0000
+[PRED 4] gold=['six thousand, four hundred and sixty-one'] | pred='1 × 6 + 4 × 6 + 6 × 1 = 46' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031558__em__clear__concise__and_specific.__ee4f1e24.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.25
+********* Done *********
+Instruction: ['Output only the number.']
+[DEBUG] 开始评估，指令: Output only the number.
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['six thousand, nine hundred and forty'] | pred='6940' | score=0.0000
+[PRED 1] gold=['one thousand and fifty-three'] | pred='1053' | score=0.0000
+[PRED 2] gold=['one thousand, six hundred and sixty-eight'] | pred='1668' | score=0.0000
+[PRED 3] gold=['six thousand, nine hundred and thirty-three'] | pred='0' | score=0.0000
+[PRED 4] gold=['two thousand, six hundred and nineteen'] | pred='2' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031627__em__Output_only_the_number.__86bd7a9d.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.25
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 3524
+Output: three thousand, five hundred and twenty-four' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 5235
+Output: five thousand, two hundred and thirty-five
+
+ ASSISTANT: Input: 5858
+Output: five thousand, eight hundred and fifty-eight
+
+ ASSISTANT: Input: 30' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 2441
+Output: two thousand, four hundred and forty-one' -> 强制判为 0.0 分
+Instruction: ['Return the answer without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Return the answer without any explanation, numbering, or conversational text.
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['six thousand, two hundred and twenty-five'] | pred='625' | score=0.0000
+[PRED 1] gold=['seven thousand and nine'] | pred='prime' | score=0.0000
+[PRED 2] gold=['seven hundred and seventy-six'] | pred='2' | score=0.0000
+[PRED 3] gold=['two thousand, two hundred and seventeen'] | pred='17' | score=0.0000
+[PRED 4] gold=['three hundred and forty-four'] | pred='346' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031657__em__Return_the_answer_without_any_explanatio__4bd41ee6.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.25
+********* Done *********
+Instruction: ['"Please provide the answer without any explanation, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Please provide the answer without any explanation, numbering, or conversational text."
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['nine thousand, one hundred and thirteen'] | pred='the square root of 9113 is 95.' | score=0.0000
+[PRED 1] gold=['two thousand, six hundred and twenty'] | pred='52' | score=0.0000
+[PRED 2] gold=['seven thousand and eighty-two'] | pred='seven thousand and eighty-two' | score=1.0000
+[PRED 3] gold=['seven thousand, eight hundred and seventy-three'] | pred='seven thousand eight hundred seventy-three' | score=1.0000
+[PRED 4] gold=['one thousand, five hundred and fifty-six'] | pred='mdlvi' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031724__em__Please_provide_the_answer_without_any_ex__36c3136e.tsv
+Dev loss: 0.2. Dev perf: 0.2. Best dev perf: 0.25
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['seven thousand, eight hundred and ninety-eight'] | pred='return the sum of the digits of the input number.' | score=0.0000
+[PRED 1] gold=['six thousand, nine hundred and thirty-two'] | pred='reverse the given number. output only the result.' | score=0.0000
+[PRED 2] gold=['three thousand, six hundred and forty-eight'] | pred='return the sum of the digits of the input number. output only the result.' | score=0.0000
+[PRED 3] gold=['seven thousand, nine hundred and sixty-five'] | pred='convert the number to binary and return the binary number' | score=0.0000
+[PRED 4] gold=['eight thousand, one hundred and sixty-nine'] | pred='the square root of 8169 is 90' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031800__em__Please_provide_a_clear__imperative_instr__df998172.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.25
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Output: two thousand, four hundred and forty-one' -> 强制判为 0.0 分
+Instruction: ['"Output only the answer, without any explanation or conversational text."']
+[DEBUG] 开始评估，指令: "Output only the answer, without any explanation or conversational text."
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['six thousand, four hundred and eighty-nine'] | pred='six thousand four hundred eighty-nine' | score=1.0000
+[PRED 1] gold=['five hundred and fifty-six'] | pred='five hundred fifty-six' | score=1.0000
+[PRED 2] gold=['three thousand, nine hundred and fourteen'] | pred='three thousand nine hundred fourteen' | score=1.0000
+[PRED 3] gold=['one thousand, four hundred and twenty'] | pred='40' | score=0.0000
+[PRED 4] gold=['three thousand, one hundred and twenty-eight'] | pred='314' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031831__em__Output_only_the_answer__without_any_expl__db06c9c9.tsv
+Dev loss: 0.35. Dev perf: 0.35. Best dev perf: 0.35
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['five thousand, seven hundred and fifty-three'] | pred='there are no words in the input, so the output is empty.' | score=0.0000
+[PRED 1] gold=['four thousand and thirteen'] | pred='there are no words to sort. the input is a number.' | score=0.0000
+[PRED 2] gold=['seven hundred and forty-seven'] | pred='there is no list of words to sort. the input is a number, 747.' | score=0.0000
+[PRED 3] gold=['five thousand, one hundred and fifteen'] | pred='there is no list of words to sort. the input is a number.' | score=0.0000
+[PRED 4] gold=['nine thousand, two hundred and twenty-nine'] | pred='there is no list of words to sort. the input is a number.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031904__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.35
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 4972
+Output: four thousand, nine hundred and seventy-two' -> 强制判为 0.0 分
+Instruction: ['Please provide the necessary input for the task you would like me to perform.']
+[DEBUG] 开始评估，指令: Please provide the necessary input for the task you would like me to perform.
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['four thousand, five hundred and fifty-eight'] | pred="i'd like you to reverse the given input number.\n\noutput: 8564" | score=0.0000
+[PRED 1] gold=['one thousand, nine hundred and eighty-five'] | pred='back to the future' | score=0.0000
+[PRED 2] gold=['nine thousand, four hundred and thirty-nine'] | pred='please provide the task you would like me to perform with the input 9439.' | score=0.0000
+[PRED 3] gold=['six thousand and two'] | pred='it seems like you want me to perform a task, but the instruction is incomplete. could you please provide more context or clarify what task you would like me to perform with the input "6002"?' | score=0.0000
+[PRED 4] gold=['three thousand, eight hundred and thirty-nine'] | pred="i'd like you to reverse the given input number.\n\noutput: tiener3" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_031954__em__Please_provide_the_necessary_input_for_t__13dca349.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.35
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 5298
+Output: five thousand, two hundred and ninety-eight' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 978
+Output: nine thousand, seven hundred and eighty' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: 2484
+Output: two thousand, four hundred and eighty-four' -> 强制判为 0.0 分
+Instruction: ["This is a task that requires a specific instruction. Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n\n* 'Sort the words alphabetically"]
+[DEBUG] 开始评估，指令: This is a task that requires a specific instruction. Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+
+
+* 'Sort the words alphabetically
+Using metric "em" for task "num_to_verbal"...
+Using metric "em" for task "num_to_verbal"...
+[PRED 0] gold=['six thousand, seven hundred and twelve'] | pred='sort the digits in the number' | score=0.0000
+[PRED 1] gold=['three thousand, two hundred and one'] | pred='return the binary representation of the input number.' | score=0.0000
+[PRED 2] gold=['five thousand, two hundred and ninety-two'] | pred='divide the number by 2' | score=0.0000
+[PRED 3] gold=['four thousand, eight hundred and seventy-nine'] | pred='return the number of digits in the input number.' | score=0.0000
+[PRED 4] gold=['six thousand, four hundred and eighteen'] | pred='reverse the number' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/num_to_verbal_20251201_032026__em__This_is_a_task_that_requires_a_specific___ee94ded9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.35
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 678
+Output: six thousand, seven hundred and eighty
+
+Input: 384
+Output: three thousand, eight hundred and forty
+Input: 753
+Output: seven thousand, five hundred and thirty
+Input: 928
+Output: nine thousand' -> 强制判为 0.0 分
+Instruction: ['Output only the number.']
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.35
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Example:
+
+Input: 2441
+Output: two thousand, four hundred and forty-one
+Input: 5235
+Output: five thousand, two hundred and thirty-five
+Input: 5858
+Output: five thousand, eight hundred and fifty-eight' -> 强制判为 0.0 分
+Best initial point: 0.350
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][03:20:32] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+[03:20:32] INFO [PROFILE] GP fit: 0.925s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[WARNING][Iteration 0] custom kernel GP fit failed, falling back to baseline. Error: All attempts to fit the model have failed.
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 879, in run
+    output = gp_model(X_train)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py", line 345, in __call__
+    ) = self.prediction_strategy.exact_prediction(full_mean, full_covar)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 324, in exact_prediction
+    self.exact_predictive_mean(test_mean, test_train_covar),
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 349, in exact_predictive_mean
+    res = (test_train_covar @ mean_cache.unsqueeze(-1)).squeeze(-1)
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: double != float

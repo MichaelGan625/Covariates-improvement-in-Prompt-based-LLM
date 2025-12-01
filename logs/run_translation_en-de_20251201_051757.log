@@ -1,0 +1,423 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.34s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.97s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Translate the sentence. Return only the translated text.'"]
+[DEBUG] 开始评估，指令: 'Translate the sentence. Return only the translated text.'
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Streuung', 'Verteilung', 'Austeilung', 'Gliederung', 'Verbreitung', 'Distribution', 'Absatz', 'Aufteilung'] | pred='distribución' | score=0.0000
+[PRED 1] gold=['Querformat', 'Landschaft'] | pred='paysage' | score=0.0000
+[PRED 2] gold=['Nummerierung'] | pred='numération' | score=0.0000
+[PRED 3] gold=['Schwangerschaft'] | pred='embarazo' | score=0.0000
+[PRED 4] gold=['sich treffen', 'Rendezvous'] | pred='rencontre' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_051849__em__Translate_the_sentence._Return_only_the___f5b2d59e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['I understand the task.']
+[DEBUG] 开始评估，指令: I understand the task.
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Wochenende'] | pred='saturday and sunday' | score=0.0000
+[PRED 1] gold=['Veröffentlichung', 'Publikation'] | pred='the act of making something publicly known.' | score=0.0000
+[PRED 2] gold=['Steuerruder', 'Steuer', 'Ruder'] | pred='rudder is a flat surface, typically located at the back of a boat or aircraft, used for steering.' | score=0.0000
+[PRED 3] gold=['Telegramm'] | pred='a message sent through a telegraph system' | score=0.0000
+[PRED 4] gold=['Remis', 'binden', 'Unentschieden'] | pred='necktie' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_051922__em__I_understand_the_task.__0d38579c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.0
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Koffer', 'Kofferraum', 'Stamm', 'Rüssel', 'Truhe'] | pred='trunk' | score=0.0000
+[PRED 1] gold=['Aspekt'] | pred='aspect' | score=0.0000
+[PRED 2] gold=['Bewegung', 'Satz'] | pred='movement' | score=0.0000
+[PRED 3] gold=['Reporter', 'Reporterin'] | pred='e-e-e-o-p-r-r-r-t' | score=0.0000
+[PRED 4] gold=['Nachfolgerin', 'Nachfolger'] | pred='c c e o r r s s s u' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_051949__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+Instruction: ["Please provide a clear and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list"]
+[DEBUG] 开始评估，指令: Please provide a clear and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Desaster'] | pred='return only the anagram of the input word.' | score=0.0000
+[PRED 1] gold=['Granate'] | pred='return only the definition of the word.' | score=0.0000
+[PRED 2] gold=['Bridge', 'überwechseln', 'Nasenrücken', 'überbrücken', 'Steg', 'Brücke'] | pred='return the word in uppercase.' | score=0.0000
+[PRED 3] gold=['Fracht'] | pred='cargo' | score=0.0000
+[PRED 4] gold=['Truppe'] | pred='troupe' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052025__em__Please_provide_a_clear_and_imperative_in__d3001702.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.15
+********* Done *********
+Instruction: ['I understand the task and the examples. Please provide the input and you will receive the corresponding output.']
+[DEBUG] 开始评估，指令: I understand the task and the examples. Please provide the input and you will receive the corresponding output.
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Probe', 'Prüfung', 'Test', 'testen', 'Examen'] | pred='please provide the input.' | score=0.0000
+[PRED 1] gold=['Ringer'] | pred='restlerw' | score=0.0000
+[PRED 2] gold=['Streitgespräch', 'Argument', 'Streit', 'Diskussion', 'Argumentation'] | pred='reason or opinion offered to support or oppose a point' | score=0.0000
+[PRED 3] gold=['Kunst', 'Fertigkeit', 'Fähigkeit', 'Talent', 'Geschicklichkeit'] | pred='ableness, ability, adeptness, adroitness, aptitude, art, artistry, cleverness, competence, craft, craftsmanship, dexterity, expertise, facility, finesse, flair, handiness, ingenuity, knack, mastery, proficiency, prowess, skillfulness, technique' | score=0.0000
+[PRED 4] gold=['spalten', 'Kernspaltung', 'Zellteilung', 'Spaltung'] | pred='splitting' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052107__em__I_understand_the_task_and_the_examples.___e41f078e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ["I'm sorry, I didn't understand your question. Could you please rephrase or provide more context so I can better understand what you're trying to communicate?"]
+[DEBUG] 开始评估，指令: I'm sorry, I didn't understand your question. Could you please rephrase or provide more context so I can better understand what you're trying to communicate?
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['schwimmen', 'Schwimmen'] | pred='you said "swim". are you asking about the act of swimming, or is there something else related to "swim" that you\'d like to know or discuss?' | score=0.0000
+[PRED 1] gold=['Preisgabe', 'Aufgabe', 'Überlassen', 'Hinterlassung'] | pred='the act of leaving or deserting a person, place, or thing, often in a permanent or irreversible manner, and sometimes in a way that is considered irresponsible or unjust.' | score=0.0000
+[PRED 2] gold=['Camping'] | pred="i'm happy to help with camping! are you looking for tips, recommendations, or information about camping in general?" | score=0.0000
+[PRED 3] gold=['Flugkörper', 'Rakete'] | pred='i didn\'t ask a question, you provided a word "missile". could you please provide more context or information about what you would like to know or discuss about "missile"?' | score=0.0000
+[PRED 4] gold=['Exposition', 'Ausstellung', 'Einführung'] | pred='exposition is a literary device used to introduce background information about the setting, characters, and situation in a story.' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052209__em__I_m_sorry__I_didn_t_understand_your_ques__a8ac4451.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['I understand the task and the examples provided. Please give me a clear, imperative instruction for this task, and I will return only the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: I understand the task and the examples provided. Please give me a clear, imperative instruction for this task, and I will return only the answer, without any explanation, numbering, or conversational text.
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Rezession'] | pred='provide a noun that is related to the given word.' | score=0.0000
+[PRED 1] gold=['schätzen', 'Preis', 'den Preis festsetzen'] | pred='calculate the total cost of a 10% discount on the price.' | score=0.0000
+[PRED 2] gold=['Gaststätte', 'Restaurant'] | pred='enter the name of a food or drink that is often served at a restaurant.' | score=0.0000
+[PRED 3] gold=['Ende', 'enden', 'Tod', 'beenden', 'Schluss'] | pred='the word "end" spelled backwards is "dne".' | score=0.0000
+[PRED 4] gold=['bestimmt', 'einbetonieren', 'aus Beton', 'Beton', 'Beton-', 'genau', 'konkretisieren', 'betonieren', 'konkret'] | pred='return a noun that is related to the given word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052243__em__I_understand_the_task_and_the_examples_p__feb3e8b7.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ["Please provide a clear and imperative instruction for this task, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the synonym. Return just the word.'"]
+[DEBUG] 开始评估，指令: Please provide a clear and imperative instruction for this task, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* 'Find the synonym. Return just the word.'
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Umfang'] | pred='ambit' | score=0.0000
+[PRED 1] gold=['Kolonne', 'Zug'] | pred='find the synonym. return just the word.' | score=0.0000
+[PRED 2] gold=['Veröffentlichung', 'veröffentlichen', 'freilassen', 'loslassen', 'Version', 'freisetzen', 'Freisetzung'] | pred='free' | score=0.0000
+[PRED 3] gold=['Verletzung'] | pred='return the antonym.' | score=0.0000
+[PRED 4] gold=['Getriebe', 'Übertragung'] | pred='return the definition of the word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052315__em__Please_provide_a_clear_and_imperative_in__9ad8b162.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['I understand the task you have described. Please provide me with the necessary information, and I will generate the output you require.']
+[DEBUG] 开始评估，指令: I understand the task you have described. Please provide me with the necessary information, and I will generate the output you require.
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Berater', 'Beraterin'] | pred='an expert who gives professional advice.' | score=0.0000
+[PRED 1] gold=['Landung', 'Anlegeplatz', 'Treppenabsatz'] | pred='touchdown' | score=0.0000
+[PRED 2] gold=['Parlament'] | pred='a legislative assembly in a country' | score=0.0000
+[PRED 3] gold=['Küche'] | pred="here's the output:\n\na room or area where food is prepared and cooked." | score=0.0000
+[PRED 4] gold=["Hast'se", 'Tag', 'Fange', 'Fangen', 'Etikett', 'Marke'] | pred='html' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052353__em__I_understand_the_task_you_have_described__3a6c7bd7.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Karriere'] | pred='career' | score=0.0000
+[PRED 1] gold=['Taufe'] | pred='baptism' | score=0.0000
+[PRED 2] gold=['vernetzen', 'sich vernetzen', 'Netzwerk'] | pred='e k n o r t w' | score=0.0000
+[PRED 3] gold=['Stärke', 'Kraft'] | pred='e g h n r s t' | score=0.0000
+[PRED 4] gold=['Unterscheidung', 'Bestimmtheit', 'Bestimmung', 'Entschluss', 'Determination', 'Feststellung'] | pred='determination' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052427__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Please provide a clear, imperative instruction for this task."']
+[DEBUG] 开始评估，指令: "Please provide a clear, imperative instruction for this task."
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['stumpf', 'ungehobelt', 'abstumpfen', 'abgestumpft', 'unverblümt', 'Blunt'] | pred='sharpen the blunt object to a precise point using a whetstone or sharpener.' | score=0.0000
+[PRED 1] gold=['Trainer'] | pred='design a comprehensive training program that includes a detailed curriculum, instructional materials, and assessment methods to ensure the trainer is equipped to effectively educate and support learners.' | score=0.0000
+[PRED 2] gold=['Schmuggel'] | pred='do not engage in or facilitate any illegal activities, including smuggling. is there anything else i can help you with?' | score=0.0000
+[PRED 3] gold=['Inauguration'] | pred='write a brief historical description of the first inauguration of a united states president, including the date, location, and notable events.' | score=0.0000
+[PRED 4] gold=['Komiker'] | pred='write a humorous joke or one-liner about a comedian.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052519__em__Please_provide_a_clear__imperative_instr__d683f262.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'It seems like you're asking for instructions on how to give an answer without any explanation, numbering, or conversational text. Here are some examples:
+
+Input: label
+Output: etikettieren
+Input: emergency
+Output: Notstand
+Input: undergraduate
+Output: Student' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: task
+Output: answer' -> 强制判为 0.0 分
+Instruction: ['"Return the answer without any additional text or explanation."']
+[DEBUG] 开始评估，指令: "Return the answer without any additional text or explanation."
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Moralität', 'Moral'] | pred='principles concerning the distinction between right and wrong or good and bad behavior' | score=0.0000
+[PRED 1] gold=['Boxen'] | pred='pugilism' | score=0.0000
+[PRED 2] gold=['Lautstärke', 'Volumen', 'Jahrgang', 'Band'] | pred='the amount of space inside a 3d object.' | score=0.0000
+[PRED 3] gold=['Bezirk', 'Stadtviertel', 'Kreis', 'Stadtteil'] | pred='area' | score=0.0000
+[PRED 4] gold=['Stärke', 'Kraft'] | pred='power, might, force' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052558__em__Return_the_answer_without_any_additional__a6a86311.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."\n"Find the synonym. Return just the word."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+"Find the synonym. Return just the word."
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Querformat', 'Landschaft'] | pred='scenery' | score=0.0000
+[PRED 1] gold=['Übung', 'Praktizieren', 'ausüben', 'üben', 'Ausüben', 'Ausübung', 'Üben', 'Praxis', 'praktizieren'] | pred='exercise' | score=0.0000
+[PRED 2] gold=['bemerken', 'Zitat', 'anbieten', 'Preisangebot machen', 'berücksichtigen', 'zitieren'] | pred='citation' | score=0.0000
+[PRED 3] gold=['Attraktion', 'Anziehung', 'Anziehungskraft', 'Liebreiz', 'Reiz'] | pred='allure' | score=0.0000
+[PRED 4] gold=['Korruption'] | pred='bribery' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052628__em__Sort_the_words_alphabetically._Output_on__de4c1470.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: '' -> 强制判为 0.0 分
+Instruction: ["Provide a clear, concise, and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space"]
+[DEBUG] 开始评估，指令: Provide a clear, concise, and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Bestattung', 'Begräbnis', 'Beerdigung', 'Beisetzung'] | pred='funeral' | score=0.0000
+[PRED 1] gold=['Person', 'Körper'] | pred='person' | score=1.0000
+[PRED 2] gold=['Nelke', 'pink', 'Rosa', 'rosa'] | pred='return the color in lowercase.' | score=0.0000
+[PRED 3] gold=['Kommentar'] | pred='commentary' | score=0.0000
+[PRED 4] gold=['Währung'] | pred='return the plural form of the input word.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052659__em__Provide_a_clear__concise__and_imperative__0f33ad1f.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.15
+********* Done *********
+Instruction: ["I understand the task you've given me. Please provide the input and the desired output, and I will do my best to generate the appropriate response."]
+[DEBUG] 开始评估，指令: I understand the task you've given me. Please provide the input and the desired output, and I will do my best to generate the appropriate response.
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Route', 'Straße', 'Weg', 'Straßen'] | pred='highway' | score=0.0000
+[PRED 1] gold=['Kämpfer', 'Jäger'] | pred='warrior' | score=0.0000
+[PRED 2] gold=['Klosett', 'Bad', 'WC', 'Toilette', 'Badezimmer', 'Klo'] | pred='a room in a house with a toilet and usually a sink and bathtub or shower.' | score=0.0000
+[PRED 3] gold=['Bücherei', 'Bibliothek', 'Archiv'] | pred='bookshelf' | score=0.0000
+[PRED 4] gold=['Gesellschaft'] | pred='a social structure' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052740__em__I_understand_the_task_you_ve_given_me._P__4a7e1206.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Instruction: ['"Sort the words alphabetically."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically."
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Affäre', 'Beziehung', 'Scharmützel', 'Ding', 'Angelegenheit'] | pred='affair' | score=0.0000
+[PRED 1] gold=['Schießen', 'Schießerei'] | pred='gihnoots' | score=0.0000
+[PRED 2] gold=['Illusion', 'Wahnvorstellung', 'Sinnestäuschung'] | pred='illusion' | score=1.0000
+[PRED 3] gold=['Bösewicht', 'Schurke', 'Gauner', 'Oberböse'] | pred='aillniv' | score=0.0000
+[PRED 4] gold=['strahlen', 'Balken', 'Strahl', 'beamen'] | pred='beam' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052810__em__Sort_the_words_alphabetically.__22411b0d.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.15
+********* Done *********
+Instruction: ['This is a list of instructions for a task.']
+[DEBUG] 开始评估，指令: This is a list of instructions for a task.
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Jugendliche', 'Jugendlicher'] | pred='survey about daily habits and interests.' | score=0.0000
+[PRED 1] gold=['Oper', 'Opernhaus'] | pred="please provide the task instructions, and i'll be happy to assist you." | score=0.0000
+[PRED 2] gold=['System', 'Ordnung'] | pred='install the new operating system on the computer.' | score=0.0000
+[PRED 3] gold=['Metapher'] | pred="a comparison that isn't literal" | score=0.0000
+[PRED 4] gold=['Regiment'] | pred='a system or set of rules and regulations to be followed' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052848__em__This_is_a_list_of_instructions_for_a_tas__71117898.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'It seems like you are looking for examples of instructions that are clear and imperative. Here are some examples:
+Input: label
+Output: etikettieren
+Input: emergency
+Output: Notstand
+Input: undergraduate
+Output: Student
+Input: clothing
+Output: Kleidung' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.15
+********* Done *********
+Instruction: ["I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?"]
+[DEBUG] 开始评估，指令: I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Meer', 'See'] | pred='it seems like you only typed "sea". could you please provide more context or clarify what you\'re trying to ask or find out about the sea?' | score=0.0000
+[PRED 1] gold=['Proletin', 'Bäuerin', 'Landfrau', 'Bauernbub', 'Plebejerin', 'Bauernjunge', 'Prolet', 'Banausin', 'Bauersfrau', 'Dorfbewohnerin', 'Landmann', 'Landarbeiter', 'Dörflerin', 'Dorfbewohner', 'Bauer', 'Bauernlümmel', 'Banause', 'Dörfler', 'Plebejer', 'Bauernmädchen'] | pred='it seems like you\'ve only provided a single word, "peasant". could you please provide more context or clarify what you would like to know or discuss about peasants? are you looking for a definition, historical information, or something else?' | score=0.0000
+[PRED 2] gold=['Granit'] | pred='i\'m happy to help! however, it seems like you didn\'t ask a question or provide any context. "granite" is a type of rock, but i\'m not sure what you\'re looking for. could you please provide more context or clarify what you\'d like to know about granite?' | score=0.0000
+[PRED 3] gold=['packen', 'Paket', 'einpacken'] | pred="i'd be happy to help with your question about a package, but i'm not sure what specific information you're looking for. could you please provide more context or clarify your question?" | score=0.0000
+[PRED 4] gold=['Unbehagen', 'ablehnen'] | pred='it seems like you only typed a single word "dislike". could you please provide more context or clarify what you mean by "dislike"? are you asking about the meaning of the word, its antonym, or something else?' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_052943__em__I_m_sorry__I_m_not_sure_what_you_re_aski__a68b33ff.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.15
+********* Done *********
+Best initial point: 0.150
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][05:29:44] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+[05:29:47] INFO [PROFILE] GP fit: 3.396s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:29:48] INFO Iter 0 best_value=2.57778 gp_loss=1260.90985
+[05:29:48] INFO [PROFILE] Acquisition: 0.588s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:30:18] INFO [PROFILE] LLM eval candidate: 30.087s
+[05:30:18] INFO Best value so far: 0.30000
+Bayes iterations:  20%|██        | 1/5 [00:34<02:16, 34.11s/it][05:30:18] INFO [Iteration 1] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:30:20] INFO [PROFILE] GP fit: 1.770s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:30:20] INFO Iter 1 best_value=3.74459 gp_loss=1081.43488
+[05:30:21] INFO [PROFILE] Acquisition: 0.578s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:30:57] INFO [PROFILE] LLM eval candidate: 36.016s
+[05:30:57] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  40%|████      | 2/5 [01:12<01:49, 36.62s/it][05:30:57] INFO [Iteration 2] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:30:59] INFO [PROFILE] GP fit: 1.922s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:30:59] INFO Iter 2 best_value=3.74459 gp_loss=1081.43488
+[05:30:59] INFO [PROFILE] Acquisition: 0.796s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:31:00] INFO [PROFILE] LLM eval candidate: 0.450s
+[05:31:00] INFO Invalid/fallback instruction; skip appending to training set.
+Bayes iterations:  60%|██████    | 3/5 [01:15<00:42, 21.36s/it][05:31:00] INFO [Iteration 3] X_train torch.Size([26, 30]), y_train torch.Size([26, 1])
+[05:31:02] INFO [PROFILE] GP fit: 1.837s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:31:02] INFO Iter 3 best_value=3.74459 gp_loss=1081.43488
+[05:31:02] INFO [PROFILE] Acquisition: 0.690s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:32:08] INFO [PROFILE] LLM eval candidate: 65.888s
+[05:32:08] INFO Best value so far: 0.30000
+Bayes iterations:  80%|████████  | 4/5 [02:24<00:39, 39.95s/it][05:32:08] INFO [Iteration 4] X_train torch.Size([27, 30]), y_train torch.Size([27, 1])
+[05:32:11] INFO [PROFILE] GP fit: 2.652s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+[05:32:11] INFO Iter 4 best_value=3.81254 gp_loss=1274.18000
+[05:32:12] INFO [PROFILE] Acquisition: 0.751s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-10.
+  warnings.warn(
+[05:32:45] INFO [PROFILE] LLM eval candidate: 33.636s
+[05:32:45] INFO Best value so far: 0.30000
+Bayes iterations: 100%|██████████| 5/5 [03:01<00:00, 38.91s/it]Bayes iterations: 100%|██████████| 5/5 [03:01<00:00, 36.24s/it]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['etikettieren']
+[DEBUG] 开始评估，指令: etikettieren
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Spion', 'Spionin', 'ausspionieren'] | pred='geheimagent' | score=0.0000
+[PRED 1] gold=['Mast'] | pred='turm' | score=0.0000
+[PRED 2] gold=['Rauschgift', 'Rauschmittel', 'Droge', 'Betäubungsmittel'] | pred='medikament' | score=0.0000
+[PRED 3] gold=['Pistole', 'Gewehr', 'Geschütz', 'Kanone'] | pred='weapon' | score=0.0000
+[PRED 4] gold=['Bikini'] | pred='kleidung' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_053018__em__etikettieren__25769a45.tsv
+Dev loss: 0.3. Dev perf: 0.3. Best dev perf: 0.3
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ["To complete the task, you need to return the answer without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the synonym. Return just the word.'"]
+[DEBUG] 开始评估，指令: To complete the task, you need to return the answer without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* 'Find the synonym. Return just the word.'
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Stabilität'] | pred='steadiness' | score=0.0000
+[PRED 1] gold=['Erneuerung'] | pred='revival' | score=0.0000
+[PRED 2] gold=['Spurt', 'spurten', 'Sprint', 'Kurzstreckenlauf'] | pred='dash' | score=0.0000
+[PRED 3] gold=['Anleitung', 'Handlungsempfehlung', 'Orientierungshilfe', 'Richtungsweisung'] | pred='direction' | score=0.0000
+[PRED 4] gold=['Konzern', 'Sorge', 'Besorgnis', 'Betroffenheit'] | pred='anxiety' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_053057__em__To_complete_the_task__you_need_to_return__2a2bc818.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.3
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[FILTER] 拦截到偷懒指令: 'Input: etikettieren
+Output: Notstand' -> 强制判为 0.0 分
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['What is the best way to organize the information in a way that it is easy to find the desired input?']
+[DEBUG] 开始评估，指令: What is the best way to organize the information in a way that it is easy to find the desired input?
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Satz', 'Ausrüstung'] | pred='alphabetical order' | score=0.0000
+[PRED 1] gold=['Saurierin', 'Saurier', 'Dinosaurier', 'Dinosaurierin'] | pred='alphabetical order' | score=0.0000
+[PRED 2] gold=['abwracken', 'Schrott', 'Speisereste', 'Stückchen', 'Fetzen', 'Essensreste', 'verschrotten', 'Abfall', 'Reste', 'Altmaterial', 'wegwerfen', 'Altmetall'] | pred='alphabetical order' | score=0.0000
+[PRED 3] gold=['prüfender od. forschender Blick', 'genaue Untersuchung'] | pred='create an alphabetical index or categorize the information into relevant topics/subtopics, and use clear headings and subheadings. additionally, use tags, keywords, or metadata to facilitate searching.' | score=0.0000
+[PRED 4] gold=['Untersuchung'] | pred='create an index' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_053208__em__What_is_the_best_way_to_organize_the_inf__b5ba8cf9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.3
+********* Done *********
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+Instruction: ['ONLY THE ANSWER']
+[DEBUG] 开始评估，指令: ONLY THE ANSWER
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Gattung'] | pred='biology' | score=0.0000
+[PRED 1] gold=['radfahren'] | pred='biking' | score=0.0000
+[PRED 2] gold=['Fluss', 'Strom'] | pred='stream' | score=0.0000
+[PRED 3] gold=['Dach', 'überdachen'] | pred='top' | score=0.0000
+[PRED 4] gold=['Leitartikel', 'redaktionell'] | pred='rial' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/translation_en-de_20251201_053245__em__ONLY_THE_ANSWER__abbb8f4a.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.3
+********* Done *********
+Evaluate on test data...
+Best instruction is:
+['etikettieren']
+The final instruction set is:
+{"'Translate the sentence. Return only the translated text.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I understand the task.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'Sort the words alphabetically. Output only the space-separated list.': (0.1, array([[0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 1.]])), "Please provide a clear and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list": (0.15, array([[0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 1., 0., 0.,
+        0., 0., 1., 0.]])), 'I understand the task and the examples. Please provide the input and you will receive the corresponding output.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I'm sorry, I didn't understand your question. Could you please rephrase or provide more context so I can better understand what you're trying to communicate?": (0.05, array([[0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'I understand the task and the examples provided. Please give me a clear, imperative instruction for this task, and I will return only the answer, without any explanation, numbering, or conversational text.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "Please provide a clear and imperative instruction for this task, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the synonym. Return just the word.'": (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 1.]])), 'I understand the task you have described. Please provide me with the necessary information, and I will generate the output you require.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically. Output only the space-separated list."': (0.05, array([[0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Please provide a clear, imperative instruction for this task."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Return the answer without any additional text or explanation."': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically. Output only the space-separated list."\n"Find the synonym. Return just the word."': (0.05, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0.,
+        0., 0., 0., 0.]])), "Provide a clear, concise, and imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space": (0.05, array([[0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I understand the task you've given me. Please provide the input and the desired output, and I will do my best to generate the appropriate response.": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), '"Sort the words alphabetically."': (0.05, array([[0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'This is a list of instructions for a task.': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), "I'm sorry, I'm not sure what you're asking for. Could you please provide more context or clarify your question?": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'etikettieren': (0.3, array([[0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 1., 0., 1., 0.,
+        0., 1., 1., 0.]])), "To complete the task, you need to return the answer without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* 'Find the synonym. Return just the word.'": (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'What is the best way to organize the information in a way that it is easy to find the desired input?': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]])), 'ONLY THE ANSWER': (0.0, array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0.]]))}
+Evaluating on test data...
+Evaluating prompts...
+Using metric "em" for task "translation_en-de"...
+Using metric "em" for task "translation_en-de"...
+[PRED 0] gold=['Sitz', 'Sitzplatz'] | pred='sitzplatz' | score=1.0000
+[PRED 1] gold=['platzieren', 'pflanzen', 'Kombination', 'Pflanze'] | pred='here are some possible labels or tags for the input "plant":\n\n* living thing\n* organism\n* botany\n* greenery\n* flora\n* nature\n* environment\n* photosynthesis\n* growth\n* development\n* biology' | score=0.0000
+[PRED 2] gold=['eisern', 'Eisen', 'bügeln', 'Bügeleisen'] | pred='**labeling:**\n\n* category: household item\n* subcategory: laundry\n* type: appliance' | score=0.0000
+[PRED 3] gold=['Osten', 'Ost'] | pred='ost' | score=1.0000
+[PRED 4] gold=['Botschaft'] | pred='diplomatie' | score=0.0000
+[PRED-DUMP] wrote 100 rows to logs/preds/translation_en-de_20251201_053644__em__etikettieren__25769a45.tsv
+Finished evaluating.
+Finished!!!
+Test score on ChatGPT: 0.39

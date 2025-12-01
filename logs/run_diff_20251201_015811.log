@@ -1,0 +1,310 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.93s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.47s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the output only.'"]
+[DEBUG] 开始评估，指令: 'Return the output only.'
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['71'] | pred='73' | score=0.0000
+[PRED 1] gold=['72'] | pred='158' | score=0.0000
+[PRED 2] gold=['80'] | pred='2' | score=0.0000
+[PRED 3] gold=['93'] | pred='183' | score=0.0000
+[PRED 4] gold=['12'] | pred='4' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_015856__diff_numeric_em__Return_the_output_only.__cb86dee8.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+Instruction: ["The task is to provide a clear and concise instruction for the user. The instruction MUST be given only the answer, without any explanation, numbering, or conversational text.\nExamples of good instructions:\n- 'Sort the words alphabetically. Output only the space-separated list.'\n-"]
+[DEBUG] 开始评估，指令: The task is to provide a clear and concise instruction for the user. The instruction MUST be given only the answer, without any explanation, numbering, or conversational text.
+Examples of good instructions:
+- 'Sort the words alphabetically. Output only the space-separated list.'
+-
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['67'] | pred='23' | score=0.0000
+[PRED 1] gold=['82'] | pred='200' | score=0.0000
+[PRED 2] gold=['83'] | pred='187' | score=0.0000
+[PRED 3] gold=['80'] | pred='176' | score=0.0000
+[PRED 4] gold=['55'] | pred='133' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_015918__diff_numeric_em__The_task_is_to_provide_a_clear_and_conci__beb47a6c.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+Instruction: ["'Find the output.'"]
+[DEBUG] 开始评估，指令: 'Find the output.'
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['67'] | pred='67' | score=1.0000
+[PRED 1] gold=['82'] | pred='11.25' | score=0.0000
+[PRED 2] gold=['57'] | pred='99 + 42 = 141' | score=1.0000
+[PRED 3] gold=['96'] | pred='246' | score=0.0000
+[PRED 4] gold=['68'] | pred='198' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_015946__diff_numeric_em__Find_the_output.__7be4c71c.tsv
+Dev loss: 0.2. Dev perf: 0.2. Best dev perf: 0.2
+********* Done *********
+Instruction: ['Return the list of examples.']
+[DEBUG] 开始评估，指令: Return the list of examples.
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['49'] | pred='[29, 78]' | score=0.0000
+[PRED 1] gold=['93'] | pred='[1, 4, 7, 5, 4]' | score=0.0000
+[PRED 2] gold=['83'] | pred='[80, 85, 90, 95]' | score=0.0000
+[PRED 3] gold=['54'] | pred='[61, 7]' | score=1.0000
+[PRED 4] gold=['83'] | pred='4 64 16 32' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020028__diff_numeric_em__Return_the_list_of_examples.__126101f5.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.25
+********* Done *********
+Instruction: ['Return only the answer, without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Return only the answer, without any explanation, numbering, or conversational text.
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['77'] | pred='3.1' | score=0.0000
+[PRED 1] gold=['89'] | pred='89' | score=1.0000
+[PRED 2] gold=['6'] | pred='27' | score=0.0000
+[PRED 3] gold=['55'] | pred='2' | score=0.0000
+[PRED 4] gold=['55'] | pred='2376' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020057__diff_numeric_em__Return_only_the_answer__without_any_expl__4ae8be85.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.25
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['71'] | pred='there are no words to sort. the input appears to be numbers.' | score=0.0000
+[PRED 1] gold=['54'] | pred='fifty-five fifty-nine' | score=0.0000
+[PRED 2] gold=['92'] | pred='100 8' | score=1.0000
+[PRED 3] gold=['68'] | pred='there are no words to sort. the input contains numbers, not words.' | score=0.0000
+[PRED 4] gold=['45'] | pred='14 59' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020135__diff_numeric_em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.25
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 41 13
+Output: 28
+
+Input: 72 31
+Output: 41
+
+Input: 125 35
+Output: 90
+
+Input: 99 16
+Output: 83' -> 强制判为 0.0 分
+Instruction: ['"Sort the list of words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the list of words alphabetically. Output only the space-separated list."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['55'] | pred='there are no words in the input, only numbers. if you meant to provide a list of words, please do so. if not, i assume the task is to sort the numbers. here is the result:\n\n39 94' | score=0.0000
+[PRED 1] gold=['51'] | pred='forty-six ninety-seven' | score=0.0000
+[PRED 2] gold=['7'] | pred='eleven four' | score=1.0000
+[PRED 3] gold=['12'] | pred='there is no list of words to sort.' | score=0.0000
+[PRED 4] gold=['77'] | pred='there are no words to sort. the input consists of numbers, not words.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020214__diff_numeric_em__Sort_the_list_of_words_alphabetically._O__5b79446b.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.25
+********* Done *********
+Instruction: ['Example HTML PageCiao']
+[DEBUG] 开始评估，指令: Example HTML PageCiao
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['79'] | pred='<html>\n  <head>\n    <title>area of rectangle</title>\n  </head>\n  <body>\n    <h1>area of rectangle</h1>\n    <p>the area of the rectangle is: 10932</p>\n  </body>\n</html>' | score=0.0000
+[PRED 1] gold=['45'] | pred='<doctype html>\n<html>\n<head>\n<title>example html page</title>\n</head>\n<body>\n<h1>ciao</h1>\n<p>59 14</p>\n</body>\n</html>' | score=0.0000
+[PRED 2] gold=['90'] | pred='182' | score=0.0000
+[PRED 3] gold=['56'] | pred='<html>\n  <head>\n    <title>my web page</title>\n  </head>\n  <body>\n    <h1>111 55</h1>\n  </body>\n</html>' | score=0.0000
+[PRED 4] gold=['34'] | pred='50' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020244__diff_numeric_em__Example_HTML_PageCiao__d03e52e9.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.25
+********* Done *********
+Instruction: ['"Find the pattern. Output only the number."']
+[DEBUG] 开始评估，指令: "Find the pattern. Output only the number."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['67'] | pred='the pattern appears to be a simple subtraction of 67.\n\n122 - 67 = 55\n55 - 67 = -12' | score=0.0000
+[PRED 1] gold=['67'] | pred='178' | score=0.0000
+[PRED 2] gold=['73'] | pred='9' | score=0.0000
+[PRED 3] gold=['56'] | pred='28' | score=0.0000
+[PRED 4] gold=['77'] | pred='211' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020310__diff_numeric_em__Find_the_pattern._Output_only_the_number__f0aae554.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.25
+********* Done *********
+Instruction: ['42 25']
+[DEBUG] 开始评估，指令: 42 25
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['69'] | pred='101' | score=0.0000
+[PRED 1] gold=['86'] | pred='44' | score=0.0000
+[PRED 2] gold=['50'] | pred='50' | score=1.0000
+[PRED 3] gold=['54'] | pred='36' | score=0.0000
+[PRED 4] gold=['52'] | pred='44' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020342__diff_numeric_em__42_25__d242cd64.tsv
+Dev loss: 0.25. Dev perf: 0.25. Best dev perf: 0.25
+********* Done *********
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['67'] | pred='thirty-five one hundred two' | score=0.0000
+[PRED 1] gold=['26'] | pred='twenty-three forty-nine' | score=0.0000
+[PRED 2] gold=['89'] | pred='3 92' | score=0.0000
+[PRED 3] gold=['76'] | pred='thirty 106' | score=1.0000
+[PRED 4] gold=['82'] | pred='one hundred fifty-six seventy-four' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020413__diff_numeric_em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.15. Dev perf: 0.15. Best dev perf: 0.25
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 13 31
+Output: 72
+
+Input: 32 12
+Output: 41
+Input: 11 12
+Output: 13
+Input: 12 13
+Output: 11
+Input:' -> 强制判为 0.0 分
+Instruction: ['"Calculate the sum. Output only the number."']
+[DEBUG] 开始评估，指令: "Calculate the sum. Output only the number."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['78'] | pred='130' | score=0.0000
+[PRED 1] gold=['72'] | pred='92' | score=0.0000
+[PRED 2] gold=['98'] | pred='254' | score=0.0000
+[PRED 3] gold=['65'] | pred='139' | score=0.0000
+[PRED 4] gold=['90'] | pred='132' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020441__diff_numeric_em__Calculate_the_sum._Output_only_the_numbe__dc08d971.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.25
+********* Done *********
+Instruction: ['Return the list of outputs without any additional explanations or conversational text.']
+[DEBUG] 开始评估，指令: Return the list of outputs without any additional explanations or conversational text.
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['68'] | pred='154' | score=0.0000
+[PRED 1] gold=['89'] | pred='[6, 2, 8, 4]' | score=0.0000
+[PRED 2] gold=['97'] | pred='159' | score=0.0000
+[PRED 3] gold=['97'] | pred='[153, 28]' | score=0.0000
+[PRED 4] gold=['93'] | pred='3.325' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020506__diff_numeric_em__Return_the_list_of_outputs_without_any_a__3f4a6ad6.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.25
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.25
+********* Done *********
+Instruction: ['"Please return only the output for each task without any explanations, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Please return only the output for each task without any explanations, numbering, or conversational text."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['12'] | pred='19 / 7 = 2 r 5' | score=1.0000
+[PRED 1] gold=['79'] | pred='145' | score=0.0000
+[PRED 2] gold=['78'] | pred='4.54545454545455' | score=0.0000
+[PRED 3] gold=['46'] | pred='3.875' | score=0.0000
+[PRED 4] gold=['83'] | pred='4.6' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020535__diff_numeric_em__Please_return_only_the_output_for_each_t__011ffc2d.tsv
+Dev loss: 0.2. Dev perf: 0.2. Best dev perf: 0.25
+********* Done *********
+Instruction: ['"Retrieve the information."']
+[DEBUG] 开始评估，指令: "Retrieve the information."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['88'] | pred='167 ÷ 79 = 2.11' | score=1.0000
+[PRED 1] gold=['74'] | pred='the sum is 140.' | score=0.0000
+[PRED 2] gold=['48'] | pred='the sum of the two numbers is 94.' | score=0.0000
+[PRED 3] gold=['93'] | pred='183 × 90 = 16470' | score=1.0000
+[PRED 4] gold=['87'] | pred='a fahrenheit temperature of 68 is equivalent to 20 celsius.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020609__diff_numeric_em__Retrieve_the_information.__fc3db719.tsv
+Dev loss: 0.55. Dev perf: 0.55. Best dev perf: 0.55
+********* Done *********
+Instruction: ['"Please provide a list of inputs and their corresponding outputs. The list should be space-separated and organized alphabetically. Only the outputs should be returned, without any explanations, numbering, or conversational text."']
+[DEBUG] 开始评估，指令: "Please provide a list of inputs and their corresponding outputs. The list should be space-separated and organized alphabetically. Only the outputs should be returned, without any explanations, numbering, or conversational text."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['73'] | pred='214 9' | score=0.0000
+[PRED 1] gold=['38'] | pred='3 6' | score=0.0000
+[PRED 2] gold=['85'] | pred='7 11' | score=0.0000
+[PRED 3] gold=['93'] | pred='133 40' | score=1.0000
+[PRED 4] gold=['81'] | pred='155 75' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020635__diff_numeric_em__Please_provide_a_list_of_inputs_and_thei__2107c307.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.55
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.55
+********* Done *********
+Instruction: ['"Sort the numbers in ascending order."']
+[DEBUG] 开始评估，指令: "Sort the numbers in ascending order."
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['75'] | pred='55 130' | score=0.0000
+[PRED 1] gold=['91'] | pred='65 156' | score=0.0000
+[PRED 2] gold=['38'] | pred='12 50' | score=0.0000
+[PRED 3] gold=['63'] | pred='3 66' | score=0.0000
+[PRED 4] gold=['28'] | pred='7 35' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020701__diff_numeric_em__Sort_the_numbers_in_ascending_order.__60643008.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.55
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input:
+Output:' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.\nFind the synonym. Return just the word.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Find the synonym. Return just the word.
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['94'] | pred='one twenty five thirty one' | score=0.0000
+[PRED 1] gold=['34'] | pred='forty six' | score=1.0000
+[PRED 2] gold=['23'] | pred='forty-one eighteen' | score=1.0000
+[PRED 3] gold=['65'] | pred='one hundred seventeen one hundred fifty-two' | score=0.0000
+[PRED 4] gold=['90'] | pred="it seems like there's been a mistake. the input doesn't contain any words to sort alphabetically or find a synonym for. the input appears to be numbers. could you please provide the correct input?" | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020732__diff_numeric_em__Sort_the_words_alphabetically._Output_on__690e1afa.tsv
+Dev loss: 0.3. Dev perf: 0.3. Best dev perf: 0.55
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: 12 27
+Output: 85
+
+
+
+Assuming you want me to return the answer without any explanation, numbering, or conversational text, here are some examples:
+
+* 'Find the definition. Return just the definition.'
+* 'Count' -> 强制判为 0.0 分
+Instruction: ['What is the meaning of life']
+[DEBUG] 开始评估，指令: What is the meaning of life
+Using metric "diff_numeric_em" for task "diff"...
+Using metric "diff_numeric_em" for task "diff"...
+[PRED 0] gold=['83'] | pred="the age-old question!\n\nwhile there's no definitive answer, here's a philosophical perspective:\n\nthe meaning of life is a subjective, personal, and multifaceted concept that can vary from person to person. it can be understood in different ways, depending on one's values, beliefs, culture, and experiences.\n\nsome possible interpretations include:\n\n1. **pursuit of happiness**: the pursuit of happiness, fulfillment, and well-being, often achieved through personal growth, relationships, and experiences that bring joy" | score=0.0000
+[PRED 1] gold=['52'] | pred='the meaning of life' | score=0.0000
+[PRED 2] gold=['84'] | pred='i\'m happy to help! however, i think there might be some confusion. the input "127 43" doesn\'t seem to be related to the question "what is the meaning of life?"\n\ncould you please provide more context or clarify what you mean by "127 43"? are you looking for a numerical answer to the question, or perhaps you\'d like to explore the meaning of life in a more philosophical sense?\n\nif you\'re interested in discussing the meaning of life, i\'d be happy' | score=1.0000
+[PRED 3] gold=['15'] | pred="a philosophical question!\n\naccording to various sources, including philosophers, theologians, and scientists, the meaning of life can be interpreted in many ways. here's a brief summary:\n\n* happiness and fulfillment: living a life that brings happiness, contentment, and a sense of purpose.\n* self-actualization: realizing one's potential, pursuing personal growth, and becoming the best version of oneself.\n* love and connection: forming meaningful relationships, loving and being loved, and experiencing a sense of" | score=0.0000
+[PRED 4] gold=['83'] | pred='i\'m afraid the input "115 32" doesn\'t provide enough context or information to provide a meaningful answer to the question "what is the meaning of life?" \n\nthe meaning of life is a complex and subjective topic that has been debated and explored by philosophers, theologians, scientists, and many other thinkers throughout human history. it\'s a deeply personal and existential question that can have different answers for different people.\n\nif you\'d like to explore this topic further, i\'d be happy to engage in' | score=1.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/diff_20251201_020828__diff_numeric_em__What_is_the_meaning_of_life__e750541f.tsv
+Dev loss: 0.55. Dev perf: 0.55. Best dev perf: 0.55
+********* Done *********
+Best initial point: 0.550
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][02:08:29] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+[02:08:30] INFO [PROFILE] GP fit: 0.779s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[WARNING][Iteration 0] custom kernel GP fit failed, falling back to baseline. Error: All attempts to fit the model have failed.
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 0.0000e+00
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 879, in run
+    output = gp_model(X_train)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py", line 345, in __call__
+    ) = self.prediction_strategy.exact_prediction(full_mean, full_covar)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 324, in exact_prediction
+    self.exact_predictive_mean(test_mean, test_train_covar),
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 349, in exact_predictive_mean
+    res = (test_train_covar @ mean_cache.unsqueeze(-1)).squeeze(-1)
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: double != float

@@ -1,0 +1,283 @@
+Using a total of 150 function evaluations
+Set all the seeds to 42 successfully!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.62s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.33s/it]
+Shape of initial prompt embedding: torch.Size([1, 3, 4096])
+Instruction: ["'Return the output only.'"]
+[DEBUG] 开始评估，指令: 'Return the output only.'
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['p a t r o n a g e'] | pred='the state of being a patron.' | score=0.0000
+[PRED 1] gold=['a u t o b i o g r a p h y'] | pred='a biography of oneself written by oneself' | score=1.0000
+[PRED 2] gold=['s i n'] | pred='0.0' | score=0.0000
+[PRED 3] gold=['r e p r e s e n t a t i o n'] | pred='the way in which something is shown or expressed' | score=0.0000
+[PRED 4] gold=['s y n t h'] | pred='short-wave radio' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_023654__em__Return_the_output_only.__cb86dee8.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+Instruction: ['clear, concise, and unambiguous.']
+[DEBUG] 开始评估，指令: clear, concise, and unambiguous.
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['m e m o i r'] | pred="a written account of one's life experiences." | score=0.0000
+[PRED 1] gold=['a u t h o r i t y'] | pred='power or control over others.' | score=0.0000
+[PRED 2] gold=['l i m i t'] | pred='the maximum or minimum amount of something that is allowed or possible' | score=0.0000
+[PRED 3] gold=['p l a n e t'] | pred='mars' | score=0.0000
+[PRED 4] gold=['i n s t i t u t e'] | pred='establish or found (an organization or system)' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_023740__em__clear__concise__and_unambiguous.__d2edee12.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: task
+Output: t a s k' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: a b c e d e f e r
+Output: a b c e d e f e r a t i o n' -> 强制判为 0.0 分
+Instruction: ['Sort the words alphabetically. Output only the space-separated list.']
+[DEBUG] 开始评估，指令: Sort the words alphabetically. Output only the space-separated list.
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['s i g n'] | pred='sign' | score=0.0000
+[PRED 1] gold=['l i q u i d'] | pred='liquid' | score=0.0000
+[PRED 2] gold=['c r i t i c'] | pred='critic' | score=0.0000
+[PRED 3] gold=['d i e s e l'] | pred='diesel' | score=0.0000
+[PRED 4] gold=['e x p u l s i o n'] | pred='expulsion' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_023810__em__Sort_the_words_alphabetically._Output_on__aad58d68.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.05
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."\n\n"Find the synonym. Return just the word."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+
+"Find the synonym. Return just the word."
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['h e r o'] | pred='champion' | score=0.0000
+[PRED 1] gold=['p l a n e t'] | pred='cosmos' | score=0.0000
+[PRED 2] gold=['p l a q u e'] | pred='panel' | score=0.0000
+[PRED 3] gold=['p l u t o n i u m'] | pred='radionuclide' | score=0.0000
+[PRED 4] gold=['c u l t'] | pred='sect' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_023836__em__Sort_the_words_alphabetically._Output_on__d6b4eeb7.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ["Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n\n\nExamples of good instructions:\n\n\n* 'Sort the words alphabetically. Output only the space-separ"]
+[DEBUG] 开始评估，指令: Please provide a clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.
+
+
+Examples of good instructions:
+
+
+* 'Sort the words alphabetically. Output only the space-separ
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['p r e c e d e n t'] | pred='precedent' | score=0.0000
+[PRED 1] gold=['g r o w t h'] | pred='growth' | score=0.0000
+[PRED 2] gold=['c o n t e m p t'] | pred='return the scrambled letters of the input word in alphabetical order.' | score=0.0000
+[PRED 3] gold=['m o r a l i t y'] | pred='return the number of vowels in the input word.' | score=0.0000
+[PRED 4] gold=['m i l i t a n t'] | pred='militant' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_023903__em__Please_provide_a_clear__imperative_instr__fd176c8e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: sort the words alphabetically. Output: only the space-separated list.' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: y e s t' -> 强制判为 0.0 分
+[FILTER] 拦截到偷懒指令: 'Input: task
+Output: t a s k' -> 强制判为 0.0 分
+Instruction: ['clear, imperative']
+[DEBUG] 开始评估，指令: clear, imperative
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['c o m m i t m e n t'] | pred='a promise or pledge to do something.' | score=0.0000
+[PRED 1] gold=['c h a p t e r'] | pred='read!' | score=0.0000
+[PRED 2] gold=['c a v e'] | pred='explore it.' | score=0.0000
+[PRED 3] gold=['n a t i o n a l i t y'] | pred='what is the typical cuisine associated with this nationality?' | score=0.0000
+[PRED 4] gold=['r a p p i n g'] | pred='spit bars like a pro!' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_023940__em__clear__imperative__98303d0c.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ['Example instructions:\n\n* "Sort the words alphabetically. Output only the space-separated list."\n* "Find the synonym. Return just the word."\n\nInstructions:\n\n* "Sort the words alphabetically. Output only the space-separated list."\n* "Find']
+[DEBUG] 开始评估，指令: Example instructions:
+
+* "Sort the words alphabetically. Output only the space-separated list."
+* "Find the synonym. Return just the word."
+
+Instructions:
+
+* "Sort the words alphabetically. Output only the space-separated list."
+* "Find
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['m o d e l i n g'] | pred='it seems like the second instruction is incomplete. however, based on the input "modeling", i will provide an answer for the first instruction.\n\nhere is the output:\n\nmodeling' | score=0.0000
+[PRED 1] gold=['a r c h i t e c t'] | pred='designer' | score=0.0000
+[PRED 2] gold=['s i t u a t i o n'] | pred='circumstance' | score=0.0000
+[PRED 3] gold=['v e g e t a t i o n'] | pred='flora' | score=0.0000
+[PRED 4] gold=['m a s s'] | pred='it seems like the second instruction is incomplete. however, based on the input "mass", i\'m going to assume the complete instruction is "find the synonym. return just the word."\n\nhere\'s the output:\n\nbulk' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024024__em__Example_instructions_Sort_the_words_alph__6b70cb67.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ['clear, concise, and specific.']
+[DEBUG] 开始评估，指令: clear, concise, and specific.
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['p r e s e n c e'] | pred='existence or being present.' | score=0.0000
+[PRED 1] gold=['h e i g h t'] | pred='please provide the height value to get the output.' | score=0.0000
+[PRED 2] gold=['v o l u n t e e r'] | pred='a person who freely offers to do something, especially to help others, without being forced or paid.' | score=0.0000
+[PRED 3] gold=['d e s c e n t'] | pred='downward movement or slope' | score=0.0000
+[PRED 4] gold=['s y m p a t h y'] | pred='condolences.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024103__em__clear__concise__and_specific.__ee4f1e24.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: y e a r' -> 强制判为 0.0 分
+Instruction: ['"Return the answer without any additional text or explanation."']
+[DEBUG] 开始评估，指令: "Return the answer without any additional text or explanation."
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['f e e d b a c k'] | pred='response' | score=0.0000
+[PRED 1] gold=['c o u p l e'] | pred='2' | score=0.0000
+[PRED 2] gold=['p e a s a n t'] | pred='a person of low social status, typically a small farmer or laborer' | score=0.0000
+[PRED 3] gold=['c o n s u l t a n t'] | pred='adviser' | score=0.0000
+[PRED 4] gold=['c a s u a l t y'] | pred='victim' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024135__em__Return_the_answer_without_any_additional__a6a86311.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.05
+********* Done *********
+Instruction: ["'Sort the words alphabetically. Output only the space-separated list.'"]
+[DEBUG] 开始评估，指令: 'Sort the words alphabetically. Output only the space-separated list.'
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['t h r o w'] | pred='throw' | score=0.0000
+[PRED 1] gold=['w o r k e r'] | pred='worker' | score=0.0000
+[PRED 2] gold=['s u b w a y'] | pred='bus subway train' | score=0.0000
+[PRED 3] gold=['c o o k i n g'] | pred='cooking' | score=0.0000
+[PRED 4] gold=['b i k i n i'] | pred='bikini' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024208__em__Sort_the_words_alphabetically._Output_on__3a2979d5.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: task' -> 强制判为 0.0 分
+Instruction: ['The instruction is a clear and imperative order for this task. It should not include any explanations, numberings, or conversational texts.\n\nExamples of good instructions:\n\n* "Sort the words alphabetically. Output only the space-separated list."\n* "Find the synonym.']
+[DEBUG] 开始评估，指令: The instruction is a clear and imperative order for this task. It should not include any explanations, numberings, or conversational texts.
+
+Examples of good instructions:
+
+* "Sort the words alphabetically. Output only the space-separated list."
+* "Find the synonym.
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['o v e r s e e i n g'] | pred='find the antonym.\n\ninput: fast\noutput (result only):' | score=0.0000
+[PRED 1] gold=['o p p o n e n t'] | pred='find the antonym.\n\ninput: fast\noutput (result only):' | score=0.0000
+[PRED 2] gold=['d e v i c e'] | pred="i'm ready to follow the instruction. what is it?" | score=0.0000
+[PRED 3] gold=['p e r s u a d e'] | pred='find the antonym.\n\ninput: fast\noutput (result only):' | score=0.0000
+[PRED 4] gold=['t o n e'] | pred='find the antonym.' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024244__em__The_instruction_is_a_clear_and_imperativ__fd6f9a1e.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ['Return the answer without any explanation, numbering, or conversational text.']
+[DEBUG] 开始评估，指令: Return the answer without any explanation, numbering, or conversational text.
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['v i c t o r y'] | pred='yrotciv' | score=0.0000
+[PRED 1] gold=['g r a v i t a t i o n a l'] | pred='force' | score=0.0000
+[PRED 2] gold=['b u s i n e s s'] | pred='commerce, trade, industry, firm, company, corporation, enterprise' | score=0.0000
+[PRED 3] gold=['g r a d e'] | pred='level or rank in a scale of achievement' | score=0.0000
+[PRED 4] gold=['d i v e'] | pred='ive' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024315__em__Return_the_answer_without_any_explanatio__4bd41ee6.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.1
+********* Done *********
+[FILTER] 拦截到偷懒指令: 'Input: sort the words alphabetically. Output only the space-separated list.' -> 强制判为 0.0 分
+Instruction: ["'Return the plural form.'"]
+[DEBUG] 开始评估，指令: 'Return the plural form.'
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['w a l k'] | pred='walks' | score=0.0000
+[PRED 1] gold=['t r a c k'] | pred='tracks' | score=0.0000
+[PRED 2] gold=['c r i t i c i s m'] | pred='criticisms' | score=0.0000
+[PRED 3] gold=['f u n d r a i s i n g'] | pred='fundraisings' | score=0.0000
+[PRED 4] gold=['r e n d e z v o u s'] | pred='rendezvous' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024345__em__Return_the_plural_form.__b52adec6.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Instruction: ["I am ready to receive the task. Please provide the clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:\n\n- 'Sort the words alphabetically. Output only"]
+[DEBUG] 开始评估，指令: I am ready to receive the task. Please provide the clear, imperative instruction for this task. The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text. Examples of good instructions:
+
+- 'Sort the words alphabetically. Output only
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['m o n s t e r'] | pred="i'm ready to assist you. here is your task instruction:\n\n'provide the plural form of the input word. output only'" | score=0.0000
+[PRED 1] gold=['l i c e n c e'] | pred='provide the instruction.' | score=0.0000
+[PRED 2] gold=['c o l o r a t i o n'] | pred="i'm ready to assist. here is your instruction:\n\n'remove all vowels from the input string. output only'" | score=0.0000
+[PRED 3] gold=['f r a n c h i s e'] | pred='write a 5-word sentence using the word "cloud". output only' | score=0.0000
+[PRED 4] gold=['s l o g a n'] | pred='provide the next number in the sequence: 1, 2, 4, 8, 16. output only' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024430__em__I_am_ready_to_receive_the_task._Please_p__4a66216b.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.1
+********* Done *********
+Instruction: ["I understand that the task is to provide a clear, imperative instruction for me to return only the answer, without any explanation, numbering, or conversational text.\n\nExamples of good instructions:\n\n* 'Sort the words alphabetically. Output only the space-separated list.'\n* '"]
+[DEBUG] 开始评估，指令: I understand that the task is to provide a clear, imperative instruction for me to return only the answer, without any explanation, numbering, or conversational text.
+
+Examples of good instructions:
+
+* 'Sort the words alphabetically. Output only the space-separated list.'
+* '
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['m o m e n t'] | pred='moment' | score=0.0000
+[PRED 1] gold=['b a l a n c e'] | pred='balance' | score=0.0000
+[PRED 2] gold=['d o c k'] | pred='dock' | score=0.0000
+[PRED 3] gold=['b u s i n e s s m a n'] | pred='businessman' | score=0.0000
+[PRED 4] gold=['e n t r a n c e'] | pred='entrance' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024457__em__I_understand_that_the_task_is_to_provide__86b3c8f4.tsv
+Dev loss: 0.05. Dev perf: 0.05. Best dev perf: 0.1
+********* Done *********
+Instruction: ['"Sort the words alphabetically. Output only the space-separated list."']
+[DEBUG] 开始评估，指令: "Sort the words alphabetically. Output only the space-separated list."
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['a c h i e v e m e n t'] | pred='achievement' | score=0.0000
+[PRED 1] gold=['a s s i s t a n c e'] | pred='a a c e i n n s s t' | score=1.0000
+[PRED 2] gold=['t e r r a c e'] | pred='e a c e r r t' | score=0.0000
+[PRED 3] gold=['g u t'] | pred='gut' | score=0.0000
+[PRED 4] gold=['s c r a p'] | pred='a c p r s' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024524__em__Sort_the_words_alphabetically._Output_on__a5b45a52.tsv
+Dev loss: 0.1. Dev perf: 0.1. Best dev perf: 0.1
+********* Done *********
+Instruction: ["'Write the command.'"]
+[DEBUG] 开始评估，指令: 'Write the command.'
+Using metric "em" for task "letters_list"...
+Using metric "em" for task "letters_list"...
+[PRED 0] gold=['v e h i c l e'] | pred='start vehicle' | score=0.0000
+[PRED 1] gold=['s e c o n d'] | pred='seq 2' | score=0.0000
+[PRED 2] gold=['c a n d i d a t e'] | pred='whois' | score=0.0000
+[PRED 3] gold=['d i s h'] | pred='wash' | score=0.0000
+[PRED 4] gold=['b r i d g e'] | pred='/bridge' | score=0.0000
+[PRED-DUMP] wrote 20 rows to logs/preds/letters_list_20251201_024555__em__Write_the_command.__b0e5dbf9.tsv
+Dev loss: 0.0. Dev perf: 0.0. Best dev perf: 0.1
+********* Done *********
+Best initial point: 0.100
+[WARNING] initial custom kernel GP fit failed, falling back to baseline. Error: name 'true' is not defined
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 9.5367e-09
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s][02:45:56] INFO [Iteration 0] X_train torch.Size([25, 30]), y_train torch.Size([25, 1])
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/botorch/fit.py:214: OptimizationWarning: `scipy_minimize` terminated with status 3, displaying original message from `scipy.optimize.minimize`: ABNORMAL: 
+  result = optimizer(mll, closure=closure, **optimizer_kwargs)
+[02:45:57] INFO [PROFILE] GP fit: 0.933s
+/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py:296: GPInputWarning: The input matches the stored training data. Did you forget to call model.train()?
+  warnings.warn(
+Bayes iterations:   0%|          | 0/5 [00:00<?, ?it/s]
+[kernel] auto_grad {'alpha_lat': 1.3132616875182228, 'alpha_instr': 0.6931471805599453, 'alpha_cov': 0.31326168751822286}
+Custom kernel sample K shape: torch.Size([3, 3]) has NaN: False
+[WARNING][Iteration 0] custom kernel GP fit failed, falling back to baseline. Error: All attempts to fit the model have failed.
+[baseline] X_train shape: torch.Size([25, 30]), dtype: torch.float32, device: cuda:0
+[baseline] y_train shape: torch.Size([25, 1]), std: 1.0000e+00, mean: 9.5367e-09
+Traceback (most recent call last):
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 1082, in <module>
+    test_score = run(args=args)
+  File "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/run_instructzero.py", line 879, in run
+    output = gp_model(X_train)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_gp.py", line 345, in __call__
+    ) = self.prediction_strategy.exact_prediction(full_mean, full_covar)
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 324, in exact_prediction
+    self.exact_predictive_mean(test_mean, test_train_covar),
+  File "/home2/langj/miniconda3/envs/instruct0/lib/python3.10/site-packages/gpytorch/models/exact_prediction_strategies.py", line 349, in exact_predictive_mean
+    res = (test_train_covar @ mean_cache.unsqueeze(-1)).squeeze(-1)
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: double != float
