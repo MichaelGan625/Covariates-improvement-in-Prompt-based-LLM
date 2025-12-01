@@ -62,7 +62,16 @@ from botorch import fit_gpytorch_mll
 from gpytorch.kernels import ScaleKernel, MaternKernel, LinearKernel
 from gpytorch.priors import GammaPrior
 from gpytorch.mlls import ExactMarginalLogLikelihood
-
+ALLOW_SHORT_TASKS = {
+    'antonyms', 'synonyms', 'diff', 'sum', 'negation', 
+    'rhymes', 'singular_to_plural', 'active_to_passive', 
+    'num_to_verbal', 'first_word_letter', 'second_word_letter',
+    'letters_list', 'orthography_starts_with', 'taxonomy_animal',
+    'larger_animal', 'word_sorting', 'word_unscrambling',
+    'object_count', 'odd_one_out', 'ascii', 'periodic_elements',
+    'translation_en-de', 'translation_en-es', 'translation_en-fr',
+    'sentiment', 'sentence_similarity', 'common_concept'
+}
 # 内核与CMA-ES
 from instruction_coupled_kernel import EfficientCombinedStringKernel
 from instruction_coupled_kernel import *  # 含 cma_es_concat
@@ -428,7 +437,7 @@ class LMForwardAPI:
         else:
             raise ValueError(f'[Prompt Embedding] Only support [list, numpy.ndarray], got {type(prompt_embedding)} instead.')
 
-        input_text = f"{self.system_prompt} USER:{self.init_token} ASSISTANT:"
+        input_text = self.init_token
         input_ids = self.tokenizer(input_text, return_tensors="pt").input_ids.to(self.device)
         input_embed = self.embedding[input_ids]
         prompt_embedding = prompt_embedding.to(device=input_embed.device, dtype=input_embed.dtype)
@@ -438,32 +447,60 @@ class LMForwardAPI:
         _profile = TASK_PROFILES.get(self.task_name, DEFAULT_PROFILE)
         # === 1. 生成配置 (增加随机性，防止复读) ===
         # 这里把 temperature 稍微调高一点点，让它敢于生成不同的句子
-        gen_kwargs = dict(do_sample=True, temperature=0.7, top_p=0.9)
+        gen_kwargs = dict(do_sample=True, temperature=0.35, top_p=0.9)
 
         outputs = self.model.generate(inputs_embeds=input_embed, max_new_tokens=64, **gen_kwargs)
         instruction = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
-        # === 2. 强力清洗 ===
+# === 2. 强力清洗 (Enhanced Cleaning) ===
         raw = instruction[0] if isinstance(instruction, list) else str(instruction)
-        # 很多时候模型会自己生成 "Instruction: " 前缀，必须去掉
-        instr_clean = raw.replace("Instruction:", "").strip()
-
-        # === 3. 强力过滤器 (Hard Filter) ===
-        # 目的：一旦发现指令长得像 "Input: ... Output: ..."，直接判死刑 (0分)
-        # 这样 GP 就会受到惩罚，从而被迫去探索其他区域
         
+        # 1. 去除常见的“前缀废话”
+        # 使用正则表达式，忽略大小写，非贪婪匹配
+        import re
+        patterns = [
+            r"^Instruction\s*:\s*", 
+            r"^The instruction is\s*(to|:)?\s*",
+            r"^The task is\s*(to|:)?\s*",
+            r"^Based on.*?write\s*:\s*",
+            r"^Task\s*:\s*"
+        ]
+        instr_clean = raw.strip()
+        for pat in patterns:
+            instr_clean = re.sub(pat, "", instr_clean, flags=re.IGNORECASE)
+            
+        # 2. 去除首尾的引号 (单引号和双引号)
+        instr_clean = instr_clean.strip('"\'')
+        
+        # 3. 只要第一行 (防止模型生成指令后又开始解释)
+        if "\n" in instr_clean:
+            instr_clean = instr_clean.split("\n")[0].strip()
+            
+        # 4. (可选) 如果剩下的内容里还有 "Input:"，说明清洗失败或者是复读，强制截断
+        if "Input:" in instr_clean:
+            instr_clean = instr_clean.split("Input:")[0].strip()
+
+        # 打印清洗结果，方便调试
+        print(f'Raw: {raw[:50]}... -> Clean: {instr_clean}')
+
+# === 3. 强力过滤器 (通用版) ===
         is_lazy_pattern = False
         lower_instr = instr_clean.lower()
         
-        # 规则 A: 如果指令里同时出现了 input 和 output，极大概率是它在复读 Template
-        # (除非是 antonyms 这种极简任务，否则不允许)
-        if "input:" in lower_instr or "output:" in lower_instr:
-             if self.task_name != 'antonyms':
-                 is_lazy_pattern = True
-        
-        # 规则 B: 指令太短 (小于 5 个字符)
-        if len(instr_clean) < 3: 
+        # 只拦截极其明显的“数据泄露”或“复读”行为
+        # 例如：指令直接以 "Input:" 开头，说明它没写指令，而是在抄例子
+        if instr_clean.strip().lower().startswith("input:"):
             is_lazy_pattern = True
+            
+        # 拦截模型拒绝回答的情况
+        if "sorry" in lower_instr and "cannot" in lower_instr:
+            is_lazy_pattern = True
+
+        # [修改] 不再拦截包含 "output" 单词的指令，也不拦截短指令
+        # 让 Llama-3 去打分，如果指令太短（如 "Sum"），Llama-3 也能执行，不应该判 0 分。
+        
+        if is_lazy_pattern:
+            return 0.0, dummy_scores
 
         # === 4. 判决 ===
         if is_lazy_pattern:
@@ -605,14 +642,9 @@ def run(args):
     eval_template = "Instruction: [PROMPT]\n\nInput: [INPUT]\n\nOUTPUT: [OUTPUT]"
     init_prompt = ['\n']
     prompt_gen_template = (
-        "Here are some examples of a task:\n"
+        "Here are examples of a task:\n\n"
         "[full_DEMO]\n\n"
-        "Write a clear, imperative instruction for this task.\n"
-        "The instruction MUST tell the assistant to return ONLY the answer, without any explanation, numbering, or conversational text.\n"
-        "Examples of good instructions:\n"
-        "- 'Sort the words alphabetically. Output only the space-separated list.'\n"
-        "- 'Find the synonym. Return just the word.'\n"
-        "Instruction:"
+        "The concise instruction for this task is to" 
     )
     base_conf = '../configs/instruction_induction.yaml'
     conf = get_conf(task, eval_data)
@@ -765,7 +797,7 @@ def run(args):
         )
 
         # 规则任务：不允许协变量主导
-        allow_mix_opt = true
+        allow_mix_opt = True
         _install_covariates_into_kernel(gp_model, F_hist, y_train, step_idx=0, allow_mix_opt=allow_mix_opt)
 
         # 规则任务把 alpha_cov 压到 0
