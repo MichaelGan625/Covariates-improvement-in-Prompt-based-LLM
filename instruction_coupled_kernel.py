@@ -52,7 +52,7 @@ class EfficientCombinedStringKernel(Kernel):
         # 协变量初始值给低一点 (raw=-2.0 => alpha ~ 0.1)，防止起步就跑偏
         self.register_parameter(
             name="raw_alpha_cov", 
-            parameter=torch.nn.Parameter(torch.tensor(-5.0, device=self._device, dtype=self._dtype))
+            parameter=torch.nn.Parameter(torch.tensor(-1.0, device=self._device, dtype=self._dtype))
         )
         self.raw_alpha_cov.requires_grad = True
         # 注册约束：保证权重永远大于 0
