@@ -655,10 +655,10 @@ def run(args):
     )
     init_prompt = ['\n']
     prompt_gen_template = (
-        "I will provide some input-output pairs.\n\n"
+        "USER: I have some input-output pairs. Can you figure out the instruction that transforms the input to the output?\n\n"
         "[full_DEMO]\n\n"
-        "The instruction that describes the relationship between the inputs and outputs is:\n"
-        "Instruction:"
+        "Please write the instruction clearly and concisely. Start the instruction with a verb.\n"
+        "ASSISTANT: The instruction is to"  # <--- 关键！帮它起个头，它就会顺着写下去
     )
     base_conf = '../configs/instruction_induction.yaml'
     conf = get_conf(task, eval_data)
