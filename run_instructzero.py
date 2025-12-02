@@ -447,7 +447,7 @@ class LMForwardAPI:
         _profile = TASK_PROFILES.get(self.task_name, DEFAULT_PROFILE)
         # === 1. 生成配置 (增加随机性，防止复读) ===
         # 这里把 temperature 稍微调高一点点，让它敢于生成不同的句子
-        gen_kwargs = dict(do_sample=True, temperature=0.35, top_p=0.9)
+        gen_kwargs = dict(do_sample=True, temperature=0.6, top_p=0.9,repetition_penalty=1.1)
 
         outputs = self.model.generate(inputs_embeds=input_embed, max_new_tokens=64, **gen_kwargs)
         instruction = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
@@ -639,13 +639,14 @@ def run(args):
     # Data is in the form input: single item, output: list of items
     prompt_gen_data = prompt_gen_data[0], [random.sample(output, 1)[0] for output in prompt_gen_data[1]]
     demos_template = "Input: [INPUT]\nOutput: [OUTPUT]"
-    eval_template = "Instruction: [PROMPT]\n\nInput: [INPUT]\n\nOUTPUT: [OUTPUT]"
-    init_prompt = ['\n']
-    prompt_gen_template = (
-        "Here are examples of a task:\n\n"
-        "[full_DEMO]\n\n"
-        "The concise instruction for this task is to" 
+    eval_template = (
+    "Instruction: [PROMPT]\n\n"
+    "Input: [INPUT]\n\n"
+    "Answer the input directly. Do not output any explanation or extra text.\n"
+    "Output: [OUTPUT]"
     )
+    init_prompt = ['\n']
+    prompt_gen_template = "Below are some input-output pairs.\n\n[full_DEMO]\n\nGenerate the instruction that describes this task.\nInstruction:"
     base_conf = '../configs/instruction_induction.yaml'
     conf = get_conf(task, eval_data)
 
