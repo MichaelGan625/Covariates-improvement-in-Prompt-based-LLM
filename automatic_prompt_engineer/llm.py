@@ -459,6 +459,20 @@ class GPT_Forward(LLM):
             prompt_single = p.replace('[APE]', '').strip()
             content = self.chat_completion([{"role": "user", "content": prompt_single}], is_async=False)
             if content:
+                # 1. 去掉常见的 Chat 前缀
+                content = content.strip()
+                prefixes = [
+                    "Output:", "Response:", "Answer:", "Sure, here is", 
+                    "sort:", "list:", "translate:", "deduce:", "provide:",
+                    "Input:", "The output is:", "Here is the list:"
+                ]
+                for pre in prefixes:
+                    if content.lower().startswith(pre.lower()):
+                        content = content[len(pre):].strip()
+                
+                # 2. 去掉首尾引号
+                content = content.strip('"\'`')
+            if content:
                 answer.append(content)
             else:
                 answer.append("do not have response from chatgpt")
