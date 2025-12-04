@@ -82,32 +82,35 @@ def _extract_first_int(s):
     except Exception:
         return None
 
-def diff_numeric_em(pred, gold):
+# evaluation_instruction_induction/utility.py
+
+def _simple_numeric_match(pred, gold):
     """
-    如果 pred 里有两个数（数字或英文单词），按 first - second 计算结果；
-    否则尝试把 pred 当作“直接给出的单个结果”。
-    只要和 gold 的任一候选整数相等，返回 1.0；否则 0.0
+    通用数字匹配逻辑：
+    只检查 pred 解析出的数字列表中，是否包含 gold 中的答案。
+    绝对不替模型做加减运算。
     """
-    nums = _find_numbers_mixed(pred)
-    if len(nums) >= 2:
-        got = nums[0] - nums[1]
-    elif len(nums) == 1:
-        got = nums[0]
-    else:
-        return 0.0
+    # 提取模型输出里的所有数字
+    pred_nums = _find_numbers_mixed(pred)
+    # 提取标准答案里的整数
     gold_ints = _extract_gold_ints(gold)
-    return 1.0 if got in gold_ints else 0.0
+    
+    if not pred_nums or not gold_ints:
+        return 0.0
+        
+    # 只要模型输出的数字里包含了正确答案，就给分
+    for val in pred_nums:
+        if val in gold_ints:
+            return 1.0
+    return 0.0
+
+# === 重写这两个函数，直接调用上面的简单匹配 ===
+
+def diff_numeric_em(pred, gold):
+    return _simple_numeric_match(pred, gold)
 
 def sum_numeric_em(pred, gold):
-    nums = _find_numbers_mixed(pred)
-    if len(nums) >= 2:
-        got = nums[0] + nums[1]
-    elif len(nums) == 1:
-        got = nums[0]
-    else:
-        return 0.0
-    gold_ints = _extract_gold_ints(gold)
-    return 1.0 if got in gold_ints else 0.0
+    return _simple_numeric_match(pred, gold)
 
 def _first_line(s: str) -> str:
     s = s.strip()
