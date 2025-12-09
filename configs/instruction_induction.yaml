@@ -1,13 +1,13 @@
 # instruction_induction.yaml
 generation:
   num_subsamples: 2
-  num_demos: 3
+  num_demos: 5
   num_prompts_per_subsample: 15
   model:
     name: GPT_forward
     batch_size: 300
     gpt_config:
-      model: meta-llama/llama-3-70b-instruct  # 修改这里
+      model: meta-llama/llama-3.3-70b-instruct:free # 修改这里
       api_base: https://openrouter.ai/api/v1
       temperature: 0.9
       max_tokens: 50
@@ -23,7 +23,7 @@ evaluation:
     name: GPT_forward
     batch_size: 15
     gpt_config:
-      model: meta-llama/llama-3-70b-instruct  # 修改这里
+      model: meta-llama/llama-3.3-70b-instruct:free  # 修改这里
       api_base: https://openrouter.ai/api/v1
       temperature: 0.7
       max_tokens: 100
@@ -36,7 +36,7 @@ demo:
     name: GPT_forward
     batch_size: 300
     gpt_config:
-      model: meta-llama/llama-3-70b-instruct  # 修改这里
+      model: meta-llama/llama-3.3-70b-instruct:free  # 修改这里
       api_base: https://openrouter.ai/api/v1
       temperature: 0.7
       max_tokens: 100
