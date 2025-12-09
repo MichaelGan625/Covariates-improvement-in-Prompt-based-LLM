@@ -136,14 +136,33 @@ class Llama_Forward(LLM):
 
     def __init__(self, config, needs_confirmation=False, disable_tqdm=True):
         """Initializes the model."""
-        SIZE=13
-        MODEL_DIR = "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/models/vicuna-13b"
-        TOKENIZER_DIR = MODEL_DIR
+        # 这里填你下载的 Qwen 模型绝对路径
+        MODEL_DIR = "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/models/qwen"
+        
         self.config = config
         self.needs_confirmation = needs_confirmation
         self.disable_tqdm = disable_tqdm
-        self.model=LlamaForCausalLM.from_pretrained(MODEL_DIR, device_map="auto")
-        self.tokenizer=LlamaTokenizer.from_pretrained(TOKENIZER_DIR)
+        
+        print(f"Loading local model from: {MODEL_DIR}")
+        print("Using FP32 Mode (No Quantization)...")
+
+        # 1. 加载 Tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            MODEL_DIR, 
+            trust_remote_code=True,
+            use_fast=False
+        )
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+
+        # 2. 加载模型 (最简配置)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            MODEL_DIR,
+            device_map="auto",          # 让 HF 自动处理显卡分配
+            trust_remote_code=True,
+            torch_dtype=torch.float32,  # 强制 FP32，防止报错
+            low_cpu_mem_usage=True
+        )
 
     def auto_reduce_n(self, fn, prompt, n):
         """Reduces n by half until the function succeeds."""
