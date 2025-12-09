@@ -1,4 +1,4 @@
-Timport subprocess
+import subprocess
 import os
 import re
 import csv
@@ -6,22 +6,50 @@ from datetime import datetime
 
 # 任务列表（跟 misc.py 一致）
 TASKS = [
-    'num_to_verbal', 'active_to_passive', 'singular_to_plural', 'rhymes',
-    'second_word_letter', 'sentiment', 'orthography_starts_with',
-    'sum', 'synonyms', 'translation_en-de', 'translation_en-es',
-    'word_in_context', 'auto_categorization', 'auto_debugging',
-    'periodic_elements', 'word_sorting', 'word_unscrambling', 'odd_one_out'
+    'antonyms', 
+    'cause_and_effect', 
+    'common_concept', 
+    'diff', 
+    'first_word_letter', 
+    'informal_to_formal', 
+    'larger_animal', 
+    'letters_list', 
+    'taxonomy_animal', 
+    'negation', 
+    'num_to_verbal', 
+    'active_to_passive', 
+    'singular_to_plural', 
+    'rhymes', 
+    'second_word_letter', 
+    'sentence_similarity', 
+    'sentiment', 
+    'orthography_starts_with', 
+    'sum', 
+    'synonyms', 
+    'translation_en-de', 
+    'translation_en-es', 
+    'translation_en-fr', 
+    'word_in_context', 
+    'auto_categorization', 
+    'auto_debugging', 
+    'ascii', 
+    'cs_algorithms', 
+    'periodic_elements', 
+    'word_sorting', 
+    'word_unscrambling', 
+    'odd_one_out', 
+    'object_count'
 ]
 
 
 # 固定参数（你原始命令模版）
 MODEL_NAME = "vicuna"
-HF_CACHE_DIR = r"D:\Py\LLM"
+HF_CACHE_DIR = "/home2/langj/Covariates-improvement-in-Prompt-based-LLM/models/qwen/"
 RANDOM_PROJ = "uniform"
 INTRINSIC_DIM = "30"
 N_PROMPT_TOKENS = "5"
-SEED = "42"
-API_MODEL = "chatgpt"
+SEED = "112"
+API_MODEL = "qwen/qwen-2.5-72b-instruct"
 
 # ===== 仅保留自动学习与开关，不传手动权重 =====
 USE_SCALARIZATION = True   # 启用协变量标量化（奖励+软约束）
@@ -102,4 +130,3 @@ for row in summary:
     print(f"{row['task']:30} {row['status']:10} {row['score']:8} {str(row['exit_code']):9} {row['log']}")
 
 print(f"\nSaved summary to {summary_path}")
-
