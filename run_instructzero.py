@@ -5,6 +5,7 @@ import copy
 import random
 import math
 import csv
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import semantic_covariates
 from semantic_covariates import SemanticCovariateSystem
 from datetime import datetime
@@ -311,24 +312,34 @@ class LMForwardAPI:
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
         self.ops_model = model_name
-        if self.ops_model in ["vicuna", "wizardlm", 'openchat']:
+        if self.ops_model in ["vicuna", "wizardlm", 'openchat',"llama-3", "qwen"]:
+            print(f"Loading model from {HF_cache_dir}")
+            
 
+            # === 修改: 加载模型 ===
             self.model = AutoModelForCausalLM.from_pretrained(
                 HF_cache_dir,
                 low_cpu_mem_usage=True,
-                device_map={"": "cuda:0"} if self.device.startswith("cuda") else None,
+                device_map="auto",     # 让 accelerate 自动分配 4 张卡
                 local_files_only=True,
-                torch_dtype=torch.float16,
-                use_cache=True,
-            ).to(self.device)
-
+                trust_remote_code=True,         # Gemma 3 需要这个
+                torch_dtype=torch.float32,    # 由 bnb_config 管理，注释掉
+                # use_cache=True,               # 【删除】导致报错的罪魁祸首
+            ) 
+            # 注意：删掉了最后的 .to(self.device)，因为 device_map="auto" 会自动管理设备
+            
             self.tokenizer = AutoTokenizer.from_pretrained(
                 HF_cache_dir,
                 model_max_length=1024,
                 padding_side="left",
                 use_fast=False,
                 local_files_only=True,
+                trust_remote_code=True, 
             )
+            
+            if self.tokenizer.pad_token is None:
+                self.tokenizer.pad_token = self.tokenizer.eos_token
+
 
             # 静音上一轮的 temperature/top_p 警告：默认不采样
             gc = self.model.generation_config
@@ -356,29 +367,50 @@ class LMForwardAPI:
         self.count = 0
         self.linear = torch.nn.Linear(intrinsic_dim, self.n_prompt_tokens * self.hidden_size, bias=False).to(self.device)
 
-        if self.ops_model == 'vicuna':
+        # === 修改点 1: 增加 Qwen 和 Llama 的适配逻辑 ===
+        # 使用 .lower() 和 in 判断，这样 'qwen-2.5-7b' 也能匹配上 'qwen'
+        if any(m in self.ops_model.lower() for m in ['vicuna', 'wizardlm']):
             self.system_prompt = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
             self.role = ['USER:', 'ASSISTANT:']
-        elif self.ops_model == 'wizardlm':
-            self.system_prompt = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
-            self.role = ['USER:', 'ASSISTANT:']
-        elif self.ops_model == 'alpaca':
+        
+        # 【新增】Qwen 的适配逻辑
+        elif 'qwen' in self.ops_model.lower():
+            self.system_prompt = "You are a helpful assistant."
+            self.role = ["<|im_start|>user\n", "<|im_end|>\n<|im_start|>assistant\n"]
+            
+        # 【新增】Llama-3 的适配逻辑
+        elif 'llama' in self.ops_model.lower():
+            self.system_prompt = "You are a helpful AI assistant."
+            self.role = ["", ""] 
+
+        elif 'alpaca' in self.ops_model.lower():
             self.system_prompt = "Below is an instruction that describes a task. Write a response that appropriately completes the request."
             self.role = ["### Instruction:", "### Response:"]
+            
         else:
-            NotImplementedError
+            # 【关键修改】不要直接报错，而是给一个默认值
+            print(f"[WARNING] Model '{self.ops_model}' not recognized in system prompt list, using default.")
+            self.system_prompt = "You are a helpful assistant."
+            self.role = ["User:", "Assistant:"]
+            # raise NotImplementedError  <-- 注释掉这行！死罪可免！
 
         if random_proj == 'normal':
-            if model_name in ['wizardlm', 'vicuna', 'openchat']:
+            # === 修改点 2: 把 qwen 和 llama 加入白名单 ===
+            # 原代码: if model_name in ['wizardlm', 'vicuna', 'openchat']:
+            # 修改后:
+            if any(m in model_name.lower() for m in ['wizardlm', 'vicuna', 'openchat', 'qwen', 'llama']):
                 print('Get the embedding firstly to avoid issues')
             else:
-                raise NotImplementedError
+                # 建议注释掉这个报错，或者确保你的模型名在上面列表里
+                # raise NotImplementedError
+                print(f"[Warning] Model {model_name} not strictly in random_proj list, proceeding anyway...")
+
             mu_hat = self.embedding.reshape(-1).mean().item()
             std_hat = self.embedding.reshape(-1).std().item()
             mu = 0.0
             std = args.alpha * std_hat / (np.sqrt(intrinsic_dim) * args.sigma)
             print('[Embedding] mu: {} | std: {} [RandProj]  mu: {} | std: {}'.format(mu_hat, std_hat, mu, std))
-            torch.nn.init.normal_(self.linear.weight, -1, 1)
+            torch.nn.init.normal_(self.linear.weight, std=0.5)
         elif random_proj == 'uniform':
             torch.nn.init.uniform_(self.linear.weight, -1, 1)
 
@@ -426,6 +458,8 @@ class LMForwardAPI:
         self.num_call += 1
         if prompt_embedding is None:
             prompt_embedding = self.best_prompt
+        
+        # === 1. Embedding 处理 (保持不变) ===
         tmp_prompt = copy.deepcopy(prompt_embedding)
         if isinstance(prompt_embedding, list):
             pe_list = []
@@ -445,174 +479,147 @@ class LMForwardAPI:
         else:
             raise ValueError(f'[Prompt Embedding] Only support [list, numpy.ndarray], got {type(prompt_embedding)} instead.')
 
+        prompt_embedding = prompt_embedding.to(dtype=torch.float32)
+        if torch.isnan(prompt_embedding).any() or torch.isinf(prompt_embedding).any():
+            print("[WARNING] Found NaN/Inf in soft prompt! Resetting to 0.")
+            prompt_embedding = torch.nan_to_num(prompt_embedding, nan=0.0, posinf=1.0, neginf=-1.0)
+        
+        prompt_embedding = torch.clamp(prompt_embedding, min=-5.0, max=5.0)
+        prompt_embedding = prompt_embedding.to(device=self.device, dtype=torch.float16) # V100/FP16
+
         input_text = self.init_token
         input_ids = self.tokenizer(input_text, return_tensors="pt").input_ids.to(self.device)
-        input_embed = self.embedding[input_ids]
-        prompt_embedding = prompt_embedding.to(device=input_embed.device, dtype=input_embed.dtype)
-        input_embed = torch.cat((prompt_embedding, input_embed), 1)
+        word_embedding = self.embedding[input_ids].to(dtype=torch.float16)
+        input_embed = torch.cat((prompt_embedding, word_embedding), 1)
 
-        # === 依据任务画像决定是否采样 ===
-        _profile = TASK_PROFILES.get(self.task_name, DEFAULT_PROFILE)
-        # === 1. 生成配置 (增加随机性，防止复读) ===
-        # 这里把 temperature 稍微调高一点点，让它敢于生成不同的句子
-        gen_kwargs = dict(do_sample=True, temperature=0.72, top_p=0.9,repetition_penalty=1.1)
-
-        outputs = self.model.generate(inputs_embeds=input_embed, max_new_tokens=64, **gen_kwargs)
-        instruction = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
-
-# === 2. 强力清洗 (Enhanced Cleaning) ===
-        raw = instruction[0] if isinstance(instruction, list) else str(instruction)
+        # === 2. 生成指令 (Generation) ===
+        # 提高 Temperature 防止复读，但不要太高导致乱码
+        gen_kwargs = dict(do_sample=True, temperature=0.9, top_p=0.95, repetition_penalty=1.1)
         
-        # 1. 去除常见的“前缀废话”
-        # 使用正则表达式，忽略大小写，非贪婪匹配
+        try:
+            outputs = self.model.generate(
+                inputs_embeds=input_embed, 
+                max_new_tokens=64, 
+                use_cache=False, 
+                **gen_kwargs
+            )
+            instruction_raw = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
+        except Exception as e:
+            print(f"[ERROR] Generation failed: {e}")
+            return 0.0, [0.0]*len(self.eval_data[0]), "Generation Error"
+
+        # === 3. 强力清洗 v3.0 (Unified Cleaning) ===
         import re
+        raw = instruction_raw[0] if isinstance(instruction_raw, list) else str(instruction_raw)
+        
+        # A. 移除 Markdown
+        clean = raw.replace("```markdown", "").replace("```", "").strip()
+
+        # B. 暴力截断：只取第一句 (遇到 . ! ? \n 就停)
+        match = re.search(r'[.!?\n]', clean)
+        if match:
+            clean = clean[:match.start()]
+            
+        clean = clean.strip()
+
+        # C. 移除常见的前缀废话
         patterns = [
             r"^Instruction\s*:\s*", 
             r"^The instruction is\s*(to|:)?\s*",
             r"^The task is\s*(to|:)?\s*",
             r"^Based on.*?write\s*:\s*",
-            r"^Task\s*:\s*"
+            r"^Task\s*:\s*",
+            r"^Step 1:\s*"
         ]
-        instr_clean = raw.strip()
         for pat in patterns:
-            instr_clean = re.sub(pat, "", instr_clean, flags=re.IGNORECASE)
-            
-        # 2. 去除首尾的引号 (单引号和双引号)
-        instr_clean = instr_clean.strip('"\'')
-        
-        # 3. 只要第一行 (防止模型生成指令后又开始解释)
-        if "\n" in instr_clean:
-            instr_clean = instr_clean.split("\n")[0].strip()
-            
-        # 4. (可选) 如果剩下的内容里还有 "Input:"，说明清洗失败或者是复读，强制截断
-        if "Input:" in instr_clean:
-            instr_clean = instr_clean.split("Input:")[0].strip()
+            clean = re.sub(pat, "", clean, flags=re.IGNORECASE)
 
-        # 打印清洗结果，方便调试
+        # D. 兜底：如果切空了，回退到取第一行
+        if len(clean) < 2:
+            clean = raw.split('\n')[0].strip()
+            
+        instr_clean = clean.strip('"\'') # 去引号
+
         print(f'Raw: {raw[:50]}... -> Clean: {instr_clean}')
-        # ==========================================
-        # === [在此处插入新的强力拦截逻辑] ===
-        # ==========================================
-        
-        # 1. 定义黑名单
-        bad_phrases = [
-            "transform the input to the output",
-            # "provide the output",  <-- 建议注释掉这个（见下文分析）
-            "figure out the instruction",
-            "provide a verb",
-            "write the instruction",
-            # "predict the output",  <-- 建议注释掉这个
-            "provide more context",
-            "what you need help with"
-        ]
-        
-        lower_instr = instr_clean.lower().strip()
-        is_bad = False
-        
-        # 2. 检查黑名单 (Contains 检查)
-        for phrase in bad_phrases:
-            if phrase in lower_instr:
-                is_bad = True
-                print(f"[FILTER] 拦截到通用/偷懒废话: '{phrase}'")
-                break
-        
-        # 3. 针对 "provide the output" 做更严格的检查 (防止误杀)
-        # 只有当指令 *仅仅* 是 "provide the output" (或极短) 时才拦截
-        # 这样 "Provide the output in German" (好的指令) 不会被杀掉
-        if "provide the output" in lower_instr and len(lower_instr) < 30:
-             is_bad = True
-             print(f"[FILTER] 拦截到过短的通用指令: 'provide the output'")
 
-        # 4. 检查是否复读了 Meta-Instruction (Input/Output 泄露)
-        # 如果指令直接以 "Input:" 开头，说明清洗失败或严重复读
-        if lower_instr.startswith("input:") or "can you figure" in lower_instr:
-            is_bad = True
-            print(f"[FILTER] 拦截到元指令泄露")
+        # === 4. 过滤器 (Filter) ===
+        # 长度检查：放宽到 60
+        if len(instr_clean.split()) > 60:
+             print(f"[FILTER] Drop too long: {len(instr_clean.split())} words")
+             return 0.0, [0.0]*len(self.eval_data[0]), instr_clean
 
-        # 5. 检查长度 (过长通常是幻觉)
-        if len(instr_clean.split()) > 30: 
-             is_bad = True
-             print(f"[FILTER] 指令过长 ({len(instr_clean.split())} words)，疑似幻觉/解释")
+        # 黑名单检查
+        bad_phrases = ["figure out", "predict the output", "what you need help"]
+        if any(bad in instr_clean.lower() for bad in bad_phrases):
+             print(f"[FILTER] Drop bad phrase.")
+             return 0.0, [0.0]*len(self.eval_data[0]), instr_clean
 
-        # === 拦截执行 ===
-        if is_bad:
-            print(f"[FILTER] Drop bad instruction: '{instr_clean}' -> Score 0.0")
-            self.last_instruction_text = instr_clean 
-            
-            # 构造全 0 分数
-            dummy_scores = [0.0] * len(self.eval_data[0])
-            
-            # 返回 0 分
-            return 0.0, dummy_scores, instr_clean
-            
-        # ==========================================
-        # === [插入结束，后面接正常的评估逻辑] ===
-        # ==========================================
-    # === 3. 强力过滤器 (通用版) ===
-        is_lazy_pattern = False
-        lower_instr = instr_clean.lower()
-        
-        # 只拦截极其明显的“数据泄露”或“复读”行为
-        # 例如：指令直接以 "Input:" 开头，说明它没写指令，而是在抄例子
-        if instr_clean.strip().lower().startswith("input:"):
-            is_lazy_pattern = True
-            
-        # 拦截模型拒绝回答的情况
-        if "sorry" in lower_instr and "cannot" in lower_instr:
-            is_lazy_pattern = True
+        # Input 泄露检查 (开头就是 Input:)
+        if instr_clean.lower().startswith("input:"):
+             print(f"[FILTER] Drop input leakage.")
+             return 0.0, [0.0]*len(self.eval_data[0]), instr_clean
 
-        # [修改] 不再拦截包含 "output" 单词的指令，也不拦截短指令
-        # 让 Llama-3 去打分，如果指令太短（如 "Sum"），Llama-3 也能执行，不应该判 0 分。
-        
-        if is_lazy_pattern:
-            return 0.0, dummy_scores
-
-        # === 4. 判决 ===
-        if is_lazy_pattern:
-            print(f"[FILTER] 拦截到偷懒指令: '{instr_clean}' -> 强制判为 0.0 分")
-            # 记录一下，防止主循环报错找不到 last_instruction_text
-            self.last_instruction_text = instr_clean 
-            
-            # 【核心修改】直接返回 0 分！给 GP 一个巨大的负反馈
-            # 注意：这里的 [0.0] * len(...) 是为了构造一个全 0 的 scores 向量
-            dummy_scores = [0.0] * len(self.eval_data[0])
-            return 0.0, dummy_scores
-
-        # === 5. 通过检查，正常进入后续评估 ===
-        # 兜底：真的为空时（极少见），给 antonyms 一个最小可用指令
-        if not instr_clean:
-            if self.task_name == 'antonyms':
-                instr_clean = "Return the antonym of the input word."
-
+        # === 5. 评分 (Evaluation) ===
+        # 这里的 instruction 必须是 list 形式
         instruction = [instr_clean]
-        self.last_instruction_text = instr_clean  # 记录给主循环去重
+        self.last_instruction_text = instr_clean
+        print(f'Instruction: {instruction}')
 
-        # print post-processed instruction
-        print('Instruction: {}'.format(instruction))
-
+        # A. 查缓存
         if instruction[0] in self.prompts_set.keys():
             (dev_perf, instruction_score) = self.prompts_set[instruction[0]]
+            print("[Cache Hit] Used cached score.")
         else:
-            if self.api_model in [ 'meta-llama/llama-3-70b-instruct','qwen/qwen-2.5-72b-instruct','meta-llama/llama-3.3-70b-instruct:free']:
+            # B. 调用 API 评分
+            # 你的 api_model 列表里包含了 OpenRouter 的模型
+            valid_models = [
+                'meta-llama/llama-3-70b-instruct',
+                'qwen/qwen-2.5-72b-instruct',
+                'meta-llama/llama-3.3-70b-instruct:free',
+                'vicuna', 'wizardlm'
+            ]
+            
+            # 这里的逻辑是：只要 api_model 不为空，就尝试跑
+            try:
+                # 增加一个 print 确认正在调用 API
+                print(f"Calling Evaluator ({self.api_model})...")
+                
                 dev_perf, instruction_score = evaluate.evaluate_prompts(
-                    instruction, self.eval_template, self.eval_data,
-                    self.demos_template, self.few_shot_data,
-                    self.conf['evaluation']['method'], self.conf['evaluation']
+                    instruction, 
+                    self.eval_template, 
+                    self.eval_data,
+                    self.demos_template, 
+                    self.few_shot_data,
+                    self.conf['evaluation']['method'], 
+                    self.conf['evaluation']
                 )
-                dev_perf = dev_perf.sorted()[1][0]
-                # NaN/Inf 清洗
+                
+                # 处理返回格式
+                if hasattr(dev_perf, 'sorted'):
+                    dev_perf = dev_perf.sorted()[1][0]
+                
+                # 清洗 NaN
                 try:
                     dev_perf = float(dev_perf)
-                except Exception:
+                except:
                     dev_perf = 0.0
-                if not math.isfinite(dev_perf):
-                    dev_perf = 0.0
-                instruction_score = _np.nan_to_num(_np.asarray(instruction_score, dtype=float),
-                                                   nan=0.0, posinf=0.0, neginf=0.0)
+                if not math.isfinite(dev_perf): dev_perf = 0.0
+                
+                instruction_score = _np.nan_to_num(
+                    _np.asarray(instruction_score, dtype=float), 
+                    nan=0.0, posinf=0.0, neginf=0.0
+                )
+                
+                # 存缓存
                 self.prompts_set[instruction[0]] = (dev_perf, instruction_score)
-            else:
-                raise NotImplementedError
+                
+            except Exception as e:
+                print(f"[CRITICAL ERROR] Evaluation API failed: {e}")
+                # 如果 API 挂了，暂时返回 0 分，避免程序崩溃
+                dev_perf = 0.0
+                instruction_score = [0.0] * len(self.eval_data[0])
 
+        # === 6. 更新最佳记录 ===
         if dev_perf >= self.best_last_perf:
             self.count += 1
 
@@ -621,6 +628,7 @@ class LMForwardAPI:
             self.best_prompt = copy.deepcopy(tmp_prompt)
             self.best_instruction = instruction
 
+        # === 7. 最终打印结果 ===
         print('Dev loss: {}. Dev perf: {}. Best dev perf: {}'.format(
             round(float(dev_perf), 4),
             round(float(dev_perf), 4),
@@ -720,13 +728,13 @@ def run(args):
     )
     init_prompt = ['\n']
     # [修改 1] 更严格的生成模版，明确禁止通用废话
+# [修改点] 增强生成模板，加上“负面约束” (Negative Constraint)
+# 纯净通用版模板：移除所有误导性例子，强迫模型看数据
     prompt_gen_template = (
         "I need an instruction that transforms the INPUT to the OUTPUT.\n"
-        "Here are some examples:\n"
+        "Examples:\n"
         "[full_DEMO]\n\n"
-        "Analyze the examples above. What is the single operation being performed?\n"
-        "Write the instruction as a short, imperative command (e.g., 'Translate to Spanish', 'Sort the list', 'Find the antonym').\n"
-        "Instruction:"
+        "Write the instruction."
     )
     base_conf = '../configs/instruction_induction.yaml'
     conf = get_conf(task, eval_data)
@@ -1197,7 +1205,9 @@ def run(args):
                     instr_text, None, _get_kernel_alphas(gp_model),
                     acq=acq_val_num, mu=mu, sigma=sigma
                 )
-                continue
+                # continue
+                new_dev_perf = 0.0
+                ys = _np.zeros_like(ys)
 
             if instr_text in seen_instructions:
                 logger.logger.info("Duplicate instruction detected; skip appending to training set.")
