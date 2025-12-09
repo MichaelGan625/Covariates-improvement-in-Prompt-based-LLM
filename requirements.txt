@@ -12,7 +12,7 @@ python run_instructzero.py --task antonyms --model_name vicuna --HF_cache_dir "D
 探索度开关// 迭代次数  early stop 防止过拟合 设置阈值  全部用UCB  试一下其他采集函数 主要考虑探索
 
 conda activate iz310
-$env: OPENROUTER_API_KEY =  "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"
+$env: OPENROUTER_API_KEY =  "sk-or-v1-dfa0"
 $env:OPENROUTER_API_BASE = "https://openrouter.ai/api/v1"
 python run_instructzero.py --task antonyms  --model_name vicuna --HF_cache_dir "D:\Py\LLM" --random_proj uniform --intrinsic_dim 30 --n_prompt_tokens 5 --seed 42
 python run_instructzero.py --task antonyms --model_name vicuna --HF_cache_dir /home2/langj/Covariates-improvement-in-Prompt-based-LLM/models/qwen/ --api_model qwen/qwen-2.5-72b-instruct --random_proj uniform --intrinsic_dim 30 --n_prompt_tokens 5 --seed 114
