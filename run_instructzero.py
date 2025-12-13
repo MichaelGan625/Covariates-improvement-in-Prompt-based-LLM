@@ -573,6 +573,7 @@ class LMForwardAPI:
             # B. 调用 API 评分
             # 你的 api_model 列表里包含了 OpenRouter 的模型
             valid_models = [
+                'deepseek-chat',
                 'meta-llama/llama-3-70b-instruct',
                 'qwen/qwen-2.5-72b-instruct',
                 'meta-llama/llama-3.3-70b-instruct:free',
