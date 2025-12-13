@@ -39,36 +39,28 @@ class EfficientCombinedStringKernel(Kernel):
         self._dtype = self.latent_train.dtype # 现在应该是 torch.float64
         self.n_tr = int(self.latent_train.shape[0])
 
-        # === 【核心修改 1】将 alpha 注册为可学习参数 ===
-        # 初始值：raw=0.0 经过 softplus 变换后大约是 0.69，作为一个中性的初始值
         self.register_parameter(
             name="raw_alpha_lat", 
-            parameter=torch.nn.Parameter(torch.tensor(1.0, device=self._device, dtype=self._dtype)) # 原 0.0
+            parameter=torch.nn.Parameter(torch.zeros(1, device=self._device, dtype=self._dtype))
         )
+        self.register_constraint("raw_alpha_lat", Interval(0.01, 10.0)) # 强制 > 0.01
+
+        # 2. Instruction 权重 (alpha_instr): 保持正数即可，或者也给个上限
         self.register_parameter(
             name="raw_alpha_instr", 
-            parameter=torch.nn.Parameter(torch.tensor(0.0, device=self._device, dtype=self._dtype))
+            parameter=torch.nn.Parameter(torch.zeros(1, device=self._device, dtype=self._dtype))
         )
-        # 协变量初始值给低一点 (raw=-2.0 => alpha ~ 0.1)，防止起步就跑偏
+        self.register_constraint("raw_alpha_instr", Positive())
+
+        # 3. Covariate 权重 (alpha_cov): 【关键】必须加严格上限！
+        # 防止它飙升到 38.0 这种数值。强制它只能起到“辅助修正”作用。
         self.register_parameter(
             name="raw_alpha_cov", 
-            parameter=torch.nn.Parameter(torch.tensor(-1.0, device=self._device, dtype=self._dtype))
+            parameter=torch.nn.Parameter(torch.zeros(1, device=self._device, dtype=self._dtype))
         )
-        self.raw_alpha_cov.requires_grad = True
-        # 注册约束：保证权重永远大于 0
-        self.register_constraint("raw_alpha_lat", Positive())
-        self.register_constraint("raw_alpha_instr", Positive())
-        self.register_constraint("raw_alpha_cov", Positive())
+        self.register_constraint("raw_alpha_cov", Interval(0.0, 5.0)) # 强制 < 5.0
 
-        self._mode = "auto_grad" # 标记模式变为自动梯度
-        self._anneal_steps = 10
-        self._cov_kernel_type = "linear"
-        self._F_hist = None
-        self._F_mu = None
-        self._F_std = None
-        self._w = np.ones(4, dtype=np.float32)
-        self.K_cov = None
-        jitter_tensor = torch.as_tensor(jitter, device=self._device, dtype=self._dtype)
+
 
         with torch.no_grad():
             K_lat = _as_dense(
